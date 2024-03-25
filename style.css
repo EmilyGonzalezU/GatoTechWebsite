@@ -1,0 +1,35 @@
+
+.supBarr{
+    background-color: #E22F89;
+}
+
+.navBarLg{
+    background-color: black;
+}
+.imgLogoLg{
+    width: 190px;
+    margin-left: 500px;
+}
+.imgLogo{
+    width: 170px;
+    align-items: center;
+    margin-right: 10px;
+    margin-left: 30px;
+}
+
+
+.iconNav{
+    color: #E22F89;
+    
+    
+}
+
+.btnSearch {
+    color: white;
+    border-color: white;
+}
+ 
+.btnSearch:hover{
+     color: #E22F89;
+    border-color: #E22F89;
+}
