@@ -2,59 +2,75 @@
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-@media (max-width: 990px) {
+@media (max-width: 1000px) {
     .navBarLg {
-        display: none; /* Oculta el navbar lg en dispositivos menores a 1000px */
+        display: none;
+        
     }
+
+    .imgBanner{
+        width: 100vw;
+        margin: 0;
+    }
+
+    .navMenu{
+        display: none;
+    }
+    
 }
 
 /* Estilos para el navbar superior */
-@media (min-width: 991px) {
+@media (min-width: 1000px) {
     .navBarLg {
-        display: block; /* Muestra el navbar lg en dispositivos mayores o iguales a 1000px */
+        display: block; 
     }
     .navBarmd {
-        display: none !important; /* Oculta el navbar superior en dispositivos mayores o iguales a 1000px */
+        display: none !important;
     }
 
-
+    .imgBanner{
+        width: 80vw;
+        height: 70vh;
+        margin-left: 10vw ;
+        margin-right: 10vw;
+        margin-top: 10h;
+    }
+    
 }
-
+/*Superior bar*/
 .supBarr{
     background-color: #E22F89;
 }
 
-
+/*NavBar>1000px*/
 
 .navBarLg{
     background-color: black;
 }
+
 .imgLogoLg{
     width: 190px;
     margin-left: 500px;
 }
+
 
 .imgLogo{
     width: 170px;
     align-items: center;
     margin-right: 10px;
     margin-left: 30px;
+
 }
-
-
-.iconNav{
-    color: #E22F89;
-
-    
-    
-}
-
 .iconNav{
     color: #E22F89;
     
     
 }
 
+
+
+
+/*NavBar<1000*/
 .nav-link,
 .dropdown-item {
     color: black;
@@ -64,3 +80,4 @@
     font-size: 25px;
     
 }
+
