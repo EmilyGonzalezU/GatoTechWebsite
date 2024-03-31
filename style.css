@@ -1,8 +1,9 @@
 *{
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 992px) {
     .navBarLg {
         display: none;
         
@@ -16,11 +17,32 @@
     .navMenu{
         display: none;
     }
+
+    .cardCarousel1, .cardCarousel2, .cardCarousel3{
+        width: 29vw;
+        font-size: 10px;
+        
+    }
+    
+    .cardCarousel4{
+        display: none;
+    }
+
+    .price{
+        font-size: 15px;
+        color: #E22F89;
+        margin: 0;
+        font-weight:bold ;
+    }
+    
+    .transf{
+        margin: 0;
+    }
     
 }
 
 /* Estilos para el navbar superior */
-@media (min-width: 1000px) {
+@media (min-width: 992px) {
     .navBarLg {
         display: block; 
     }
@@ -29,11 +51,27 @@
     }
 
     .imgBanner{
-        width: 80vw;
+        width: 100vw;
         height: 70vh;
-        margin-left: 10vw ;
-        margin-right: 10vw;
-        margin-top: 10h;
+        
+    }
+    
+    .cardCarousel1,  .cardCarousel2, .cardCarousel3, .cardCarousel4{
+        width: 300px;
+        height: 300px;
+        
+        
+    }
+
+    .price{
+        font-size: 25px;
+        color: #E22F89;
+        margin: 0;
+        font-weight:bold ;
+    }
+    
+    .transf{
+        margin: 0;
     }
     
 }
@@ -81,6 +119,22 @@
     
 }
 
-.cardCarousel{
-    width: 30vh;
+/*Body2*/
+.body2{
+    background-color: #f5f5f5;
+}
+
+.titleH2{
+    border: 10px solid #E22F89;
+    border-width: 3px ;
+    width: 200px;
+    text-align: center;
+    border-radius: 3px;
+}
+
+/*1st Banner*/
+
+.banner1{
+
+    clip-path: inset(0 7% 70% 7%);
 }
