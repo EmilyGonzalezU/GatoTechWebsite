@@ -21,7 +21,6 @@
     .cardCarousel1, .cardCarousel2, .cardCarousel3, .cardCarousel4, .cardCarousel5{
         width: 29vw;
         font-size: 10px;
-        gap: 5px;
         
         
     }
@@ -59,7 +58,7 @@
 
     .imgBanner{
         width: 100vw;
-        height: 100vh;
+        height: 50vh;
         
     }
     
@@ -88,6 +87,7 @@
 /*Superior bar*/
 .supBarr{
     background-color: #E22F89;
+    color: white;
 }
 
 /*NavBar>1000px*/
@@ -161,7 +161,7 @@
 }
 
 .containerCard{
-    gap:20px;
+    gap:10px;
 }
 
 /*1st Banner*/
@@ -183,21 +183,21 @@
 .conteinerImgBanner3{
     border: 1px solid black;
     text-align: center;
-    margin-right: -50%;
+  
     
 }
 /*4th Banner*/
 .conteinerImgBanner4{
     border: 1px solid black;
     text-align: center;
-    margin-right: -50%;
+   
     
 }
 /*5th Banner*/
 .conteinerImgBanner5{
     border: 1px solid black;
     text-align: center;
-    margin-right: -50%;
+ 
    
     
 }
