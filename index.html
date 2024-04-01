@@ -49,8 +49,8 @@
 
                 <div class="col-md-3">
                     <div class="container-fluid d-flex justify-content-center align-items-center">
-                        <a href=""><i class="bi bi-person fs-1 me-5 iconNav ms-2"></i></a>
-                        <a href=""><i class="bi bi-cart3  fs-2 iconNav me-3"></i></a>
+                        <a href=""><i class="bi bi-person fs-1 me-3 iconNav ms-2"></i></a>
+                        <a href=""><i class="bi bi-cart3  fs-2 iconNav me-2"></i></a>
                     </div>
                 </div>
             </nav>
@@ -203,39 +203,48 @@
         </div>
       </div>
    <!--Carrousel-->
-    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner ">
-          <div class="carousel-item active">
-            <img src="img/Banner/Banner de Descuentos Simple Turquesa y Blanco.png" class="d-block  imgBanner" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="img/Banner/Banner de Descuentos Simple Turquesa y Blanco.png" class="d-block imgBanner" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="img/Banner/Banner de Descuentos Simple Turquesa y Blanco.png" class="d-block imgBanner" alt="...">
-          </div>
+   <div class="body2">
+        <div class="row">
+            <div class="col-12 ">
+                <div class="containerCarousel">
+                    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner ">
+                        <div class="carousel-item active">
+                            <img src="img/Banner/Banner de Descuentos Simple Turquesa y Blanco.png" class="d-block  imgBanner" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/Banner/Banner de Descuentos Simple Turquesa y Blanco.png" class="d-block imgBanner" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/Banner/Banner de Descuentos Simple Turquesa y Blanco.png" class="d-block imgBanner" alt="...">
+                        </div>
+                        </div>
+                        <button class="btn  btn-outline-success carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
         </div>
-        <button class="btn  btn-outline-success carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-    </div>
     
-    <div class="body2">
+    
+    
         <!--Cards-->
         <div class="container">
             <div class="row">
                 <div class="col-md-12 col-lg-12">
                     <h2 class="fs-5 pt-5 text-center text-black ">Destacados en Pc armados</h2>
                     <div class="border-bottom  titleH2 mx-auto"></div>
-                    <div class="container d-flex justify-content-between pt-5"> 
-                        <div class="card cardCarousel1 col-md-2 col-lg-3 border-0 p-0 m-0" >
-                            <img src="img/Pc/Pc ryzen.png" class="card-img-top" alt="  img/Pc/Pc ryzen.png">
-                            <div class="card-body">
+                    <div class="containerCard d-flex justify-content-between pt-5"> 
+                        <div class="card cardCarousel1 col-md-2 col-lg-2 border-0  " >
+                            <a href="#">
+                                <img src="img/Pc/Pc ryzen.png" class="card-img-top" alt="">
+                            </a>                            <div class="card-body">
                                 <h5 class="fw-bold">Ryzen</h5>
                                 <p class="">Ryzen 7, Gtx 2070, ram 16, ssd1tb</p>
                                 <p class="price">$650,000</p>
@@ -246,24 +255,30 @@
                             </div>
                         </div>
 
-                        <div class="card cardCarousel2 col-md-2  col-lg-3 border-0 p-0 m-0"    >
-                            <img src="img/Pc/Pc ryzen.png" class="card-img-top" alt="">
-                            <div class="card-body ">
-                            
-                                <h5 class="fw-bold">Ryzen</h5>
-                                <p class="">Ryzen 7, Gtx 2070, ram 16, ssd1tb</p>
-                                <p class="price">$650,000</p>
-                                <p class="transf ">Transferencia</p>
-                                <p class="price">$700,000</p>
-                                <p class="otro ">Otro medio de pago</p>
-                            </div>  
+                        
+
+                        <div class="card cardCarousel2 col-md-2  col-lg-2 border-0 "    >
+                            <a href="#">
+                                <img src="img/Pc/Pc ryzen.png" class="card-img-top" alt="">
+                            </a>
+                                <div class="card-body ">
+                                
+                                    <h5 class="fw-bold">Ryzen</h5>
+                                    <p class="">Ryzen 7, Gtx 2070, ram 16, ssd1tb</p>
+                                    <p class="price">$650,000</p>
+                                    <p class="transf ">Transferencia</p>
+                                    <p class="price">$700,000</p>
+                                    <p class="otro ">Otro medio de pago</p>
+                                </div> 
+                             
                         
                         </div>
 
 
-                        <div class="card cardCarousel3 col-md-2 col-lg-3 border-0 p-0 m-0"    >
-                            <img src="img/Pc/Pc ryzen.png" class="card-img-top" alt="...">
-                            <div class="card-body">
+                        <div class="card cardCarousel3 col-md-2 col-lg-2 border-0 "    >
+                            <a href="#">
+                                <img src="img/Pc/Pc ryzen.png" class="card-img-top" alt="">
+                            </a>                            <div class="card-body">
                                 <h5 class="fw-bold">Ryzen</h5>
                                 <p class="">Ryzen 7, Gtx 2070, ram 16, ssd1tb</p>
                                 <p class="price">$650,000</p>
@@ -273,9 +288,23 @@
                             </div>
                         </div>
 
-                        <div class="card cardCarousel4 col-md-2 d-none d-md-block col-lg-3 border-0 p-0 m-0"    >
-                            <img src="  img/Pc/Pc ryzen.png" class="card-img-top" alt="...">
-                            <div class="card-body">
+                        <div class="card cardCarousel4 col-md-2 d-none d-md-block col-lg-2 border-0"    >
+                            <a href="#">
+                                <img src="img/Pc/Pc ryzen.png" class="card-img-top" alt="">
+                            </a>                            <div class="card-body">
+                                <h5 class="fw-bold">Ryzen</h5>
+                                <p class="">Ryzen 7, Gtx 2070, ram 16, ssd1tb</p>
+                                <p class="price">$650,000</p>
+                                <p class="transf fw">Transferencia</p>
+                                <p class="price">$700,000</p>
+                                <p class="otro fw">Otro medio de pago</p>
+                            </div>
+                        </div>
+
+                        <div class="card cardCarousel5 col-md-2 d-none d-md-block col-lg-2 border-0  "    >
+                            <a href="#">
+                                <img src="img/Pc/Pc ryzen.png" class="card-img-top" alt="">
+                            </a>                            <div class="card-body">
                                 <h5 class="fw-bold">Ryzen</h5>
                                 <p class="">Ryzen 7, Gtx 2070, ram 16, ssd1tb</p>
                                 <p class="price">$650,000</p>
@@ -290,11 +319,136 @@
             </div>
         </div>
         
+
         <!--ImgBanner-->
-        <img src="img/Banner/BannerGatoTech.png" class="w-100 p-5 banner1" alt="">
+        <div class="row">
+            <div class="col-12 p-5">
+                <div class="conteinerImgBanner1 p-3">
+                    <h1>IMG BANNER</h1>
+                </div>
+            </div>
+            
+        </div>
         
+        <!--SecondCards-->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-lg-12">
+                    <h2 class="fs-5 text-center text-black ">Destacados en Pc armados</h2>
+                    <div class="border-bottom  titleH2 mx-auto"></div>
+                    <div class="containerCard d-flex justify-content-between pt-5"> 
+                        
+                        <div class="card cardCarousel1 col-md-2 col-lg-2 border-0  " >
+                            <a href="#">
+                                <img src="img/Pc/Pc ryzen.png" class="card-img-top" alt="">
+                            </a>                            <div class="card-body">
+                                <h5 class="fw-bold">Ryzen</h5>
+                                <p class="">Ryzen 7, Gtx 2070, ram 16, ssd1tb</p>
+                                <p class="price">$650,000</p>
+                                <p class="transf fw">Transferencia</p>
+                                <p class="price">$700,000</p>
+                                <p class="otro fw">Otro medio de pago</p>
+                                
+                            </div>
+                        </div>
+
+                        
+
+                        <div class="card cardCarousel2 col-md-2  col-lg-2 border-0 "    >
+                            <a href="#">
+                                <img src="img/Pc/Pc ryzen.png" class="card-img-top" alt="">
+                            </a>
+                                <div class="card-body ">
+                                
+                                    <h5 class="fw-bold">Ryzen</h5>
+                                    <p class="">Ryzen 7, Gtx 2070, ram 16, ssd1tb</p>
+                                    <p class="price">$650,000</p>
+                                    <p class="transf ">Transferencia</p>
+                                    <p class="price">$700,000</p>
+                                    <p class="otro ">Otro medio de pago</p>
+                                </div> 
+                             
+                        
+                        </div>
+
+
+                        <div class="card cardCarousel3 col-md-2 col-lg-2 border-0 "    >
+                            <a href="#">
+                                <img src="img/Pc/Pc ryzen.png" class="card-img-top" alt="">
+                            </a>                            <div class="card-body">
+                                <h5 class="fw-bold">Ryzen</h5>
+                                <p class="">Ryzen 7, Gtx 2070, ram 16, ssd1tb</p>
+                                <p class="price">$650,000</p>
+                                <p class="transf fw">Transferencia</p>
+                                <p class="price">$700,000</p>
+                                <p class="otro fw">Otro medio de pago</p>
+                            </div>
+                        </div>
+
+                        <div class="card cardCarousel4 col-md-2 d-none d-md-block col-lg-2 border-0"    >
+                            <a href="#">
+                                <img src="img/Pc/Pc ryzen.png" class="card-img-top" alt="">
+                            </a>                            <div class="card-body">
+                                <h5 class="fw-bold">Ryzen</h5>
+                                <p class="">Ryzen 7, Gtx 2070, ram 16, ssd1tb</p>
+                                <p class="price">$650,000</p>
+                                <p class="transf fw">Transferencia</p>
+                                <p class="price">$700,000</p>
+                                <p class="otro fw">Otro medio de pago</p>
+                            </div>
+                        </div>
+
+                        <div class="card cardCarousel5 col-md-2 d-none d-md-block col-lg-2 border-0  "    >
+                            <a href="#">
+                                <img src="img/Pc/Pc ryzen.png" class="card-img-top" alt="">
+                            </a>                            <div class="card-body">
+                                <h5 class="fw-bold">Ryzen</h5>
+                                <p class="">Ryzen 7, Gtx 2070, ram 16, ssd1tb</p>
+                                <p class="price">$650,000</p>
+                                <p class="transf fw">Transferencia</p>
+                                <p class="price">$700,000</p>
+                                <p class="otro fw">Otro medio de pago</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
         
-        
+        <!--ImgBanner2-->
+        <div class="row">
+            <div class="col-12 p-5 pb-1">
+                <div class="conteinerImgBanner2 p-3">
+                    <h1>IMG BANNER 2</h1>
+                </div>
+            </div>
+        </div>
+        <div class="containerBanner2 d-flex">
+            <div class="row">
+                <div class="col-12  ps-5 pt-0">
+                    <div class="conteinerImgBanner3 p-3">
+                        <h1>IMG BANNER 3</h1>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12 pe-5 pt-0">
+                    <div class="conteinerImgBanner4 p-3">
+                        <h1>IMG BANNER 4</h1>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12 ps-5 pt-0">
+                    <div class="conteinerImgBanner5 p-3">
+                        <h1>IMG BANNER 5</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!--Footer-->
         <div class="container">
@@ -315,7 +469,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
+        crossorigin="anonymous">
+    </script>
 </body>
-
 </html>

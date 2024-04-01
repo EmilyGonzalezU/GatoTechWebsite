@@ -11,20 +11,26 @@
 
     .imgBanner{
         width: 100vw;
-        margin: 0;
+        height: 50vh;
     }
 
     .navMenu{
         display: none;
     }
 
-    .cardCarousel1, .cardCarousel2, .cardCarousel3{
+    .cardCarousel1, .cardCarousel2, .cardCarousel3, .cardCarousel4, .cardCarousel5{
         width: 29vw;
         font-size: 10px;
+        gap: 5px;
+        
         
     }
     
     .cardCarousel4{
+        display: none;
+    }
+
+    .cardCarousel5{
         display: none;
     }
 
@@ -39,6 +45,7 @@
         margin: 0;
     }
     
+    
 }
 
 /* Estilos para el navbar superior */
@@ -52,17 +59,20 @@
 
     .imgBanner{
         width: 100vw;
-        height: 70vh;
+        height: 100vh;
         
     }
     
-    .cardCarousel1,  .cardCarousel2, .cardCarousel3, .cardCarousel4{
+    .cardCarousel1,  .cardCarousel2, .cardCarousel3, .cardCarousel4, .cardCarousel5{
         width: 300px;
         height: 300px;
+
+        
         
         
     }
 
+   
     .price{
         font-size: 25px;
         color: #E22F89;
@@ -132,9 +142,62 @@
     border-radius: 3px;
 }
 
+/*Cards*/
+.cardCarousel1,  .cardCarousel2, .cardCarousel3, .cardCarousel4, .cardCarousel5{
+    box-shadow: 0.3s, transform 0.3s;
+    
+    
+}
+
+  
+.cardCarousel1:hover,  .cardCarousel2:hover, .cardCarousel3:hover, .cardCarousel4:hover, .cardCarousel5:hover{
+    box-shadow: 4px 4px 10px rgba(0,0, 0, 0.2);
+    transform: translate(1px);
+    cursor: hand;
+    
+    
+
+    
+}
+
+.containerCard{
+    gap:20px;
+}
+
 /*1st Banner*/
 
-.banner1{
+.conteinerImgBanner1{
+    border: 1px solid black;
+    text-align: center;
+    
+}
 
-    clip-path: inset(0 7% 70% 7%);
+/*2nd Banner*/
+.conteinerImgBanner2{
+    border: 1px solid black;
+    text-align: center;
+    
+    
+}  
+/*3rd Banner*/
+.conteinerImgBanner3{
+    border: 1px solid black;
+    text-align: center;
+    margin-right: -50%;
+    
+}
+/*4th Banner*/
+.conteinerImgBanner4{
+    border: 1px solid black;
+    text-align: center;
+    margin-right: -50%;
+    
+}
+/*5th Banner*/
+.conteinerImgBanner5{
+    border: 1px solid black;
+    text-align: center;
+    margin-right: -50%;
+   
+    
 }
