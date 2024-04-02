@@ -18,12 +18,11 @@
         display: none;
     }
 
-    .cardCarousel1, .cardCarousel2, .cardCarousel3, .cardCarousel4, .cardCarousel5{
-        width: 29vw;
-        font-size: 10px;
-        
-        
+
+    .cardCarousel3{
+        display: none;
     }
+
     
     .cardCarousel4{
         display: none;
@@ -44,7 +43,9 @@
         margin: 0;
     }
     
-    
+    .imgLogomd{
+        width: 190px;
+    }
 }
 
 /* Estilos para el navbar superior */
@@ -62,14 +63,7 @@
         
     }
     
-    .cardCarousel1,  .cardCarousel2, .cardCarousel3, .cardCarousel4, .cardCarousel5{
-        width: 300px;
-        height: 300px;
-
-        
-        
-        
-    }
+ 
 
    
     .price{
@@ -130,10 +124,6 @@
 }
 
 /*Body2*/
-.body2{
-    background-color: #f5f5f5;
-}
-
 .titleH2{
     border: 10px solid #E22F89;
     border-width: 3px ;
@@ -160,9 +150,6 @@
     
 }
 
-.containerCard{
-    gap:10px;
-}
 
 /*1st Banner*/
 
