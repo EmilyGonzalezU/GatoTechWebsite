@@ -3,7 +3,31 @@
     
 }
 
-@media (max-width: 992px) {
+@media  (min-width: 576px ) and  (max-width: 768px ) {
+    .navBarLg {
+        display: none;
+        
+    }
+
+    .navMenu{
+        display: none;
+    }
+
+    .imgLogomd{
+        width: 190px;
+    }
+
+    .imgBanner{
+        width: 100vw;
+        height: 50vh;
+    }
+
+    .card{
+        margin: 0 .5em;
+        width: calc(100%);
+    }
+}
+@media   (min-width: 768px ) and (max-width: 992px ) {
     .navBarLg {
         display: none;
         
@@ -19,19 +43,15 @@
     }
 
 
-    .cardCarousel3{
-        display: none;
+    .cards-wrapper{
+        display: flex;
+        justify-content: center;
     }
-
     
-    .cardCarousel4{
-        display: none;
+    .card{
+        margin: 0 .5em;
+        width: calc(100%/3);
     }
-
-    .cardCarousel5{
-        display: none;
-    }
-
     .price{
         font-size: 15px;
         color: #E22F89;
@@ -49,7 +69,7 @@
 }
 
 /* Estilos para el navbar superior */
-@media (min-width: 992px) {
+@media (min-width: 992px)  {
     .navBarLg {
         display: block; 
     }
@@ -64,7 +84,14 @@
     }
     
  
-
+    .cards-wrapper{
+        display: flex;
+    }
+    
+    .card{
+        margin: 0 .5em;
+        width: calc(100%/5);
+    }
    
     .price{
         font-size: 25px;
@@ -133,23 +160,43 @@
 }
 
 /*Cards*/
-.cardCarousel1,  .cardCarousel2, .cardCarousel3, .cardCarousel4, .cardCarousel5{
+
+.card{
     box-shadow: 0.3s, transform 0.3s;
     
     
 }
 
   
-.cardCarousel1:hover,  .cardCarousel2:hover, .cardCarousel3:hover, .cardCarousel4:hover, .cardCarousel5:hover{
-    box-shadow: 4px 4px 10px rgba(0,0, 0, 0.2);
-    transform: translate(1px);
-    cursor: hand;
-    
-    
 
-    
+
+/*CardEfect*/
+.card .image-container {
+    position: relative;
+    overflow: hidden;
 }
 
+.card .image-container .image {
+    transition: opacity 0.3s ease;
+}
+
+.card:hover .image-container .image {
+    opacity: 0;
+}
+
+.card:hover .image-container .hover-image {
+    opacity: 1;
+    transform: scale(1.1);
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Agrega la transición de transformación */
+}
+
+.card .image-container .hover-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
 
 /*1st Banner*/
 
