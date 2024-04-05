@@ -13,30 +13,49 @@
         display: none;
     }
 
+    .imgBanner {
+        max-width: 100%; /* Establece el ancho máximo de la imagen como un porcentaje del contenedor */
+        height: auto; /* Mantiene la proporción de aspecto de la imagen */
+    }
+ 
     .imgLogomd{
         width: 190px;
     }
 
-    .imgBanner{
-        width: 100vw;
-        height: 50vh;
-    }
 
     .card{
         margin: 0 .5em;
         width: calc(100%);
     }
+
+    .price{
+        font-size: 20px;
+        color: #E22F89;
+        margin: 0;
+        font-weight:bold ;
+    }
+    
+    .transf{
+        margin: 0;
+    }
+
+    /*Card efect*/
+    .hover-image{
+        display: none;
+    }
 }
+
 @media   (min-width: 768px ) and (max-width: 992px ) {
     .navBarLg {
         display: none;
         
     }
 
-    .imgBanner{
-        width: 100vw;
-        height: 50vh;
+    .imgBanner {
+        max-width: 100%; /* Establece el ancho máximo de la imagen como un porcentaje del contenedor */
+        height: auto; /* Mantiene la proporción de aspecto de la imagen */
     }
+ 
 
     .navMenu{
         display: none;
@@ -52,6 +71,7 @@
         margin: 0 .5em;
         width: calc(100%/3);
     }
+    
     .price{
         font-size: 15px;
         color: #E22F89;
@@ -66,6 +86,11 @@
     .imgLogomd{
         width: 190px;
     }
+
+    /*Card efect*/
+    .hover-image{
+        display: none;
+    }
 }
 
 /* Estilos para el navbar superior */
@@ -77,10 +102,29 @@
         display: none !important;
     }
 
-    .imgBanner{
-        width: 100vw;
-        height: 50vh;
-        
+    .imgBanner {
+        max-width: 100%; /* Establece el ancho máximo de la imagen como un porcentaje del contenedor */
+        height: auto; /* Mantiene la proporción de aspecto de la imagen */
+        padding-left: 1vw;
+        padding-right: 1vw;
+    }
+
+    .image-container11{
+        max-width: 50% ;
+        height: 20%;
+    }
+   
+  
+    .banner-image {
+        width: 100%; /* Para asegurar que la imagen ocupe todo el ancho del container */
+        height: auto; /* Altura automática para mantener la proporción de la imagen */
+        max-width: 100%; /* Máximo ancho de la imagen */
+        max-height: 200px; /* Máxima altura de la imagen (ajustar según tu necesidad) */
+        padding-left: 80px; /* Espaciado interior del container */
+        padding-right: 80px;
+        padding-top: 20px;
+        justify-content: center;
+
     }
     
  
@@ -103,11 +147,59 @@
     .transf{
         margin: 0;
     }
+
+    /*Card efect*/
+    .card:hover {
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        transition: box-shadow 0.3s ease-in-out;
+    }
+    
+    .card .image-container {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .card .image-container .image {
+        transition: opacity 0.3s ease;
+    }
+
+    .card:hover .image-container .image {
+        opacity: 0;
+    }
+
+    .card:hover .image-container .hover-image {
+        opacity: 1;
+        transform: scale(1.1);
+        transition: opacity 0.3s ease, transform 0.3s ease; /* Agrega la transición de transformación */
+    }
+
+    .card .image-container .hover-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    /*Menu efect*/
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+    
+    .dropdown-menu li:hover{
+        color: #00e6fa;
+    }
+    
+    li .dropdown-item:hover {
+        color: #E22F89;
+    }
+
     
 }
+
 /*Superior bar*/
 .supBarr{
-    background-color: #E22F89;
+    background-color: #00e6fa;
     color: white;
 }
 
@@ -131,15 +223,14 @@
 
 }
 .iconNav{
-    color: #E22F89;
+    color: #00e6fa;
     
     
 }
 
 
 
-
-/*NavBar<1000*/
+/*NavBar<1000px*/
 .nav-link,
 .dropdown-item {
     color: black;
@@ -152,86 +243,16 @@
 
 /*Body2*/
 .titleH2{
-    border: 10px solid #E22F89;
+    border: 10px solid #00e6fa;
     border-width: 3px ;
     width: 200px;
     text-align: center;
     border-radius: 3px;
+    opacity: 100%;
 }
 
 /*Cards*/
 
 .card{
     box-shadow: 0.3s, transform 0.3s;
-    
-    
-}
-
-  
-
-
-/*CardEfect*/
-.card .image-container {
-    position: relative;
-    overflow: hidden;
-}
-
-.card .image-container .image {
-    transition: opacity 0.3s ease;
-}
-
-.card:hover .image-container .image {
-    opacity: 0;
-}
-
-.card:hover .image-container .hover-image {
-    opacity: 1;
-    transform: scale(1.1);
-    transition: opacity 0.3s ease, transform 0.3s ease; /* Agrega la transición de transformación */
-}
-
-.card .image-container .hover-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-/*1st Banner*/
-
-.conteinerImgBanner1{
-    border: 1px solid black;
-    text-align: center;
-    
-}
-
-/*2nd Banner*/
-.conteinerImgBanner2{
-    border: 1px solid black;
-    text-align: center;
-    
-    
-}  
-/*3rd Banner*/
-.conteinerImgBanner3{
-    border: 1px solid black;
-    text-align: center;
-  
-    
-}
-/*4th Banner*/
-.conteinerImgBanner4{
-    border: 1px solid black;
-    text-align: center;
-   
-    
-}
-/*5th Banner*/
-.conteinerImgBanner5{
-    border: 1px solid black;
-    text-align: center;
- 
-   
-    
 }
