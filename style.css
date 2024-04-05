@@ -3,7 +3,7 @@
     
 }
 
-@media  (min-width: 576px ) and  (max-width: 768px ) {
+@media (min-width: 576px ) and  (max-width: 768px ) {
     .navBarLg {
         display: none;
         
@@ -17,7 +17,24 @@
         max-width: 100%; /* Establece el ancho máximo de la imagen como un porcentaje del contenedor */
         height: auto; /* Mantiene la proporción de aspecto de la imagen */
     }
- 
+    
+    .image-container11{
+        max-width: 50% ;
+        height: 20%;
+    }
+   
+  
+    .banner-image {
+        width: 100%; /* Para asegurar que la imagen ocupe todo el ancho del container */
+        height: auto; /* Altura automática para mantener la proporción de la imagen */
+        max-width: 100%; /* Máximo ancho de la imagen */
+        max-height: 200px; /* Máxima altura de la imagen (ajustar según tu necesidad) */
+        padding-left: 80px; /* Espaciado interior del container */
+        padding-right: 80px;
+        padding-top: 20px;
+        justify-content: center;
+    }
+
     .imgLogomd{
         width: 190px;
     }
@@ -57,10 +74,28 @@
     }
  
 
+    .image-container11{
+        max-width: 50% ;
+        height: 20%;
+    }
+   
+  
+    .banner-image {
+        width: 100%; /* Para asegurar que la imagen ocupe todo el ancho del container */
+        height: auto; /* Altura automática para mantener la proporción de la imagen */
+        max-width: 100%; /* Máximo ancho de la imagen */
+        max-height: 200px; /* Máxima altura de la imagen (ajustar según tu necesidad) */
+        padding-left: 80px; /* Espaciado interior del container */
+        padding-right: 80px;
+        padding-top: 20px;
+        justify-content: center;
+    }
+
     .navMenu{
         display: none;
     }
 
+    
 
     .cards-wrapper{
         display: flex;
@@ -120,11 +155,10 @@
         height: auto; /* Altura automática para mantener la proporción de la imagen */
         max-width: 100%; /* Máximo ancho de la imagen */
         max-height: 200px; /* Máxima altura de la imagen (ajustar según tu necesidad) */
-        padding-left: 80px; /* Espaciado interior del container */
-        padding-right: 80px;
+        padding-left: 11vw; /* Espaciado interior del container */
+        padding-right: 11vw;
         padding-top: 20px;
         justify-content: center;
-
     }
     
  
@@ -136,7 +170,11 @@
         margin: 0 .5em;
         width: calc(100%/5);
     }
-   
+    
+    .c2{
+        margin: 1vw .1em;
+        width: calc(100%/4);
+    }
     .price{
         font-size: 25px;
         color: #E22F89;
@@ -244,7 +282,7 @@
 /*Body2*/
 .titleH2{
     border: 10px solid #00e6fa;
-    border-width: 3px ;
+    border-width: 6px ;
     width: 200px;
     text-align: center;
     border-radius: 3px;
@@ -255,4 +293,15 @@
 
 .card{
     box-shadow: 0.3s, transform 0.3s;
+}
+
+
+/*Testing*/
+.image-banner3{
+    width: 31vw; /* Para asegurar que la imagen ocupe todo el ancho del container */
+    height: 59vh; /* Altura automática para mantener la proporción de la imagen */
+    padding-left: 2vw; /* Espaciado interior del container */
+    padding-right: 11vw;
+    padding-top: 20px;
+    justify-content: start;
 }
