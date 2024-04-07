@@ -18,16 +18,14 @@
         height: auto; /* Mantiene la proporción de aspecto de la imagen */
     }
     
-    .image-container11{
-        max-width: 50% ;
-        height: 20%;
+    .image-container{
+        max-width: 100vw;
+        max-height: 100vh;
     }
   
     .banner-image {
         width: 100%; /* Para asegurar que la imagen ocupe todo el ancho del container */
-        height: 320px; /* Altura automática para mantener la proporción de la imagen *//* Máxima altura de la imagen (ajustar según tu necesidad) */
-        padding-left: 0px; /* Espaciado interior del container */
-        padding-right: 0px;
+        height: 80%; /* Altura automática para mantener la proporción de la imagen *//* Máxima altura de la imagen (ajustar según tu necesidad) */
         padding-top: 10px;
         justify-content: center;
     }
@@ -214,32 +212,37 @@
         height: 20%;
     }
    
+   
   
     .banner-image {
-        width: 100%; /* Para asegurar que la imagen ocupe todo el ancho del container */
-        height: auto; /* Altura automática para mantener la proporción de la imagen */
-        max-width: 100%; /* Máximo ancho de la imagen */
-        max-height: 200px; /* Máxima altura de la imagen (ajustar según tu necesidad) */
-        padding-left: 9vw; /* Espaciado interior del container */
-        padding-right: 9vw;
+        width: 80vw; /* Para asegurar que la imagen ocupe todo el ancho del container */
+        height: 35vh; /* Altura automática para mantener la proporción de la imagen */
         padding-top: 20px;
         justify-content: center;
     }
     
  
-    .cards-wrapper{
+    .cards-wrapper {
         display: flex;
         justify-content: center;
     }
+    
+    
+    
     .card{
-        margin: 0 .5em;
+        max-width: 150vw;
+        max-height: 150vh;
         width: calc(100%);
     }
-    
-    .c2{
-        margin: 1vw .1em;
-        width: calc(100%/4);
+
+        
+    .descText{
+        max-width: 100px; /* Establece el ancho máximo */
+        overflow: hidden; /* Oculta el texto que excede el ancho máximo */
+        white-space: nowrap; /* Evita el salto de línea */
+        text-overflow: ellipsis;  /* Muestra puntos suspensivos si el texto excede el ancho máximo */
     }
+
     .price{
         font-size: 25px;
         color: #E22F89;
@@ -251,6 +254,20 @@
         margin: 0;
     }
 
+    .dscto{
+        border: 1px solid ;
+        border-radius: 5px;
+        padding: 3px;
+        background-color: #00e6fa;
+        color: white;
+        font-size: 13px;
+        font-weight: bold;
+    }
+
+    .old-price{
+        padding-left: 5px;
+        text-decoration: line-through;
+    }
     /*Card efect*/
     .card:hover {
         box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -284,6 +301,8 @@
         transition: opacity 0.3s ease;
     }
 
+    
+
     /*Menu efect*/
     .dropdown:hover .dropdown-menu {
         display: block;
@@ -296,6 +315,7 @@
     li .dropdown-item:hover {
         color: #E22F89;
     }
+
 
     
 }
@@ -354,11 +374,6 @@
     opacity: 100%;
 }
 
-/*Cards*/
-
-.card{
-    box-shadow: 0.3s, transform 0.3s;
-}
 
 /*Footer*/
 .footerLine{
