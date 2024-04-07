@@ -6,7 +6,9 @@ Commit 2.5
 3. Nuevas secciones en venta.
 4. Animaciones en imagenes.
 5. Se arreglo el resposive de extra small.
+
 --
+
 Cambios pendientes 2.6:
 1. Agregar mas secciones de venta.
 2. Arreglar imagenes.
