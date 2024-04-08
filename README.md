@@ -9,6 +9,6 @@ Commit 2.6
 6. Vista inicio sesion
 7. Vista registro
 8. Modal al agregar productos al carrito
---
---
+
+----
 
