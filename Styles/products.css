@@ -3,14 +3,31 @@
     
 }
 
-@media (min-width: 0px ) and  (max-width: 576px ) {
+@media (min-width: 0px ) and  (max-width: 359px ) {
     .filter{
         display: none;
     }
     
     
     .card{
-        width: 10rem;
+        width: 100%;
+        margin: auto;
+        
+        
+    }
+}      
+@media (min-width: 359px ) and  (max-width: 530px ) {
+    .filter{
+        display: none;
+    }
+    
+    
+    .card{
+        width: calc(100%);
+        margin: 0. 5em;
+        justify-content: center;
+        align-items: center;
+        
     }
     
     /*Prices*/
@@ -45,6 +62,37 @@
     }
 }
 
+@media (min-width: 530px ) and  (max-width: 576px ) {
+    .filter{
+        display: none;
+    }
+    
+    
+    .card{
+        width: 15rem;
+        
+        
+        
+        
+    }
+}
+/*Small*/
+@media (min-width: 576px ) and  (max-width: 768px ) {
+    .filter{
+        display: none;
+    }
+    
+    
+    .card{
+        width: 17rem;
+        
+        
+        
+        
+    }
+    
+}
+
 /*Mid*/
 @media   (min-width: 768px ) and (max-width: 992px ) {
     .filter{
@@ -54,6 +102,7 @@
     
     .card{
         width: 15rem;
+        
     }
     
     /*Prices*/
@@ -88,7 +137,7 @@
 @media (min-width: 992px)  {
     
     .card{
-        width: 16.3rem;
+        width: 15rem;
     }
 
     .price{
