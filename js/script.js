@@ -23,4 +23,13 @@ containerDsctoTarget.forEach(function(dsctoTarget){
     }
 });
 
+/**TRUNC TEXT FUNCTION */
+document.addEventListener("DOMContentLoaded", function() { /*DOM CARGADO EJECUTA FUNCION*/
+    var productDescriptions = document.querySelectorAll('.productDesc');
 
+    productDescriptions.forEach(function(productDesc) {
+        if (productDesc.textContent.length > 50) {
+            productDesc.textContent = productDesc.textContent.substring(0, 50) + '...';
+        }
+    });
+});
