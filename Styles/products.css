@@ -137,7 +137,7 @@
 @media (min-width: 992px)  {
     
     .card{
-        width: 15rem;
+        width: 16.5rem;
     }
 
     .price{
@@ -165,6 +165,7 @@
         text-decoration: line-through;
         font-size: 15px;
     }
+    
     
 }
 
