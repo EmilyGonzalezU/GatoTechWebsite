@@ -155,74 +155,131 @@
       </section>
     </div>
   </nav>
-
   <!--NavMenu-->
-  <div class="container-fluid navMenu border ">
-    <div class="row">
-      <nav class="navbar navbar-expand-lg mx-auto">
-        <div class="col-2"></div>
-        <div class="col-lg-8">
-          <div class="container-fluid">
-
-            <ul class="navbar-nav justify-content-between">
-              <li class="nav-item dropdown pe-2">
-                <a class="nav-link dropdown-toggle menuList" href="#" role="button" data-bs-toggle="dropdown"
-                  aria-expanded="false">
-                  PC
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item " href="pc-gamer.html">PC Gamer</a></li>
-                  <li><a class="dropdown-item" href="#">PC Escritorio</a></li>
-
-                </ul>
-              </li>
-
-              <li class="nav-item dropdown ">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                  aria-expanded="false">
-                  Notebook
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item " href="#">Notebooks Gamer</a></li>
-                  <li><a class="dropdown-item" href="#">Notebooks</a></li>
-                </ul>
-              </li>
-
-              <li class="nav-item dropdown  ">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                  aria-expanded="false">
-                  Componentes
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item  " href="#">Procesador</a></li>
-                  <li><a class="dropdown-item  " href="#">Placa Madre</a></li>
-                  <li><a class="dropdown-item  " href="#">Ram</a></li>
-                  <li><a class="dropdown-item  " href="#">Almacenamiento</a></li>
-                  <li><a class="dropdown-item  " href="#">Fuente de Poder</a></li>
-                  <li><a class="dropdown-item  " href="#">Tarjeta de Video</a></li>
-                  <li><a class="dropdown-item  " href="#">Gabinetes</a></li>
-                </ul>
-              </li>
-
-              <li class="nav-item dropdown  ">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                  aria-expanded="false">
-                  Periféricos
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item  " href="#">Audifonos</a></li>
-                  <li><a class="dropdown-item  " href="#">Monitores</a></li>
-                  <li><a class="dropdown-item  " href="#">Teclados</a></li>
-                  <li><a class="dropdown-item  " href="#">Mouse</a></li>
-                </ul>
-              </li>
+  <nav class="navbar bg-white navbar-expand-lg bg-body-dark navBarLg" data-bs-theme="white">
+    <div class="container">
+      <div class="collapse navbar-collapse justify-content-center" id="navBarMegaMenu">
+        <ul class="navbar-nav g-5 bg-white ">
+          <li class="dropdown">
+            <a href="" class="nav-link px-3 text-black dropdown-toggle mx-2" data-bs-toggle="dropdown"
+              aria-expanded="false">PC</a>
+            <ul class="dropdown-menu mega-menu dropdown-menu-white border-0">
+              <div class="row pb-3 pt-3 "> <!-- Añadida la clase justify-content-center -->
+                <div class="col-4">
+                  <li>
+                    <h6 class="dropdown-header  menuTitle" style="color: #E22F89;" style="color: #E22F89;">PC</h6>
+                  </li>
+                  <li class="item"><a href="" class="nav-link px-5 text-black"></a>PC Gamer</li>
+                  <li class="item"><a href="" class="nav-link px-5 text-black"></a>PC Escritorio</li>
+                </div>
+              </div>
             </ul>
-          </div>
-        </div>
-        <div class="col-2"></div>
-      </nav>
+          </li>
+  
+          <li class="dropdown  g-5">
+            <a href="" class="nav-link px-3 text-black dropdown-toggle mx-2" data-bs-toggle="dropdown"
+              aria-expanded="false">Notebook</a>
+            <ul class="dropdown-menu mega-menu dropdown-menu-white border-0">
+              <div class="row pb-3 pt-3 "> <!-- Añadida la clase justify-content-center -->
+                <div class="col-4">
+                  <li>
+                    <h6 class="dropdown-header  menuTitle" style="color: #E22F89;" style="color: #E22F89;">Notebooks</h6>
+                  </li>
+                  <li class="item"><a href="" class="nav-link px-5 text-black"></a>Notebook Gamer</li>
+                  <li class="item"><a href="" class="nav-link px-5 text-black"></a>Notebook oficina</li>
+                </div>
+              </div>
+            </ul>
+          </li>
+  
+          <li class="dropdown  g-5">
+            <a href="" class="nav-link px-3 text-black dropdown-toggle mx-2" data-bs-toggle="dropdown"
+              aria-expanded="false">Componentes</a>
+            <ul class="dropdown-menu mega-menu  dropdown-menu-white border-0">
+              <div class="row pb-3 pt-3"> <!-- Añadida la clase justify-content-center -->
+                <div class="col-4">
+                  <li>
+                    <h6 class="dropdown-header  menuTitle" style="color: #E22F89;" style="color: #E22F89;">Procesador</h6>
+                  </li>
+                  <li class="item"><a href="" class="nav-link px-5 text-black"></a>AMD</li>
+                  <li class="item"><a href="" class="nav-link px-5 text-black"></a>Intel</li>
+                </div>
+  
+                <div class="col-lg-4"> <!-- Añadida la clase    -->
+                  <li>
+                    <h6 class="dropdown-header" style="color: #E22F89;">Placa Madre</h6>
+                  </li>
+                  <li><a href="" class="nav-link px-4 text-black"></a>Placa AMD</li>
+                  <li><a href="" class="nav-link px-4 text-black"></a>Placa Intel</li>
+                </div>
+  
+                <div class="col-lg-4 "> <!-- Añadida la clase    -->
+                  <li>
+                    <h6 class="dropdown-header" style="color: #E22F89;">Memorio RAM</h6>
+                  </li>
+                  <li><a href="" class="nav-link px-4 text-black"></a>Memoria RAM PC</li>
+                  <li><a href="" class="nav-link px-4 text-black"></a>Memoria RAM Notebook</li>
+                </div>
+                <div class="row pb-3 pt-3"> <!-- Añadida la clase justify-content-center -->
+                  <div class="col-4">
+                    <li>
+                      <h6 class="dropdown-header  menuTitle" style="color: #E22F89;" style="color: #E22F89;">
+                        Almacenamiento</h6>
+                    </li>
+                    <li class="item"><a href="" class="nav-link px-5 text-black"></a>HDD Disco duro Mecánico</li>
+                    <li class="item"><a href="" class="nav-link px-5 text-black"></a>SDD Unidad de estado Sólido</li>
+                  </div>
+  
+                  <div class="col-4">
+                    <li>
+                      <h6 class="dropdown-header " style="color: #E22F89;">Tarjeta de Video</h6>
+                    </li>
+                    <li class="item"><a href="" class="nav-link px-5 text-black"></a>Tarjeta de video Nvidia</li>
+                    <li class="item"><a href="" class="nav-link px-5 text-black"></a>Tarjeta de video AMD</li>
+                    <li class="item"><a href="" class="nav-link px-5 text-black"></a>Tarjeta de video Intel</li>
+                  </div>
+  
+                  <div class="col-4">
+                    <li>
+                      <h6 class="dropdown-header  menuTitle" style="color: #E22F89;" style="color: #E22F89;"
+                        style="color: #E22F89;">Fuentes de Poder</h6>
+                    </li>
+                    <li class="item"><a href="" class="nav-link px-5 text-black"></a>Fuentes de poder</li>
+  
+                  </div>
+                </div>
+              </div>
+            </ul>
+          </li>
+  
+          <li class="dropdown  g-5">
+            <a href="" class="nav-link px-3 text-black dropdown-toggle mx-2" data-bs-toggle="dropdown"
+              aria-expanded="false">Periféricos</a>
+            <ul class="dropdown-menu mega-menu dropdown-menu-white border-0">
+              <div class="row pb-3 pt-3 "> <!-- Añadida la clase justify-content-center -->
+                <div class="col-4">
+                  <li>
+                    <h6 class="dropdown-header  menuTitle" style="color: #E22F89;">Periféricos</h6>
+                  </li>
+                  <li class="item"><a href="" class="nav-link px-5 text-black"></a>Audifonos</li>
+                  <li class="item"><a href="" class="nav-link px-5 text-black"></a>Teclados</li>
+                  <li class="item"><a href="" class="nav-link px-5 text-black"></a>Mouse</li>
+                </div>
+  
+                <div class="col-4">
+                  <li>
+                    <h6 class="dropdown-header  menuTitle" style="color: #E22F89;">Monitores</h6>
+                  </li>
+                  <li class="item"><a href="" class="nav-link px-5 text-black"></a>Monitores Gamer</li>
+                  <li class="item"><a href="" class="nav-link px-5 text-black"></a>Monitores Oficina</li>
+                </div>
+              </div>
+            </ul>
+          </li>
+        </ul>
+      </div>
     </div>
-  </div>
+  </nav>
 
   <!--Distribution-->
   <div class="container-fluid  d-none d-md-none d-sm-none d-xs-none d-lg-block text-start"
@@ -397,23 +454,25 @@
         </div>
       </div>
 
-
+      <!--Distribution-->
       <div class="col-md-12 col-lg-9 col-sm-12 col-xs-12 d-flex flex-wrap ">
         <div class="position-relative col-lg-3 col-md-4 col-sm-6 mb-4">
           <div class="card border   ">
             <a href="#">
-                <img src="img/Pc/Oficina/8.png" class="card-img-top main-image" alt="">
+                <img src="img/Pc/Componentes/Ram/PC/1.png" class="card-img-top main-image" alt="">
             </a>
-            <div class="card-body">
-                <h6 class="fw-bold">ASUS:</h6>
-                 <p  class="productDesc">SEGUNDA SELECCIÓN Desktop Asus ExpertCenter D7 SFF, i3-10105, Ram 8GB, SSD 256GB, W10P</p>
-              <div class="priceContainer d-flex position-absolute dsctoTarget">
-                <span class="dscto">45% DCTO.</span> <span class="old-price oldPrice">$949.990</span>
+            <div class="card-body" style="height: 295px;">
+                <h6 class="fw-bold">CORSAIR:</h6>
+                <div class="position-relative" style="height: 86.1px;">
+                  <p  class="productDesc">Memoria Ram DDR4 8GB 3200MHz Corsair Vengeance RGB RS, DIMM, PC4-25600, CL16, 1.35V</p>
+                </div>
+                <div class="priceContainer d-flex position-absolute dsctoTarget">
+                <span class="dscto">37% DCTO.</span> <span class="old-price oldPrice">$39.990</span>
               </div>
               <div class="position-relative pt-4">
-                <p class="price fs-5">$519.990</p>
+                <p class="price fs-5">$24.990</p>
                 <p class="metod">Transferencia</p>
-                <p class="price fs-5">$543.395</p>
+                <p class="price fs-5">$26.120</p>
                 <p class="metod">Otro medio de pago</p>
               </div>
             </div>
@@ -423,18 +482,20 @@
         <div class="position-relative col-lg-3 col-md-4  col-sm-6 mb-4">
           <div class="card border  ">
             <a href="#">
-                <img src="img/Pc/Oficina/7.png" class="card-img-top main-image" alt="">
+                <img src="img/Pc/Componentes/Ram/PC/2.png" class="card-img-top main-image" alt="">
             </a>
-            <div class="card-body">
-                <h6 class="fw-bold">LENOVO:</h6>
-                 <p  class="productDesc">Neo 50s SFF, i7-12700 4.7 GHz, RAM 16GB, SSD 512GB, W11P</p>
-              <div class="priceContainer d-flex position-absolute dsctoTarget">
-                <span class="dscto">8% DCTO.</span> <span class="old-price oldPrice">$1.045.520</span>
+            <div class="card-body" style="height: 295px;">
+                <h6 class="fw-bold">ADATA:</h6>
+                <div class="position-relative" style="height: 86.1px;">
+                  <p  class="productDesc">Memoria Ram DDR4 16GB, 3200MT/s, XPG SPECTRIX D35G, RGB, CL16, UDIMM, Black</p>
+                </div>
+                 <div class="priceContainer d-flex position-absolute dsctoTarget">
+                <span class="dscto"></span> <span class="old-price oldPrice"></span>
               </div>
               <div class="position-relative pt-4">
-                <p class="price fs-5">$963.550</p>
+                <p class="price fs-5">$59.990</p>
                 <p class="metod">Transferencia</p>
-                <p class="price fs-5">$1.006.913</p>
+                <p class="price fs-5">$62.690</p>
                 <p class="metod">Otro medio de pago</p>
               </div>
             </div>
@@ -444,18 +505,20 @@
         <div class="position-relative col-lg-3 col-md-4   col-sm-6 mb-4">
           <div class="card border  ">
             <a href="#">
-              <img src="img/Pc/Oficina/6.png" class="card-img-top main-image" alt="">
+              <img src="img/Pc/Componentes/Ram/PC/3.png" class="card-img-top main-image" alt="">
             </a>
-            <div class="card-body">
-              <h6 class="fw-bold">ASUS:</h6>
-               <p  class="productDesc">PC de Escritorio ASUS ProArt Station PD5 Wi-Fi, i7-11700, RTX A2000, 16GB RAM, 1TB SSD, W11 Pro</p>
-              <div class="priceContainer d-flex position-absolute dsctoTarget">
-                <span class="dscto"></span> <span class="old-price oldPrice"></span>     
+            <div class="card-body" style="height: 295px;">
+              <h6 class="fw-bold">CORSAIR:</h6>
+              <div class="position-relative" style="height: 86.1px;">
+                <p  class="productDesc">Memoria Ram DDR4 8GB 3200Mhz, Corsair Vengeance RGB Pro, DIMM</p>
+              </div>
+               <div class="priceContainer d-flex position-absolute dsctoTarget">
+                <span class="dscto">21% DCTO.</span> <span class="old-price oldPrice">$40.300</span>     
               </div>         
               <div class="position-relative pt-4">
-                <p class="price fs-5">$2.659.830</p>
+                <p class="price fs-5">$31.660</p>
                 <p class="metod">Transferencia</p>
-                <p class="price fs-5">$2.779.520</p>
+                <p class="price fs-5">$33.086</p>
                 <p class="metod">Otro medio de pago</p>
               </div>
             </div>
@@ -465,18 +528,20 @@
         <div class="position-relative col-lg-3 col-md-4  col-sm-6 mb-4">
           <div class="card border  ">
             <a href="#">
-              <img src="img/Pc/Oficina/5.png" class="card-img-top main-image" alt="">
+              <img src="img/Pc/Componentes/Ram/PC/4.png" class="card-img-top main-image" alt="">
             </a>
-            <div class="card-body">
-              <h6 class="fw-bold">ASUS:</h6>
-               <p  class=" productDesc">PC de Escritorio Asus ExpertCenter D7 SFF, i7-12700, RAM 8GB , SSD 512GB, W11 Pro</p>
+            <div class="card-body" style="height: 295px;">
+              <h6 class="fw-bold">CORSAIR:</h6>
+              <div class="position-relative" style="height: 86.1px;">
+                <p  class=" productDesc">Memoria Ram DDR4 16GB (2x8GB), 3200MHZ, Corsair Dominator Platinum, RGB, DIMM</p>
+              </div>
               <div class="priceContainer d-flex position-absolute dsctoTarget">
-                <span class="dscto"></span> <span class="old-price oldPrice"></span>
+                <span class="dscto">41% DCTO.</span> <span class="old-price oldPrice">$109.990</span>
               </div>
               <div class="position-relative pt-4">
-                <p class="price fs-5">$1.097.860</p>
+                <p class="price fs-5">$64.990</p>
                 <p class="metod">Transferencia</p>
-                <p class="price fs-5">$1.147.264</p>
+                <p class="price fs-5">$67.920</p>
                 <p class="metod">Otro medio de pago</p>
               </div>
             </div>
@@ -486,18 +551,20 @@
         <div class="position-relative col-lg-3 col-md-4  col-sm-6 mb-4">
             <div class="card border  ">
                 <a href="#">
-                    <img src="img/Pc/Oficina/9.png" class="card-img-top main-image" alt="">
+                    <img src="img/Pc/Componentes/Ram/PC/5.png" class="card-img-top main-image" alt="">
                 </a>
-                <div class="card-body">
-                    <h6 class="fw-bold">LENOVO:</h6>
-                    <p class=" productDesc">ThinkStation Lenovo P360, i7-12700, 16GB DDR5 RAM</p>
+                <div class="card-body" style="height: 295px;">
+                    <h6 class="fw-bold">KINGSTON:</h6>
+                    <div class="position-relative" style="height: 86.1px;">
+                      <p class=" productDesc">Memoria Ram DDR4 16GB 3200MHz Kingston FURY Beast, DIMM, CL16, 1.35V</p>
+                    </div>
                     <div class="priceContainer d-flex position-absolute dsctoTarget">
-                        <span class="dscto">17% DCTO.</span> <span class="old-price oldPrice">2.989.750</span>
+                        <span class="dscto"></span> <span class="old-price oldPrice"></span>
                     </div>
                     <div class="position-relative pt-4">
-                        <p class="price fs-5">$2.472.820</p>
+                        <p class="price fs-5">$42.990</p>
                         <p class="metod">Transferencia</p>
-                        <p class="price fs-5">$2.584.100</p>
+                        <p class="price fs-5">$44.930</p>
                         <p class="metod">Otro medio de pago</p>
                     </div>
                 </div>
@@ -507,18 +574,20 @@
         <div class="position-relative col-lg-3 col-md-4  col-sm-6 mb-4">
           <div class="card border  ">
             <a href="#">
-              <img src="img/Pc/Oficina/4.png" class="card-img-top main-image" alt="">
+              <img src="img/Pc/Componentes/Ram/PC/6.png" class="card-img-top main-image" alt="">
             </a>
-            <div class="card-body">
-              <h6 class="fw-bold">MSI:</h6>
-               <p  class=" productDesc">Mini PC MSI Cubi 5 12M, i5-1235U, 2xDDR4, 1x2.5" HDD/SSD, WiFi 6E, BT 5.2, Thunderbolt Type-C</p>
-              <div class="priceContainer d-flex position-absolute dsctoTarget">
+            <div class="card-body" style="height: 295px;">
+              <h6 class="fw-bold">ZADAK:</h6>
+              <div class="position-relative" style="height: 86.1px;">
+               <p  class=" productDesc">Memoria Ram DDR4 16GB 3200MT/s ZADAK TWIST, CL16, DIMM, Intel XMP 2.0</p>
+              </div>
+               <div class="priceContainer d-flex position-absolute dsctoTarget">
                 <span class="dscto"></span> <span class="old-price oldPrice"></span>
               </div>
               <div class="position-relative pt-4">
-                <p class="price fs-5">$565.140</p>
+                <p class="price fs-5">$35.990</p>
                 <p class="metod">Transferencia</p>
-                <p class="price fs-5">$590.580</p>
+                <p class="price fs-5">$37.610</p>
                 <p class="metod">Otro medio de pago</p>
               </div>
             </div>
@@ -528,18 +597,20 @@
         <div class="position-relative col-lg-3 col-md-4  col-sm-6 col-xs-6 mb-4">
           <div class="card border  ">
             <a href="#">
-              <img src="img/Pc/Oficina/3.png" class="card-img-top main-image" alt="">
+              <img src="img/Pc/Componentes/Ram/PC/7.png" class="card-img-top main-image" alt="">
             </a>
-            <div class="card-body">
-              <h6 class="fw-bold">DELL:</h6>
-               <p  class=" productDesc">Desktop Dell Optiplex 7019 MFF, Intel Core i5-13500T, Ram 8GB, SSD 512GB, W11Pro</p>
-              <div class="priceContainer d-flex position-absolute dsctoTarget">
-                <span class="dscto">15% DCTO.</span> <span class="old-price oldPrice">886.990</span>
+            <div class="card-body" style="height: 295px;">
+              <h6 class="fw-bold">CORSAIR:</h6>
+              <div class="position-relative" style="height: 86.1px;">
+               <p  class=" productDesc">Memoria Ram DDR4 16GB 3200MHz Corsair Vengeance RGB RS, DIMM, PC4-25600, 1.35V</p>
+              </div>
+               <div class="priceContainer d-flex position-absolute dsctoTarget">
+                <span class="dscto">35% DCTO.</span> <span class="old-price oldPrice">$64.990</span>
               </div>
               <div class="position-relative pt-4">
-                <p class="price fs-5">$749.990</p>
+                <p class="price fs-5">$41.990</p>
                 <p class="metod">Transferencia</p>
-                <p class="price fs-5">$783.740</p>
+                <p class="price fs-5">$43.740</p>
                 <p class="metod">Otro medio de pago</p>
               </div>
             </div>
@@ -549,18 +620,20 @@
         <div class="position-relative col-lg-3 col-md-4  col-sm-6 col-xs-6 mb-4">
           <div class="card border  ">
             <a href="#">
-              <img src="img/Pc/Oficina/3.png" class="card-img-top main-image" alt="">
+              <img src="img/Pc/Componentes/Ram/PC/8.png" class="card-img-top main-image" alt="">
             </a>
-            <div class="card-body">
-              <h6 class="fw-bold">DELL:</h6>
-               <p  class=" productDesc">Dell OptiPlex - Ultra small form factor - Intel Core i5 I5-12500T / 2.05 GHz - DDR4 SDRAM - 512 GB H</p>
-              <div class="priceContainer d-flex position-absolute dsctoTarget">
-                <span class="dscto">15% DCTO.</span> <span class="old-price oldPrice">$871.460</span>
+            <div class="card-body" style="height: 295px;">
+              <h6 class="fw-bold">G.SKILL:</h6>
+              <div class="position-relative" style="height: 86.1px;">
+               <p  class=" productDesc">Memoria Ram DDR4 32GB (2x16) 3600MHz G.Skill Trident Z RGB DIMM, CL18-22-22-42, 1.35V, Black</p>
+              </div>
+               <div class="priceContainer d-flex position-absolute dsctoTarget">
+                <span class="dscto">9% DCTO.</span> <span class="old-price oldPrice">$149.990</span>
               </div>
               <div class="position-relative pt-4">
-                <p class="price fs-5">$744.830</p>
+                <p class="price fs-5">$136.990</p>
                 <p class="metod ">Transferencia</p>
-                <p class="price fs-5">$778.358</p>
+                <p class="price fs-5">$143.160</p>
                 <p class="metod ">Otro medio de pago</p>
               </div>
             </div>
@@ -570,18 +643,20 @@
         <div class="position-relative col-lg-3 col-md-4  col-sm-6 col-xs-6 mb-4">
           <div class="card border  ">
             <a href="#">
-              <img src="img/Pc/Oficina/2.png" class="card-img-top main-image" alt="">
+              <img src="img/Pc/Componentes/Ram/PC/9.png" class="card-img-top main-image" alt="">
             </a>
-            <div class="card-body">
-              <h6 class="fw-bold">ASUS:</h6>
-               <p  class=" productDesc">ASUS ExpertCenter D5 SFF, i5-12400, RAM 8GB, SSD 512GB, W10 Pro</p>
-              <div class="priceContainer d-flex position-absolute dsctoTarget">
-                <span class="dscto">5% DCTO.</span> <span class="old-price oldPrice">$802.570</span>
+            <div class="card-body" style="height: 295px;">
+              <h6 class="fw-bold">KINGSTON:</h6>
+              <div class="position-relative" style="height: 86.1px;">
+               <p  class=" productDesc">Memoria Ram DDR4 8GB 2666MHz Kingston FURY Beast Black DIMM, Non-ECC, CL16, 1.2V</p>
+              </div>
+               <div class="priceContainer d-flex position-absolute dsctoTarget">
+                <span class="dscto">53% DCTO.</span> <span class="old-price oldPrice">$48.570</span>
               </div>
               <div class="position-relative pt-4">
-                <p class="price fs-5">$766-210</p>
+                <p class="price fs-5">$22.990</p>
                 <p class="metod">Transferencia</p>
-                <p class="price fs-5">$800.697</p>
+                <p class="price fs-5">$24.025</p>
                 <p class="metod">Otro medio de pago</p>
               </div>
             </div>
@@ -591,18 +666,20 @@
         <div class="position-relative col-lg-3 col-md-4  col-sm-6 col-xs-6 mb-4">
           <div class="card border  ">
             <a href="#">
-              <img src="img/Pc/Oficina/2.png" class="card-img-top main-image" alt="">
+              <img src="img/Pc/Componentes/Ram/PC/10.png" class="card-img-top main-image" alt="">
             </a>
-            <div class="card-body">
-              <h6 class="fw-bold">ASUS:</h6>
-               <p  class=" productDesc">ASUS - Desktop - Intel Core i3 I3-12100 - 256 GB Hard Drive Capacity</p>
-              <div class="priceContainer d-flex position-absolute dsctoTarget">
-                <span class="dscto">15% DCTO.</span> <span class="old-price oldPrice">$830.600</span>
+            <div class="card-body" style="height: 295px;">
+              <h6 class="fw-bold">KINGSTON:</h6>
+              <div class="position-relative" style="height: 86.1px;">
+               <p  class=" productDesc">Memoria Ram DDR4 8GB 2666MHz Kingston FURY Beast RGB DIMM, Non-ECC, CL16, 1.2V</p>
+              </div>
+               <div class="priceContainer d-flex position-absolute dsctoTarget">
+                <span class="dscto">52% DCTO.</span> <span class="old-price oldPrice">$59.990</span>
               </div>
               <div class="position-relative pt-4">
-                <p class="price fs-5">$709.910</p>
+                <p class="price fs-5">$28.990</p>
                 <p class="metod">Transferencia</p>
-                <p class="price fs-5">$741.863</p>
+                <p class="price fs-5">$30.300</p>
                 <p class="metod">Otro medio de pago</p>
               </div>
             </div>
@@ -612,18 +689,324 @@
         <div class="position-relative col-lg-3 col-md-4  col-sm-6 col-xs-6 mb-4">
           <div class="card border  ">
             <a href="#">
-              <img src="img/Pc/Oficina/1.png" class="card-img-top main-image" alt="">
+              <img src="img/Pc/Componentes/Ram/PC/9.png" class="card-img-top main-image" alt="">
             </a>
-            <div class="card-body">
-              <h6 class="fw-bold">ASUS:</h6>
-               <p  class="productDesc">Desktop Asus ExpertCenter D5, i3-10105, Ram 4GB, SSD 256GB, FreeDOS</p>
-              <div class="priceContainer d-flex position-absolute dsctoTarget">
-                <span class="dscto">15% DCTO.</span> <span class="old-price oldPrice">$461.440</span>
+            <div class="card-body" style="height: 295px;">
+              <h6 class="fw-bold">KINGSTON:</h6>
+              <div class="position-relative" style="height: 86.1px;">
+               <p  class="productDesc">Memoria Ram DDR4 8GB 3200MHz Kingston FURY Beast, UDIMM, CL16, 1.35V</p>
+              </div>
+               <div class="priceContainer d-flex position-absolute dsctoTarget">
+                <span class="dscto">53% DCTO.</span> <span class="old-price oldPrice">$49.990</span>
               </div>
               <div class="position-relative pt-4">
-                <p class="price fs-5">$394.430</p>
+                <p class="price fs-5">$23.490</p>
                 <p class="metod">Transferencia</p>
-                <p class="price fs-5">$412.193</p>
+                <p class="price fs-5">$24.552</p>
+                <p class="metod">Otro medio de pago</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="position-relative col-lg-3 col-md-4  col-sm-6 col-xs-6 mb-4">
+          <div class="card border  ">
+            <a href="#">
+              <img src="img/Pc/Componentes/Ram/PC/9.png" class="card-img-top main-image" alt="">
+            </a>
+            <div class="card-body" style="height: 295px;">
+              <h6 class="fw-bold">KINGSTON:</h6>
+              <div class="position-relative" style="height: 86.1px;">
+               <p  class="productDesc">Memoria Ram DDR4 8GB 3600MHz Kingston Fury Beast DIMM, CL17, 1.35V</p>
+              </div>
+               <div class="priceContainer d-flex position-absolute dsctoTarget">
+                <span class="dscto">58% DCTO.</span> <span class="old-price oldPrice">$59.990</span>
+              </div>
+              <div class="position-relative pt-4">
+                <p class="price fs-5">$24.990</p>
+                <p class="metod">Transferencia</p>
+                <p class="price fs-5">$26.120</p>
+                <p class="metod">Otro medio de pago</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="position-relative col-lg-3 col-md-4  col-sm-6 col-xs-6 mb-4">
+          <div class="card border  ">
+            <a href="#">
+              <img src="img/Pc/Componentes/Ram/PC/11.png" class="card-img-top main-image" alt="">
+            </a>
+            <div class="card-body" style="height: 295px;" style="height: 295px;">
+              <h6 class="fw-bold">ZADAK:</h6>
+              <div class="position-relative" style="height: 86.1px;">
+              <div class="position-relative" style="height: 86.1px;">
+              </div>
+                <p  class="productDesc">Memoria Ram DDR4 8GB, 3200Mhz, Zadak MOAB, RGB, Dimm</p>
+              </div>
+               <div class="priceContainer d-flex position-absolute dsctoTarget">
+                <span class="dscto"></span> <span class="old-price oldPrice"></span>
+              </div>
+              <div class="position-relative pt-4">
+                <p class="price fs-5">$44.490</p>
+                <p class="metod">Transferencia</p>
+                <p class="price fs-5">$47.010</p>
+                <p class="metod">Otro medio de pago</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="position-relative col-lg-3 col-md-4  col-sm-6 col-xs-6 mb-4">
+          <div class="card border  ">
+            <a href="#">
+              <img src="img/Pc/Componentes/Ram/PC/12.png" class="card-img-top main-image" alt="">
+            </a>
+            <div class="card-body" style="height: 295px;" style="height: 295px;">
+              <h6 class="fw-bold">KINGSTON:</h6>
+              <div class="position-relative" style="height: 86.1px;">
+              <div class="position-relative" style="height: 86.1px;">
+              </div>
+                <p class="productDesc" >Memoria Ram G.Skill Rip Jaws, DDR4, SO-DIMM, 3200MHz, 16GB</p>
+              </div>
+              <div class="priceContainer d-flex position-absolute dsctoTarget">
+                <span class="dscto">43% DCTO.</span> <span class="old-price oldPrice">$59.990</span>
+              </div>
+              <div class="position-relative pt-4">
+                <p class="price fs-5">$33.990</p>
+                <p class="metod">Transferencia</p>
+                <p class="price fs-5">$35.525</p>
+                <p class="metod">Otro medio de pago</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="position-relative col-lg-3 col-md-4  col-sm-6 col-xs-6 mb-4">
+          <div class="card border  ">
+            <a href="#">
+              <img src="img/Pc/Componentes/Ram/PC/13.png" class="card-img-top main-image" alt="">
+            </a>
+            <div class="card-body" style="height: 295px;" style="height: 295px;">
+              <h6 class="fw-bold">G.SKILL:</h6>
+              <div class="position-relative" style="height: 86.1px;">
+               <p  class="productDesc">Memoria Ram DDR4 16GB(2x8GB) 3600MHz G.Skill Trident Z Royal Elite, CL16, 1.2V</p>
+              </div>
+               <div class="priceContainer d-flex position-absolute dsctoTarget">
+                <span class="dscto">47% DCTO.</span> <span class="old-price oldPrice">$224.990</span>
+              </div>
+              <div class="position-relative pt-4">
+                <p class="price fs-5">$119.990</p>
+                <p class="metod">Transferencia</p>
+                <p class="price fs-5">$125.390</p>
+                <p class="metod">Otro medio de pago</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--Notebook-->
+        <div class="position-relative col-lg-3 col-md-4  col-sm-6 col-xs-6 mb-4">
+          <div class="card border  ">
+            <a href="#">
+              <img src="img/Pc/Componentes/Ram/Notebookj/20.png" class="card-img-top main-image" alt="">
+            </a>
+            <div class="card-body" style="height: 295px;" style="height: 295px;">
+              <h6 class="fw-bold">G.SKILL:</h6>
+              <div class="position-relative" style="height: 86.1px;">
+               <p  class="productDesc">Memoria Ram G.Skill Rip Jaws, DDR4, SO-DIMM, 3200MHz, 16GB</p>
+              </div>
+               <div class="priceContainer d-flex position-absolute dsctoTarget">
+                <span class="dscto"></span> <span class="old-price oldPrice"></span>
+              </div>
+              <div class="position-relative pt-4">
+                <p class="price fs-5">$109.990</p>
+                <p class="metod">Transferencia</p>
+                <p class="price fs-5">$119.390</p>
+                <p class="metod">Otro medio de pago</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="position-relative col-lg-3 col-md-4  col-sm-6 col-xs-6 mb-4">
+          <div class="card border  ">
+            <a href="#">
+              <img src="img/Pc/Componentes/Ram/Notebookj/20.png" class="card-img-top main-image" alt="">
+            </a>
+            <div class="card-body" style="height: 295px;" style="height: 295px;">
+              <h6 class="fw-bold">G.SKILL:</h6>
+              <div class="position-relative" style="height: 86.1px;">
+               <p  class="productDesc">Memoria Ram G.Skill Rip Jaws, DDR4, SO-DIMM, 3200MHz, 16GB</p>
+              </div>
+               <div class="priceContainer d-flex position-absolute dsctoTarget">
+                <span class="dscto"></span> <span class="old-price oldPrice"></span>
+              </div>
+              <div class="position-relative pt-4">
+                <p class="price fs-5">$109.990</p>
+                <p class="metod">Transferencia</p>
+                <p class="price fs-5">$119.390</p>
+                <p class="metod">Otro medio de pago</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="position-relative col-lg-3 col-md-4  col-sm-6 col-xs-6 mb-4">
+          <div class="card border  ">
+            <a href="#">
+              <img src="img/Pc/Componentes/Ram/Notebookj/20.png" class="card-img-top main-image" alt="">
+            </a>
+            <div class="card-body" style="height: 295px;" style="height: 295px;">
+              <h6 class="fw-bold">G.SKILL:</h6>
+              <div class="position-relative" style="height: 86.1px;">
+               <p  class="productDesc">Memoria Ram G.Skill Rip Jaws, DDR4, SO-DIMM, 3200MHz, 16GB</p>
+              </div>
+               <div class="priceContainer d-flex position-absolute dsctoTarget">
+                <span class="dscto"></span> <span class="old-price oldPrice"></span>
+              </div>
+              <div class="position-relative pt-4">
+                <p class="price fs-5">$109.990</p>
+                <p class="metod">Transferencia</p>
+                <p class="price fs-5">$119.390</p>
+                <p class="metod">Otro medio de pago</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="position-relative col-lg-3 col-md-4  col-sm-6 col-xs-6 mb-4">
+          <div class="card border  ">
+            <a href="#">
+              <img src="img/Pc/Componentes/Ram/Notebookj/20.png" class="card-img-top main-image" alt="">
+            </a>
+            <div class="card-body" style="height: 295px;" style="height: 295px;">
+              <h6 class="fw-bold">G.SKILL:</h6>
+              <div class="position-relative" style="height: 86.1px;">
+               <p  class="productDesc">Memoria Ram G.Skill Rip Jaws, DDR4, SO-DIMM, 3200MHz, 16GB</p>
+              </div>
+               <div class="priceContainer d-flex position-absolute dsctoTarget">
+                <span class="dscto"></span> <span class="old-price oldPrice"></span>
+              </div>
+              <div class="position-relative pt-4">
+                <p class="price fs-5">$109.990</p>
+                <p class="metod">Transferencia</p>
+                <p class="price fs-5">$119.390</p>
+                <p class="metod">Otro medio de pago</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="position-relative col-lg-3 col-md-4  col-sm-6 col-xs-6 mb-4">
+          <div class="card border  ">
+            <a href="#">
+              <img src="img/Pc/Componentes/Ram/Notebookj/20.png" class="card-img-top main-image" alt="">
+            </a>
+            <div class="card-body" style="height: 295px;" style="height: 295px;">
+              <h6 class="fw-bold">G.SKILL:</h6>
+              <div class="position-relative" style="height: 86.1px;">
+               <p  class="productDesc">Memoria Ram G.Skill Rip Jaws, DDR4, SO-DIMM, 3200MHz, 16GB</p>
+              </div>
+               <div class="priceContainer d-flex position-absolute dsctoTarget">
+                <span class="dscto"></span> <span class="old-price oldPrice"></span>
+              </div>
+              <div class="position-relative pt-4">
+                <p class="price fs-5">$109.990</p>
+                <p class="metod">Transferencia</p>
+                <p class="price fs-5">$119.390</p>
+                <p class="metod">Otro medio de pago</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="position-relative col-lg-3 col-md-4  col-sm-6 col-xs-6 mb-4">
+          <div class="card border  ">
+            <a href="#">
+              <img src="img/Pc/Componentes/Ram/Notebookj/20.png" class="card-img-top main-image" alt="">
+            </a>
+            <div class="card-body" style="height: 295px;" style="height: 295px;">
+              <h6 class="fw-bold">G.SKILL:</h6>
+              <div class="position-relative" style="height: 86.1px;">
+               <p  class="productDesc">Memoria Ram G.Skill Rip Jaws, DDR4, SO-DIMM, 3200MHz, 16GB</p>
+              </div>
+               <div class="priceContainer d-flex position-absolute dsctoTarget">
+                <span class="dscto"></span> <span class="old-price oldPrice"></span>
+              </div>
+              <div class="position-relative pt-4">
+                <p class="price fs-5">$109.990</p>
+                <p class="metod">Transferencia</p>
+                <p class="price fs-5">$119.390</p>
+                <p class="metod">Otro medio de pago</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="position-relative col-lg-3 col-md-4  col-sm-6 col-xs-6 mb-4">
+          <div class="card border  ">
+            <a href="#">
+              <img src="img/Pc/Componentes/Ram/Notebookj/20.png" class="card-img-top main-image" alt="">
+            </a>
+            <div class="card-body" style="height: 295px;">
+              <h6 class="fw-bold">G.SKILL:</h6>
+              <div class="position-relative" style="height: 86.1px;">
+               <p  class="productDesc">Memoria Ram G.Skill Rip Jaws, DDR4, SO-DIMM, 3200MHz, 16GB</p>
+              </div>
+               <div class="priceContainer d-flex position-absolute dsctoTarget">
+                <span class="dscto"></span> <span class="old-price oldPrice"></span>
+              </div>
+              <div class="position-relative pt-4">
+                <p class="price fs-5">$109.990</p>
+                <p class="metod">Transferencia</p>
+                <p class="price fs-5">$119.390</p>
+                <p class="metod">Otro medio de pago</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="position-relative col-lg-3 col-md-4  col-sm-6 col-xs-6 mb-4">
+          <div class="card border  ">
+            <a href="#">
+              <img src="img/Pc/Componentes/Ram/Notebookj/20.png" class="card-img-top main-image" alt="">
+            </a>
+            <div class="card-body" style="height: 295px;">
+              <h6 class="fw-bold">G.SKILL:</h6>
+              <div class="position-relative" style="height: 86.1px;">
+               <p  class="productDesc">Memoria Ram G.Skill Rip Jaws, DDR4, SO-DIMM, 3200MHz, 16GB</p>
+              </div>
+               <div class="priceContainer d-flex position-absolute dsctoTarget">
+                <span class="dscto"></span> <span class="old-price oldPrice"></span>
+              </div>
+              <div class="position-relative pt-4">
+                <p class="price fs-5">$109.990</p>
+                <p class="metod">Transferencia</p>
+                <p class="price fs-5">$119.390</p>
+                <p class="metod">Otro medio de pago</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="position-relative col-lg-3 col-md-4  col-sm-6 col-xs-6 mb-4">
+          <div class="card border  ">
+            <a href="#">
+              <img src="img/Pc/Componentes/Ram/Notebookj/20.png" class="card-img-top main-image" alt="">
+            </a>
+            <div class="card-body" style="height: 295px;" style="height: 285px;">
+              <h6 class="fw-bold">G.SKILL:</h6>
+              <div class="position-relative" style="height: 86.1px;">
+               <p  class="productDesc">Memoria Ram G.Skill Rip Jaws, DDR4, SO-DIMM, 3200MHz, 16GB asdasdsd</p>
+              </div>
+               <div class="priceContainer d-flex position-absolute dsctoTarget">
+                <span class="dscto"></span> <span class="old-price oldPrice"></span>
+              </div>
+              <div class="position-relative pt-4">
+                <p class="price fs-5">$109.990</p>
+                <p class="metod">Transferencia</p>
+                <p class="price fs-5">$119.390</p>
                 <p class="metod">Otro medio de pago</p>
               </div>
             </div>

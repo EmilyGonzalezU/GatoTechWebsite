@@ -116,7 +116,14 @@
                             <ul class="dropdown-menu bg-black text-white">
                                 <li><a class="dropdown-item text-white" href="#">Procesador</a></li>
                                 <li><a class="dropdown-item text-white" href="#">Placa Madre</a></li>
-                                <li><a class="dropdown-item text-white" href="#">Ram</a></li>
+                                <div class="dropdown">
+                                    <li class="sub-menu-ram"><a href="#" class="dropdown-item dropdown-toggle" data-toggle="dropdown">RAM</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#" class="dropdown-item">PC</a></li>
+                                            <li><a href="#" class="dropdown-item">Notebook</a></li>
+                                        </ul>
+                                    </li>
+                                </div>
                                 <li><a class="dropdown-item text-white" href="#">Almacenamiento</a></li>
                                 <li><a class="dropdown-item text-white" href="#">Fuente de Poder</a></li>
                                 <li><a class="dropdown-item text-white" href="#">Tarjeta de Video</a></li>
@@ -142,69 +149,125 @@
     </nav>
 
     <!--NavMenu-->
-    <div class="container-fluid navMenu ">
-        <div class="row">
-            <nav class="navbar navbar-expand-lg mx-auto">
-                <div class="col-2"></div>
-                <div class="col-lg-8">
-                    <div class="container-fluid">
-                        
-                            <ul class="navbar-nav justify-content-between">
-                                <li class="nav-item dropdown pe-2">
-                                <a class="nav-link dropdown-toggle menuList" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    PC
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item " href="pc-gamer.html">PC Gamer</a></li>
-                                    <li><a class="dropdown-item" href="#">PC Escritorio</a></li>
-                                    
-                                </ul>
-                                </li>
-                        
-                                <li class="nav-item dropdown " >
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Notebook
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item " href="#">Notebooks Gamer</a></li>
-                                    <li><a class="dropdown-item" href="#">Notebooks</a></li>
-                                </ul>
-                                </li>
-                        
-                                <li class="nav-item dropdown  ">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Componentes
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item  " href="#">Procesador</a></li>
-                                    <li><a class="dropdown-item  " href="#">Placa Madre</a></li>
-                                    <li><a class="dropdown-item  " href="#">Ram</a></li>
-                                    <li><a class="dropdown-item  " href="#">Almacenamiento</a></li>
-                                    <li><a class="dropdown-item  " href="#">Fuente de Poder</a></li>
-                                    <li><a class="dropdown-item  " href="#">Tarjeta de Video</a></li>
-                                    <li><a class="dropdown-item  " href="#">Gabinetes</a></li>
-                                </ul>
-                                </li>
-                
-                                <li class="nav-item dropdown  ">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Periféricos
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item  " href="#">Audifonos</a></li>
-                                    <li><a class="dropdown-item  " href="#">Monitores</a></li>
-                                    <li><a class="dropdown-item  " href="#">Teclados</a></li>
-                                    <li><a class="dropdown-item  " href="#">Mouse</a></li>
-                                </ul>
-                                </li>
-                            </ul>
-                    </div>
-                </div>
-                <div class="col-2"></div>
-            </nav>
+    <nav class="navbar bg-white navbar-expand-lg bg-body-dark navBarLg" data-bs-theme="white">
+        <div class="container">
+            <div class="collapse navbar-collapse justify-content-center" id="navBarMegaMenu">
+                <ul class="navbar-nav g-5 bg-white ">
+                    <li class="dropdown">
+                        <a href="" class="nav-link px-3 text-black dropdown-toggle mx-2" data-bs-toggle="dropdown" aria-expanded="false">PC</a>
+                        <ul class="dropdown-menu mega-menu dropdown-menu-white border-0">
+                            <div class="row pb-3 pt-3 "> <!-- Añadida la clase justify-content-center -->
+                                <div class="col-4">
+                                    <li>
+                                         <h6 class="dropdown-header  menuTitle" style="color: #E22F89;" style="color: #E22F89;">PC</h6>
+                                    </li>
+                                    <li class="item"><a href="" class="nav-link px-5 text-black"></a>PC Gamer</li>
+                                    <li class="item"><a href="" class="nav-link px-5 text-black"></a>PC Escritorio</li>
+                                </div>
+                            </div>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown  g-5">
+                        <a href="" class="nav-link px-3 text-black dropdown-toggle mx-2" data-bs-toggle="dropdown" aria-expanded="false">Notebook</a>
+                        <ul class="dropdown-menu mega-menu dropdown-menu-white border-0">
+                            <div class="row pb-3 pt-3 "> <!-- Añadida la clase justify-content-center -->
+                                <div class="col-4">
+                                    <li>
+                                         <h6 class="dropdown-header  menuTitle" style="color: #E22F89;" style="color: #E22F89;">Notebooks</h6>
+                                    </li>
+                                    <li class="item"><a href="" class="nav-link px-5 text-black"></a>Notebook Gamer</li>
+                                    <li class="item"><a href="" class="nav-link px-5 text-black"></a>Notebook oficina</li>
+                                </div>
+                            </div>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown  g-5">
+                        <a href="" class="nav-link px-3 text-black dropdown-toggle mx-2" data-bs-toggle="dropdown" aria-expanded="false">Componentes</a>
+                        <ul class="dropdown-menu mega-menu  dropdown-menu-white border-0">
+                            <div class="row pb-3 pt-3"> <!-- Añadida la clase justify-content-center -->
+                                <div class="col-4">
+                                    <li>
+                                         <h6 class="dropdown-header  menuTitle" style="color: #E22F89;" style="color: #E22F89;">Procesador</h6>
+                                    </li>
+                                    <li class="item"><a href="" class="nav-link px-5 text-black"></a>AMD</li>
+                                    <li class="item"><a href="" class="nav-link px-5 text-black"></a>Intel</li>
+                                </div>
+    
+                                <div class="col-lg-4"> <!-- Añadida la clase    -->
+                                    <li>
+                                        <h6 class="dropdown-header" style="color: #E22F89;">Placa Madre</h6>
+                                    </li>
+                                    <li><a href="" class="nav-link px-4 text-black"></a>Placa AMD</li>
+                                    <li><a href="" class="nav-link px-4 text-black"></a>Placa Intel</li>
+                                </div>
+    
+                                <div class="col-lg-4 "> <!-- Añadida la clase    -->
+                                    <li>
+                                        <h6 class="dropdown-header" style="color: #E22F89;">Memorio RAM</h6>
+                                    </li>
+                                    <li><a href="" class="nav-link px-4 text-black"></a>Memoria RAM PC</li>
+                                    <li><a href="" class="nav-link px-4 text-black"></a>Memoria RAM Notebook</li>
+                                </div>
+                                <div class="row pb-3 pt-3"> <!-- Añadida la clase justify-content-center -->
+                                    <div class="col-4">
+                                        <li>
+                                             <h6 class="dropdown-header  menuTitle" style="color: #E22F89;" style="color: #E22F89;">Almacenamiento</h6>
+                                        </li>
+                                        <li class="item"><a href="" class="nav-link px-5 text-black"></a>HDD Disco duro Mecánico</li>
+                                        <li class="item"><a href="" class="nav-link px-5 text-black"></a>SDD Unidad de estado Sólido</li>
+                                    </div> 
+
+                                    <div class="col-4">
+                                        <li>
+                                            <h6 class="dropdown-header " style="color: #E22F89;">Tarjeta de Video</h6>
+                                        </li>
+                                        <li class="item"><a href="" class="nav-link px-5 text-black"></a>Tarjeta de video Nvidia</li>
+                                        <li class="item"><a href="" class="nav-link px-5 text-black"></a>Tarjeta de video AMD</li>
+                                        <li class="item"><a href="" class="nav-link px-5 text-black"></a>Tarjeta de video Intel</li>
+                                    </div> 
+
+                                    <div class="col-4">
+                                        <li>
+                                             <h6 class="dropdown-header  menuTitle" style="color: #E22F89;" style="color: #E22F89;" style="color: #E22F89;">Fuentes de Poder</h6>
+                                        </li>
+                                        <li class="item"><a href="" class="nav-link px-5 text-black"></a>Fuentes de poder</li>
+                                        
+                                    </div> 
+                                </div>
+                            </div>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown  g-5" >
+                        <a href="" class="nav-link px-3 text-black dropdown-toggle mx-2" data-bs-toggle="dropdown" aria-expanded="false">Periféricos</a>
+                        <ul class="dropdown-menu mega-menu dropdown-menu-white border-0">
+                            <div class="row pb-3 pt-3 "> <!-- Añadida la clase justify-content-center -->
+                                <div class="col-4">
+                                    <li>
+                                         <h6 class="dropdown-header  menuTitle" style="color: #E22F89;">Periféricos</h6>
+                                    </li>
+                                    <li class="item"><a href="" class="nav-link px-5 text-black"></a>Audifonos</li>
+                                    <li class="item"><a href="" class="nav-link px-5 text-black"></a>Teclados</li>
+                                    <li class="item"><a href="" class="nav-link px-5 text-black"></a>Mouse</li>
+                                </div>
+
+                                <div class="col-4">
+                                    <li>
+                                         <h6 class="dropdown-header  menuTitle" style="color: #E22F89;">Monitores</h6>
+                                    </li>
+                                    <li class="item"><a href="" class="nav-link px-5 text-black"></a>Monitores Gamer</li>
+                                    <li class="item"><a href="" class="nav-link px-5 text-black"></a>Monitores Oficina</li>
+                                </div>
+                            </div>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
-   
+    </nav>
+    
    
     <!--Carrousel-->
     <div class="containerCarousel">
@@ -702,7 +765,8 @@
                                 <div class="card-body">
                                     <h6 class="fw-bold">AMD:</h6>
                                     
-                                    <p  class="text-truncate">Procesador AMD Ryzen 5 5500, 3.6GHz (4.2GHz Turbo), 6Core/12Thread, Socket AM4</p>  <div class="priceContainer d-flex"> 
+                                    <p  class="text-truncate">Procesador AMD Ryzen 5 5500, 3.6GHz (4.2GHz Turbo), 6Core/12Thread, Socket AM4</p>
+                                    <div class="priceContainer d-flex">
                                         <span class="dscto d-none" > <span class="old-price"></span>
                                     </div>
                                     <p class="price">$130.990</p>
@@ -762,7 +826,7 @@
                                 </a>
                                 <div class="card-body">
                                     <h6 class="fw-bold">Hikvision:</h6>
-                                    <p  class="text-truncate">Disco Estado Sólido SSD Hikvision E3000 512GB, M.2 PCIE NVME</p>   
+                                    <p  class="text-truncate"> Disco Estado Sólido SSD Hikvision E3000 512GB, M.2 PCIE NVME</p>
                                     <div class="priceContainer d-flex"> 
                                         <span class="dscto d-none"> <span class="old-price"></span>
                                     </div>
