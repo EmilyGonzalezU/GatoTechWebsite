@@ -5,6 +5,5 @@ Actualizaciones pendientes:
 Vistas (ig)
 Carrito
 Links
-Mega-menu
 Responsivo menu
 >>>>>>>
