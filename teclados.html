@@ -12,6 +12,7 @@
     <!--CSS-->
     <link rel="stylesheet" href="Styles/style.css">
     <link rel="stylesheet" href="Styles/products.css">
+    <link rel="stylesheet" href="Styles/menu.css">
     <!--Owl carousel CDN-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -193,127 +194,191 @@
     </nav>
 
     <!--NavMenu-->
-    <nav class="navbar bg-white navbar-expand-lg bg-body-dark navBarLg" data-bs-theme="white">
-        <div class="container">
-            <div class="collapse navbar-collapse justify-content-center" id="navBarMegaMenu">
-                <ul class="navbar-nav g-5 bg-white ">
-                    <li class="dropdown">
-                        <a href="" class="nav-link px-3 text-black dropdown-toggle mx-2" data-bs-toggle="dropdown" aria-expanded="false">PC</a>
-                        <ul class="dropdown-menu mega-menu dropdown-menu-white border-0">
-                            <div class="row pb-3 pt-3 "> <!-- Añadida la clase justify-content-center -->
-                                <div class="col-4">
-                                    <li>
-                                         <h6 class="dropdown-header  menuTitle" style="color: #E22F89;" style="color: #E22F89;">PC</h6>
-                                    </li>
-                                    <li class="item"><a href="" class="nav-link px-5 text-black"></a>PC Gamer</li>
-                                    <li class="item"><a href="" class="nav-link px-5 text-black"></a>PC Escritorio</li>
-                                </div>
-                            </div>
-                        </ul>
-                    </li>
+    <div id="nav-especifico">
+      <header class="navMenu">
+          <nav class="navbar navbar-expand-lg">
+              <div class="container">
+                  <div class="collapse navbar-collapse" id="navbar-content">
+                      <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                          <li class="nav-item dropdown dropdown-mega position-static">
+                              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
+                                  data-bs-auto-close="outside">Computación</a>
+                              <div class="dropdown-menu shadow">
+                                  <div class="mega-content px-md-4">
+                                      <div class="container-fluid">
+                                          <div class="row">
+                                              <div class="col-2"></div>
+                                              <div class="col-lg-2 col-sm-6 py-4 px-xl-5 px-4">
+                                                  <h5>Pc</h5>
+                                                  <div class="list-group">
+                                                      <a class="list-group-item" href="#">Pc Gamer</a>
+                                                      <a class="list-group-item" href="#">Pc Oficina</a>
+                                                      <a class="list-group-item text-info" href="#">Ver Todos</a>
+                                                  </div>
+                                              </div>
+                                              <div class="col-lg-2 col-sm-6 py-4 px-xl-5 px-4">
+                                                  <h5>Notebook</h5>
+                                                  <div class="list-group">
+                                                      <a class="list-group-item" href="#">Notebook Gamer</a>
+                                                      <a class="list-group-item" href="#">Notebook Oficina</a>
+                                                      <a class="list-group-item text-info" href="#">Ver Todos</a>
+                                                  </div>
+                                              </div>
+                                              <div class="col-lg-2 col-sm-6 py-4 px-xl-5 px-4">
+                                                  <h5>Periféricos</h5>
+                                                  <div class="list-group">
+                                                      <a class="list-group-item" href="#">Teclados</a>
+                                                      <a class="list-group-item" href="#">Audifonos</a>
+                                                      <a class="list-group-item" href="#">Mouse</a>
+                                                      <a class="list-group-item text-info" href="#">Ver Todos</a>
+                                                  </div>
+                                              </div>
+                                              <div class="col-lg-2 col-sm-6 py-4 px-xl-5 px-4">
+                                                  <h5>Monitores</h5>
+                                                  <div class="list-group">
+                                                      <a class="list-group-item" href="#">Monitor Gamer</a>
+                                                      <a class="list-group-item" href="#">Monitor Oficina</a>
+                                                      <a class="list-group-item text-info" href="#">Ver Todos</a>
+                                                  </div>
+                                              </div>
+                                              <div class="col-2"></div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </li>
+  
+                          <li class="nav-item dropdown dropdown-mega position-static">
+                              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
+                                  data-bs-auto-close="outside">Componentes</a>
+                              <div class="dropdown-menu shadow">
+                                  <div class="mega-content px-md-4">
+                                      <div class="container-fluid">
+                                          <div class="row">
+                                              <div class="col-2"></div>
+                                              <div class="col-lg-2 col-xl-2  col-sm-6 py-4 px-xl-5 px-4">
+                                                  <h5>Procesador</h5>
+                                                  <div class="list-group">
+                                                      <a class="list-group-item" href="#">AMD</a>
+                                                      <a class="list-group-item" href="#">Intel</a>
+                                                      <a class="list-group-item text-info" href="#">Ver Todos</a>
+                                                  </div>
+                                              </div>
+                                              <div class="col-lg-2 col-xl-2 col-sm-6 py-4 px-xl-5 px-4">
+                                                  <h5>Placa Madre</h5>
+                                                  <div class="list-group">
+                                                      <a class="list-group-item" href="#">Placa madre AMD</a>
+                                                      <a class="list-group-item" href="#">Placa madre Intel</a>
+                                                      <a class="list-group-item text-info" href="#">Ver Todos</a>
+                                                  </div>
+                                              </div>
+                                              <div class="col-lg-2  col-xl-2 col-sm-6 py-4 px-xl-5 px-4">
+                                                  <h5>Memoria RAM</h5>
+                                                  <div class="list-group">
+                                                      <a class="list-group-item" href="#">Memoria RAM PC</a>
+                                                      <a class="list-group-item" href="#">Memoria RAM Notebook</a>
+                                                      <a class="list-group-item text-info" href="#">Ver Todos</a>
+                                                  </div>
+                                              </div>
+                                              <div class="col-lg-2  col-xl-2  col-sm-6 py-4 px-xl-5 px-4">
+                                                  <h5>Almacenamiento</h5>
+                                                  <div class="list-group">
+                                                      <a class="list-group-item" href="#">Almacenamiento HDD</a>
+                                                      <a class="list-group-item" href="#">Almacenamiento SDD </a>
+                                                      <a class="list-group-item text-info" href="#">Ver Todos</a>
+                                                  </div>
+                                              </div>
+                                              <div class="col-2"></div>
+                                          </div>
+                                          <div class="row">
+                                              <div class="col-2"></div>
+                                              <div class="col-lg-2 col-xl-2  col-sm-6 py-4 px-xl-5 px-4">
+                                                  <h5>Tarjeta de Video</h5>
+                                                  <div class="list-group">
+                                                      <a class="list-group-item" href="#">Tarjeta de Video NVIDIA</a>
+                                                      <a class="list-group-item" href="#">Tarjeta de Video AMD</a>
+                                                      <a class="list-group-item" href="#">Tarjeta de Video Intel</a>
+                                                      <a class="list-group-item text-info" href="#">Ver Todos</a>
+                                                  </div>
+                                              </div>
+                                              <div class="col-lg-2 col-xl-2 col-sm-6 py-4 px-xl-5 px-4">
+                                                  <h5>Fuente de Poder</h5>
+                                                  <div class="list-group">
+                                                      <a class="list-group-item" href="#">Fuentes de Poder</a>
+                                                      <a class="list-group-item text-info" href="#">Ver Todos</a>
+                                                  </div>
+                                              </div>
+                                              <div class="col-lg-2  col-xl-2 col-sm-6 py-4 px-xl-5 px-4">
+                                                  <h5>Gabinete</h5>
+                                                  <div class="list-group">
+                                                      <a class="list-group-item" href="#">Gabinetes Gamer</a>
+                                                      <a class="list-group-item" href="#">Gabinetes Oficina</a>
+                                                      <a class="list-group-item text-info" href="#">Ver Todos</a>
+                                                  </div>
+                                              </div>
+                                              <div class="col-2"></div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </li>
+                          <li class="nav-item dropdown dropdown-mega position-static">
+                              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
+                                  data-bs-auto-close="outside">Periféricos</a>
+                              <div class="dropdown-menu shadow">
+                                  <div class="mega-content px-md-4">
+                                      <div class="container-fluid">
+                                          <div class="row">
+                                              <div class="col-2"></div>
+                                              <div class="col-lg-2 col-sm-6 py-4 px-xl-5 px-4">
+                                                  <h5>Audifonos</h5>
+                                                  <div class="list-group">
+                                                      <a class="list-group-item" href="#">True wireless (TWS)</a>
+                                                      <a class="list-group-item" href="#">Headsets</a>
+                                                      <a class="list-group-item" href="#">Deportivos</a>
+                                                      <a class="list-group-item text-info" href="#">Ver Todos</a>
+                                                  </div>
+                                              </div>
+                                              <div class="col-lg-2 col-sm-6 py-4 px-xl-5 px-4">
+                                                  <h5>Teclados</h5>
+                                                  <div class="list-group">
+                                                      <a class="list-group-item" href="#">Mecánicos</a>
+                                                      <a class="list-group-item" href="#">Membrana</a>
+                                                      <a class="list-group-item" href="#">Inalambricos</a>
+                                                      <a class="list-group-item text-info" href="#">Ver Todos</a>
+                                                  </div>
+                                              </div>
+                                              <div class="col-lg-2 col-sm-6 py-4 px-xl-5 px-4">
+                                                  <h5>Mouse</h5>
+                                                  <div class="list-group">
+                                                      <a class="list-group-item" href="#">Ópticos</a>
+                                                      <a class="list-group-item" href="#">Láser</a>
+                                                      <a class="list-group-item" href="#">Inalámbricos</a>
+                                                      <a class="list-group-item text-info" href="#">Ver Todos</a>
+                                                  </div>
+                                              </div>
+                                              <div class="col-lg-2 col-sm-6 py-4 px-xl-5 px-4">
+                                                  <h5>Monitores</h5>
+                                                  <div class="list-group">
+                                                      <a class="list-group-item" href="#">De 144Hz o más</a>
+                                                      <a class="list-group-item" href="#">Con FreeSync</a>
+                                                      <a class="list-group-item" href="#">Con G-Sync</a>
+                                                      <a class="list-group-item text-info" href="#">Ver Todos</a>
+                                                  </div>
+                                              </div>
+                                              <div class="col-2"></div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+          </nav>
+      </header>
+  </div>
 
-                    <li class="dropdown  g-5">
-                        <a href="" class="nav-link px-3 text-black dropdown-toggle mx-2" data-bs-toggle="dropdown" aria-expanded="false">Notebook</a>
-                        <ul class="dropdown-menu mega-menu dropdown-menu-white border-0">
-                            <div class="row pb-3 pt-3 "> <!-- Añadida la clase justify-content-center -->
-                                <div class="col-4">
-                                    <li>
-                                         <h6 class="dropdown-header  menuTitle" style="color: #E22F89;" style="color: #E22F89;">Notebooks</h6>
-                                    </li>
-                                    <li class="item"><a href="" class="nav-link px-5 text-black"></a>Notebook Gamer</li>
-                                    <li class="item"><a href="" class="nav-link px-5 text-black"></a>Notebook oficina</li>
-                                </div>
-                            </div>
-                        </ul>
-                    </li>
-
-                    <li class="dropdown  g-5">
-                        <a href="" class="nav-link px-3 text-black dropdown-toggle mx-2" data-bs-toggle="dropdown" aria-expanded="false">Componentes</a>
-                        <ul class="dropdown-menu mega-menu  dropdown-menu-white border-0">
-                            <div class="row pb-3 pt-3"> <!-- Añadida la clase justify-content-center -->
-                                <div class="col-4">
-                                    <li>
-                                         <h6 class="dropdown-header  menuTitle" style="color: #E22F89;" style="color: #E22F89;">Procesador</h6>
-                                    </li>
-                                    <li class="item"><a href="" class="nav-link px-5 text-black"></a>AMD</li>
-                                    <li class="item"><a href="" class="nav-link px-5 text-black"></a>Intel</li>
-                                </div>
-    
-                                <div class="col-lg-4"> <!-- Añadida la clase    -->
-                                    <li>
-                                        <h6 class="dropdown-header" style="color: #E22F89;">Placa Madre</h6>
-                                    </li>
-                                    <li><a href="" class="nav-link px-4 text-black"></a>Placa AMD</li>
-                                    <li><a href="" class="nav-link px-4 text-black"></a>Placa Intel</li>
-                                </div>
-    
-                                <div class="col-lg-4 "> <!-- Añadida la clase    -->
-                                    <li>
-                                        <h6 class="dropdown-header" style="color: #E22F89;">Memorio RAM</h6>
-                                    </li>
-                                    <li><a href="" class="nav-link px-4 text-black"></a>Memoria RAM PC</li>
-                                    <li><a href="" class="nav-link px-4 text-black"></a>Memoria RAM Notebook</li>
-                                </div>
-                                <div class="row pb-3 pt-3"> <!-- Añadida la clase justify-content-center -->
-                                    <div class="col-4">
-                                        <li>
-                                             <h6 class="dropdown-header  menuTitle" style="color: #E22F89;" style="color: #E22F89;">Almacenamiento</h6>
-                                        </li>
-                                        <li class="item"><a href="" class="nav-link px-5 text-black"></a>HDD Disco duro Mecánico</li>
-                                        <li class="item"><a href="" class="nav-link px-5 text-black"></a>SDD Unidad de estado Sólido</li>
-                                    </div> 
-
-                                    <div class="col-4">
-                                        <li>
-                                            <h6 class="dropdown-header " style="color: #E22F89;">Tarjeta de Video</h6>
-                                        </li>
-                                        <li class="item"><a href="" class="nav-link px-5 text-black"></a>Tarjeta de video Nvidia</li>
-                                        <li class="item"><a href="" class="nav-link px-5 text-black"></a>Tarjeta de video AMD</li>
-                                        <li class="item"><a href="" class="nav-link px-5 text-black"></a>Tarjeta de video Intel</li>
-                                    </div> 
-
-                                    <div class="col-4">
-                                        <li>
-                                             <h6 class="dropdown-header  menuTitle" style="color: #E22F89;" style="color: #E22F89;" style="color: #E22F89;">Fuentes de Poder</h6>
-                                        </li>
-                                        <li class="item"><a href="" class="nav-link px-5 text-black"></a>Fuentes de poder</li>
-                                        <li>
-                                          <h6 class="dropdown-header  menuTitle" style="color: #E22F89;" style="color: #E22F89;" style="color: #E22F89;">Gabinetes</h6>
-                                        </li>
-                                        <li class="item"><a href="" class="nav-link px-5 text-black"></a>Fuentes de poder</li>
-                                    </div> 
-                                </div>
-                            </div>
-                        </ul>
-                    </li>
-
-                    <li class="dropdown  g-5" >
-                        <a href="" class="nav-link px-3 text-black dropdown-toggle mx-2" data-bs-toggle="dropdown" aria-expanded="false">Periféricos</a>
-                        <ul class="dropdown-menu mega-menu dropdown-menu-white border-0">
-                            <div class="row pb-3 pt-3 "> <!-- Añadida la clase justify-content-center -->
-                                <div class="col-4">
-                                    <li>
-                                         <h6 class="dropdown-header  menuTitle" style="color: #E22F89;">Periféricos</h6>
-                                    </li>
-                                    <li class="item"><a href="" class="nav-link px-5 text-black"></a>Audifonos</li>
-                                    <li class="item"><a href="" class="nav-link px-5 text-black"></a>Teclados</li>
-                                    <li class="item"><a href="" class="nav-link px-5 text-black"></a>Mouse</li>
-                                </div>
-
-                                <div class="col-4">
-                                    <li>
-                                         <h6 class="dropdown-header  menuTitle" style="color: #E22F89;">Monitores</h6>
-                                    </li>
-                                    <li class="item"><a href="" class="nav-link px-5 text-black"></a>Monitores Gamer</li>
-                                    <li class="item"><a href="" class="nav-link px-5 text-black"></a>Monitores Oficina</li>
-                                </div>
-                            </div>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
   <!--Distribution-->
   <div class="container-fluid  d-none d-md-none d-sm-none d-xs-none d-lg-block text-start"
   style="font-size: 15px; padding-left: 75px;">
