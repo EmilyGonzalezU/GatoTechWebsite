@@ -4,7 +4,5 @@ Gato Tech es una empresa dedicada a la venta de productos tecnologicos, tales co
 Actualizaciones pendientes:
 Vistas (ig)
 Carrito
-Links
-Mega-menu
 Responsivo menu
 >>>>>>>
