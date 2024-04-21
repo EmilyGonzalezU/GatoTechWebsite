@@ -1,133 +1,85 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
-    <link rel="stylesheet" href="Styles/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modal de Inicio de Sesión</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Estilos personalizados -->
+  <style>
+    /* Estilos adicionales */
+  </style>
 </head>
-<body class="">
-    <nav class="navbar bg-white navbar-expand-lg bg-body-dark navBarLg" data-bs-theme="white">
-        <div class="container">
-            <div class="collapse navbar-collapse justify-content-center" id="navBarMegaMenu">
-                <ul class="navbar-nav g-5 bg-white ">
-                    <li class="dropdown">
-                        <a href="" class="nav-link px-3 text-black dropdown-toggle mx-2" data-bs-toggle="dropdown" aria-expanded="false">PC</a>
-                        <ul class="dropdown-menu mega-menu dropdown-menu-white border-0">
-                            <div class="row pb-3 pt-3 "> <!-- Añadida la clase justify-content-center -->
-                                <div class="col-4">
-                                    <li>
-                                         <h6 class="dropdown-header  menuTitle" style="color: #E22F89;" style="color: #E22F89;">PC</h6>
-                                    </li>
-                                    <li class="item"><a href="" class="nav-link px-5 text-black"></a>PC Gamer</li>
-                                    <li class="item"><a href="" class="nav-link px-5 text-black"></a>PC Escritorio</li>
-                                </div>
-                            </div>
-                        </ul>
-                    </li>
+<body>
 
-                    <li class="dropdown  g-5">
-                        <a href="" class="nav-link px-3 text-black dropdown-toggle mx-2" data-bs-toggle="dropdown" aria-expanded="false">Notebook</a>
-                        <ul class="dropdown-menu mega-menu dropdown-menu-white border-0">
-                            <div class="row pb-3 pt-3 "> <!-- Añadida la clase justify-content-center -->
-                                <div class="col-4">
-                                    <li>
-                                         <h6 class="dropdown-header  menuTitle" style="color: #E22F89;" style="color: #E22F89;">Notebooks</h6>
-                                    </li>
-                                    <li class="item"><a href="" class="nav-link px-5 text-black"></a>Notebook Gamer</li>
-                                    <li class="item"><a href="" class="nav-link px-5 text-black"></a>Notebook oficina</li>
-                                </div>
-                            </div>
-                        </ul>
-                    </li>
+<!-- Botón para abrir el modal -->
+<button type="button" class="btn btn-primary" id="openModalBtn">Iniciar Sesión</button>
 
-                    <li class="dropdown  g-5">
-                        <a href="" class="nav-link px-3 text-black dropdown-toggle mx-2" data-bs-toggle="dropdown" aria-expanded="false">Componentes</a>
-                        <ul class="dropdown-menu mega-menu  dropdown-menu-white border-0">
-                            <div class="row pb-3 pt-3"> <!-- Añadida la clase justify-content-center -->
-                                <div class="col-4">
-                                    <li>
-                                         <h6 class="dropdown-header  menuTitle" style="color: #E22F89;" style="color: #E22F89;">Procesador</h6>
-                                    </li>
-                                    <li class="item"><a href="" class="nav-link px-5 text-black"></a>AMD</li>
-                                    <li class="item"><a href="" class="nav-link px-5 text-black"></a>Intel</li>
-                                </div>
-    
-                                <div class="col-lg-4"> <!-- Añadida la clase    -->
-                                    <li>
-                                        <h6 class="dropdown-header" style="color: #E22F89;">Placa Madre</h6>
-                                    </li>
-                                    <li><a href="" class="nav-link px-4 text-black"></a>Placa AMD</li>
-                                    <li><a href="" class="nav-link px-4 text-black"></a>Placa Intel</li>
-                                </div>
-    
-                                <div class="col-lg-4 "> <!-- Añadida la clase    -->
-                                    <li>
-                                        <h6 class="dropdown-header" style="color: #E22F89;">Memorio RAM</h6>
-                                    </li>
-                                    <li><a href="" class="nav-link px-4 text-black"></a>Memoria RAM PC</li>
-                                    <li><a href="" class="nav-link px-4 text-black"></a>Memoria RAM Notebook</li>
-                                </div>
-                                <div class="row pb-3 pt-3"> <!-- Añadida la clase justify-content-center -->
-                                    <div class="col-4">
-                                        <li>
-                                             <h6 class="dropdown-header  menuTitle" style="color: #E22F89;" style="color: #E22F89;">Almacenamiento</h6>
-                                        </li>
-                                        <li class="item"><a href="" class="nav-link px-5 text-black"></a>HDD Disco duro Mecánico</li>
-                                        <li class="item"><a href="" class="nav-link px-5 text-black"></a>SDD Unidad de estado Sólido</li>
-                                    </div> 
-
-                                    <div class="col-4">
-                                        <li>
-                                            <h6 class="dropdown-header " style="color: #E22F89;">Tarjeta de Video</h6>
-                                        </li>
-                                        <li class="item"><a href="" class="nav-link px-5 text-black"></a>Tarjeta de video Nvidia</li>
-                                        <li class="item"><a href="" class="nav-link px-5 text-black"></a>Tarjeta de video AMD</li>
-                                        <li class="item"><a href="" class="nav-link px-5 text-black"></a>Tarjeta de video Intel</li>
-                                    </div> 
-
-                                    <div class="col-4">
-                                        <li>
-                                             <h6 class="dropdown-header  menuTitle" style="color: #E22F89;" style="color: #E22F89;" style="color: #E22F89;">Fuentes de Poder</h6>
-                                        </li>
-                                        <li class="item"><a href="" class="nav-link px-5 text-black"></a>Fuentes de poder</li>
-                                        
-                                    </div> 
-                                </div>
-                            </div>
-                        </ul>
-                    </li>
-
-                    <li class="dropdown  g-5" >
-                        <a href="" class="nav-link px-3 text-black dropdown-toggle mx-2" data-bs-toggle="dropdown" aria-expanded="false">Periféricos</a>
-                        <ul class="dropdown-menu mega-menu dropdown-menu-white border-0">
-                            <div class="row pb-3 pt-3 "> <!-- Añadida la clase justify-content-center -->
-                                <div class="col-4">
-                                    <li>
-                                         <h6 class="dropdown-header  menuTitle" style="color: #E22F89;">Periféricos</h6>
-                                    </li>
-                                    <li class="item"><a href="" class="nav-link px-5 text-black"></a>Audifonos</li>
-                                    <li class="item"><a href="" class="nav-link px-5 text-black"></a>Teclados</li>
-                                    <li class="item"><a href="" class="nav-link px-5 text-black"></a>Mouse</li>
-                                </div>
-
-                                <div class="col-4">
-                                    <li>
-                                         <h6 class="dropdown-header  menuTitle" style="color: #E22F89;">Monitores</h6>
-                                    </li>
-                                    <li class="item"><a href="" class="nav-link px-5 text-black"></a>Monitores Gamer</li>
-                                    <li class="item"><a href="" class="nav-link px-5 text-black"></a>Monitores Oficina</li>
-                                </div>
-                            </div>
-                        </ul>
-                    </li>
-                </ul>
+<!-- Modal -->
+<div class="modal fade" id="loginModal" tabindex="-2" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="loginModalLabel">Inicio de sesión</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <!-- Formulario de inicio de sesión -->
+        <form action="procesar.php" method="post">
+            <div class="input-group mt-4 mb-4 mt-5">
+            <div class="input-group-text bg-info">
+                <i class="bi bi-person-fill text-white"></i>
             </div>
-        </div>
-    </nav>
-    
-    
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+            <input class="form-control bg-light" type="email" name="email" placeholder="Ingrese email" required />
+            </div>
+            <div class="input-group mt-1">
+            <div class="input-group-text bg-info">
+                <i class="bi bi-key-fill text-white"></i>
+            </div>
+            <input class="form-control bg-light" type="password" name="password" placeholder="Ingrese contraseña" required />
+            </div>
+            <div class="d-flex justify-content-end mt-1">
+            <div class="pt-1">
+                <a href="#" class="text-decoration-none text-info fw-semibold text-end" style="font-size: 0.9rem">¿Olvidaste la contraseña?</a>
+            </div>
+            </div>
+            <button class="btn btn-info text-white w-100 mt-4 fw-semibold shadow-sm" type="submit">Iniciar sesión</button>
+        </form>
+        <div class="d-flex gap-1 justify-content-center mt-1">
+            <div>¿No tienes cuenta?</div>
+            <a href="registro.html" class="text-decoration-none text-info fw-semibold">Registrarse</a>
+        </div> 
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap JS y jQuery (necesario para los modales) -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<!-- Tu código JavaScript personalizado -->
+<script>
+  // Abre el modal cuando se hace clic en el botón
+  document.getElementById('openModalBtn').addEventListener('click', function() {
+    $('#loginModal').modal('show');
+  });
+
+  // Maneja el envío del formulario de inicio de sesión
+  document.getElementById('loginForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Evita que se envíe el formulario
+
+    // Aquí puedes agregar la lógica para procesar el inicio de sesión
+    // Por ejemplo, podrías enviar los datos del formulario a un servidor con AJAX
+    // y recibir una respuesta para mostrar un mensaje de éxito o error en el modal
+  });
+</script>
+
 </body>
 </html>
