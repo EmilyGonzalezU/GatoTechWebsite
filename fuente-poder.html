@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GatoTech</title>
+  <!--Bootstrap-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <!--Bootstrap-Icons-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <!--CSS-->
+  <link rel="stylesheet" href="Styles/style.css">
+  <link rel="stylesheet" href="Styles/products.css">
+  <!--Owl carousel CDN-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!--MontserratFont-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <!--Icon-->
+  <link rel="icon" href="img/Logos/2.png" type="image/x-icon">
+</head>
+<body>
+  <!--Superior Barr-->
+  <div class="container-fluid text-center">
+    <div class="row align-items-start supBarr">
+      <div class="col-12">
+        <nav>
+          <h6 class="">¡Envio gratis en la primera compra!</h6>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+  <!--NavBarLg-->
+  <div class="container-fluid text-center  navBarLg">
+    <div class="row align-items-start">
+      <nav class="navbar pe-2 ">
+        <div class="col-md-3 mb-3 col-xl-3">
+          <div class="container-fluid d-flex justify-content-center">
+            <a class="navbar-brand" href="#">
+              <img src="img/Logos/GatoTechLogo.png" alt="Logo" class="ms-5 imgLogoLg" id="imgLogo">
+            </a>
+          </div>
+        </div>
+
+        <div class="col-xs-3 col-md-6 col-xl-6">
+          <div class="container-fluid d-flex justify-content-center">
+            <form class="d-flex w-100 p-0">
+              <input class="form-control me-2 m-2" type="search" placeholder="Encuentra lo que necesitas"
+                aria-label="Search">
+              <button class="btn btnSearch border-1" type="submit">
+                <i class="bi bi-search fs-2 iconNav"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <div class="col-md-3 col-xl-3">
+          <div class="container-fluid d-flex justify-content-center align-items-center">
+            <a href="iniciosesion.html"><i class="bi bi-person fs-1 me-3 iconNav ms-2"></i></a>
+            <a href=""><i class="bi bi-cart3  fs-2 iconNav me-2"></i></a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+  <!--NavBar=md -->
+  <nav class="navbar navBarmd bg-black">
+    <div class="container-fluid">
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#menulateral">
+        <span class="navbar-toggler-icon "><i class="bi bi-list text-light fs-1"></i></span>
+      </button>
+      <a href="#" class="navbar-brand"><img src="img/Logos/GatoTechLogo.png" class="imgLogomd" alt=""></a>
+      <div class="d-lg-none">
+        <a href="iniciosesion.html"><i class="bi bi-person fs-1 me-2  ms-1"></i></a>
+        <a href=""><i class="bi bi-cart3 fs-2  me-3"></i></a>
+      </div>
+      <div class="container-fluid justify-content-center d-flex mb-2 mt-2  searchDiv">
+        <form class="d-flex w-100">
+          <input class="form-control mt-3 ms-2 " type="search" placeholder="Encuentra lo que necesitas"
+            aria-label="Search">
+          <button class="btn pt-4 ms-2" type="submit"><i class="bi bi-search fs-5"></i></button>
+        </form>
+      </div>
+      <section class="offcanvas offcanvas-start bg-black p-3" id="menulateral" tabindex="-1 ">
+        <div class="offcanvas-header  align-items-start mt-3" data-bs-theme="none">
+          <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto me-5 text-decoration-none">
+            <img src="img/Logos/GatoTechLogo.png" class="imgLogomd" alt="gatoTechLogo">
+          </a>
+          <button class="btn pt-1 ms-5" type="button" aria-label="close" data-bs-dismiss="offcanvas"><i
+              class="bi bi-x-lg  fs-5 text-white ms-1"></i></button>
+        </div>
+        <hr class="text-white w-60 h-10">
+        <div class="offcanvas-body d-flex flex-column">
+          <ul class="navbar-nav bg-black" style="gap: 10px;">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                PC
+              </a>
+              <ul class="dropdown-menu bg-black text-white">
+                <li><a class="dropdown-item text-white" href="pc-gamer.html">PC Gamer</a></li>
+                <li><a class="dropdown-item text-white" href="#">PC Escritorio</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle  text-white" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">Notebook</a>
+              <ul class="dropdown-menu bg-black text-white">
+                <li><a class="dropdown-item text-white" href="#">Notebook Gamer</a></li>
+                <li><a class="dropdown-item text-white" href="#">Notebook</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle  text-white" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">Componentes</a>
+              <ul class="dropdown-menu bg-black text-white">
+                <li><a class="dropdown-item text-white" href="#">Procesador</a></li>
+                <li><a class="dropdown-item text-white" href="#">Placa Madre</a></li>
+                <li><a class="dropdown-item text-white" href="#">Ram</a></li>
+                <li><a class="dropdown-item text-white" href="#">Almacenamiento</a></li>
+                <li><a class="dropdown-item text-white" href="#">Fuente de Poder</a></li>
+                <li><a class="dropdown-item text-white" href="#">Tarjeta de Video</a></li>
+                <li><a class="dropdown-item text-white" href="#">Gabinetes</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle  text-white" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">Periféricos</a>
+              <ul class="dropdown-menu bg-black text-white">
+                <li><a class="dropdown-item text-white" href="#">Audifonos</a></li>
+                <li><a class="dropdown-item text-white" href="#">Monitores</a></li>
+                <li><a class="dropdown-item text-white" href="#">Teclados</a></li>
+                <li><a class="dropdown-item text-white" href="#">Mouse</a></li>
+              </ul>
+            </li>
+
+          </ul>
+        </div>
+        <hr class="text-white w-60 h-10">
+      </section>
+    </div>
+  </nav>
+
+ <!--NavMenu-->
+ <nav class="navbar bg-white navbar-expand-lg bg-body-dark navBarLg" data-bs-theme="white">
+  <div class="container">
+      <div class="collapse navbar-collapse justify-content-center" id="navBarMegaMenu">
+          <ul class="navbar-nav g-5 bg-white ">
+              <li class="dropdown">
+                  <a href="" class="nav-link px-3 text-black dropdown-toggle mx-2" data-bs-toggle="dropdown" aria-expanded="false">PC</a>
+                  <ul class="dropdown-menu mega-menu dropdown-menu-white border-0">
+                      <div class="row pb-3 pt-3 "> <!-- Añadida la clase justify-content-center -->
+                          <div class="col-4">
+                              <li>
+                                   <h6 class="dropdown-header  menuTitle" style="color: #E22F89;" style="color: #E22F89;">PC</h6>
+                              </li>
+                              <li class="item"><a href="" class="nav-link px-5 text-black"></a>PC Gamer</li>
+                              <li class="item"><a href="" class="nav-link px-5 text-black"></a>PC Escritorio</li>
+                          </div>
+                      </div>
+                  </ul>
+              </li>
+
+              <li class="dropdown  g-5">
+                  <a href="" class="nav-link px-3 text-black dropdown-toggle mx-2" data-bs-toggle="dropdown" aria-expanded="false">Notebook</a>
+                  <ul class="dropdown-menu mega-menu dropdown-menu-white border-0">
+                      <div class="row pb-3 pt-3 "> <!-- Añadida la clase justify-content-center -->
+                          <div class="col-4">
+                              <li>
+                                   <h6 class="dropdown-header  menuTitle" style="color: #E22F89;" style="color: #E22F89;">Notebooks</h6>
+                              </li>
+                              <li class="item"><a href="" class="nav-link px-5 text-black"></a>Notebook Gamer</li>
+                              <li class="item"><a href="" class="nav-link px-5 text-black"></a>Notebook oficina</li>
+                          </div>
+                      </div>
+                  </ul>
+              </li>
+
+              <li class="dropdown  g-5">
+                  <a href="" class="nav-link px-3 text-black dropdown-toggle mx-2" data-bs-toggle="dropdown" aria-expanded="false">Componentes</a>
+                  <ul class="dropdown-menu mega-menu  dropdown-menu-white border-0">
+                      <div class="row pb-3 pt-3"> <!-- Añadida la clase justify-content-center -->
+                          <div class="col-4">
+                              <li>
+                                   <h6 class="dropdown-header  menuTitle" style="color: #E22F89;" style="color: #E22F89;">Procesador</h6>
+                              </li>
+                              <li class="item"><a href="" class="nav-link px-5 text-black"></a>AMD</li>
+                              <li class="item"><a href="" class="nav-link px-5 text-black"></a>Intel</li>
+                          </div>
+
+                          <div class="col-lg-4"> <!-- Añadida la clase    -->
+                              <li>
+                                  <h6 class="dropdown-header" style="color: #E22F89;">Placa Madre</h6>
+                              </li>
+                              <li><a href="" class="nav-link px-4 text-black"></a>Placa AMD</li>
+                              <li><a href="" class="nav-link px-4 text-black"></a>Placa Intel</li>
+                          </div>
+
+                          <div class="col-lg-4 "> <!-- Añadida la clase    -->
+                              <li>
+                                  <h6 class="dropdown-header" style="color: #E22F89;">Memorio RAM</h6>
+                              </li>
+                              <li><a href="" class="nav-link px-4 text-black"></a>Memoria RAM PC</li>
+                              <li><a href="" class="nav-link px-4 text-black"></a>Memoria RAM Notebook</li>
+                          </div>
+                          <div class="row pb-3 pt-3"> <!-- Añadida la clase justify-content-center -->
+                              <div class="col-4">
+                                  <li>
+                                       <h6 class="dropdown-header  menuTitle" style="color: #E22F89;" style="color: #E22F89;">Almacenamiento</h6>
+                                  </li>
+                                  <li class="item"><a href="" class="nav-link px-5 text-black"></a>HDD Disco duro Mecánico</li>
+                                  <li class="item"><a href="" class="nav-link px-5 text-black"></a>SDD Unidad de estado Sólido</li>
+                              </div> 
+
+                              <div class="col-4">
+                                  <li>
+                                      <h6 class="dropdown-header " style="color: #E22F89;">Tarjeta de Video</h6>
+                                  </li>
+                                  <li class="item"><a href="" class="nav-link px-5 text-black"></a>Tarjeta de video Nvidia</li>
+                                  <li class="item"><a href="" class="nav-link px-5 text-black"></a>Tarjeta de video AMD</li>
+                                  <li class="item"><a href="" class="nav-link px-5 text-black"></a>Tarjeta de video Intel</li>
+                              </div> 
+
+                              <div class="col-4">
+                                  <li>
+                                       <h6 class="dropdown-header  menuTitle" style="color: #E22F89;" style="color: #E22F89;" style="color: #E22F89;">Fuentes de Poder</h6>
+                                  </li>
+                                  <li class="item"><a href="" class="nav-link px-5 text-black"></a>Fuentes de poder</li>
+                                  
+                              </div> 
+                          </div>
+                      </div>
+                  </ul>
+              </li>
+
+              <li class="dropdown  g-5" >
+                  <a href="" class="nav-link px-3 text-black dropdown-toggle mx-2" data-bs-toggle="dropdown" aria-expanded="false">Periféricos</a>
+                  <ul class="dropdown-menu mega-menu dropdown-menu-white border-0">
+                      <div class="row pb-3 pt-3 "> <!-- Añadida la clase justify-content-center -->
+                          <div class="col-4">
+                              <li>
+                                   <h6 class="dropdown-header  menuTitle" style="color: #E22F89;">Periféricos</h6>
+                              </li>
+                              <li class="item"><a href="" class="nav-link px-5 text-black"></a>Audifonos</li>
+                              <li class="item"><a href="" class="nav-link px-5 text-black"></a>Teclados</li>
+                              <li class="item"><a href="" class="nav-link px-5 text-black"></a>Mouse</li>
+                          </div>
+
+                          <div class="col-4">
+                              <li>
+                                   <h6 class="dropdown-header  menuTitle" style="color: #E22F89;">Monitores</h6>
+                              </li>
+                              <li class="item"><a href="" class="nav-link px-5 text-black"></a>Monitores Gamer</li>
+                              <li class="item"><a href="" class="nav-link px-5 text-black"></a>Monitores Oficina</li>
+                          </div>
+                      </div>
+                  </ul>
+              </li>
+          </ul>
+      </div>
+  </div>
+</nav>
+
+
+  <!--Distribution-->
+  <div class="container-fluid  d-none d-md-none d-sm-none d-xs-none d-lg-block text-start" style="font-size: 15px; padding-left: 75px;">
+    <div class="row pt-4 pb-4">
+      <div class="col-12">
+        <nav aria-label="breadcrumb" style="--bs-breadcrumb-divider: '>';">
+          <ol class="breadcrumb ">
+            <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
+            <li class="breadcrumb-item"><a href="#">Componentes</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Procesadores</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <div class="row justify-content-center">
+      <div class="filter col-2">
+        <!--Filters-->
+        <div class="container-expand-md border">
+          <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed border" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                  General
+                </button>
+              </h2>
+              <div id="flush-collapseOne" class="accordion-collapse collapse show"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                  <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="amdMarca">
+                    <label class="form-check-label" for="amdMarca">AMD</label>
+                  </div>
+
+                  <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="intelMarca">
+                    <label class="form-check-label" for="intelMarca">Intel</label>
+                  </div>
+
+                  <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="" placeholder="">
+                    <label for="floatingInput" class="fs-8">Socket</label>
+
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </div>
+
+                  <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="floatingInputLines" placeholder="">
+                    <label for="floatingInput" class="fs-8">Lineas</label>
+
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed border" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                  Categoria
+                </button>
+              </h2>
+              <div id="flush-collapseTwo" class="accordion-collapse collapse " data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                  <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="amdCategoria">
+                    <label class="form-check-label" for="amdCategoria">Procesadores AMD</label>
+                  </div>
+
+                  <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="intelCategoria">
+                    <label class="form-check-label" for="intelCategoria">Procesadores Intel</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                  Precio
+                </button>
+              </h2>
+              <div id="flush-collapseThree" class="accordion-collapse collapse "
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body ">
+                  <div class="mb-3 form-check ">
+                    <input type="checkbox" class="form-check-input" id="rango1Precio">
+                    <label class="form-check-label" for="rango1Precio">$50.000 - $100.000</label>
+
+                    <input type="checkbox" class="form-check-input" id="rango2Precio">
+                    <label class="form-check-label" for="rango2Precio">$100.001 - $200.000</label>
+
+                    <input type="checkbox" class="form-check-input" id="rango3Precio">
+                    <label class="form-check-label" for="rango3Precio">$200.001 - $300.000</label>
+
+                    <input type="checkbox" class="form-check-input" id="rango4Precio">
+                    <label class="form-check-label" for="rango4Precio">$300.001 - $500.000</label>
+
+                    <input type="checkbox" class="form-check-input" id="rango5Precio">
+                    <label class="form-check-label" for="rango5Precio">$500.001 - $100.000.000</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseThree">
+                  Núcleos
+                </button>
+              </h2>
+              <div id="flush-collapseFour" class="accordion-collapse collapse "
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body ">
+                  <div class="mb-3 form-check ">
+                    <div class="form-floating mb-3">
+                      <input type="text" class="form-control" id="floatingInput" placeholder="">
+                      <label for="floatingInput" class="fs-8">Lineas</label>
+  
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                      </ul>
+                    </div>  
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-md-12 col-lg-9 col-sm-12 col-xs-12 d-flex flex-wrap ">
+        <div class="position-relative col-lg-3 col-md-4 col-sm-6 mb-4">
+          <div class="card border" id="product1">
+            <a href="#">
+              <img src="img/Pc/Componentes/FuentePoder/fuente-poder/f-1.png" class="card-img-top main-image " alt="">
+            </a>
+            <div class="card-body" style="height: 295px;" style="height: 295px;">
+              <h6 class="fw-bold">EVGA</h6>
+              <div class="position-relative" style="height: 86.1px;">
+               <p  class="productDesc">EVGA 500 W1 (100-W1-0500-KR) (500 W) (80PLUS)</p>
+              </div>
+              <div class="priceContainer d-flex position-absolute dsctoTarget">
+                <span class="dscto dcto"></span> <span class="old-price oldPrice"></span>
+              </div>
+              <div class="position-relative pt-4">
+                <p class="price fs-5">$53.900</p>
+                <p class="metod ">Transferencia</p>
+                <p class="price fs-5">$57.000</p>
+                <p class="metod ">Otro medio de pago</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="position-relative col-lg-3 col-md-4 col-sm-6 mb-4">
+          <div class="card border" id="product1">
+            <a href="#">
+              <img src="img/Pc/Componentes/FuentePoder/fuente-poder/f-2.png" class="card-img-top main-image " alt="">
+            </a>
+            <div class="card-body" style="height: 295px;" style="height: 295px;">
+              <h6 class="fw-bold">EVGA</h6>
+              <div class="position-relative" style="height: 86.1px;">
+               <p  class="productDesc">EVGA 500 BQ (110-BQ-0500-K1) (500 W) (80PLUS Bronze)</p>
+              </div>
+              <div class="priceContainer d-flex position-absolute dsctoTarget">
+                <span class="dscto dcto"></span> <span class="old-price oldPrice"></span>
+              </div>
+              <div class="position-relative pt-4">
+                <p class="price fs-5">$58.900</p>
+                <p class="metod ">Transferencia</p>
+                <p class="price fs-5">$62.000</p>
+                <p class="metod ">Otro medio de pago</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="position-relative col-lg-3 col-md-4 col-sm-6 mb-4">
+          <div class="card border" id="product1">
+            <a href="#">
+              <img src="img/Pc/Componentes/FuentePoder/fuente-poder/f-3.png" class="card-img-top main-image " alt="">
+            </a>
+            <div class="card-body" style="height: 295px;" style="height: 295px;">
+              <h6 class="fw-bold">EVGA</h6>
+              <div class="position-relative" style="height: 86.1px;">
+               <p  class="productDesc">EVGA 700W (100-W1-0700-K1) (700 W) (80PLUS)</p>
+              </div>
+              <div class="priceContainer d-flex position-absolute dsctoTarget">
+                <span class="dscto dcto"></span> <span class="old-price oldPrice"></span>
+              </div>
+              <div class="position-relative pt-4">
+                <p class="price fs-5">$68.900</p>
+                <p class="metod ">Transferencia</p>
+                <p class="price fs-5">$73.000</p>
+                <p class="metod ">Otro medio de pago</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="position-relative col-lg-3 col-md-4 col-sm-6 mb-4">
+          <div class="card border" id="product1">
+            <a href="#">
+              <img src="img/Pc/Componentes/FuentePoder/fuente-poder/f-4.png" class="card-img-top main-image " alt="">
+            </a>
+            <div class="card-body" style="height: 295px;" style="height: 295px;">
+              <h6 class="fw-bold">CORSAIR</h6>
+              <div class="position-relative" style="height: 86.1px;">
+               <p  class="productDesc">Corsair CX-M Series CX650M (CP-9020221-WW / CP-9020221-NA) (650 W) (80PLUS Bronze)</p>
+              </div>
+              <div class="priceContainer d-flex position-absolute dsctoTarget">
+                <span class="dscto dcto"></span> <span class="old-price oldPrice"></span>
+              </div>
+              <div class="position-relative pt-4">
+                <p class="price fs-5">$68.900</p>
+                <p class="metod ">Transferencia</p>
+                <p class="price fs-5">$73.000</p>
+                <p class="metod ">Otro medio de pago</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="position-relative col-lg-3 col-md-4 col-sm-6 mb-4">
+          <div class="card border" id="product1">
+            <a href="#">
+              <img src="img/Pc/Componentes/FuentePoder/fuente-poder/f-5.png" class="card-img-top main-image " alt="">
+            </a>
+            <div class="card-body" style="height: 295px;" style="height: 295px;">
+              <h6 class="fw-bold">CORSAIR</h6>
+              <div class="position-relative" style="height: 86.1px;">
+               <p  class="productDesc">Corsair CX Series CX650 (CP-9020278-NA) (650 W) (80PLUS Bronze)</p>
+              </div>
+              <div class="priceContainer d-flex position-absolute dsctoTarget">
+                <span class="dscto dcto"></span> <span class="old-price oldPrice"></span>
+              </div>
+              <div class="position-relative pt-4">
+                <p class="price fs-5">$89.990</p>
+                <p class="metod ">Transferencia</p>
+                <p class="price fs-5">$94.690</p>
+                <p class="metod ">Otro medio de pago</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="position-relative col-lg-3 col-md-4 col-sm-6 mb-4">
+          <div class="card border" id="product1">
+            <a href="#">
+              <img src="img/Pc/Componentes/FuentePoder/fuente-poder/f-6.png" class="card-img-top main-image " alt="">
+            </a>
+            <div class="card-body" style="height: 295px;" style="height: 295px;">
+              <h6 class="fw-bold">EVGA</h6>
+              <div class="position-relative" style="height: 86.1px;">
+               <p  class="productDesc">EVGA 750 BP (100-BP-0750-K1) (750 W) (80PLUS Bronze)</p>
+              </div>
+              <div class="priceContainer d-flex position-absolute dsctoTarget">
+                <span class="dscto dcto"></span> <span class="old-price oldPrice"></span>
+              </div>
+              <div class="position-relative pt-4">
+                <p class="price fs-5">$98.900</p>
+                <p class="metod ">Transferencia</p>
+                <p class="price fs-5">$104.800</p>
+                <p class="metod ">Otro medio de pago</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="position-relative col-lg-3 col-md-4 col-sm-6 mb-4">
+          <div class="card border" id="product1">
+            <a href="#">
+              <img src="img/Pc/Componentes/FuentePoder/fuente-poder/f-7.png" class="card-img-top main-image " alt="">
+            </a>
+            <div class="card-body" style="height: 295px;" style="height: 295px;">
+              <h6 class="fw-bold">CORSAIR</h6>
+              <div class="position-relative" style="height: 86.1px;">
+               <p  class="productDesc">Corsair RM Series RM750 (CP-9020195-NA) (750 W) (80PLUS Bronze)</p>
+              </div>
+              <div class="priceContainer d-flex position-absolute dsctoTarget">
+                <span class="dscto dcto"></span> <span class="old-price oldPrice"></span>
+              </div>
+              <div class="position-relative pt-4">
+                <p class="price fs-5">$129.900</p>
+                <p class="metod ">Transferencia</p>
+                <p class="price fs-5">$137.690</p>
+                <p class="metod ">Otro medio de pago</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="position-relative col-lg-3 col-md-4 col-sm-6 mb-4">
+          <div class="card border" id="product1">
+            <a href="#">
+              <img src="img/Pc/Componentes/FuentePoder/fuente-poder/f-8.png" class="card-img-top main-image " alt="">
+            </a>
+            <div class="card-body" style="height: 295px;" style="height: 295px;">
+              <h6 class="fw-bold">EVGA</h6>
+              <div class="position-relative" style="height: 86.1px;">
+               <p  class="productDesc">EVGA XC 850G (520-5G-0850-K1) (850 W) (80PLUS Gold)</p>
+              </div>
+              <div class="priceContainer d-flex position-absolute dsctoTarget">
+                <span class="dscto dcto"></span> <span class="old-price oldPrice"></span>
+              </div>
+              <div class="position-relative pt-4">
+                <p class="price fs-5">$98.900</p>
+                <p class="metod ">Transferencia</p>
+                <p class="price fs-5">$104.800</p>
+                <p class="metod ">Otro medio de pago</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="position-relative col-lg-3 col-md-4 col-sm-6 mb-4">
+          <div class="card border" id="product1">
+            <a href="#">
+              <img src="img/Pc/Componentes/FuentePoder/fuente-poder/f-9.png" class="card-img-top main-image " alt="">
+            </a>
+            <div class="card-body" style="height: 295px;" style="height: 295px;">
+              <h6 class="fw-bold">ASUS</h6>
+              <div class="position-relative" style="height: 86.1px;">
+               <p  class="productDesc">ASUS ROG LOKI SFX-L 750W Platinum (750 W) (80PLUS Platinum)</p>
+              </div>
+              <div class="priceContainer d-flex position-absolute dsctoTarget">
+                <span class="dscto dcto"></span> <span class="old-price oldPrice"></span>
+              </div>
+              <div class="position-relative pt-4">
+                <p class="price fs-5">$219.900</p>
+                <p class="metod ">Transferencia</p>
+                <p class="price fs-5">$233.000</p>
+                <p class="metod ">Otro medio de pago</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="position-relative col-lg-3 col-md-4 col-sm-6 mb-4">
+          <div class="card border" id="product1">
+            <a href="#">
+              <img src="img/Pc/Componentes/FuentePoder/fuente-poder/f-10.png" class="card-img-top main-image " alt="">
+            </a>
+            <div class="card-body" style="height: 295px;" style="height: 295px;">
+              <h6 class="fw-bold">ASUS</h6>
+              <div class="position-relative" style="height: 86.1px;">
+               <p  class="productDesc">ASUS ROG-STRIX-750G (90YE00A0-B0NA00) (750 W) (80PLUS Gold)</p>
+              </div>
+              <div class="priceContainer d-flex position-absolute dsctoTarget">
+                <span class="dscto dcto"></span> <span class="old-price oldPrice"></span>
+              </div>
+              <div class="position-relative pt-4">
+                <p class="price fs-5">$230.000</p>
+                <p class="metod ">Transferencia</p>
+                <p class="price fs-5">$235.000</p>
+                <p class="metod ">Otro medio de pago</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="position-relative col-lg-3 col-md-4 col-sm-6 mb-4">
+          <div class="card border" id="product1">
+            <a href="#">
+              <img src="img/Pc/Componentes/FuentePoder/fuente-poder/f-11.png" class="card-img-top main-image " alt="">
+            </a>
+            <div class="card-body" style="height: 295px;" style="height: 295px;">
+              <h6 class="fw-bold">EVGA</h6>
+              <div class="position-relative" style="height: 86.1px;">
+               <p  class="productDesc">EVGA SuperNOVA 1300 P+ [220-PP-1300-X1] (1300 W) (80PLUS Gold)</p>
+              </div>
+              <div class="priceContainer d-flex position-absolute dsctoTarget">
+                <span class="dscto dcto"></span> <span class="old-price oldPrice"></span>
+              </div>
+              <div class="position-relative pt-4">
+                <p class="price fs-5">$256.990</p>
+                <p class="metod ">Transferencia</p>
+                <p class="price fs-5">$272.990</p>
+                <p class="metod ">Otro medio de pago</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="position-relative col-lg-3 col-md-4 col-sm-6 mb-4">
+          <div class="card border" id="product1">
+            <a href="#">
+              <img src="img/Pc/Componentes/FuentePoder/fuente-poder/f-12.png" class="card-img-top main-image " alt="">
+            </a>
+            <div class="card-body" style="height: 295px;" style="height: 295px;">
+              <h6 class="fw-bold">ASUS</h6>
+              <div class="position-relative" style="height: 86.1px;">
+               <p  class="productDesc">ASUS ROG-STRIX-1000G (1000 W) (80PLUS Gold)</p>
+              </div>
+              <div class="priceContainer d-flex position-absolute dsctoTarget">
+                <span class="dscto dcto"></span> <span class="old-price oldPrice"></span>
+              </div>
+              <div class="position-relative pt-4">
+                <p class="price fs-5">$249.990</p>
+                <p class="metod ">Transferencia</p>
+                <p class="price fs-5">$265.000</p>
+                <p class="metod ">Otro medio de pago</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+  <!--BootstrapJs-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
