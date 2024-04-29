@@ -325,79 +325,70 @@
                 <div class=" p-5 rounded-5 text-secondary shadow">
                     <div class="text-center fs-1 fw-bold mb-4">Registro de usuarios</div>
                     <form action="procesar_registro.php" method="post" class="needs-validation" novalidate>
-                        <div class="form-group mb-1 "  style="height: 98px;">
-                            <label for="text" class="fs-5 mt-1 pb-1 fw-semibold ">Ingrese nombre</label>
+                        <div class="form-group mb-3"  style="height: 98px;">
+                            <label for="nombre" class="fs-5 mt-1 pb-1 fw-semibold ">Ingrese nombre</label>
                             <div class="input-group mt-1 pb-2">
                                 <div class="input-group-text bg-info">
                                     <i class="bi bi-person-fill text-white"></i>
                                 </div>
-                                <input type="text" class="form-control bg-light" name="nombre" required>
-                                <div class="invalid-feedback">
-                                    Ingrese nombre
-                                </div>
+                                <input type="text" class="form-control bg-light" name="nombre" id="nombre" required>
                             </div>
+                            <div class="fs-7 text-danger fw-bold" id="msgErrorNom"></div>
                         </div>
-                        <div class="form-group mb-1 "  style="height: 98px;">
-                            <label for="text" class="fs-5 mt-1 pb-1 fw-semibold ">Ingrese apellido</label>
+                        <div class="form-group mb-3 "  style="height: 98px;">
+                            <label for="apellido" class="fs-5 mt-1 pb-1 fw-semibold ">Ingrese apellido</label>
                             <div class="input-group mt-1 pb-2">
                                 <div class="input-group-text bg-info">
                                     <i class="bi bi-person-fill text-white"></i>
                                 </div>
-                                <input type="text" class="form-control bg-light" name="nombre" required>
-                                <div class="invalid-feedback">
-                                    Ingrese apellido
-                                </div>
+                                <input type="text" class="form-control bg-light" name="apellido" id="apellido" required>
+                               
                             </div>
+                            <div class="fs-7 text-danger fw-bold" id="msgErrorAp"></div>
                         </div>
-                        <div class="form-group mb-1 "  style="height: 98px;">
+                        <div class="form-group mb-3  "  style="height: 98px;">
                             <label for="email" class="fs-5 mt-1 pb-1 fw-semibold ">Ingrese email</label>
                             <div class="input-group mt-1 pb-2">
                                 <div class="input-group-text bg-info">
-                                    <i class="bi bi-envelope text-white"></i>                                </div>
-                                <input class="form-control bg-light" id="email" type="email" name="email" required />
-                                <div class="invalid-feedback">
-                                    Ingrese email válido
+                                    <i class="bi bi-envelope text-white"></i>                              
                                 </div>
+                                <input class="form-control bg-light" type="email" name="email" id="email" required />
                             </div>
+                            <div class="fs-7 text-danger fw-bold" id="msgErrorMail"></div>
                         </div>
 
-                        <div class="form-group mb-1 "  style="height: 98px;">
-                            <label for="number" class="fs-5 mt-1 pb-1 fw-semibold ">Ingrese telefono</label>
+                        <div class="form-group mb-3"  style="height: 98px;">
+                            <label for="telefono" class="fs-5 mt-1 pb-1 fw-semibold ">Ingrese telefono</label>
                             <div class="input-group mt-1 pb-2">
                                 <div class="input-group-text bg-info">
                                     <i class="bi bi-telephone-fill text-white"></i>
                                 </div>
-                                <input type="tel" class="form-control bg-light" name="telefono" pattern=^[0-9]{1,9}$ required>
-                                <div class="invalid-feedback">
-                                    Ingrese numero válido
-                                </div>
+                                <input type="tel" class="form-control bg-light" name="telefono" id="telefono" required>
                             </div>
+                            <div class="fs-7 text-danger fw-bold" id="msgErrorTel"></div>
                         </div>
-                        <div class="form-group mb-1 "  style="height: 98px;">
-                            <label for="number" class="fs-5 mt-1 pb-1 fw-semibold ">Ingrese telefono</label>
+                        <div class="form-group mb-3 "  style="height: 98px;">
+                            <label for="RUT" class="fs-5 mt-1 pb-1 fw-semibold ">Ingrese RUT</label>
                             <div class="input-group mt-1 pb-2">
                                 <div class="input-group-text bg-info">
                                     <i class="bi bi-person-vcard text-white"></i>                               
                                 </div>
-                                <input type="text" class="form-control bg-light" name="rut" placeholder="Ingrese RUT (sin puntos y con guión)" pattern="^[0-9]{8,9}[-|‐]{1}[0-9kK]{1}$" required>
-                                <div class="invalid-feedback">
-                                    Ingrese rut válido
-                                </div>
+                                <input type="text" class="form-control bg-light" name="RUT" placeholder="Ingrese RUT (sin puntos y con guión)" id="RUT" required>
                             </div>
+                            <div class="fs-7 text-danger fw-bold" id="msgErrorRUT"></div>
                         </div>
                         <div class="form-group " style="height: 98px;">
                             <label for="password" class="fs-5 pb-1 fw-semibold">Contraseña</label>
-                            <div class="input-group mt-1">
+                            <div class="input-group mt-1 pb-2">
                                 <div class="input-group-text bg-info">
                                     <i class="bi bi-key-fill text-white"></i>
                                 </div>
-                                <input class="form-control bg-light" id="passwrd" type="password" name="password" required  />
-                                <div class="invalid-feedback">
-                                    Ingrese contraseña
-                                </div>
+                                <input class="form-control bg-light"  type="password" name="password" id="pass" required  />
+                                
                             </div>
+                            <div class="fs-7 text-danger fw-bold" id="msgErrorPass"></div>
                         </div>
-                        <button type="submit" class="btn btn-info w-100 mt-4  shadow-sm text-white">Registrarse</button>
+                        <button type="submit" class="btn btn-info w-100 mt-4  shadow-sm text-white" id="btnEnviar" >Registrarse</button>
                     </form>
                     <div class="text-center mt-3">
                         ¿Ya tienes cuenta? <a href="iniciosesion.html" class="text-info fw-bold text-decoration-none">Iniciar sesión</a>
