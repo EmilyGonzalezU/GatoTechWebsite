@@ -301,10 +301,10 @@
 
     /*CarouselBanner*/
     .imgBanner {
-        max-width: 90vw; 
-        height: auto; 
-        padding-left: 1vw;
-        padding-right: 1vw;
+        width: 80vw; 
+        height: 80vh; 
+        margin-left: 10vw;
+        margin-right: 10vw;
     }
 
     /*Banners*/
@@ -511,3 +511,16 @@ h1{
 }
 
 
+.input-group input:focus,
+.form-control:focus {
+    border-color: #ced4da; /* Cambia el color del borde enfocado si lo deseas */
+    box-shadow: none; /* Elimina cualquier sombreado */
+}
+
+.campo-invalido {
+    border-color: red !important; /* Cambia el color del borde a rojo */
+}
+
+.campo-valido {
+    border-color: #0ac2a3 !important; /* Cambia el color del borde a verde */
+}

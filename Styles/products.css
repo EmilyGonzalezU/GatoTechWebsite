@@ -208,3 +208,9 @@
     color: #E22F89;
     font-weight: bolder;
 }
+
+.input-group input:focus,
+.form-control:focus {
+    border-color: #ced4da; /* Cambia el color del borde enfocado si lo deseas */
+    box-shadow: none; /* Elimina cualquier sombreado */
+}

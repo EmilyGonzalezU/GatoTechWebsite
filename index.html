@@ -69,42 +69,36 @@
 
     <!--Modal-->
     <div class="modal fade " id="loginModal" tabindex="-2" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document" style="width: 262px; height: 300px; margin-right: 50px; margin-top: 110px;">
+        <div class="modal-dialog" role="document" style="width: 262px; height: 350px; margin-right: 150px; margin-top: 110px;">
           <div class="modal-content">
-            <div class="modal-body" style="width: 262px; height: 380px; align-items: end; ">
+            <div class="modal-body" style="width: 262px; height: 370px; align-items: end; ">
               <!-- Formulario de inicio de sesión -->
-                <form  method="get" id="sing-up-form " class="needs-validation" novalidate> 
-                    <button type="button" class="btn-close" aria-label="Close" style="margin-left: 210px;" data-bs-dismiss="modal"></button>
-                    <div class="form-group pb-3 "  style="height: 98px;">
+                <form  method="get" id="sing-up-form " novalidate> 
+                    <div class="form-group mb-3 "  style="height: 100px;">
                         <label for="email" class="fs-5 mt-1 pb-1 fw-semibold ">Ingrese email</label>
                         <div class="input-group mt-1 pb-2">
                             <div class="input-group-text bg-info">
                                 <i class="bi bi-envelope text-white"></i>  
                             </div>
-                            <input class="form-control bg-light" id="email" type="email" name="email" required />
-                            <div class="invalid-feedback">
-                                Ingrese email 
-                            </div>
+                            <input class="form-control bg-light" id="emailInicio" type="email" name="email" required />
                         </div>
+                        <div class="text-danger fw-bold" id="msgErrorMailInicio" style="font-size: 13px;"></div>
                     </div>
-                    <div class="form-group " style="height: 98px;">
+                    <div class="form-group " style="height: 100px;">
                         <label for="password" class="fs-5 pb-1 fw-semibold">Contraseña</label>
                         <div class="input-group mt-1">
                             <div class="input-group-text bg-info">
                                 <i class="bi bi-key-fill text-white"></i>
                             </div>
-                            <input class="form-control bg-light" id="passwrd" type="password" name="password" required  />
-                            <div class="invalid-feedback">
-                                Ingrese contraseña
-                            </div>
+                            <input class="form-control bg-light" id="passInicio" type="password" name="password" required  />
                         </div>
+                        <div class=" text-danger fw-bold " id="msgErrorPassInicio" style="font-size: 13px;"></div>
                     </div>
-                  
-                   
-                    <div class="pt-2 mb-2">
+                    <button class="btn btn-info text-white w-100 mt-2 fw-semibold shadow-sm" type="submit" id="btn">Iniciar sesión</button>
+                    <div class="pt-1 mb-1 text-center">
                         <a href="#" class="text-decoration-none text-info fw-semibold" style="font-size: 0.9rem">¿Olvidaste la contraseña?</a>
                     </div>
-                    <button class="btn btn-info text-white w-100 mt-1 fw-semibold shadow-sm mb-2" type="submit">Iniciar sesión</button>
+                    <hr>
                     <div class="d-flex justify-content-between align-items-center">
                         <div class="text-start">¿No tienes cuenta?</div>
                         <a href="registro.html" class="text-decoration-none text-info fw-semibold">Registrarse</a>
@@ -113,7 +107,8 @@
             </div>
           </div>
         </div>
-      </div>
+    </div>
+    
     <!--NavBar=md -->
     <nav class="navbar navBarmd bg-black">
         <div class="container-fluid">
@@ -383,41 +378,27 @@
 
     
     <!--Carrousel-->
-    <div class="containerCarousel">
-        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="image-container1 d-flex justify-content-center">
-                        <img src="img/Banner/a (1).png" class="d-block imgBanner" alt="...">
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="image-container1 d-flex justify-content-center">
-                        <img src="img/Banner/banner2.png" class="d-block imgBanner" alt="...">
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="image-container1 d-flex justify-content-center">
-                        <img src="img/Banner/banner3.png" class="d-block imgBanner" alt="...">
-                    </div>
-                </div>
-            </div>
-            <button class="btn carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
+
+    <div class="owl-carousel owl-theme" id="carousel">
+        <div class="item">
+          <div class="image-container1 d-flex justify-content-center">
+            <img src="img/Banner/banner3.png" class="d-block imgBanner" alt="...">
+          </div>
+        </div>
+        <div class="item">
+          <div class="image-container1 d-flex justify-content-center">
+            <img src="img/Banner/banner2.png" class="d-block imgBanner" alt="...">
+          </div>
+        </div>
+        <div class="item">
+          <div class="image-container1 d-flex justify-content-center">
+            <img src="img/Banner/a (1).png" class="d-block imgBanner" alt="...">
+          </div>
         </div>
     </div>
     
     <!--Banner1-->
-    <div class="banner-container d-flex justify-content-center">
-        <img src="img/Banner/banner_despacho.jpg" class="d-block banner-image" alt="...">
-    </div>
-    
+ 
     <!--Cards-->
     <div class="container-fluid">
         <div class="row">
@@ -437,7 +418,7 @@
                                 </a>
                                 <div class="card-body">
                                     <h6 class="fw-bold">Pc Gamer Arrax Gamer:</h6>
-                                    <p  class="text-truncate">Intel i5-12400, UHD 730, SSD Sata, RAM 16 GB, Wifi</p>
+                                    <p  class="productDesc">Intel i5-12400, UHD 730, SSD Sata, RAM 16 GB, Wifi</p>
                                     <div>
                                         <div class="priceContainer d-flex"> 
                                             <span class="dscto">30% DCTO.</span> <span class="old-price">$653.961</span>
@@ -468,7 +449,7 @@
                                 </a>
                                 <div class="card-body">
                                     <h6 class="fw-bold">PC Gamer Warrior 7:</h6>
-                                    <p  class="d-inlzine-none text-truncate" style="max-width: 300px;">Ryzen 5700G, SSD M.2, RAM 16GB (3200MHz, D-Channel), WiFi USB</p>
+                                    <p class="productDesc" style="max-width: 300px;">Ryzen 5700G, SSD M.2, RAM 16GB (3200MHz, D-Channel), WiFi USB</p>
                                     
                                     <div class="priceContainer d-flex"> 
                                         <span class="dscto">30% DCTO.</span> <span class="old-price">$653.961</span>
@@ -497,7 +478,7 @@
                                 </a>
                                 <div class="card-body">
                                     <h6 class="fw-bold">Pc Gamer Draco:</h6>
-                                    <p  class="text-truncate">Intel Core i5-13400F, SSD M.2 1TB, RAM 16GB, RTX 4060 ti, Wifi</p>
+                                    <p  class="productDesc">Intel Core i5-13400F, SSD M.2 1TB, RAM 16GB, RTX 4060 ti, Wifi</p>
                                     
                                     <div class="priceContainer d-flex"> 
                                         <span class="dscto">30% DCTO.</span> <span class="old-price">$653.961</span>
@@ -526,7 +507,7 @@
                                 </a>
                                 <div class="card-body">
                                     <h6 class="fw-bold">Pc Armada Baryonyx i3:</h6>
-                                    <p  class="text-truncate">Intel i3-12100F, SD M.2, ram16GB, RX 6500 XT gaming OC 4G</p>
+                                    <p  class="productDesc">Intel i3-12100F, SD M.2, ram16GB, RX 6500 XT gaming OC 4G</p>
                                     
                                     <div class="priceContainer d-flex"> 
                                         <span class="dscto">30% DCTO.</span> <span class="old-price">$653.961</span>
@@ -555,7 +536,7 @@
                                 </a>
                                 <div class="card-body">
                                     <h6 class="fw-bold">PC Gamer Dreamfyre 4:</h6>
-                                    <p  class="text-truncate">Ryzen 5 4600G, SSD M.2, RAM 16GB (3200MHz, D-Channel)</p>
+                                    <p  class="productDesc">Ryzen 5 4600G, SSD M.2, RAM 16GB (3200MHz, D-Channel)</p>
         
                                     <div class="priceContainer d-flex"> 
                                         <span class="dscto">30% DCTO.</span> <span class="old-price">$653.961</span>
@@ -584,7 +565,7 @@
                                 </a>
                                 <div class="card-body">
                                     <h6 class="fw-bold">PC Gamer Voltius 3:</h6>
-                                    <p  class="text-truncate">Ryzen 3 3200G Vega 8, SSD Sata, RAM 16GB, WiFi</p>
+                                    <p  class="productDesc">Ryzen 3 3200G Vega 8, SSD Sata, RAM 16GB, WiFi</p>
                                     
                                     <div class="priceContainer d-flex"> 
                                         <span class="dscto">30% DCTO.</span> <span class="old-price">$653.961</span>
@@ -615,7 +596,7 @@
                                 <div class="card-body ">
 
                                     <h6 class="fw-bold">PC Gamer Voltius 5:</h6>
-                                    <p  class="text-truncate">Ryzen 5500, SSD M.2, RAM 16GB, RX 6600, WiFi USB</p>
+                                    <p  class="productDesc">Ryzen 5500, SSD M.2, RAM 16GB, RX 6600, WiFi USB</p>
                                       
                                     <div class="priceContainer d-flex"> 
                                         <span class="dscto">30% DCTO.</span> <span class="old-price">$653.961</span>
@@ -644,7 +625,7 @@
                                 </a>
                                 <div class="card-body w-100">
                                     <h6 class="fw-bold">PC Gamer Halo Pro:</h6>
-                                    <p  class="text-truncate">Ryzen 5600X, SSD M.2, RAM 16GB (3200MHz, D-Channel), RXT 4060</p>
+                                    <p  class="productDesc">Ryzen 5600X, SSD M.2, RAM 16GB (3200MHz, D-Channel), RXT 4060</p>
                                     
                                     <div class="priceContainer d-flex"> 
                                         <span class="dscto">30% DCTO.</span> <span class="old-price">$653.961</span>
@@ -673,7 +654,7 @@
                                 </a>
                                 <div class="card-body">
                                     <h6 class="fw-bold">Pc Gamer Kratos:</h6>
-                                    <p  class="text-truncate">Intel i3-12100f, GTX 1650, RAM 16gb, SSD M.2</p>
+                                    <p  class="productDesc">Intel i3-12100f, GTX 1650, RAM 16gb, SSD M.2</p>
                                     
                                     <div class="priceContainer d-flex"> 
                                         <span class="dscto">30% DCTO.</span> <span class="old-price">$653.961</span>
@@ -702,7 +683,7 @@
                                 </a>
                                 <div class="card-body ">
                                     <h6 class="fw-bold">Pc Gamer Arrax Gamer:</h6>
-                                    <p  class="text-truncate"> Core i5-10400 , UHD 630, SSD Sata, RAM 16 GB, Wifi</p>
+                                    <p  class="productDesc"> Core i5-10400 , UHD 630, SSD Sata, RAM 16 GB, Wifi</p>
 
                                     <div class="priceContainer d-flex"> 
                                         <span class="dscto">30% DCTO.</span> <span class="old-price">$653.961</span>
@@ -746,14 +727,14 @@
                             <div class="card border-0">
                                 <a href="#">
                                     <div class="image-container">
-                                        <img src="img/Pc/Componentes/Proce/i91.png" class="card-img-top main-image" alt="">
+                                        <img src="img/Pc/Componentes/Proce/Intel/19.png" class="card-img-top main-image" alt="">
                                         <img src="img/Pc/Componentes/Proce/i92.png"
                                             class="card-img-top hover-image d-none d-md-none d-lg-block" alt="">
                                     </div>
                                 </a>
                                 <div class="card-body ">
                                     <h6 class="fw-bold">Intel:</h6>
-                                    <p  class="text-truncate">Procesador Intel Core i9-13900KF Raptor Lake (LGA1700, 24 Cores, 32 Hilos, 3.0/5)</p>
+                                    <p  class="productDesc">Procesador Intel Core i9-13900KF Raptor Lake (LGA1700, 24 Cores, 32 Hilos, 3.0/5)</p>
                                     
                                     <div class="priceContainer d-flex"> 
                                         <span class="dscto d-none"></span> <span class="old-price"></span>
@@ -784,7 +765,7 @@
                                 </a>
                                 <div class="card-body">
                                     <h6 class="fw-bold">Nvidia:</h6>
-                                    <p  class="text-truncate">Tarjeta de Video Asus Dual RTX 4060 TI White OC 8GB</p>
+                                    <p  class="productDesc">Tarjeta de Video Asus Dual RTX 4060 TI White OC 8GB</p>
 
                                     <div class="priceContainer d-flex"> 
                                         <span class="dscto d-none"></span> <span class="old-price"></span>
@@ -814,7 +795,7 @@
                                 </a>
                                 <div class="card-body">
                                     <h6 class="fw-bold">Kingston:</h6>
-                                    <p  class="text-truncate">Memoria RAM Kingston Fury Beast RGB DDR5, 32GB 5600MT/s, DIMM</p>
+                                    <p  class="productDesc">Memoria RAM Kingston Fury Beast RGB DDR5, 32GB 5600MT/s, DIMM</p>
                                     
                                     
                                     <div class="priceContainer d-flex"> 
@@ -846,7 +827,7 @@
                                 </a>
                                 <div class="card-body">
                                     <h6 class="fw-bold">Aorus:</h6>
-                                    <p  class="text-truncate">Disco Sólido SSD AORUS Gen4 7300 1 TB (NVMe M.2, hasta 7300MB/s, con Disipador)</p>
+                                    <p  class="productDesc">Disco Sólido SSD AORUS Gen4 7300 1 TB (NVMe M.2, hasta 7300MB/s, con Disipador)</p>
                                     
                                     <div class="priceContainer d-flex"> 
                                         <span class="dscto d-none" > <span class="old-price"></span>
@@ -869,16 +850,16 @@
                             <div class="card  border-0">
                                 <a href="#">
                                     <div class="image-container">
-                                        <img src="img/Pc/Componentes/Proce/1.2.png"
+                                        <img src="img/Pc/Componentes/Proce/Ryzen/1.png"
                                             class="card-img-top main-image " alt="">
-                                        <img src="img/Pc/Componentes/Proce/1.1.png"
+                                        <img src="img/Pc/Componentes/Proce/Ryzen/1.png"
                                             class="card-img-top hover-image d-none d-md-none d-lg-block" alt="">
                                     </div>
                                 </a>
                                 <div class="card-body">
                                     <h6 class="fw-bold">AMD:</h6>
                                     
-                                    <p  class="text-truncate">Procesador AMD Ryzen 5 5500, 3.6GHz (4.2GHz Turbo), 6Core/12Thread, Socket AM4</p>
+                                    <p  class="productDesc">Procesador AMD Ryzen 5 5500, 3.6GHz (4.2GHz Turbo), 6Core/12Thread, Socket AM4</p>
                                     <div class="priceContainer d-flex">
                                         <span class="dscto d-none" > <span class="old-price"></span>
                                     </div>
@@ -900,7 +881,7 @@
                             <div class="card  border-0">
                                 <a href="#">
                                     <div class="image-container">
-                                        <img src="img/Pc/Componentes/Gabinete/1.1.png"
+                                        <img src="img/Pc/Componentes/Gabinete/10.png"
                                             class="card-img-top main-image " alt="">
                                         <img src="img/Pc/Componentes/Gabinete/1.2.png"
                                             class="card-img-top hover-image d-none d-md-none d-lg-block" alt="">
@@ -908,7 +889,7 @@
                                 </a>
                                 <div class="card-body">
                                     <h6 class="fw-bold">Kronos:</h6>
-                                    <p  class="text-truncate">Gabinete Kronos Atlantis ATX Vidrio Templado, USB 3.0, White</p>
+                                    <p  class="productDesc">Gabinete Kronos Atlantis ATX Vidrio Templado, USB 3.0, White</p>
                                     
                                     <div class="priceContainer d-flex"> 
                                         <span class="dscto d-none"><span class="old-price"></span>
@@ -939,7 +920,7 @@
                                 </a>
                                 <div class="card-body">
                                     <h6 class="fw-bold">Hikvision:</h6>
-                                    <p  class="text-truncate"> Disco Estado Sólido SSD Hikvision E3000 512GB, M.2 PCIE NVME</p>
+                                    <p  class="productDesc"> Disco Estado Sólido SSD Hikvision E3000 512GB, M.2 PCIE NVME</p>
                                     <div class="priceContainer d-flex"> 
                                         <span class="dscto d-none"> <span class="old-price"></span>
                                     </div>
@@ -969,7 +950,7 @@
                                 </a>
                                 <div class="card-body">
                                     <h6 class="fw-bold">Asus:</h6>
-                                    <p  class="text-truncate">Placa Madre Asus TUF GAMING X570-PLUS Wi-Fi, AM4, DDR4, M2 x2 PCIe 4.0, RGB, ATX</p>
+                                    <p  class="productDesc">Placa Madre Asus TUF GAMING X570-PLUS Wi-Fi, AM4, DDR4, M2 x2 PCIe 4.0, RGB, ATX</p>
                                     
                                     <div class="priceContainer d-flex"> 
                                         <span class="dscto d-none"> <span class="old-price"></span>
@@ -1000,7 +981,7 @@
                                 </a>
                                 <div class="card-body">
                                     <h6 class="fw-bold">Gigabyte:</h6>
-                                    <p  class="text-truncate">Tarjeta de Video Gigabyte RTX 4090 AERO OC 24GB, GDDR6X, 384bit</p>
+                                    <p  class="productDesc">Tarjeta de Video Gigabyte RTX 4090 AERO OC 24GB, GDDR6X, 384bit</p>
                                     
                                     <div class="priceContainer d-flex"> 
                                         <span class="dscto d-none"></span> <span class="old-price"></span>
@@ -1049,8 +1030,8 @@
                                 </a>
                                 <div class="card-body ">
                                     <h6 class="fw-bold">ASUS:</h6>
-                                    <p  class="text-truncate">LAPTOP ASUS ROG FLOW X13 AMD RYZEN 7 6800HS 16GB RAM 512GB SSD 13.4"</p>
-                                    <p class="price">$2.091.974</p>
+                                    <p  class="productDesc">LAPTOP ASUS ROG FLOW X13 AMD RYZEN 7 6800HS 16GB RAM 512GB SSD 13.4"</p>
+                                    <p class="rice">$2.091.974</p>
                                     <p class="transf ">Transferencia</p>
                                     <p class="price">$2.129.990</p>
                                     <p class="otro ">Otro medio de pago</p>
@@ -1076,7 +1057,7 @@
                                 </a>
                                 <div class="card-body">
                                     <h6 class="fw-bold">MSI:</h6>
-                                    <p  class="text-truncate">Laptop gamer MSI Katana 15 B12VFK Intel Core i7 12650H 16GB 512GB SSD 15.6″</p>
+                                    <p  class="productDesc">Laptop gamer MSI Katana 15 B12VFK Intel Core i7 12650H 16GB 512GB SSD 15.6″</p>
                                     <p class="price">$2.018.990</p>
                                     <p class="transf fw">Transferencia</p>
                                     <p class="price">$2.025.490</p>
@@ -1102,7 +1083,7 @@
                                 </a>
                                 <div class="card-body">
                                     <h6 class="fw-bold">ACER:</h6>
-                                    <p class="text-truncate">Notebook Gamer Acer Nitro 5 AN515-57-7016-1 Intel Core i7 8 Núcleos 16GB RAM 512GB SSD RTX 3060</p>
+                                    <p class="productDesc">Notebook Gamer Acer Nitro 5 AN515-57-7016-1 Intel Core i7 8 Núcleos 16GB RAM 512GB SSD RTX 3060</p>
                                     <p class="price">$1.349.990</p>
                                     <p class="transf fw">Transferencia</p>
                                     <p class="price">$1.369.990</p>
@@ -1129,7 +1110,7 @@
                                 </a>
                                 <div class="card-body">
                                     <h6 class="fw-bold">ASUS:</h6>
-                                    <p  class="text-truncate">Notebook ROG Strix G15 AMD Ryzen 9 NVIDIA GeForce RTX 3070TI 16GB RAM 1TB SSD 15,6" WQHD 165Hz Asus</p>
+                                    <p  class="productDesc">Notebook ROG Strix G15 AMD Ryzen 9 NVIDIA GeForce RTX 3070TI 16GB RAM 1TB SSD 15,6" WQHD 165Hz Asus</p>
                                     <p class="price">$1.749.990</p>
                                     <p class="transf fw">Transferencia</p>
                                     <p class="price">$1.769.990</p>
@@ -1156,7 +1137,7 @@
                                 </a>
                                 <div class="card-body">
                                     <h6 class="fw-bold">ASUS:</h6>
-                                    <p  class="text-truncate">Notebook Gamer ROG Strix G15 G513RC-HN092W AMD Ryzen 7 NVIDIA GeForce RTX 3050 16GB RAM 512GB SSD 15,6" FHD 144Hz Asus</p>
+                                    <p  class="productDesc">Notebook Gamer ROG Strix G15 G513RC-HN092W AMD Ryzen 7 NVIDIA GeForce RTX 3050 16GB RAM 512GB SSD 15,6" FHD 144Hz Asus</p>
                                     <p class="price">$969.990</p>
                                     <p class="transf fw">Transferencia</p>
                                     <p class="price">$999.990</p>
@@ -1183,7 +1164,7 @@
                                 </a>
                                 <div class="card-body">
                                     <h6 class="fw-bold">ACER:</h6>
-                                    <p class="text-truncate">Notebook Gamer Acer Nitro 5 AN515-46-R8RX-1 AMD Ryzen 7 16GB RAM 512GB SSD RTX 3050</p>
+                                    <p class="productDesc">Notebook Gamer Acer Nitro 5 AN515-46-R8RX-1 AMD Ryzen 7 16GB RAM 512GB SSD RTX 3050</p>
                                     <p class="price">$849.990</p>
                                     <p class="transf fw">Transferencia</p>
                                     <p class="price">$869.990</p>
@@ -1210,7 +1191,7 @@
                                 </a>
                                 <div class="card-body">
                                     <h6 class="fw-bold">HP:</h6>
-                                    <p  class="text-truncate">Notebook HP Gamer Victus 15-FB1007LA AMD Ryzen 5 7535HS 8GB RAM 512GB SSD RTX 2050 4GB 15,6" FHD 144Hz</p>
+                                    <p  class="productDesc">Notebook HP Gamer Victus 15-FB1007LA AMD Ryzen 5 7535HS 8GB RAM 512GB SSD RTX 2050 4GB 15,6" FHD 144Hz</p>
                                     <p class="price">$ 809.990</p>
                                     <p class="transf fw">Transferencia</p>
                                     <p class="price">$ 839.990</p>
@@ -1237,7 +1218,7 @@
                                 </a>
                                 <div class="card-body">
                                     <h6 class="fw-bold">ACER:</h6>
-                                    <p class="text-truncate">Notebook Gamer Acer Aspire G A515-57G-55Y6-1 Intel Core i5 12 Nucleos 16GB RAM 512GB SSD NVIDIA RTX 2050</p>
+                                    <p class="productDesc">Notebook Gamer Acer Aspire G A515-57G-55Y6-1 Intel Core i5 12 Nucleos 16GB RAM 512GB SSD NVIDIA RTX 2050</p>
                                     <p class="price">$629.990</p>
                                     <p class="transf fw">Transferencia</p>
                                     <p class="price">$649.990</p>
@@ -1264,7 +1245,7 @@
                                 </a>
                                 <div class="card-body">
                                     <h6 class="fw-bold">HP:</h6>
-                                    <p class="text-truncate">Notebook HP Gamer Victus 15-FA1005LA Intel Core i5-12450H 8GB RAM 512GB SSD RTX 2050 4GB 15,6" 144Hz</p>
+                                    <p class="productDesc">Notebook HP Gamer Victus 15-FA1005LA Intel Core i5-12450H 8GB RAM 512GB SSD RTX 2050 4GB 15,6" 144Hz</p>
                                     <p class="price">$579.990</p>
                                     <p class="transf fw">Transferencia</p>
                                     <p class="price">$599.990</p>
@@ -1310,7 +1291,7 @@
                                 <div class="card-body ">
     
                                     <h6 class="fw-bold">RAZER:</h6>
-                                    <p class="text-truncate">Audifono Gamer Inalambrico Razer BlackShark V2 HyperSpeed, THX Spatial Audio, Micrófono flexible</p>
+                                    <p class="productDesc">Audifono Gamer Inalambrico Razer BlackShark V2 HyperSpeed, THX Spatial Audio, Micrófono flexible</p>
                                     
                                     <div class="priceContainer d-flex"> 
                                         <span class="dscto">20% DCTO.</span> <span class="old-price">$189.990</span>
@@ -1341,7 +1322,7 @@
                                 </a>
                                 <div class="card-body">
                                     <h6 class="fw-bold">RAZER:</h6>
-                                    <p class="text-truncate">Mouse Gamer Razer Deathadder V3, Black, 59g Ultra-lightweight Ergonomic Esports Mouse, 30K Optical</p>
+                                    <p class="productDesc">Mouse Gamer Razer Deathadder V3, Black, 59g Ultra-lightweight Ergonomic Esports Mouse, 30K Optical</p>
                                     
                                     <div class="priceContainer d-flex"> 
                                         <span class="dscto">20% DCTO.</span> <span class="old-price">$89.990</span>
@@ -1371,7 +1352,7 @@
                                 </a>
                                 <div class="card-body">
                                     <h6 class="fw-bold">RAZER:</h6>
-                                    <p class="text-truncate">Mouse Gamer Ambidiestro Razer Viper Mini 61g 8500DPI</p>
+                                    <p class="productDesc">Mouse Gamer Ambidiestro Razer Viper Mini 61g 8500DPI</p>
                                     
                                     <div class="priceContainer d-flex"> 
                                         <span class="dscto">20% DCTO.</span> <span class="old-price">$39.980</span>
@@ -1402,7 +1383,7 @@
                                 </a>
                                 <div class="card-body">
                                     <h6 class="fw-bold">RAZER:</h6>
-                                    <p class="text-truncate">Mouse Gamer Razer Viper V2 Pro, 5 Botones, 30.000 DPI, Wireless, Negro</p>
+                                    <p class="productDesc">Mouse Gamer Razer Viper V2 Pro, 5 Botones, 30.000 DPI, Wireless, Negro</p>
                                         
                                     <div class="priceContainer d-flex"> 
                                         <span class="dscto">20% DCTO.</span> <span class="old-price">$189.990</span>
@@ -1433,7 +1414,7 @@
                                 </a>
                                 <div class="card-body">
                                     <h6 class="fw-bold">RAZER:</h6>
-                                    <p class="text-truncate">Teclado mecánico Razer Huntsman V2 TKL Switch Red Español</p>
+                                    <p class="productDesc">Teclado mecánico Razer Huntsman V2 TKL Switch Red Español</p>
                                     
                                     <div class="priceContainer d-flex"> 
                                         <span class="dscto">20% DCTO.</span> <span class="old-price">$169.990</span>
@@ -1464,7 +1445,7 @@
                                 </a>
                                 <div class="card-body">
                                     <h6 class="fw-bold">RAZER:</h6>
-                                    <p class="text-truncate">Mouse Gamer Razer Viper Ultimate Rosado</p>
+                                    <p class="productDesc">Mouse Gamer Razer Viper Ultimate Rosado</p>
                                     
                                     <div class="priceContainer d-flex"> 
                                         <span class="dscto">20% DCTO.</span> <span class="old-price">$169.990</span>
@@ -1495,7 +1476,7 @@
                                 </a>
                                 <div class="card-body">
                                     <h6 class="fw-bold">RAZER:</h6>
-                                    <p class="text-truncate">Razer Huntsman Mini - Black - Clicky Optical Switch (Purple) - Inglés</p>
+                                    <p class="productDesc">Razer Huntsman Mini - Black - Clicky Optical Switch (Purple) - Inglés</p>
                                     
                                     <div class="priceContainer d-flex"> 
                                         <span class="dscto">20% DCTO.</span> <span class="old-price">$115.900</span>
@@ -1533,6 +1514,15 @@
       </div>
     </div>
   </div>
+  <div class="container-fluid">
+    <div class="row justify-content-start" >
+        <div class="col-1"></div>
+        <div class="col-6" id="map" style="height: 28vh; width: 28vw; margin-left:1vw ;"></div>
+        <div class="col-1"></div>
+    </div>
+  </div>
+  
+  
     <!--Slider-->
     <div class="slider align-items-center">
         <div class="slide-track  align-items-center">
@@ -1570,6 +1560,10 @@
                 <img src="img/Logos/Slider/11.png" alt="">
             </div>
         </div>
+    </div>
+    
+  
+
     </div>
     <!--Footer-->
     <div class="container-fluid">
@@ -1621,19 +1615,90 @@
                 </div>
         </div>
     </div>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDyMudUDq9GoN9KwzuoAndo0C8Svo4UHGE&libraries=places&callback=initMap" defer></script>
 
-   
     <!--BootstrapJs-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
     <!--jQuery-->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <!--Owl-carousel js-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <!--Js-->
-    <script src="js/script.js"></script>    
+    <script>
+        //Modal inicio sesion
+        document.getElementById('openModalBtn').addEventListener('click', function() {
+            $('#loginModal').modal('show');
+        });
+    </script>  
+    <script>
+        $(document).ready(function(){
+            $("#carousel").owlCarousel({
+            items: 1, // Solo muestra una imagen por diapositiva
+            loop: true
+            });
+        });
+    </script>
+    <script>
+        const btn = document.getElementById('btn');
+        btn.addEventListener('click', (ev) => {
+            const esValidoInicio = validacionInicio();
+            
+
+            if (!esValidoInicio) {
+                ev.preventDefault(); // Detiene el envío del formulario si hay errores de validación
+                document.getElementById('msgErrorMailInicio').textContent = "Ingresa tu e-mail."; 
+                document.getElementById('msgErrorPassInicio').textContent = "Ingresa tu contraseña.";
+            }
+        });
+
+        const validacionInicio = () => { // Validacion
+            const pass = document.getElementById('passInicio');
+            const email = document.getElementById('emailInicio');
+
+            let Errores = false;
+            // Validar email
+            email.addEventListener('blur', function() {
+                const emailValue = email.value.trim(); 
+                const mensajeErrorEmail = document.getElementById('msgErrorMailInicio'); 
+
+                if (emailValue === "") {
+                    email.classList.add('campo-invalido'); 
+                    email.classList.remove('campo-valido'); 
+                    mensajeErrorEmail.textContent = "Ingresa tu e-mail."; 
+                    Errores = true; 
+                } else {
+                    if (!emailValue.includes("@") || !emailValue.includes(".")) {
+                        email.classList.add('campo-invalido');
+                        email.classList.remove('campo-valido');
+                        mensajeErrorEmail.textContent = "Ingresa un correo electrónico válido.";
+                        Errores = true;
+                    } else {
+                        email.classList.remove('campo-invalido');
+                        email.classList.add('campo-valido');
+                        mensajeErrorEmail.textContent = ""; 
+                    }
+                }
+            });
+
+            // Validar contraseña
+            pass.addEventListener('blur', function(){ 
+                if (pass.value === "" || pass.value.length < 8) {
+                    pass.classList.add('campo-invalido');
+                    pass.classList.remove('campo-valido');
+                    document.getElementById('msgErrorPassInicio').textContent = "Ingresa una contraseña.";
+                    Errores = true;
+                } else {
+                    pass.classList.remove('campo-invalido');
+                    pass.classList.add('campo-valido');
+                    document.getElementById('msgErrorPassInicio').textContent = "";
+                }
+            });
+            return Errores;
+        }
+    </script>
+    <script src="js/script.js"></script>
+    <script src="js/apiMaps.js"></script>
 </body>
 </html>
