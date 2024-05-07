@@ -1,52 +1,48 @@
-*{
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    
+/* Tarjetas */
+.card {
+    width: 100%; /* Ancho completo en pantallas pequeñas */
+    margin-bottom: 5px; /* Reducir el espacio entre tarjetas */
 }
 
-@media (min-width: 0px ) and  (max-width: 359px ) {
-    .filter{
-        display: none;
+
+@media (max-width: 576px) {
+    .filter {
+        display: none; /* Ancho fijo para los filtros en dispositivos pequeños */
     }
-    
-    
-    .card{
-        width: 100%;
+
+    .card {
+        width: 100%; /* Ocupa el resto del ancho disponible */
+        margin-bottom: 5px; /* Reducir el espacio entre tarjetas */
         margin: auto;
-        
-        
     }
-}      
-@media (min-width: 359px ) and  (max-width: 530px ) {
-    .filter{
-        display: none;
-    }
-    
-    
-    .card{
-        width: calc(100%);
-        margin: 0. 5em;
-        justify-content: center;
-        align-items: center;
-        
-    }
-    
-    /*Prices*/
 
-    .desc{
-        font-size: 12px
+}
+@media (min-width: 576px) {
+    .filter {
+        width: 25%; /* Ancho fijo para los filtros en dispositivos pequeños */
     }
-    .price{
+
+    .card {
+        width: calc(100% - 20px); /* Ocupa el resto del ancho disponible */
+        margin-bottom: 5px; /* Reducir el espacio entre tarjetas */
+    }
+
+    .desc {
+        font-size: 12px;
+    }
+
+    .price {
         color: #E22F89;
         margin: 0;
-        font-weight:bold ;
-    }
-    
-    .metod{
-        font-size: 10px ;
+        font-weight: bold;
     }
 
-    .dscto{
-        border: 1px solid ;
+    .metod {
+        font-size: 10px;
+    }
+
+    .dscto {
+        border: 1px solid;
         border-radius: 5px;
         padding: 3px;
         background-color: #00e6fa;
@@ -55,70 +51,36 @@
         font-weight: bold;
     }
 
-    .old-price{
+    .old-price {
         padding-left: 5px;
         text-decoration: line-through;
         font-size: 15px;
     }
 }
 
-@media (min-width: 530px ) and  (max-width: 576px ) {
-    .filter{
-        display: none;
+@media (min-width: 768px) {
+    .filter {
+        width: 20%; /* Ancho fijo para los filtros en dispositivos medianos */
     }
-    
-    
-    .card{
-        width: 15rem;
-        
-        
-        
-        
-    }
-}
-/*Small*/
-@media (min-width: 576px ) and  (max-width: 768px ) {
-    .filter{
-        display: none;
-    }
-    
-    
-    .card{
-        width: 17rem;
-        
-        
-        
-        
-    }
-    
-}
 
-/*Mid*/
-@media   (min-width: 768px ) and (max-width: 992px ) {
-    .filter{
-        display: none;
+    .card {
+        width: calc(100% - 20px); /* Ocupa el resto del ancho disponible */
+        margin-bottom: 5px; /* Reducir el espacio entre tarjetas */
     }
-    
-    
-    .card{
-        width: 15rem;
-        
-    }
-    
-    /*Prices*/
 
-    .price{
+    .price {
         color: #E22F89;
         margin: 0;
-        font-weight:bold ;
-    }
-    
-    .metod{
-        font-size: 15px ;
+        font-weight: bold;
+        font-size: 20px;
     }
 
-    .dscto{
-        border: 1px solid ;
+    .metod {
+        font-size: 15px;
+    }
+
+    .dscto {
+        border: 1px solid;
         border-radius: 5px;
         padding: 3px;
         background-color: #00e6fa;
@@ -127,31 +89,36 @@
         font-weight: bold;
     }
 
-    .old-price{
+    .old-price {
         padding-left: 5px;
         text-decoration: line-through;
         font-size: 15px;
     }
-    
 }
-@media (min-width: 992px) and (max-width: 1200px) {
-    
-    .card{
-        width: 16.5rem;
+
+@media (min-width: 992px) {
+    .filter {
+        width: 15%; /* Ancho fijo para los filtros en dispositivos grandes */
     }
 
-    .price{
+    .card {
+        width: calc(100% - 20px); /* Ocupa el resto del ancho disponible */
+        margin-bottom: 5px; /* Reducir el espacio entre tarjetas */
+    }
+
+    .price {
         color: #E22F89;
         margin: 0;
-        font-weight:bold ;
-    }
-    
-    .metod{
-        font-size: 15px ;
+        font-weight: bold;
+        font-size: 21px;
     }
 
-    .dscto{
-        border: 1px solid ;
+    .metod {
+        font-size: 16px;
+    }
+
+    .dscto {
+        border: 1px solid;
         border-radius: 5px;
         padding: 3px;
         background-color: #00e6fa;
@@ -160,43 +127,7 @@
         font-weight: bold;
     }
 
-    .old-price{
-        padding-left: 5px;
-        text-decoration: line-through;
-        font-size: 15px;
-    }
-    
-    
-}
-
-@media (min-width: 1200px) {
-    
-    .card{
-        width: 21rem;
-        padding: 5px;
-    }
-
-    .price{
-        color: #E22F89;
-        margin: 0;
-        font-weight:bold ;
-    }
-    
-    .metod{
-        font-size: 15px ;
-    }
-
-    .dscto{
-        border: 1px solid ;
-        border-radius: 5px;
-        padding: 3px;
-        background-color: #00e6fa;
-        color: white;
-        font-size: 10px;
-        font-weight: bold;
-    }
-
-    .old-price{
+    .old-price {
         padding-left: 5px;
         text-decoration: line-through;
         font-size: 15px;
@@ -206,11 +137,11 @@
 .breadcrumb-item a {
     text-decoration: none;
     color: #E22F89;
-    font-weight: bolder;
+    font-weight: bold;
 }
 
 .input-group input:focus,
 .form-control:focus {
-    border-color: #ced4da; /* Cambia el color del borde enfocado si lo deseas */
-    box-shadow: none; /* Elimina cualquier sombreado */
+    border-color: #ced4da;
+    box-shadow: none;
 }
