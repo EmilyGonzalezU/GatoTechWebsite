@@ -1,57 +1,44 @@
 document.addEventListener('DOMContentLoaded', function() {
-  const marcaCheckboxes = document.querySelectorAll('.marcaMouse');
-  const categoriaCheckboxes = document.querySelectorAll('.categoriaMouse');
-  const precioCheckboxes = document.querySelectorAll('.precioMouse');
-  const productos = document.querySelectorAll('.producto');
+  const marcaCheckbox = document.querySelectorAll('.marcaMouse');
+  const sensorCheckbox = document.querySelectorAll('.sensorMouse');
+  const productos = document.querySelectorAll('.card');
 
-  marcaCheckboxes.forEach(function(checkbox) {
-    checkbox.addEventListener('change', function() {
-      filtrarProductos();
-    });
-  });
 
-  categoriaCheckboxes.forEach(function(checkbox) {
-    checkbox.addEventListener('change', function() {
-      filtrarProductos();
-    });
-  });
-
-  precioCheckboxes.forEach(function(checkbox) {
-    checkbox.addEventListener('change', function() {
-      filtrarProductos();
+  [marcaCheckbox, sensorCheckbox].forEach(function(checkboxes) {
+    checkboxes.forEach(function(checkbox) {
+      checkbox.addEventListener('change', function() {
+        filtrarProductos();
+      });
     });
   });
 
   function filtrarProductos() {
-    const marcasSeleccionadas = obtenerOpcionesSeleccionadas('.marcaMouse');
-    const categoriasSeleccionadas = obtenerOpcionesSeleccionadas('.categoriaMouse');
-    const preciosSeleccionados = obtenerOpcionesSeleccionadas('.precioMouse');
+    const marcaSelect = obtenerOpc('.marcaMouse');
+    const sensorSelect = obtenerOpc('.sensorMouse');
 
     productos.forEach(function(producto) {
       const marcaProducto = producto.dataset.marca;
-      const categoriaProducto = producto.dataset.categoria;
-      const precioProducto = producto.dataset.precio;
+      const sensorProducto = producto.dataset.sensor;
 
-      const marcaValida = marcasSeleccionadas.length === 0 || marcasSeleccionadas.includes(marcaProducto);
-      const categoriaValida = categoriasSeleccionadas.length === 0 || categoriasSeleccionadas.includes(categoriaProducto);
-      const precioValido = preciosSeleccionados.length === 0 || preciosSeleccionados.includes(precioProducto);
+      const marcaValida = marcaSelect.length === 0 || marcaSelect.includes(marcaProducto);
+      const sensorValido = sensorSelect.length === 0 || sensorSelect.includes(sensorProducto);
 
-      if (marcaValida && categoriaValida && precioValido) {
-        producto.style.visibility = 'visible';
+      if (marcaValida && sensorValido) {
+        producto.style.display = 'block';
       } else {
-        producto.style.visibility = 'hidden';
+        producto.style.display = 'none';
       }
     });
   }
 
-  function obtenerOpcionesSeleccionadas(selector) {
-    const opcionesSeleccionadas = [];
+  function obtenerOpc(selector) {
+    const opcSelect = [];
     const checkboxes = document.querySelectorAll(selector);
     checkboxes.forEach(function(checkbox) {
       if (checkbox.checked) {
-        opcionesSeleccionadas.push(checkbox.value);
+        opcSelect.push(checkbox.dataset.marca);
       }
     });
-    return opcionesSeleccionadas;
+    return opcSelect;
   }
 });

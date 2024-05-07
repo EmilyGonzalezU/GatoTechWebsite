@@ -411,17 +411,17 @@
               data-bs-parent="#accordionFlushExample">
               <div class="accordion-body">
                 <div class="mb-3 form-check">
-                  <input type="checkbox" class="form-check-input marcaMouse" id="mouse_razer">
+                  <input type="checkbox" class="form-check-input marcaMouse" id="mouse_razer" data-marca="razer">
                   <label class="form-check-label" for="mouse_razer">Razer</label>
                 </div>
 
                 <div class="mb-3 form-check">
-                  <input type="checkbox" class="form-check-input marcaMouse" id="mouse_logitech">
+                  <input type="checkbox" class="form-check-input marcaMouse" id="mouse_logitech" data-marca="logitech">
                   <label class="form-check-label" for="mouse_logitech">Logitech G</label>
                 </div>
 
                 <div class="mb-3 form-check">
-                  <input type="checkbox" class="form-check-input marcaMouse" id="mouse_hyperx">
+                  <input type="checkbox" class="form-check-input marcaMouse" id="mouse_hyperx" data-marca="hyperx">
                   <label class="form-check-label" for="mouse_hyperx">HyperX</label>
                 </div>
 
@@ -432,19 +432,19 @@
             <h2 class="accordion-header">
               <button class="accordion-button collapsed border" type="button" data-bs-toggle="collapse"
                 data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                Categoria
+                Sensor
               </button>
             </h2>
             <div id="flush-collapseTwo" class="accordion-collapse collapse " data-bs-parent="#accordionFlushExample">
               <div class="accordion-body">
                 <div class="mb-3 form-check">
-                  <input type="checkbox" class="form-check-input categoriaMouse" id="opticoCategoria">
-                  <label class="form-check-label" for="opticoCategoria">Óptico</label>
+                  <input type="checkbox" class="form-check-input categoriaMouse" id="sensorOptico" data-sensor="optico">
+                  <label class="form-check-label" for="sensorOptico">Óptico</label>
                 </div>
 
                 <div class="mb-3 form-check">
-                  <input type="checkbox" class="form-check-input categoriaMouse" id="laserCategoria">
-                  <label class="form-check-label" for="laserCategoria">Láser</label>
+                  <input type="checkbox" class="form-check-input categoriaMouse" id="sensorLaser" data-sensor="laser">
+                  <label class="form-check-label" for="sensorLaser">Láser</label>
                 </div>
               </div>
             </div>
@@ -485,7 +485,7 @@
 
     <div class="col-md-12 col-lg-9 col-sm-12 col-xs-12 d-flex flex-wrap ">
       <div class="position-relative col-lg-3 col-md-4  col-sm-6 mb-4">
-        <div class="card border  rounded-0">
+        <div class="card border  rounded-0" data-marca="razer" data-sensor="optico">
           <a href="#">
               <img src="img/Pc/Perifericos/mouse/ms-1.png" class="card-img-top main-image" alt="">
           </a>
@@ -507,7 +507,7 @@
 
       
       <div class="position-relative col-lg-3 col-md-4  col-sm-6 mb-4">
-        <div class="card border  rounded-0">
+        <div class="card border  rounded-0" data-marca="razer" data-sensor="optico">
           <a href="#">
               <img src="img/Pc/Perifericos/mouse/ms-2.png" class="card-img-top main-image" alt="">
           </a>
@@ -530,7 +530,7 @@
       </div>
 
       <div class="position-relative col-lg-3 col-md-4  col-sm-6 mb-4">
-        <div class="card border  rounded-0">
+        <div class="card border  rounded-0" data-marca="hyperx" data-sensor="optico">
           <a href="#">
               <img src="img/Pc/Perifericos/mouse/ms-3.png" class="card-img-top main-image" alt="">
           </a>
@@ -553,7 +553,7 @@
       </div>
 
       <div class="position-relative col-lg-3 col-md-4  col-sm-6 mb-4">
-        <div class="card border  rounded-0">
+        <div class="card border  rounded-0" data-marca="logitech" data-sensor="optico">
           <a href="#">
               <img src="img/Pc/Perifericos/mouse/ms-4.png" class="card-img-top main-image" alt="">
           </a>
@@ -576,7 +576,7 @@
       </div>
 
       <div class="position-relative col-lg-3 col-md-4  col-sm-6 mb-4">
-        <div class="card border  rounded-0">
+        <div class="card border  rounded-0" data-marca="hyperx" data-sensor="optico">
           <a href="#">
               <img src="img/Pc/Perifericos/mouse/ms-5.png" class="card-img-top main-image" alt="">
           </a>
@@ -599,7 +599,7 @@
       </div>
 
       <div class="position-relative col-lg-3 col-md-4  col-sm-6 mb-4">
-        <div class="card border  rounded-0">
+        <div class="card border  rounded-0" data-marca="logitech" data-sensor="optico">
           <a href="#">
               <img src="img/Pc/Perifericos/mouse/ms-6.png" class="card-img-top main-image" alt="">
           </a>
@@ -622,7 +622,7 @@
       </div>
 
       <div class="position-relative col-lg-3 col-md-4  col-sm-6 mb-4">
-        <div class="card border  rounded-0">
+        <div class="card border  rounded-0" data-marca="razer" data-sensor="optico">
           <a href="#">
               <img src="img/Pc/Perifericos/mouse/ms-7.png" class="card-img-top main-image" alt="">
           </a>
@@ -645,7 +645,7 @@
       </div>
 
       <div class="position-relative col-lg-3 col-md-4  col-sm-6 mb-4">
-        <div class="card border  rounded-0">
+        <div class="card border  rounded-0" data-marca="logitech" data-sensor="optico">
           <a href="#">
               <img src="img/Pc/Perifericos/mouse/ms-8.png" class="card-img-top main-image" alt="">
           </a>
@@ -668,7 +668,7 @@
       </div>
 
       <div class="position-relative col-lg-3 col-md-4  col-sm-6 mb-4">
-        <div class="card border  rounded-0">
+        <div class="card border  rounded-0" data-marca="hyperx" data-sensor="optico">
           <a href="#">
               <img src="img/Pc/Perifericos/mouse/ms-9.png" class="card-img-top main-image" alt="">
           </a>
