@@ -69,147 +69,141 @@ document.addEventListener("DOMContentLoaded", function() { /*DOM CARGADO EJECUTA
 });
 
 
-// Validacion Registro usuario
-const btnEnviar = document.getElementById('btnEnviar'); // Variable del boton para poder leerlo.
-const validacion = () => { // Validacion
-    const nombreUsuario = document.getElementById('nombre'); // Varibles constantes porque no cambian. Se obtienen mediante ID.
+
+
+// Declaración de variables de validación fuera de la función
+const btnEnviar = document.getElementById('btnEnviar');
+
+// Declaración de variables de validación y mensajes de error
+let nombreValido = false;
+let apellidoValido = false;
+let emailValido = false;
+let telValido = false;
+let rutValido = false;
+let passValido = false;
+
+
+const validacion = () => {
+    const nombreUsuario = document.getElementById('nombre');
     const apellidoUsuario = document.getElementById('apellido');
     const telUsuario = document.getElementById('telefono');
     const rutUsuario = document.getElementById('RUT');
     const passUsuario = document.getElementById('pass');
     const emailUsuario = document.getElementById('email');
 
-    // Empieza con 0 errores detectados
-    let  hayErrores= false;
 
-    //Validar nombre
-    nombreUsuario.addEventListener('blur', function(){ // Evento hace que no se vaya el foco de la validacion.
-        const nombreValue = nombreUsuario.value.trim(); // Obtener el valor del campo de nombre y eliminar espacios en blanco
-        if (nombreValue === "" || !/^[a-zA-Z\s]+$/.test(nombreValue)) { 
+    // Validar nombre
+    nombreUsuario.addEventListener('blur', function(){
+        const nombreValue = nombreUsuario.value.trim();
+        if (nombreValue === "" || !/^[a-zA-Z\s]+$/.test(nombreValue)) {
             nombreUsuario.classList.add('campo-invalido');
             nombreUsuario.classList.remove('campo-valido');
             document.getElementById('msgErrorNom').textContent = "Ingresa tu nombre";
-            // Cada validacion que no pase en un error, verdadero. No pasa.
-            hayErrores = true;
+            nombreValido = false;
         } else {
-            // Si pasa validacion texto error en blanco. No se muestra.
+            document.getElementById('msgErrorNom').textContent = "";
+            nombreValido = true;
             nombreUsuario.classList.remove('campo-invalido');
             nombreUsuario.classList.add('campo-valido');
-            document.getElementById('msgErrorNom').textContent = "";
-             
         }
     });
 
     // Validar apellido
-    apellidoUsuario.addEventListener('blur', function(){ 
-        const apellidoValue = apellidoUsuario.value.trim(); // Obtener el valor del campo de nombre y eliminar espacios en blanco
+    apellidoUsuario.addEventListener('blur', function(){
+        const apellidoValue = apellidoUsuario.value.trim();
         if (apellidoValue === "" || !/^[a-zA-Z\s]+$/.test(apellidoValue)) {
             apellidoUsuario.classList.add('campo-invalido');
             apellidoUsuario.classList.remove('campo-valido');
             document.getElementById('msgErrorAp').textContent = "Ingresa tu apellido";
-            hayErrores = true;
+            apellidoValido = false;
         } else {
+            document.getElementById('msgErrorAp').textContent = "";
+            apellidoValido = true;
             apellidoUsuario.classList.remove('campo-invalido');
             apellidoUsuario.classList.add('campo-valido');
-            document.getElementById('msgErrorAp').textContent = "";
-             
         }
     });
 
     // Validar email
     emailUsuario.addEventListener('blur', function() {
-        const emailValue = emailUsuario.value.trim(); 
-        const mensajeErrorEmail = document.getElementById('msgErrorMail'); 
-
+        const emailValue = emailUsuario.value.trim();
         if (emailValue === "") {
             emailUsuario.classList.add('campo-invalido'); 
             emailUsuario.classList.remove('campo-valido'); 
-            mensajeErrorEmail.textContent = "Ingresa tu e-mail."; 
-            hayErrores = true; 
+            document.getElementById('msgErrorMail').textContent = "Ingresa tu e-mail."; 
+            emailValido = false;
+        } else if (!emailValue.includes("@") || !emailValue.includes(".")) {
+            document.getElementById('msgErrorMail').textContent="Ingresa un correo electrónico válido.";
+            emailValido = false;
         } else {
-            if (!emailValue.includes("@") || !emailValue.includes(".")) {
-                emailUsuario.classList.add('campo-invalido');
-                emailUsuario.classList.remove('campo-valido');
-                mensajeErrorEmail.textContent = "Por favor, ingresa un correo electrónico válido.";
-                hayErrores = true;
-            } else {
-                emailUsuario.classList.remove('campo-invalido');
-                emailUsuario.classList.add('campo-valido');
-                mensajeErrorEmail.textContent = ""; 
-                 
-            }
+            document.getElementById('msgErrorMail').textContent="";
+            emailValido = true;
+            emailUsuario.classList.remove('campo-invalido');
+            emailUsuario.classList.add('campo-valido');
         }
     });
     
     // Validar teléfono
-    telUsuario.addEventListener('blur', function(){ 
+    telUsuario.addEventListener('blur', function(){
         const telValue = telUsuario.value.trim();
         if (telValue === "" || !/^\d{8}$/.test(telValue)) {
-            telUsuario.blur();
             telUsuario.classList.add('campo-invalido');
             telUsuario.classList.remove('campo-valido');
-            document.getElementById('msgErrorTel').textContent = "Ingresa tu teléfono (Sin número 9)";
-            hayErrores = true;
+            document.getElementById('msgErrorTel').textContent = "Ingresa un teléfono (8 dígitos).";
+            telValido = false;
         } else {
+            document.getElementById('msgErrorTel').textContent = "";
+            telValido = true;
             telUsuario.classList.remove('campo-invalido');
             telUsuario.classList.add('campo-valido');
-            document.getElementById('msgErrorTel').textContent = "";
-             
         }
     });
 
     // Validar RUT 
     rutUsuario.addEventListener('blur', function() {
-        const rutValue = rutUsuario.value.trim(); 
-        const mensajeErrorRut = document.getElementById('msgErrorRUT'); 
-    
-        // Validar si el campo está vacío
+        const rutValue = rutUsuario.value.trim();
         if (rutValue === "") {
             rutUsuario.classList.add('campo-invalido');
             rutUsuario.classList.remove('campo-valido'); 
-            mensajeErrorRut.textContent = "Ingresa tu RUT (Sin puntos y con dígito verificador)."; 
-            hayErrores = true;
+            document.getElementById('msgErrorRUT').textContent = "Ingresa tu RUT (Sin puntos y con dígito verificador).";             
+            rutValido = false;
+        } else if (!Fn.validaRut(rutValue)) {
+            document.getElementById('msgErrorRUT').textContent = "Ingresa un RUT válido. (Sin puntos y con dígito verificador).";             
+            rutValido = false;
         } else {
-            if (!Fn.validaRut(rutValue)) {
-                rutUsuario.classList.add('campo-invalido');
-                rutUsuario.classList.remove('campo-valido');
-                mensajeErrorRut.textContent = "Ingresa un RUT válido (Sin puntos y con dígito verificador).";
-                hayErrores = true;
-            } else {
-                rutUsuario.classList.remove('campo-invalido');
-                rutUsuario.classList.add('campo-valido');
-                mensajeErrorRut.textContent = ""; // Eliminar el mensaje de error
-                 
-            }
+            document.getElementById('msgErrorRUT').textContent = "";            
+            rutUsuario.classList.remove('campo-invalido');
+            rutUsuario.classList.add('campo-valido');
+            rutValido = true;
         }
     });
     
     // Validar contraseña
-    passUsuario.addEventListener('blur', function(){ 
-        if (passUsuario.value === "" || passUsuario.value.length < 8) {
-            passUsuario.blur();
+    passUsuario.addEventListener('blur', function(){
+        const passValue = passUsuario.value;
+        if (passValue === "" || passValue.length < 8) {
             passUsuario.classList.add('campo-invalido');
             passUsuario.classList.remove('campo-valido');
-            document.getElementById('msgErrorPass').textContent = "Ingresa una contraseña (Mínimo 8 dígitos).";
-            hayErrores = true;
+            document.getElementById('msgErrorPass').textContent = "Ingresa una contraseña (Mínimo 8 dígitos).";            
+            passValido = false;
         } else {
+            document.getElementById('msgErrorPass').textContent = "";
+            passValido = true;
             passUsuario.classList.remove('campo-invalido');
             passUsuario.classList.add('campo-valido');
-            document.getElementById('msgErrorPass').textContent = "";
-             
         }
     });
-    return hayErrores;
+
+    // Calcular esValido después de todas las validaciones
+    const esValido = nombreValido && apellidoValido && emailValido && telValido && rutValido && passValido;
+    return esValido;
 }
 
-
 btnEnviar.addEventListener('click', (event) => {
-
     const esValido = validacion();
     
-    
     if (!esValido) {
-        event.preventDefault(); // Detieneee el envío del formulario si hay errores de validación
+        event.preventDefault();
     }
 });
 

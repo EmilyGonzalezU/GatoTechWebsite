@@ -1,0 +1,124 @@
+{
+    "reviews": [
+        {
+            "id": 1,
+            "name": "Cristian",
+            "comentario": "Increible tienda tiene todo lo que necesitas a la hora de comprar componentes de PC.",
+            "calificacion": 4
+        },
+        {
+            "id": 2,
+            "name": "Laura",
+            "comentario": "Excelente servicio al cliente. Me ayudaron a elegir la mejor tarjeta gráfica para mi PC.",
+            "calificacion": 5
+        },
+        {
+            "id": 3,
+            "name": "Juan",
+            "comentario": "Los precios son muy competitivos y el envío fue rápido. Definitivamente volveré a comprar aquí.",
+            "calificacion": 4.5
+        },
+        {
+            "id": 4,
+            "name": "María",
+            "comentario": "Me encanta la variedad de productos que ofrecen. Siempre encuentro lo que necesito.",
+            "calificacion": 5
+        },
+        {
+            "id": 5,
+            "name": "Pedro",
+            "comentario": "La calidad de los productos es excepcional. Compré un monitor y estoy muy satisfecho con la compra.",
+            "calificacion": 4.7
+        },
+        {
+            "id": 6,
+            "name": "Carolina",
+            "comentario": "Fácil proceso de compra y excelente atención al cliente. Recomiendo esta tienda a todos mis amigos.",
+            "calificacion": 5
+        },
+        {
+            "id": 7,
+            "name": "Andrés",
+            "comentario": "Buenos precios y una gran selección de productos. La entrega fue puntual y el producto llegó en perfecto estado.",
+            "calificacion": 4.8
+        },
+        {
+            "id": 8,
+            "name": "Sofía",
+            "comentario": "Una experiencia de compra muy satisfactoria. Sin duda volveré a comprar aquí en el futuro.",
+            "calificacion": 4.5
+        },
+        {
+            "id": 9,
+            "name": "David",
+            "comentario": "El personal de atención al cliente es muy amable y servicial. Resolvieron todas mis dudas de manera rápida y efectiva.",
+            "calificacion": 4.6
+        },
+        {
+            "id": 10,
+            "name": "Ana",
+            "comentario": "Me gusta que tengan productos de marcas reconocidas a precios asequibles. Definitivamente recomendaré esta tienda a otros.",
+            "calificacion": 4.9
+        },
+        {
+            "id": 11,
+            "name": "Cristian",
+            "comentario": "Increible tienda tiene todo lo que necesitas a la hora de comprar componentes de PC.",
+            "calificacion": 4
+        },
+        {
+            "id": 12,
+            "name": "Marta",
+            "comentario": "El servicio al cliente es excelente, pero los precios son un poco altos.",
+            "calificacion": 3
+        },
+        {
+            "id": 13,
+            "name": "Diego",
+            "comentario": "Los productos son de buena calidad, pero la entrega se demoró más de lo esperado.",
+            "calificacion": 4
+        },
+        {
+            "id": 14,
+            "name": "Natalia",
+            "comentario": "Mala experiencia, el producto llegó dañado y el servicio al cliente no fue útil.",
+            "calificacion": 2
+        },
+        {
+            "id": 15,
+            "name": "Pablo",
+            "comentario": "Compré un producto y nunca llegó, además el soporte al cliente no respondió mis mensajes.",
+            "calificacion": 1
+        },
+        {
+            "id": 16,
+            "name": "Valentina",
+            "comentario": "Excelente atención al cliente, pero los productos no son de la calidad que esperaba.",
+            "calificacion": 3
+        },
+        {
+            "id": 17,
+            "name": "Andrés",
+            "comentario": "Buenos precios, pero la entrega se demoró más de lo prometido.",
+            "calificacion": 3
+        },
+        {
+            "id": 18,
+            "name": "Paula",
+            "comentario": "Mejoraría el tiempo de entrega, pero en general una buena experiencia de compra.",
+            "calificacion": 4
+        },
+        {
+            "id": 19,
+            "name": "Javier",
+            "comentario": "No recomiendo esta tienda, los productos son de mala calidad y el servicio al cliente es pobre.",
+            "calificacion": 1
+        },
+        {
+            "id": 20,
+            "name": "Daniela",
+            "comentario": "El producto llegó en buen estado y en el tiempo esperado, pero el precio era un poco alto.",
+            "calificacion": 3
+        }
+    ]
+}
