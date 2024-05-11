@@ -1592,73 +1592,16 @@
     <script>
         $(document).ready(function(){
             $("#carousel").owlCarousel({
-            items: 1, // Solo muestra una imagen por diapositiva
+            items: 1, 
             loop: true,
             autoplay: true,
             autoplaySpeed: 2000,
             });
         });
     </script>
-    <script>
-        const btn = document.getElementById('btn');
-        btn.addEventListener('click', (ev) => {
-            const esValidoInicio = validacionInicio();
-            
-
-            if (!esValidoInicio) {
-                ev.preventDefault(); // Detiene el envío del formulario si hay errores de validación
-                document.getElementById('msgErrorMailInicio').textContent = "Ingresa tu e-mail."; 
-                document.getElementById('msgErrorPassInicio').textContent = "Ingresa tu contraseña.";
-            }
-        });
-
-        const validacionInicio = () => { // Validacion
-            const pass = document.getElementById('passInicio');
-            const email = document.getElementById('emailInicio');
-
-            let Errores = false;
-            // Validar email
-            email.addEventListener('blur', function() {
-                const emailValue = email.value.trim(); 
-                const mensajeErrorEmail = document.getElementById('msgErrorMailInicio'); 
-
-                if (emailValue === "") {
-                    email.classList.add('campo-invalido'); 
-                    email.classList.remove('campo-valido'); 
-                    mensajeErrorEmail.textContent = "Ingresa tu e-mail."; 
-                    Errores = true; 
-                } else {
-                    if (!emailValue.includes("@") || !emailValue.includes(".")) {
-                        email.classList.add('campo-invalido');
-                        email.classList.remove('campo-valido');
-                        mensajeErrorEmail.textContent = "Ingresa un correo electrónico válido.";
-                        Errores = true;
-                    } else {
-                        email.classList.remove('campo-invalido');
-                        email.classList.add('campo-valido');
-                        mensajeErrorEmail.textContent = ""; 
-                    }
-                }
-            });
-
-            // Validar contraseña
-            pass.addEventListener('blur', function(){ 
-                if (pass.value === "" || pass.value.length < 8) {
-                    pass.classList.add('campo-invalido');
-                    pass.classList.remove('campo-valido');
-                    document.getElementById('msgErrorPassInicio').textContent = "Ingresa una contraseña.";
-                    Errores = true;
-                } else {
-                    pass.classList.remove('campo-invalido');
-                    pass.classList.add('campo-valido');
-                    document.getElementById('msgErrorPassInicio').textContent = "";
-                }
-            });
-            return Errores;
-        }
-    </script>
-    <script src="js/apiReseñas.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/valIncioSesion.js"></script>
+    <script src="js/apiReseñas.js"></script>
     <script src="js/apiMaps.js"></script>
 </body>
 </html>

@@ -323,11 +323,11 @@
         <div class="row justify-content-center align-items-center">
             <div class="col-md-4">
                 <div class=" p-5 rounded-5 text-secondary shadow">
-                    <div class="text-center fs-1 fw-bold mb-4">Registro de usuarios</div>
-                    <form action="procesar_registro.php" method="post" novalidate>
+                    <div class="text-start fs-3 fw-bold mb-4">Registro de usuarios</div>
+                    <form action="procesar_registro.php" method="post" novalidate autocomplete="off">
                         <div class="form-group mb-3"  style="height: 98px;">
-                            <label for="nombre" class="fs-5 mt-1 pb-1 fw-semibold ">Ingrese nombre</label>
-                            <div class="input-group mt-1 pb-2">
+                            <label for="nombre" class="fs-5 mt-3 pb-1 fw-semibold ">Nombre</label>
+                            <div class="input-group mt-2 pb-1">
                                 <div class="input-group-text bg-info">
                                     <i class="bi bi-person-fill text-white"></i>
                                 </div>
@@ -336,8 +336,8 @@
                             <div class="fs-7 text-danger fw-bold" id="msgErrorNom"></div>
                         </div>
                         <div class="form-group mb-3 "  style="height: 98px;">
-                            <label for="apellido" class="fs-5 mt-1 pb-1 fw-semibold ">Ingrese apellido</label>
-                            <div class="input-group mt-1 pb-2">
+                            <label for="apellido" class="fs-5 mt-3 pb-1 fw-semibold ">Apellido</label>
+                            <div class="input-group mt-1 pb-1">
                                 <div class="input-group-text bg-info">
                                     <i class="bi bi-person-fill text-white"></i>
                                 </div>
@@ -347,8 +347,8 @@
                             <div class="fs-7 text-danger fw-bold" id="msgErrorAp"></div>
                         </div>
                         <div class="form-group mb-3  "  style="height: 98px;">
-                            <label for="email" class="fs-5 mt-1 pb-1 fw-semibold ">Ingrese email</label>
-                            <div class="input-group mt-1 pb-2">
+                            <label for="email" class="fs-5 mt-3 pb-1 fw-semibold ">Email</label>
+                            <div class="input-group mt-1 pb-1">
                                 <div class="input-group-text bg-info">
                                     <i class="bi bi-envelope text-white"></i>                              
                                 </div>
@@ -358,8 +358,8 @@
                         </div>
 
                         <div class="form-group mb-3"  style="height: 98px;">
-                            <label for="telefono" class="fs-5 mt-1 pb-1 fw-semibold ">Ingrese telefono</label>
-                            <div class="input-group mt-1 pb-2">
+                            <label for="telefono" class="fs-5 mt-3 pb-1 fw-semibold ">Telefono</label>
+                            <div class="input-group mt-1 pb-1">
                                 <div class="input-group-text bg-info">
                                     <i class="bi bi-telephone-fill text-white"></i>
                                 </div>
@@ -368,8 +368,8 @@
                             <div class="fs-7 text-danger fw-bold" id="msgErrorTel"></div>
                         </div>
                         <div class="form-group mb-3 "  style="height: 98px;">
-                            <label for="RUT" class="fs-5 mt-1 pb-1 fw-semibold ">Ingrese RUT</label>
-                            <div class="input-group mt-1 pb-2">
+                            <label for="RUT" class="fs-5 mt-3 pb-1 fw-semibold ">RUT</label>
+                            <div class="input-group mt-1 pb-1">
                                 <div class="input-group-text bg-info">
                                     <i class="bi bi-person-vcard text-white"></i>                               
                                 </div>
@@ -378,19 +378,18 @@
                             <div class="fs-7 text-danger fw-bold" id="msgErrorRUT"></div>
                         </div>
                         <div class="form-group " style="height: 98px;">
-                            <label for="password" class="fs-5 pb-1 fw-semibold">Contraseña</label>
-                            <div class="input-group mt-1 pb-2">
+                            <label for="password" class="fs-5 mt-3 pb-1 fw-semibold">Contraseña</label>
+                            <div class="input-group mt-1 pb-1">
                                 <div class="input-group-text bg-info">
                                     <i class="bi bi-key-fill text-white"></i>
                                 </div>
                                 <input class="form-control bg-light"  type="password" name="password" id="pass" required  />
-                                
                             </div>
                             <div class="fs-7 text-danger fw-bold" id="msgErrorPass"></div>
                         </div>
-                        <button type="submit" class="btn btn-info w-100 mt-4  shadow-sm text-white" id="btnEnviar">Registrarse</button>
+                        <button type="submit" class="btn btn-info w-100 mt-5  shadow-sm text-white" id="btnEnviar">Registrarse</button>
                     </form>
-                    <div class="text-center mt-3">
+                    <div class="text-center mt-4">
                         ¿Ya tienes cuenta? <a href="iniciosesion.html" class="text-info fw-bold text-decoration-none">Iniciar sesión</a>
                     </div>
                 </div>
@@ -403,6 +402,6 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="js/script.js"></script>
+    <script src="js/valRegistro.js"></script>
   </body>
 </html>

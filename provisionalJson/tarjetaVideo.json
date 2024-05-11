@@ -1,0 +1,74 @@
+{
+    "tarjetas_graficas": {
+      "top": [
+        {
+          "marca": "NVIDIA",
+          "modelo": "GeForce RTX 3090",
+          "memoria": "24 GB GDDR6X",
+          "frecuencia": "1.70 GHz",
+          "interfaz_memoria": "384-bit"
+        },
+        {
+          "marca": "AMD",
+          "modelo": "Radeon RX 6900 XT",
+          "memoria": "16 GB GDDR6",
+          "frecuencia": "2.25 GHz",
+          "interfaz_memoria": "256-bit"
+        },
+        {
+          "marca": "NVIDIA",
+          "modelo": "GeForce RTX 3080",
+          "memoria": "10 GB GDDR6X",
+          "frecuencia": "1.71 GHz",
+          "interfaz_memoria": "320-bit"
+        }
+      ],
+      "medium": [
+        {
+          "marca": "NVIDIA",
+          "modelo": "GeForce RTX 3070",
+          "memoria": "8 GB GDDR6",
+          "frecuencia": "1.73 GHz",
+          "interfaz_memoria": "256-bit"
+        },
+        {
+          "marca": "AMD",
+          "modelo": "Radeon RX 6800 XT",
+          "memoria": "16 GB GDDR6",
+          "frecuencia": "2.25 GHz",
+          "interfaz_memoria": "256-bit"
+        },
+        {
+          "marca": "NVIDIA",
+          "modelo": "GeForce RTX 3060 Ti",
+          "memoria": "8 GB GDDR6",
+          "frecuencia": "1.41 GHz",
+          "interfaz_memoria": "256-bit"
+        }
+      ],
+      "low": [
+        {
+          "marca": "NVIDIA",
+          "modelo": "GeForce GTX 1660 Super",
+          "memoria": "6 GB GDDR6",
+          "frecuencia": "1.53 GHz",
+          "interfaz_memoria": "192-bit"
+        },
+        {
+          "marca": "AMD",
+          "modelo": "Radeon RX 5500 XT",
+          "memoria": "8 GB GDDR6",
+          "frecuencia": "1.71 GHz",
+          "interfaz_memoria": "128-bit"
+        },
+        {
+          "marca": "NVIDIA",
+          "modelo": "GeForce GTX 1650",
+          "memoria": "4 GB GDDR6",
+          "frecuencia": "1.68 GHz",
+          "interfaz_memoria": "128-bit"
+        }
+      ]
+    }
+  }
+  

@@ -1,0 +1,107 @@
+{
+    "procesadores": {
+      "top": [
+        {
+          "modelo": "Intel Core i9-11900K",
+          "generacion": "11th Gen",
+          "nucleos": 8,
+          "frecuencia_base": "3.5 GHz",
+          "frecuencia_maxima": "5.3 GHz",
+          "socket": "LGA1200"
+        },
+        {
+          "modelo": "Intel Core i9-10900K",
+          "generacion": "10th Gen",
+          "nucleos": 10,
+          "frecuencia_base": "3.7 GHz",
+          "frecuencia_maxima": "5.3 GHz",
+          "socket": "LGA1200"
+        },
+        {
+          "modelo": "Intel Core i7-11700K",
+          "generacion": "11th Gen",
+          "nucleos": 8,
+          "frecuencia_base": "3.6 GHz",
+          "frecuencia_maxima": "5.0 GHz",
+          "socket": "LGA1200"
+        },
+        {
+          "modelo": "Intel Core i7-10700K",
+          "generacion": "10th Gen",
+          "nucleos": 8,
+          "frecuencia_base": "3.8 GHz",
+          "frecuencia_maxima": "5.1 GHz",
+          "socket": "LGA1200"
+        }
+      ],
+      "medium": [
+        {
+          "modelo": "Intel Core i5-11600K",
+          "generacion": "11th Gen",
+          "nucleos": 6,
+          "frecuencia_base": "3.9 GHz",
+          "frecuencia_maxima": "4.9 GHz",
+          "socket": "LGA1200"
+        },
+        {
+          "modelo": "Intel Core i5-10600K",
+          "generacion": "10th Gen",
+          "nucleos": 6,
+          "frecuencia_base": "4.1 GHz",
+          "frecuencia_maxima": "4.8 GHz",
+          "socket": "LGA1200"
+        },
+        {
+          "modelo": "Intel Core i3-10100",
+          "generacion": "10th Gen",
+          "nucleos": 4,
+          "frecuencia_base": "3.6 GHz",
+          "frecuencia_maxima": "4.3 GHz",
+          "socket": "LGA1200"
+        },
+        {
+          "modelo": "Intel Core i3-11100",
+          "generacion": "11th Gen",
+          "nucleos": 4,
+          "frecuencia_base": "3.6 GHz",
+          "frecuencia_maxima": "4.5 GHz",
+          "socket": "LGA1200"
+        }
+      ],
+      "low": [
+        {
+          "modelo": "Intel Pentium Gold G6400",
+          "generacion": "10th Gen",
+          "nucleos": 2,
+          "frecuencia_base": "4.0 GHz",
+          "frecuencia_maxima": "N/A",
+          "socket": "LGA1200"
+        },
+        {
+          "modelo": "Intel Celeron G5900",
+          "generacion": "10th Gen",
+          "nucleos": 2,
+          "frecuencia_base": "3.4 GHz",
+          "frecuencia_maxima": "N/A",
+          "socket": "LGA1200"
+        },
+        {
+          "modelo": "Intel Pentium Gold G5420",
+          "generacion": "9th Gen",
+          "nucleos": 2,
+          "frecuencia_base": "3.8 GHz",
+          "frecuencia_maxima": "N/A",
+          "socket": "LGA1151"
+        },
+        {
+          "modelo": "Intel Celeron G4930",
+          "generacion": "8th Gen",
+          "nucleos": 2,
+          "frecuencia_base": "3.2 GHz",
+          "frecuencia_maxima": "N/A",
+          "socket": "LGA1151"
+        }
+      ]
+    }
+  }
+  
