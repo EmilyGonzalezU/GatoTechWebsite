@@ -1,74 +1,118 @@
 {
-    "tarjetas_graficas": {
-      "top": [
-        {
-          "marca": "NVIDIA",
-          "modelo": "GeForce RTX 3090",
-          "memoria": "24 GB GDDR6X",
-          "frecuencia": "1.70 GHz",
-          "interfaz_memoria": "384-bit"
-        },
-        {
-          "marca": "AMD",
-          "modelo": "Radeon RX 6900 XT",
-          "memoria": "16 GB GDDR6",
-          "frecuencia": "2.25 GHz",
-          "interfaz_memoria": "256-bit"
-        },
-        {
-          "marca": "NVIDIA",
-          "modelo": "GeForce RTX 3080",
-          "memoria": "10 GB GDDR6X",
-          "frecuencia": "1.71 GHz",
-          "interfaz_memoria": "320-bit"
+  "tarjetas_video": {
+    "top": [
+      {
+        "modelo": "NVIDIA GeForce RTX 3090",
+        "memoria": "24 GB GDDR6X",
+        "velocidad_reloj": "1.40 GHz (1.70 GHz en boost)",
+        "ancho_banda": "936 GB/s",
+        "consumo_energetico": "350 W",
+        "recomendaciones": {
+          "presupuesto": "Alto",
+          "uso_previsto": "Gaming en 4K, edición de vídeo 8K, renderizado 3D",
+          "consejos": "La tarjeta gráfica más potente de NVIDIA, ideal para usuarios que buscan el máximo rendimiento en juegos y aplicaciones de producción de alta gama."
         }
-      ],
-      "medium": [
-        {
-          "marca": "NVIDIA",
-          "modelo": "GeForce RTX 3070",
-          "memoria": "8 GB GDDR6",
-          "frecuencia": "1.73 GHz",
-          "interfaz_memoria": "256-bit"
-        },
-        {
-          "marca": "AMD",
-          "modelo": "Radeon RX 6800 XT",
-          "memoria": "16 GB GDDR6",
-          "frecuencia": "2.25 GHz",
-          "interfaz_memoria": "256-bit"
-        },
-        {
-          "marca": "NVIDIA",
-          "modelo": "GeForce RTX 3060 Ti",
-          "memoria": "8 GB GDDR6",
-          "frecuencia": "1.41 GHz",
-          "interfaz_memoria": "256-bit"
+      },
+      {
+        "modelo": "AMD Radeon RX 6900 XT",
+        "memoria": "16 GB GDDR6",
+        "velocidad_reloj": "1.825 GHz (2.250 GHz en boost)",
+        "ancho_banda": "512 GB/s",
+        "consumo_energetico": "300 W",
+        "recomendaciones": {
+          "presupuesto": "Alto",
+          "uso_previsto": "Gaming de alta calidad, creación de contenido multimedia, diseño 3D",
+          "consejos": "Potente tarjeta gráfica de AMD para juegos AAA en resolución 4K y aplicaciones de edición de vídeo y diseño gráfico."
         }
-      ],
-      "low": [
-        {
-          "marca": "NVIDIA",
-          "modelo": "GeForce GTX 1660 Super",
-          "memoria": "6 GB GDDR6",
-          "frecuencia": "1.53 GHz",
-          "interfaz_memoria": "192-bit"
-        },
-        {
-          "marca": "AMD",
-          "modelo": "Radeon RX 5500 XT",
-          "memoria": "8 GB GDDR6",
-          "frecuencia": "1.71 GHz",
-          "interfaz_memoria": "128-bit"
-        },
-        {
-          "marca": "NVIDIA",
-          "modelo": "GeForce GTX 1650",
-          "memoria": "4 GB GDDR6",
-          "frecuencia": "1.68 GHz",
-          "interfaz_memoria": "128-bit"
+      },
+      {
+        "modelo": "NVIDIA GeForce RTX 3080 Ti",
+        "memoria": "12 GB GDDR6X",
+        "velocidad_reloj": "1.37 GHz (1.67 GHz en boost)",
+        "ancho_banda": "912 GB/s",
+        "consumo_energetico": "350 W",
+        "recomendaciones": {
+          "presupuesto": "Alto",
+          "uso_previsto": "Gaming en 4K, edición de vídeo 4K, renderizado 3D",
+          "consejos": "Potente tarjeta gráfica para gaming en alta resolución y tareas de edición de vídeo y diseño. Ofrece un excelente rendimiento en aplicaciones exigentes."
         }
-      ]
-    }
+      }
+    ],
+    "mid": [
+      {
+        "modelo": "NVIDIA GeForce RTX 3070",
+        "memoria": "8 GB GDDR6",
+        "velocidad_reloj": "1.50 GHz (1.73 GHz en boost)",
+        "ancho_banda": "448 GB/s",
+        "consumo_energetico": "220 W",
+        "recomendaciones": {
+          "presupuesto": "Medio",
+          "uso_previsto": "Gaming en 1440p, edición de vídeo Full HD, streaming",
+          "consejos": "Excelente tarjeta gráfica para gaming de alta calidad en resoluciones QHD y tareas de edición de vídeo y transmisión en vivo."
+        }
+      },
+      {
+        "modelo": "AMD Radeon RX 6700 XT",
+        "memoria": "12 GB GDDR6",
+        "velocidad_reloj": "2.424 GHz (2.581 GHz en boost)",
+        "ancho_banda": "384 GB/s",
+        "consumo_energetico": "230 W",
+        "recomendaciones": {
+          "presupuesto": "Medio",
+          "uso_previsto": "Gaming en alta calidad, edición de vídeo HD, multitarea",
+          "consejos": "Excelente rendimiento en gaming en resolución 1440p y tareas de edición de vídeo y productividad. Buena relación calidad-precio."
+        }
+      },
+      {
+        "modelo": "NVIDIA GeForce RTX 3060 Ti",
+        "memoria": "8 GB GDDR6",
+        "velocidad_reloj": "1.41 GHz (1.67 GHz en boost)",
+        "ancho_banda": "448 GB/s",
+        "consumo_energetico": "200 W",
+        "recomendaciones": {
+          "presupuesto": "Medio",
+          "uso_previsto": "Gaming en 1080p, streaming, edición de vídeo básica",
+          "consejos": "Excelente tarjeta gráfica para gaming en Full HD y transmisión en vivo. También ofrece buen rendimiento en tareas de edición de vídeo."
+        }
+      }
+    ],
+    "low": [
+      {
+        "modelo": "NVIDIA GeForce GTX 1650",
+        "memoria": "4 GB GDDR6",
+        "velocidad_reloj": "1.48 GHz (1.71 GHz en boost)",
+        "ancho_banda": "128 GB/s",
+        "consumo_energetico": "75 W",
+        "recomendaciones": {
+          "presupuesto": "Bajo",
+          "uso_previsto": "Gaming ligero, navegación web, multimedia",
+          "consejos": "Tarjeta gráfica económica para gaming en resolución HD y tareas multimedia básicas. Ideal para PCs de presupuesto ajustado."
+        }
+      },
+      {
+        "modelo": "AMD Radeon RX 550",
+        "memoria": "4 GB GDDR5",
+        "velocidad_reloj": "1.12 GHz",
+        "ancho_banda": "112 GB/s",
+        "consumo_energetico": "50 W",
+        "recomendaciones": {
+          "presupuesto": "Bajo",
+          "uso_previsto": "Multimedia básica, visualización de contenido",
+          "consejos": "Tarjeta gráfica de bajo consumo para tareas multimedia básicas. Ideal para PCs de oficina y sistemas HTPC."
+        }
+      },
+      {
+        "modelo": "NVIDIA GeForce GT 1030",
+        "memoria": "2 GB GDDR5",
+        "velocidad_reloj": "1.23 GHz (1.47 GHz en boost)",
+        "ancho_banda": "48 GB/s",
+        "consumo_energetico": "30 W",
+        "recomendaciones": {
+          "presupuesto": "Bajo",
+          "uso_previsto": "Uso básico, navegación web, reproducción de medios",
+          "consejos": "Tarjeta gráfica económica para tareas básicas de PC y reproducción de medios. Ideal para sistemas de oficina y HTPC."
+        }
+      }
+    ]
   }
-  
+}
