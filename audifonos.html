@@ -421,64 +421,31 @@
         <!--Filters-->
         <div class="container-expand-md border">
           <div class="accordion accordion-flush" id="accordionFlushExample">
+
             <div class="accordion-item">
               <h2 class="accordion-header">
                 <button class="accordion-button collapsed border" type="button" data-bs-toggle="collapse"
                   data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                  General
+                  Marca
                 </button>
               </h2>
-              <div id="flush-collapseOne" class="accordion-collapse collapse show"
-                data-bs-parent="#accordionFlushExample">
+              <div id="flush-collapseOne" class="accordion-collapse collapse " data-bs-parent="#accordionFlushExample">
                 <div class="accordion-body">
                   <div class="mb-3 form-check">
-                    <input type="checkbox" class="form-check-input" id="amdMarca">
-                    <label class="form-check-label" for="amdMarca">AMD</label>
+                    <input type="checkbox" class="form-check-input marca" id="audifonos_redragon" data-marca="redragon">
+                    <label class="form-check-label" for="audifonos_redragon">Redragon</label>
                   </div>
-
                   <div class="mb-3 form-check">
-                    <input type="checkbox" class="form-check-input" id="intelMarca">
-                    <label class="form-check-label" for="intelMarca">Intel</label>
+                    <input type="checkbox" class="form-check-input marca" id="audifonos_logitech" data-marca="logitech">
+                    <label class="form-check-label" for="audifonos_logitech">Logitech</label>
                   </div>
-
-                  <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="floatingInput" placeholder="">
-                    <label for="floatingInput" class="fs-8">Socket</label>
-
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#">Action</a></li>
-                      <li><a class="dropdown-item" href="#">Another action</a></li>
-                      <li><a class="dropdown-item" href="#">Something else here</a></li>
-                      <li><a class="dropdown-item" href="#">Action</a></li>
-                      <li><a class="dropdown-item" href="#">Another action</a></li>
-                      <li><a class="dropdown-item" href="#">Something else here</a></li>
-                      <li><a class="dropdown-item" href="#">Action</a></li>
-                      <li><a class="dropdown-item" href="#">Another action</a></li>
-                      <li><a class="dropdown-item" href="#">Something else here</a></li>
-                      <li><a class="dropdown-item" href="#">Action</a></li>
-                      <li><a class="dropdown-item" href="#">Another action</a></li>
-                      <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
+                  <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input marca" id="audifonos_razer" data-marca="razer">
+                    <label class="form-check-label" for="audifonos_razer">Razer</label>
                   </div>
-
-                  <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="floatingInput" placeholder="">
-                    <label for="floatingInput" class="fs-8">Lineas</label>
-
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#">Action</a></li>
-                      <li><a class="dropdown-item" href="#">Another action</a></li>
-                      <li><a class="dropdown-item" href="#">Something else here</a></li>
-                      <li><a class="dropdown-item" href="#">Action</a></li>
-                      <li><a class="dropdown-item" href="#">Another action</a></li>
-                      <li><a class="dropdown-item" href="#">Something else here</a></li>
-                      <li><a class="dropdown-item" href="#">Action</a></li>
-                      <li><a class="dropdown-item" href="#">Another action</a></li>
-                      <li><a class="dropdown-item" href="#">Something else here</a></li>
-                      <li><a class="dropdown-item" href="#">Action</a></li>
-                      <li><a class="dropdown-item" href="#">Another action</a></li>
-                      <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
+                  <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input marca" id="audifonos_hyperx" data-marca="hyperx">
+                    <label class="form-check-label" for="audifonos_hyperx">HyperX</label>
                   </div>
                 </div>
               </div>
@@ -487,19 +454,19 @@
               <h2 class="accordion-header">
                 <button class="accordion-button collapsed border" type="button" data-bs-toggle="collapse"
                   data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                  Categoria
+                  Tipo
                 </button>
               </h2>
               <div id="flush-collapseTwo" class="accordion-collapse collapse " data-bs-parent="#accordionFlushExample">
                 <div class="accordion-body">
                   <div class="mb-3 form-check">
-                    <input type="checkbox" class="form-check-input" id="amdCategoria">
-                    <label class="form-check-label" for="amdCategoria">Procesadores AMD</label>
+                    <input type="checkbox" class="form-check-input tipo" id="audifonos_cable" data-tipo="cable">
+                    <label class="form-check-label" for="audifonos_cable">Cable</label>
                   </div>
 
                   <div class="mb-3 form-check">
-                    <input type="checkbox" class="form-check-input" id="intelCategoria">
-                    <label class="form-check-label" for="intelCategoria">Procesadores Intel</label>
+                    <input type="checkbox" class="form-check-input tipo" id="audifonos_wirless" data-sensor="wireless">
+                    <label class="form-check-label" for="audifonos_wirless">Wirless</label>
                   </div>
                 </div>
               </div>
@@ -533,39 +500,6 @@
                 </div>
               </div>
             </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseThree">
-                  Núcleos
-                </button>
-              </h2>
-              <div id="flush-collapseFour" class="accordion-collapse collapse " data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body ">
-                  <div class="mb-3 form-check ">
-                    <div class="form-floating mb-3">
-                      <input type="text" class="form-control" id="floatingInput" placeholder="">
-                      <label for="floatingInput" class="fs-8">Lineas</label>
-
-                      <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -573,7 +507,7 @@
 
       <div class="col-md-12 col-lg-9 col-sm-12 col-xs-12 d-flex flex-wrap ">
         <div class="position-relative col-lg-3 col-md-4  col-sm-6 mb-4">
-          <div class="card border  rounded-0">
+          <div class="card border  rounded-0" data-marca="redragon">
             <a href="#">
               <img src="img/Pc/Perifericos/Audifonos/audifonos/au-1.png" class="card-img-top main-image" alt="">
             </a>
@@ -598,7 +532,7 @@
 
 
         <div class="position-relative col-lg-3 col-md-4  col-sm-6 mb-4">
-          <div class="card border  rounded-0">
+          <div class="card border  rounded-0" data-marca="logitech">
             <a href="#">
               <img src="img/Pc/Perifericos/Audifonos/audifonos/au-2.png" class="card-img-top main-image" alt="">
             </a>
@@ -621,7 +555,7 @@
         </div>
 
         <div class="position-relative col-lg-3 col-md-4  col-sm-6 mb-4">
-          <div class="card border  rounded-0">
+          <div class="card border  rounded-0" data-marca="logitech">
             <a href="#">
               <img src="img/Pc/Perifericos/Audifonos/audifonos/au-3.png" class="card-img-top main-image" alt="">
             </a>
@@ -644,7 +578,7 @@
         </div>
 
         <div class="position-relative col-lg-3 col-md-4  col-sm-6 mb-4">
-          <div class="card border  rounded-0">
+          <div class="card border  rounded-0" data-marca="logitech">
             <a href="#">
               <img src="img/Pc/Perifericos/Audifonos/audifonos/au-4.png" class="card-img-top main-image" alt="">
             </a>
@@ -667,7 +601,7 @@
         </div>
 
         <div class="position-relative col-lg-3 col-md-4  col-sm-6 mb-4">
-          <div class="card border  rounded-0">
+          <div class="card border  rounded-0" data-marca="hyperx">
             <a href="#">
               <img src="img/Pc/Perifericos/Audifonos/audifonos/au-5.png" class="card-img-top main-image" alt="">
             </a>
@@ -691,12 +625,12 @@
         </div>
 
         <div class="position-relative col-lg-3 col-md-4  col-sm-6 mb-4">
-          <div class="card border  rounded-0">
+          <div class="card border  rounded-0" data-marca="razer">
             <a href="#">
               <img src="img/Pc/Perifericos/Audifonos/audifonos/au-6.png" class="card-img-top main-image" alt="">
             </a>
             <div class="card-body" style="height: 295px;" style="height: 295px;">
-              <h6 class="fw-bold">HYPERX:</h6>
+              <h6 class="fw-bold">RAZER:</h6>
               <div class="position-relative" style="height: 86.1px;">
                 <p class="productDesc">Audífono Gamer Razer Kraken Kitty Chroma, Black</p>
               </div>
@@ -714,7 +648,7 @@
         </div>
 
         <div class="position-relative col-lg-3 col-md-4  col-sm-6 mb-4">
-          <div class="card border  rounded-0">
+          <div class="card border  rounded-0" data-marca="redragon">
             <a href="#">
               <img src="img/Pc/Perifericos/Audifonos/audifonos/au-7.png" class="card-img-top main-image" alt="">
             </a>
@@ -737,7 +671,7 @@
         </div>
 
         <div class="position-relative col-lg-3 col-md-4  col-sm-6 mb-4">
-          <div class="card border  rounded-0">
+          <div class="card border  rounded-0" data-marca="logitech">
             <a href="#">
               <img src="img/Pc/Perifericos/Audifonos/audifonos/au-8.png" class="card-img-top main-image" alt="">
             </a>
@@ -761,7 +695,7 @@
         </div>
 
         <div class="position-relative col-lg-3 col-md-4  col-sm-6 mb-4">
-          <div class="card border  rounded-0">
+          <div class="card border  rounded-0" data-marca="logitech">
             <a href="#">
               <img src="img/Pc/Perifericos/Audifonos/audifonos/au-9.png" class="card-img-top main-image" alt="">
             </a>
@@ -784,7 +718,7 @@
         </div>
 
         <div class="position-relative col-lg-3 col-md-4  col-sm-6 mb-4">
-          <div class="card border  rounded-0">
+          <div class="card border  rounded-0" data-marca="hyperx">
             <a href="#">
               <img src="img/Pc/Perifericos/Audifonos/audifonos/au-10.png" class="card-img-top main-image" alt="">
             </a>
@@ -808,9 +742,9 @@
         </div>
 
         <div class="position-relative col-lg-3 col-md-4  col-sm-6 mb-4">
-          <div class="card border  rounded-0">
+          <div class="card border  rounded-0" data-marca="razer">
             <a href="#">
-              <img src="img/Pc/Perifericos/Audifonos/audifonos/au-10.png" class="card-img-top main-image" alt="">
+              <img src="img/Pc/Perifericos/Audifonos/audifonos/au-11.png" class="card-img-top main-image" alt="">
             </a>
             <div class="card-body" style="height: 295px;" style="height: 295px;">
               <h6 class="fw-bold">RAZER:</h6>
@@ -837,61 +771,61 @@
   <!--Footer-->
   <div class="container-fluid">
     <div class="row p-5 pb-0 bg-black text-white justify-content-between">
-        <div class="d-none d-sm-none d-md-none d-xs-none d-lg-block col-lg-3">
-            <a href=""><img src="img/Logos/GatoTechLogo.png" class="footerLogo" alt=""></a>
+      <div class="d-none d-sm-none d-md-none d-xs-none d-lg-block col-lg-3">
+        <a href=""><img src="img/Logos/GatoTechLogo.png" class="footerLogo" alt=""></a>
+      </div>
+      <div class="col-xs-4 col-sm-4 col-md-4 col-lg-3 ">
+        <p class="h5 ">Navegacion</p>
+        <div class="border-bottom footerLine mx-auto"></div>
+        <div class="mb-2">
+          <a class="text-white  text-decoration-none" href="# ">PC</a>
         </div>
-        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-3 ">
-            <p class="h5 ">Navegacion</p>
-            <div class="border-bottom footerLine mx-auto"></div>
-            <div class="mb-2">
-                <a class="text-white  text-decoration-none" href="# ">PC</a>
-            </div>
-            <div class="mb-2">
-                <a class="text-white text-decoration-none" href="#">Notebook</a>
-            </div>
-            <div class="mb-2">
-                <a class="text-white text-decoration-none" href="#">Componentes</a>
-            </div>
-            <div class="mb-2">
-                <a class="text-white text-decoration-none" href="#">Perifericos</a>
-            </div>
+        <div class="mb-2">
+          <a class="text-white text-decoration-none" href="#">Notebook</a>
         </div>
-        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-3">
-            <p class="h5 ">Redes sociales</p>
-            <div class="border-bottom footerLine mx-auto"></div>
-            <div class="mb-2">
-                <a class="text-white  text-decoration-none" href="# ">Instagram</a>
-            </div>
-            <div class="mb-2">
-                <a class="text-white text-decoration-none" href="#">TikTok</a>
-            </div>
-            <div class="mb-2">
-                <a class="text-white text-decoration-none" href="#">Facebook</a>
-            </div>
+        <div class="mb-2">
+          <a class="text-white text-decoration-none" href="#">Componentes</a>
         </div>
-        <div class="col-xs-4  col-sm-4 col-md-4 col-lg-3">
-            <p class="h5 ">Sobre nosotros</p>
-            <div class="border-bottom footerLine  mx-auto"></div>
-            <div class="mb-2">
-                <a class="text-white text-decoration-none" href="#">Terminos y condiciones</a>
-            </div>
-            <div class="mb-2">
-                <a class="text-white text-decoration-none" href="#">Politicas de privacidad</a>
-            </div>
-            <div class="mb-2">
-                <a class="text-white  text-decoration-none fw-bold" href="# ">Encuentranos aquí</a>
-                <div class="container-fluid">
-                    <div class="row justify-content-start">
-                        <div class="col-1"></div>
-                        <div class="col-6 mt-3 mb-3" id="map" style="height: 28vh; width: 28vw; margin-left:0vw ;">
-                        </div>
-                        <div class="col-1"></div>
-                    </div>
-                </div>
-            </div>
+        <div class="mb-2">
+          <a class="text-white text-decoration-none" href="#">Perifericos</a>
         </div>
+      </div>
+      <div class="col-xs-4 col-sm-4 col-md-4 col-lg-3">
+        <p class="h5 ">Redes sociales</p>
+        <div class="border-bottom footerLine mx-auto"></div>
+        <div class="mb-2">
+          <a class="text-white  text-decoration-none" href="# ">Instagram</a>
+        </div>
+        <div class="mb-2">
+          <a class="text-white text-decoration-none" href="#">TikTok</a>
+        </div>
+        <div class="mb-2">
+          <a class="text-white text-decoration-none" href="#">Facebook</a>
+        </div>
+      </div>
+      <div class="col-xs-4  col-sm-4 col-md-4 col-lg-3">
+        <p class="h5 ">Sobre nosotros</p>
+        <div class="border-bottom footerLine  mx-auto"></div>
+        <div class="mb-2">
+          <a class="text-white text-decoration-none" href="#">Terminos y condiciones</a>
+        </div>
+        <div class="mb-2">
+          <a class="text-white text-decoration-none" href="#">Politicas de privacidad</a>
+        </div>
+        <div class="mb-2">
+          <a class="text-white  text-decoration-none fw-bold" href="# ">Encuentranos aquí</a>
+          <div class="container-fluid">
+            <div class="row justify-content-start">
+              <div class="col-1"></div>
+              <div class="col-6 mt-3 mb-3" id="map" style="height: 28vh; width: 28vw; margin-left:0vw ;">
+              </div>
+              <div class="col-1"></div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-</div>
+  </div>
   <!--BootstrapJs-->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
@@ -902,8 +836,12 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="js/script.js"></script>
   <!--GoogleMaps API-->
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDyMudUDq9GoN9KwzuoAndo0C8Svo4UHGE&libraries=places&callback=initMap" defer></script>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDyMudUDq9GoN9KwzuoAndo0C8Svo4UHGE&libraries=places&callback=initMap"
+    defer></script>
   <script src="js/apiMaps.js"></script>
+  <!--Js Filtro-->
+  <script src="js/filtro-marca.js"></script>
 </body>
 
 </html>
