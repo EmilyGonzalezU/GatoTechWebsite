@@ -17,7 +17,7 @@ const emailUsuario = document.getElementById('email');
 
 const validacion = () => {
     // Validar nombre
-    nombreUsuario.addEventListener('blur', function(){
+    nombreUsuario.addEventListener('focus', function(){
         const nombreValue = nombreUsuario.value.trim();
         if (nombreValue === "" || !/^[a-zA-Z\s]+$/.test(nombreValue)) {
             nombreUsuario.classList.add('campo-invalido');
@@ -33,7 +33,7 @@ const validacion = () => {
     });
 
     // Validar apellido
-    apellidoUsuario.addEventListener('blur', function(){
+    apellidoUsuario.addEventListener('focus', function(){
         const apellidoValue = apellidoUsuario.value.trim();
         if (apellidoValue === "" || !/^[a-zA-Z\s]+$/.test(apellidoValue)) {
             apellidoUsuario.classList.add('campo-invalido');
@@ -49,7 +49,7 @@ const validacion = () => {
     });
 
     // Validar email
-    emailUsuario.addEventListener('blur', function() {
+    emailUsuario.addEventListener('focus', function() {
         const emailValue = emailUsuario.value.trim();
         if (emailValue === "") {
             emailUsuario.classList.add('campo-invalido'); 
@@ -68,7 +68,7 @@ const validacion = () => {
     });
     
     // Validar teléfono
-    telUsuario.addEventListener('blur', function(){
+    telUsuario.addEventListener('focus', function(){
         const telValue = telUsuario.value.trim();
         if (telValue === "" || !/^\d{8}$/.test(telValue)) {
             telUsuario.classList.add('campo-invalido');
@@ -84,7 +84,7 @@ const validacion = () => {
     });
 
     // Validar RUT 
-    rutUsuario.addEventListener('blur', function() {
+    rutUsuario.addEventListener('focus', function() {
         const rutValue = rutUsuario.value.trim();
         if (rutValue === "") {
             rutUsuario.classList.add('campo-invalido');
@@ -103,7 +103,7 @@ const validacion = () => {
     });
     
     // Validar contraseña
-    passUsuario.addEventListener('blur', function(){
+    passUsuario.addEventListener('focus', function(){
         const passValue = passUsuario.value;
         if (passValue === "" || passValue.length < 8) {
             passUsuario.classList.add('campo-invalido');

@@ -16,7 +16,6 @@ fetch('https://crafty-eye-422318-n9-default-rtdb.firebaseio.com/reviews.json')
       `;
       reseñasContainer.append(reseñaElement);
     });
-    // Inicializar Slick Carousel después de cargar las reseñas
     reseñasContainer.slick({
       slidesToShow: 4,
       slidesToScroll: 1,

@@ -9,7 +9,7 @@ const btnEnviarInicio = document.getElementById('btn');
 
 const validacionIncioSesion = () =>{
 
-    emailInicio.addEventListener('blur', function() {
+    emailInicio.addEventListener('focus', function() {
         const email = emailInicio.value.trim();
         if (email === "") {
             emailInicio.classList.add('campo-invalido'); 
@@ -27,7 +27,7 @@ const validacionIncioSesion = () =>{
         }
     });
 
-    passInicio.addEventListener('blur', function(){
+    passInicio.addEventListener('focus', function(){
         const pass = passInicio.value;
         if (pass === "" || pass.length < 8) {
             passInicio.classList.add('campo-invalido');
@@ -42,7 +42,6 @@ const validacionIncioSesion = () =>{
         }
     });
 
-    // Calcular esValido después de todas las validaciones
     const esValidoInicio = emailInicioValido && passInicioValido;
     return esValidoInicio;
 }
