@@ -46,17 +46,31 @@ def general_gabinete(request):
 def general_ram(request):
     return render(request, 'gt_store/general_ram.html')
 
-# myapp/views.py
-
-from django.shortcuts import render
-from .models import Product
-
-def general_gpu(request):
+#Vistas con BD}
+#COMPUTACION
+def general_pc(request):
     productos = Product.objects.filter(categoria='pc')
     context = {"productos": productos}
-    return render(request, 'gt_store/general_gpu.html', context)
+    return render(request, 'gt_store/general_pc.html', context)
 
-def general_monitor(request):
-    productos = Product.objects.filter(categoria='procesador')
+#COMPONENTES
+def general_almacenamiento(request):
+    productos = Product.objects.filter(categoria='almacenamiento')
     context = {"productos": productos}
-    return render(request, 'gt_store/general_monitor.html', context)
+    return render(request, 'gt_store/general_almacenamiento.html', context)
+
+def general_fP(request):
+    productos = Product.objects.filter(categoria='fuente_poder')
+    context = {"productos": productos}
+    return render(request, 'gt_store/general_fuente_poder.html', context)
+
+def general_gabinete(request):
+    productos = Product.objects.filter(categoria='gabinete')
+    context = {"productos": productos}
+    return render(request, 'gt_store/general_fuente_gabinete.html', context)
+
+#PERIFERICOS
+def general_headset(request):
+    productos = Product.objects.filter(categoria='audifono')
+    context = {"productos": productos}
+    return render(request, 'gt_store/general_audifono.html', context)

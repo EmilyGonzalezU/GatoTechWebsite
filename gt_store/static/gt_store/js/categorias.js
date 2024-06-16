@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
         'placa_madre': ['socket', 'formato', 'chipset', 'soporte_ram'],
         'tarjeta_video': ['memoria', 'tipo_memoria', 'velocidad_reloj', 'interfaz'],
         'fuente_poder': ['potencia', 'certificacion', 'modularidad'],
-        'almacenamiento': ['tipo_almacenamiento', 'velocidad_lectura', 'velocidad_escritura'],
+        'almacenamiento': ['tipo_almacenamiento', 'velocidad_lectura', 'velocidad_escritura', 'capacidad'],
         'gabinete': ['numero_bahias', 'ventilacion', 'nro_ventiladores'],
         'monitor': ['frecuencia', 'tipo_panel']
     };

@@ -19,4 +19,6 @@ urlpatterns = [
         path('audifonos/', views.general_headset, name='general_headset'),
         path('monitores/', views.general_monitor, name='general_monitor'),
         
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+] 
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
