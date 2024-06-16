@@ -1,0 +1,256 @@
+{% extends 'gt_store/base.html' %}
+{% load static %}
+{% block contenido %}
+    <!--Carrousel-->
+    <div class="owl-carousel owl-theme " id="carousel1">
+        <div class="item">
+            <div class="image-container1 d-flex justify-content-center">
+                <img src="{% static 'gt_store/img/Banner/banner3.png' %}" class="d-block imgBanner" alt="...">
+            </div>
+        </div>
+        <div class="item">
+            <div class="image-container1 d-flex justify-content-center">
+                <!--img banner2-->
+                <img src="{% static 'gt_store/img/Banner/banner3.png' %} " class="d-block imgBanner" alt="...">
+            </div>
+        </div>
+        <div class="item">
+            <div class="image-container1 d-flex justify-content-center">
+                <!--a-->
+                <img src="{% static 'gt_store/img/Banner/banner3.png' %}" class="d-block imgBanner" alt="...">
+            </div>
+        </div>
+    </div>
+    <!--Cards-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+            <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 p-5">
+                <h1 class=" pt-5 text-center text-black">Destacados en PC Gamer</h1>
+                <div class="border-bottom  titleH2 mx-auto"></div>
+                <div class="owl-carousel owl-theme pt-5">
+                    <div class="item">
+                        <div class="cards-wrapper position-relative">
+                            <div class="card border-0">
+                                <a href="#">
+                                    <div class="image-container">
+                                        <img src="{% static 'gt_store/img/Pc/Intel/2.3.png' %}" class="card-img-top main-image" alt="">
+                                        <img src="{% static 'gt_store/img/Pc/Intel/3.2.png' %}"
+                                            class="card-img-top hover-image d-none d-md-none d-lg-block" alt="">
+                                    </div>
+                                </a>
+                                <div class="card-body" style="height: 295px;">
+                                    <h6 class="fw-bold">Pc Gamer Arrax 2:</h6>
+                                    <div class="position-relative" style="height: 86.1px;">
+                                        <p class="productDesc" >Intel i5-12400, UHD 730, SSD Sata, RAM 16 GB, Wifi</p>
+                                    </div>
+                                    <div>
+                                        <div class="priceContainer d-flex position-absolute">
+                                            <span class="dscto">30% DCTO.</span> <span class="old-price">$653.961</span>
+                                        </div>
+                                        <div class="position-relative pt-4">
+                                            <p class="price">$503.491</p>
+                                            <p class="transf fw">Transferencia</p>
+                                            <p class="price">$518.596</p>
+                                            <p class="otro fw">Otro medio de pago</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+    </div>
+
+    <!--Banner2-->
+    <div class="banner-container d-flex justify-content-center p-5">
+        <img src="{% static 'gt_store/img/Banner/banner-potencial.png' %}" class="d-block banner-image" alt="...">
+    </div>
+
+    <!--Cards 2-->
+    <div class="container-fluid ">
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-sm-10 col-md-10 col-lg-10">
+                <h1 class=" pt-5 text-center text-black">Potencia tu PC</h1>
+                <div class="border-bottom  titleH2 mx-auto"></div>
+                <div class="owl-carousel owl-theme pt-5">
+                    <div class="item">
+                        <div class="cards-wrapper position-relative">
+                            <div class="card border-0">
+                                <a href="#">
+                                    <div class="image-container">
+                                        <img src="{% static 'gt_store/img/Pc/Componentes/Proce/Intel/19.png' %}" class="card-img-top main-image" alt="">
+                                        <img src="{% static 'gt_store/img/Pc/Componentes/Proce/i92.png' %}" class="card-img-top hover-image d-none d-md-none d-lg-block" alt="">
+                                    </div>
+                                </a>
+                                <div class="card-body" style="height: 295px;">
+                                    <h6 class="fw-bold">Intel:</h6>
+                                    <div class="position-relative" style="height: 86.1px;">
+                                        <p class="productDesc">Procesador Intel Core i9-13900KF Raptor Lake (LGA1700, 24
+                                            Cores, 32 Hilos, 3.0/5)</p>
+                                    </div>
+                                    <div class="priceContainer d-flex position-absolute">
+                                        <span class="dscto d-none"></span> <span class="old-price"></span>
+                                    </div>
+                                    <div class="position-relative pt-4">
+                                        <p class="price">$679.990</p>
+                                        <p class="transf ">Transferencia</p>
+                                        <p class="price">$700.390</p>
+                                        <p class="otro ">Otro medio de pago</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-1"></div>
+        </div>
+    </div>
+
+
+    <!--Banner2-->
+    <div class="banner-container d-flex justify-content-center p-5">
+        <img src="{% static 'gt_store/img/Banner/banner-potencial.png' %}" class="d-block banner-image" alt="...">
+    </div>
+
+    <!--Cards 3-->
+    <div class="container-fluid ">
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-sm-10 col-md-10 col-lg-10">
+                <h1 class=" pt-5 text-center text-black">Notebooks Gamer</h1>
+                <div class="border-bottom  titleH2 mx-auto"></div>
+                <div class="owl-carousel owl-theme pt-5">
+                    <div class="item">
+                        <div class="cards-wrapper position-relative">
+                            <div class="card border-0">
+                                <a href="#">
+                                    <div class="image-container">
+                                        <img src="{% static 'gt_store/img/Notebook/15.png' %}" class="card-img-top main-image" alt="">
+                                        <img src="{% static 'gt_store/img/Notebook/16.png' %}"
+                                            class="card-img-top hover-image d-none d-md-none d-lg-block" alt="">
+                                    </div>
+                                </a>
+                                <div class="card-body" style="height: 295px;">
+                                    <h6 class="fw-bold">ASUS:</h6>
+                                    <div class="position-relative" style="height: 86.1px;">
+                                        <p class="productDesc">LAPTOP ASUS ROG FLOW X13 AMD RYZEN 7 6800HS 16GB RAM
+                                            512GB SSD 13.4"</p>
+                                    </div>
+                                    <div class="priceContainer d-flex position-absolute dsctoTarget">
+                                        <span class="dscto">30% DCTO.</span> <span
+                                            class="old-price oldPrice">$149.990</span>
+                                    </div>
+                                    <div class="position-relative pt-4">
+                                        <p class="price">$2.091.974</p>
+                                        <p class="transf ">Transferencia</p>
+                                        <p class="price">$2.129.990</p>
+                                        <p class="otro ">Otro medio de pago</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-1"></div>
+        </div>
+    </div>
+
+    <!--Banner4-->
+    <div class="banner-container d-flex justify-content-center p-5">
+        <img src="{% static 'gt_store/img/Banner/banner-potencial.png' %}" class="d-block banner-image" alt="...">
+    </div>
+
+    <!--Cards 4-->
+    <div class="container-fluid ">
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-sm-10 col-md-10 col-lg-10">
+                <h1 class="pt-5 text-center text-black">Lo mejor de Razer</h1>
+                <div class="border-bottom  titleH2 mx-auto"></div>
+                <div class="owl-carousel owl-theme pt-5 pb-5">
+                    <div class="item">
+                        <div class="cards-wrapper position-relative">
+                            <div class="card border-0">
+                                <a href="#">
+                                    <div class="image-container">
+                                        <img src="{% static 'gt_store/img/Pc/Perifericos/1.png' %}" class="card-img-top main-image" alt="">
+                                        <img src="{% static 'gt_store/img/Pc/Perifericos/2.png' %}" class="card-img-top hover-image d-none d-md-none d-lg-block" alt="">
+                                    </div>
+                                </a>
+                                <div class="card-body" style="height: 295px;">
+                                    <h6 class="fw-bold">RAZER:</h6>
+                                    <div class="position-relative" style="height: 86.1px;">
+                                        <p class="productDesc">Audifono Gamer Inalambrico Razer BlackShark V2 HyperSpeed, THX Spatial Audio, Micrófono flexible</p>
+                                    </div>
+                                    <div class="priceContainer d-flex position-absolute">
+                                        <span class="dscto">20% DCTO.</span> <span class="old-price">$189.990</span>
+                                    </div>
+                                    <div class="position-relative pt-4">
+                                        <p class="price">$151.990</p>
+                                        <p class="transf ">Transferencia</p>
+                                        <p class="price">$162.990</p>
+                                        <p class="otro ">Otro medio de pago</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-1"></div>
+        </div>
+    </div>
+
+    <!--Reviews-->
+    <div class="container">
+        <div id="slick-carousel-reviews" class="row position-relative">
+            <!-- Las reseñas se agregarán aquí -->
+        </div>
+    </div>
+
+    <!--Slider-->
+    <div class="slider align-items-center">
+        <div class="slide-track  align-items-center">
+            <div class="slide">
+                <img src="{%static 'gt_store/img/Logos/Slider/1.png' %}" alt="">
+            </div>
+            <div class="slide">
+                <img src="{%static 'gt_store/img/Logos/Slider/2.png' %}" alt="">
+            </div>
+            <div class="slide">
+                <img src="{%static 'gt_store/img/Logos/Slider/3.png' %}" alt="">
+            </div>
+            <div class="slide">
+                <img src="{%static 'gt_store/img/Logos/Slider/4.png' %}" alt="">
+            </div>
+            <div class="slide">
+                <img src="{%static 'gt_store/img/Logos/Slider/5.png' %}" alt="">
+            </div>
+            <div class="slide">
+                <img src="{%static 'gt_store/img/Logos/Slider/6.png' %}" alt="">
+            </div>
+            <div class="slide">
+                <img src="{%static 'gt_store/img/Logos/Slider/7.png' %}" alt="">
+            </div>
+            <div class="slide">
+                <img src="{%static 'gt_store/img/Logos/Slider/8.png' %}" alt="">
+            </div>
+            <div class="slide">
+                <img src="{%static 'gt_store/img/Logos/Slider/9.png' %}" alt="">
+            </div>
+            <div class="slide">
+                <img src="{%static 'gt_store/img/Logos/Slider/10.png' %}" alt="">
+            </div>
+            <div class="slide">
+                <img src="{%static 'gt_store/img/Logos/Slider/11.png' %}" alt="">
+            </div>
+        </div>
+    </div>
+    {% endblock %}
