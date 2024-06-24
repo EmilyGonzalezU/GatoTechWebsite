@@ -1,0 +1,28 @@
+{% extends 'gt_store/base_general.html' %}
+{% load static %}
+{% block contenido %}
+  <!--Distribution-->
+<div class="container-fluid  d-none d-md-none d-sm-none d-xs-none d-lg-block text-start" style="font-size: 15px; padding-left: 75px;">
+    <div class="row pt-4 pb-4">
+        <div class="col-12">
+            <nav aria-label="breadcrumb" style="--bs-breadcrumb-divider: '>';">
+                <ol class="breadcrumb ">
+                    {% block breadcrumb %}
+                    {% endblock%}
+                </ol>
+            </nav>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="filter col-2">
+           {% block filtros%}
+           {% endblock %}
+        </div>
+        {% block card %}
+        
+        {% endblock %}
+    </div>
+</div>
+{% endblock %}

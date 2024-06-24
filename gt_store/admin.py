@@ -1,12 +1,25 @@
 from django.contrib import admin
 from django.contrib import admin
-from .models import Product
-from .forms import ProductoForm
+from . import models
 
-class ProductoAdmin(admin.ModelAdmin):
-    form = ProductoForm
+admin.site.register(models.Product)
+admin.site.register(models.Pc)
+admin.site.register(models.Notebook)
+admin.site.register(models.Procesador)
+admin.site.register(models.Placa_madre)
+admin.site.register(models.Ram)
+admin.site.register(models.Tarjeta_video)
+admin.site.register(models.Fuente_poder)
+admin.site.register(models.almacenamiento)
+admin.site.register(models.Gabinete)
+admin.site.register(models.Mouse)
+admin.site.register(models.Teclado)
+admin.site.register(models.Audifono)
+admin.site.register(models.Monitor)
 
-    class Media:
-        js = ('gt_store/js/categorias.js',)
 
-admin.site.register(Product, ProductoAdmin)
+
+
+
+
+

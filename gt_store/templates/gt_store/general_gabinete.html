@@ -1,52 +1,55 @@
-{% extends 'gt_store/base.html' %}
-{% load static %}
-{% block contenido %}
-  <!--Distribution-->
-<div class="container-fluid  d-none d-md-none d-sm-none d-xs-none d-lg-block text-start" style="font-size: 15px; padding-left: 75px;">
-    <div class="row pt-4 pb-4">
-        <div class="col-12">
-            <nav aria-label="breadcrumb" style="--bs-breadcrumb-divider: '>';">
-                <ol class="breadcrumb ">
-                    <li class="breadcrumb-item"><a href="{% url 'home' %}">Inicio</a></li>
-                    <li class="breadcrumb-item"><a href="{% url 'general_pc' %}">PC</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">PC Gamer</li>
-                </ol>
-            </nav>
+{% extends 'gt_store/base_filtros.html' %}
+{% block breadcrumb %}
+    <li class="breadcrumb-item"><a href="{% url 'home' %}">Inicio</a></li>
+    <li class="breadcrumb-item"><a href="#">Componentes</a></li>
+    <li class="breadcrumb-item"><a href="#">Gabinete</a></li>
+{% endblock %}
+            {%block filtros%}
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Accordion Item #1
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                        <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            {% endblock %}
         </div>
-    </div>
-</div>
-<div class="container-fluid">
-    <div class="row justify-content-center">
-        <div class="filter col-2">
-            <!--Filtros-->
-        </div>
+        {% block card %}
         <div class="col-md-12 col-lg-9 col-sm-12 col-xs-12 d-flex flex-wrap">
             {% for p in productos %}
             <div class="position-relative col-lg-3 col-md-4 col-sm-6 mb-4">
-                <div class="card border rounded-0">
-                    <a href="#">
-                        <img src="{{ p.imagen.url }}" class="card-img-top main-image mx-auto d-block" style="height: 200px; width: 200px;">
-                    </a>
-                    <div class="card-body" style="height: 295px;">
-                        <h6 class="fw-bold">{{ p.marca }}</h6>
-                        <div class="position-relative" style="height: 86.1px;">
-                            <p class="productDesc">{{ p.descripcion }}</p>
-                        </div>
-                        <div class="priceContainer d-flex position-absolute dsctoTarget">
-                            <span class="dscto">{{ p.descuento }} DCTO.</span>
-                            <span class="old-price oldPrice">{{ p.precio_anterior }}</span>
-                        </div>
-                        <div class="position-relative pt-4">
-                            <p class="price">{{ p.precio_transferencia }}</p>
-                            <p class="metod">Transferencia</p>
-                            <p class="price">{{ p.precio_normal }}</p>
-                            <p class="metod">Otros medio de pago</p>
+                <a href="{% url 'detalle_producto' p.id_producto %}" class="stretched-link text-decoration-none">
+                    <div class="card border rounded-0">
+                        {% if p.imagen %}
+                            <img src="{{ p.imagen.url }}" class="card-img-top main-image mx-auto d-block" style="height: 200px; width: 200px;">
+                        {% endif %}
+                        
+                        <div class="card-body" style="height: 295px;">
+                            <h6 class="fw-bold">{{ p.marca }}</h6>
+                            <div class="position-relative" style="height: 86.1px;">
+                                <p class="productDesc">{{ p.descripcion }}</p>
+                            </div>
+                            <div class="priceContainer d-flex position-absolute dsctoTarget">
+                                <span class="dscto">{{ p.descuento }} DCTO.</span>
+                                <span class="old-price oldPrice">{{ p.precio_anterior }}</span>
+                            </div>
+                            <div class="position-relative pt-4">
+                                <p class="price">{{ p.precio_transferencia }}</p>
+                                <p class="metod">Transferencia</p>
+                                <p class="price">{{ p.precio_normal }}</p>
+                                <p class="metod">Otros medio de pago</p>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </a>
             </div>
             {% endfor %}
         </div>
-    </div>
-</div>
-{% endblock %}
+        {% endblock %}

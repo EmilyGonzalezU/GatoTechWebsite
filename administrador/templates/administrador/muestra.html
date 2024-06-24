@@ -1,0 +1,246 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos por Categoría</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{% url 'home' %}">
+                <img src="{% static 'administrador/img/Logos/GatoTech__2___1_-removebg-preview.png' %}" alt="Logo" style="width: 10vw;"> 
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                <div class="navbar-nav fs-5">
+                    <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                    <a class="nav-link" href="#">Listados de productos</a>
+                    <a class="nav-link" href="#">User</a>
+                    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenido principal -->
+    <div class="container-fluid pt-5">
+        <div class="row">
+            <div class="col-2">
+                <h3>Categorías</h3>
+                <ul class="list-group menu">
+                    <li class="list-group-item"><a href="">PC</a></li>
+                    <li class="list-group-item"><a href="">Notebook</a></li>
+                    <li class="list-group-item"><a href="">Mouse</a></li>
+                    <li class="list-group-item"><a href="">Teclado</a></li>
+                    <li class="list-group-item"><a href="">Audífonos</a></li>
+                    <li class="list-group-item"><a href="">Procesador</a></li>
+                    <li class="list-group-item"><a href="">Memoria RAM</a></li>
+                    <li class="list-group-item"><a href="">Placa Madre</a></li>
+                    <li class="list-group-item"><a href="">Tarjeta de Video</a></li>
+                    <li class="list-group-item"><a href="">Fuente de Poder</a></li>
+                    <li class="list-group-item"><a href="">Almacenamiento</a></li>
+                    <li class="list-group-item"><a href="">Gabinete</a></li>
+                    <li class="list-group-item"><a href="">Monitor</a></li>
+                </ul>
+            </div>
+            <div class="col-10">
+                <h1>Productos de la categoría {{ categoria }}</h1>
+                <div class="table-responsive">
+                    <table class="table table-bordered table-hover">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>ID</th>
+                                <th>Marca</th>
+                                <th>Nombre</th>
+                                <th>Descripción</th>
+                                <th>Categoria</th>
+                                <!-- Ajusta según los campos que quieras mostrar -->
+                                {% if categoria == 'pc' %}
+                                    <th>Procesador</th>
+                                    <th>Memoria RAM</th>
+                                    <th>Almacenamiento</th>
+                                    <th>Tarjeta de Video</th>
+                                    <!-- Agrega más columnas según los campos específicos de PC -->
+                                {% elif categoria == 'notebook' %}
+                                    <th>Procesador</th>
+                                    <th>Memoria RAM</th>
+                                    <th>Almacenamiento</th>
+                                    <th>Tamaño de Pantalla</th>
+                                    <!-- Agrega más columnas según los campos específicos de Notebook -->
+                                {% elif categoria == 'mouse' %}
+                                    <th>DPI</th>
+                                    <th>Tipo de Conexión</th>
+                                    <th>Número de Botones</th>
+                                    <th>Retroiluminación</th>
+                                    <!-- Agrega más columnas según los campos específicos de Mouse -->
+                                {% elif categoria == 'teclado' %}
+                                    <th>Tipo de Conexión</th>
+                                    <th>Tipo</th>
+                                    <th>Distribución</th>
+                                    <th>Retroiluminación</th>
+                                    <!-- Agrega más columnas según los campos específicos de Teclado -->
+                                {% elif categoria == 'audifonos' %}
+                                    <th>Tipo de Conexión</th>
+                                    <th>Microfono</th>
+                                    <th>Tipo de Auricular</th>
+                                    <th>Cancelación de Ruido</th>
+                                    <!-- Agrega más columnas según los campos específicos de Audífonos -->
+                                {% elif categoria == 'procesador' %}
+                                    <th>Velocidad</th>
+                                    <th>Núcleos</th>
+                                    <th>Hilos</th>
+                                    <th>Socket</th>
+                                    <!-- Agrega más columnas según los campos específicos de Procesador -->
+                                {% elif categoria == 'ram' %}
+                                    <th>Capacidad</th>
+                                    <th>Tipo</th>
+                                    <th>Velocidad</th>
+                                    <th>Latencia</th>
+                                    <!-- Agrega más columnas según los campos específicos de RAM -->
+                                {% elif categoria == 'placa_madre' %}
+                                    <th>Socket</th>
+                                    <th>Formato</th>
+                                    <th>Chipset</th>
+                                    <th>Soporte RAM</th>
+                                    <!-- Agrega más columnas según los campos específicos de Placa Madre -->
+                                {% elif categoria == 'tarjeta_video' %}
+                                    <th>Memoria</th>
+                                    <th>Tipo de Memoria</th>
+                                    <th>Velocidad de Reloj</th>
+                                    <th>Interfaz</th>
+                                    <!-- Agrega más columnas según los campos específicos de Tarjeta de Video -->
+                                {% elif categoria == 'fuente_poder' %}
+                                    <th>Potencia</th>
+                                    <th>Certificación</th>
+                                    <th>Modularidad</th>
+                                    <!-- Agrega más columnas según los campos específicos de Fuente de Poder -->
+                                {% elif categoria == 'almacenamiento' %}
+                                    <th>Tipo</th>
+                                    <th>Velocidad de Lectura</th>
+                                    <th>Velocidad de Escritura</th>
+                                    <th>Capacidad</th>
+                                    <!-- Agrega más columnas según los campos específicos de Almacenamiento -->
+                                {% elif categoria == 'gabinete' %}
+                                    <th>Número de Bahías</th>
+                                    <th>Número de Ventiladores</th>
+                                    <th>Formato</th>
+                                    <!-- Agrega más columnas según los campos específicos de Gabinete -->
+                                {% elif categoria == 'monitor' %}
+                                    <th>Tamaño de Pantalla</th>
+                                    <th>Resolución</th>
+                                    <th>Frecuencia</th>
+                                    <th>Tipo de Panel</th>
+                                    <!-- Agrega más columnas según los campos específicos de Monitor -->
+                                {% endif %}
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for producto in productos %}
+                            <tr>
+                                <td>{{ producto.id_producto }}</td>
+                                <td>{{ producto.marca }}</td>
+                                <td>{{ producto.nombre_producto }}</td>
+                                <td>{{ producto.descripcion }}</td>
+                                <td>{{ producto.categoria }}</td>
+                                <!-- Ajusta según los campos que quieras mostrar -->
+                                {% if categoria == 'pc' %}
+                                    <td>{{ producto.pc_procesador }}</td>
+                                    <td>{{ producto.pc_memoria_ram }}</td>
+                                    <td>{{ producto.pc_almacenamiento }}</td>
+                                    <td>{{ producto.pc_tarjeta_video }}</td>
+                                    <!-- Agrega más columnas según los campos específicos de PC -->
+                                {% elif categoria == 'notebook' %}
+                                    <td>{{ producto.notebook_procesador }}</td>
+                                    <td>{{ producto.notebook_memoria_ram }}</td>
+                                    <td>{{ producto.notebook_almacenamiento }}</td>
+                                    <td>{{ producto.notebook_tamano_pantalla }}</td>
+                                    <!-- Agrega más columnas según los campos específicos de Notebook -->
+                                {% elif categoria == 'mouse' %}
+                                    <td>{{ producto.mouse_dpi }}</td>
+                                    <td>{{ producto.mouse_tipo_conexion }}</td>
+                                    <td>{{ producto.mouse_numero_botones }}</td>
+                                    <td>{{ producto.mouse_retroiluminacion }}</td>
+                                    <!-- Agrega más columnas según los campos específicos de Mouse -->
+                                {% elif categoria == 'teclado' %}
+                                    <td>{{ producto.teclado_tipo_conexion }}</td>
+                                    <td>{{ producto.teclado_tipo }}</td>
+                                    <td>{{ producto.teclado_distribucion }}</td>
+                                    <td>{{ producto.teclado_retroiluminacion }}</td>
+                                    <!-- Agrega más columnas según los campos específicos de Teclado -->
+                                {% elif categoria == 'audifonos' %}
+                                    <td>{{ producto.audifono_tipo_conexion }}</td>
+                                    <td>{{ producto.audifono_microfono }}</td>
+                                    <td>{{ producto.audifono_tipo_auricular }}</td>
+                                    <td>{{ producto.audifono_cancelacion_ruido }}</td>
+                                    <!-- Agrega más columnas según los campos específicos de Audífonos -->
+                                {% elif categoria == 'procesador' %}
+                                    <td>{{ producto.procesador_velocidad }}</td>
+                                    <td>{{ producto.procesador_nucleos }}</td>
+                                    <td>{{ producto.procesador_hilos }}</td>
+                                    <td>{{ producto.procesador_socket }}</td>
+                                    <!-- Agrega más columnas según los campos específicos de Procesador -->
+                                {% elif categoria == 'ram' %}
+                                    <td>{{ producto.ram_capacidad }}</td>
+                                    <td>{{ producto.ram_tipo }}</td>
+                                    <td>{{ producto.ram_velocidad }}</td>
+                                    <td>{{ producto.ram_latencia }}</td>
+                                    <!-- Agrega más columnas según los campos específicos de RAM -->
+                                {% elif categoria == 'placa_madre' %}
+                                    <td>{{ producto.placa_madre_socket }}</td>
+                                    <td>{{ producto.placa_madre_formato }}</td>
+                                    <td>{{ producto.placa_madre_chipset }}</td>
+                                    <td>{{ producto.placa_madre_soporte_ram }}</td>
+                                    <!-- Agrega más columnas según los campos específicos de Placa Madre -->
+                                {% elif categoria == 'tarjeta_video' %}
+                                    <td>{{ producto.tarjeta_video_memoria }}</td>
+                                    <td>{{ producto.tarjeta_video_tipo_memoria }}</td>
+                                    <td>{{ producto.tarjeta_video_velocidad_reloj }}</td>
+                                    <td>{{ producto.tarjeta_video_interfaz }}</td>
+                                    <!-- Agrega más columnas según los campos específicos de Tarjeta de Video -->
+                                {% elif categoria == 'fuente_poder' %}
+                                    <td>{{ producto.fuente_poder_potencia }}</td>
+                                    <td>{{ producto.fuente_poder_certificacion }}</td>
+                                    <td>{{ producto.fuente_poder_modularidad }}</td>
+                                    <!-- Agrega más columnas según los campos específicos de Fuente de Poder -->
+                                {% elif categoria == 'almacenamiento' %}
+                                    <td>{{ producto.almacenamiento_tipo }}</td>
+                                    <td>{{ producto.almacenamiento_velocidad_lectura }}</td>
+                                    <td>{{ producto.almacenamiento_velocidad_escritura }}</td>
+                                    <td>{{ producto.almacenamiento_capacidad }}</td>
+                                    <!-- Agrega más columnas según los campos específicos de Almacenamiento -->
+                                {% elif categoria == 'gabinete' %}
+                                    <td>{{ producto.gabinete_numero_bahias }}</td>
+                                    <td>{{ producto.gabinete_nro_ventiladores }}</td>
+                                    <td>{{ producto.gabinete_formato }}</td>
+                                    <!-- Agrega más columnas según los campos específicos de Gabinete -->
+                                {% elif categoria == 'monitor' %}
+                                    <td>{{ producto.monitor_tamano_pantalla }}</td>
+                                    <td>{{ producto.monitor_resolucion_pantalla }}</td>
+                                    <td>{{ producto.monitor_frecuencia }}</td>
+                                    <td>{{ producto.monitor_tipo_panel }}</td>
+                                    <!-- Agrega más columnas según los campos específicos de Monitor -->
+                                {% endif %}
+                            </tr>
+                            {% empty %}
+                            <tr>
+                                <td colspan="4">No hay productos disponibles en esta categoría.</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap y jQuery (si es necesario para funcionalidad adicional de Bootstrap) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

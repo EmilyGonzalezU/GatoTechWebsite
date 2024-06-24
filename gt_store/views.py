@@ -1,6 +1,6 @@
 from django.http import HttpResponse
-from django.shortcuts import render
-from .models import Product
+from django.shortcuts import render, get_object_or_404
+from . import models
 
 # Create your views here.
 def index(request):
@@ -46,31 +46,65 @@ def general_gabinete(request):
 def general_ram(request):
     return render(request, 'gt_store/general_ram.html')
 
+def registro(request):
+    return render(request, 'gt_store/registro.html')
+
 #Vistas con BD}
 #COMPUTACION
 def general_pc(request):
-    productos = Product.objects.filter(categoria='pc')
+    productos = models.Pc.objects.all()
     context = {"productos": productos}
     return render(request, 'gt_store/general_pc.html', context)
 
+def general_placa(request):
+    productos = models.Placa_madre.objects.all()
+    context = {"productos": productos}
+    return render(request, 'gt_store/general_placa.html', context)
+
+def general_placa_amd(request):
+    productos = models.Placa_madre.objects.filter(marca__iexact='AMD')
+    context = {"productos": productos}
+    return render(request, 'gt_store/general_placa.html', context)
+
+def general_placa_intel(request):
+    productos = models.Placa_madre.objects.filter(marca__iexact='INTEL')
+    context = {"productos": productos}
+    return render(request, 'gt_store/general_placa.html', context)
+
 #COMPONENTES
 def general_almacenamiento(request):
-    productos = Product.objects.filter(categoria='almacenamiento')
+    productos = models.almacenamiento.objects.all()
     context = {"productos": productos}
     return render(request, 'gt_store/general_almacenamiento.html', context)
 
 def general_fP(request):
-    productos = Product.objects.filter(categoria='fuente_poder')
+    productos = models.Fuente_poder.objects.all()
     context = {"productos": productos}
     return render(request, 'gt_store/general_fuente_poder.html', context)
 
 def general_gabinete(request):
-    productos = Product.objects.filter(categoria='gabinete')
+    productos = models.Gabinete.objects.all()
     context = {"productos": productos}
-    return render(request, 'gt_store/general_fuente_gabinete.html', context)
+    return render(request, 'gt_store/general_gabinete.html', context)
 
 #PERIFERICOS
 def general_headset(request):
-    productos = Product.objects.filter(categoria='audifono')
+    productos = models.Audifono.objects.all()
     context = {"productos": productos}
     return render(request, 'gt_store/general_audifono.html', context)
+
+def general_headset_headset(request):
+    productos = models.Audifono.objects.filter(audifono_tipo_auricular__iexact='HEADSET')
+    context = {"productos": productos}
+    return render(request, 'gt_store/general_audifono.html', context)
+
+#test detalle producto
+def detalle_producto(request, id_producto):
+    producto = get_object_or_404(models.Product, id_producto=id_producto)
+    context = {"producto": producto}
+    return render(request, 'gt_store/detalle_productos.html', context)
+
+def products (request):
+    producto = models.Product.objects.all()
+    context = {"productos": producto}
+    return render(request, 'gt_store/sugerencia.html', context)

@@ -670,7 +670,10 @@
             </div>
         </div>
     </div>
-
+    {% for p in productos %}
+        {{p.descripcion}}, {{p.marca}}, {{p.capacidad}}, {{p.procesador}}
+    {% endfor %}
+ 
     <script src="js/apiComponentes.js"></script>
     <script src="js/apiMaps.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
