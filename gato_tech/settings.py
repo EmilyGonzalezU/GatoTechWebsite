@@ -50,7 +50,6 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-
 ROOT_URLCONF = 'gato_tech.urls'
 
 TEMPLATES = [
@@ -68,7 +67,8 @@ TEMPLATES = [
         },
     },
 ]
-LOGIN_REDIRECT_URL = 'muestra'
+LOGIN_URL = 'login'
+LOGIN_REDIRECT_URL = 'listado de productos'
 LOGOUT_REDIRECT_URL = 'home'
 
 WSGI_APPLICATION = 'gato_tech.wsgi.application'
@@ -107,7 +107,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'es-es'
 
 TIME_ZONE = 'UTC'
 

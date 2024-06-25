@@ -1,13 +1,37 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Página de Inicio - GatoTech</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        a {
+            display: inline-block;
+            background-color: #00e6fa;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-top: 20px;
+        }
+        a:hover {
+            background-color: #00e5fa60;
+        }
+    </style>
 </head>
 <body>
-    <h1>Página de Inicio</h1>
-    <br><br>
+    <h1>Bienvenido a <img src="{% static 'administrador/img/Logos/GatoTech (7).png' %}" alt="" style="width: 190px;"></h1>
+    <p>Sitio administrador.</p>
     <a href="{% url 'login' %}">Iniciar Sesión</a>
 </body>
 </html>

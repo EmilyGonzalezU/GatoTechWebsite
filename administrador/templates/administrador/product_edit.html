@@ -1,0 +1,42 @@
+{% extends 'administrador/base_admin.html'%}
+{% block tittle %}Productos - Modificación{% endblock %}    
+{%block admin %}
+    <div class="container pt-5">
+        <div class="form-container">
+            <h3 class="text-center">Modificación de productos</h3>
+            <form action="" method="POST" enctype="multipart/form-data">
+                <div id="message-container">
+                    {% if messages %}
+                        {% for message in messages %}
+                            <div class="alert alert-{{ message.tags }}" role="alert" style="font-size: 18px; color: green; font-weight: bold; text-align: center;">
+                                {{ message }}
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+                </div>
+                {% csrf_token %}
+                {{ form.as_p }}
+                <div class="text-center" id="form-buttons">
+                    <button type="submit" class="btn btn-danger me-2">Actualizar</button>
+                    <button type="reset" class="btn btn-primary">Limpiar</button>
+                </div>
+            </form>
+            <div id="back-button" class="text-center mt-5" style="display: none;">
+                <a href="{% url 'listado de productos' %}"><button type="submit" class="btn btn-success">Volver</button></a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const messageContainer = document.getElementById('message-container');
+            const formButtons = document.getElementById('form-buttons');
+            const backButton = document.getElementById('back-button');
+
+            if (messageContainer.innerHTML.trim()) {
+                formButtons.style.display = 'none';
+                backButton.style.display = 'block';
+            }
+        });
+    </script>
+{% endblock %}
