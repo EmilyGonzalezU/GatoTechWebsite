@@ -1,7 +1,7 @@
-{% extends 'administrador/base_admin.html'%}
+{% extends 'administrador/base_admin.html' %}
 {% block tittle %}Productos - Modificación{% endblock %}    
-{%block admin %}
-    <div class="container pt-5">
+{% block admin %}
+    <div class="container d-flex align-items-center justify-content-center min-vh-100">
         <div class="form-container">
             <h3 class="text-center">Modificación de productos</h3>
             <form action="" method="POST" enctype="multipart/form-data">
@@ -18,7 +18,6 @@
                 {{ form.as_p }}
                 <div class="text-center" id="form-buttons">
                     <button type="submit" class="btn btn-danger me-2">Actualizar</button>
-                    <button type="reset" class="btn btn-primary">Limpiar</button>
                 </div>
             </form>
             <div id="back-button" class="text-center mt-5" style="display: none;">

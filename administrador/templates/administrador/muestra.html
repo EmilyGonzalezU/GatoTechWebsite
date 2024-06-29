@@ -39,8 +39,8 @@
                         {% if p.imagen %}
                         <td><img src="{{p.imagen.url}}" alt="no disponible" style="height: 50px;"></td>
                         {% endif %}
-                        <td><button type="button"><a href="{% url 'p_Edit' id_producto=p.id_producto %}">Actualizar</a></button></td>
-                        <td><button type="button"><a href="{% url 'producto_del' id_producto=p.id_producto %}">Eliminar</a></button></td>
+                        <td><a href="{% url 'p_Edit' id_producto=p.id_producto %}"><button type="button" class="btn btn-outline-warning">Actualizar</button></a></td>
+                        <td><a href="{% url 'producto_del' id_producto=p.id_producto %}"><button type="button" class="btn btn-outline-danger">Eliminar</button></a></td>
                     </tr>
                     {% endfor %}
                 </table>

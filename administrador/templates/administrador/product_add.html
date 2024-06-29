@@ -1,31 +1,28 @@
 {% extends 'administrador/base_admin.html' %}
 {% block tittle %}Productos - Agregar{% endblock %}    
 {% block admin %}
-    <div class="container mt-5">
-        <div class="form-container">
-            <h1 class="mb-4 text-center">Agregar Producto</h1>
-            <form action="" method="POST" enctype="multipart/form-data">
-                {% csrf_token %}
-                <div class="form-group mb-3">
-                    <label for="categoria" class="form-label">Categoría</label>
-                    <select name="categoria" id="categoria" class="form-control" required>
-                        {% for key, label in categories %}
-                            <option value="{{ key }}" {% if selected_category == key %}selected{% endif %}>{{ label }}</option>
-                        {% endfor %}
-                    </select>
-                </div>
-                {{ form.as_p }}
-                <div class="text-center">
-                    <button type="submit" class="btn btn-success me-2">Agregar</button>
-                    <button type="reset" class="btn btn-secondary">Limpiar</button>
-                </div>
-                {% if mensaje %}
-                    <div class="alert alert-success mt-3" role="alert">
-                        {{ mensaje }}
-                    </div>
-                {% endif %}
-            </form>
-        </div>
+    <div class="form-container">
+        <h1 class="mb-4 text-center">Agregar Producto</h1>
+        <form action="" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            {% if mensaje %}
+            <div class="alert alert-success mt-3" role="alert">
+                {{ mensaje }}
+            </div>
+            {% endif %}
+            <div class="form-group mb-3">
+                <label for="categoria" class="form-label">Categoría</label>
+                <select name="categoria" id="categoria" class="form-control" required>
+                    {% for key, label in categories %}
+                        <option value="{{ key }}" {% if selected_category == key %}selected{% endif %}>{{ label }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            {{ form.as_p }}
+            <div class="text-center">
+                <button type="submit" class="btn btn-success me-2">Agregar</button>
+            </div>
+        </form>
     </div>
     <script>
         document.getElementById('categoria').addEventListener('change', function() {
