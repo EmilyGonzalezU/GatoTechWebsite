@@ -5,20 +5,127 @@
     <li class="breadcrumb-item"><a href="#">Gabinete</a></li>
 {% endblock %}
             {%block filtros%}
-                <div class="accordion" id="accordionExample">
-                    <div class="accordion-item">
+            <div class="container-expand-md border">
+                <div class="accordion accordion-flush" id="accordionFlushExample">
+                  <div class="accordion-item">
                     <h2 class="accordion-header">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                        Accordion Item #1
-                        </button>
+                      <button class="accordion-button collapsed border" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                        Marca
+                      </button>
                     </h2>
-                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                        <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                    <div id="flush-collapseOne" class="accordion-collapse collapse show"
+                      data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+    
+                        <div class="mb-3 form-check">
+                          <input type="checkbox" class="form-check-input marca" id="gabineteAerocool" data-marca="aerocool">
+                          <label class="form-check-label" for="gabineteAerocool">AeroCool</label>
                         </div>
+    
+                        <div class="mb-3 form-check">
+                          <input type="checkbox" class="form-check-input marca" id="gabineteAntec" data-marca="antec">
+                          <label class="form-check-label" for="gabineteAntec">Antec</label>
+                        </div>
+    
+                        <div class="mb-3 form-check">
+                          <input type="checkbox" class="form-check-input marca" id="gabineteBeQuiet" data-marca="beQuiet">
+                          <label class="form-check-label" for="gabineteBeQuiet">Be Quiet!</label>
+                        </div>
+    
+                        <div class="mb-3 form-check">
+                          <input type="checkbox" class="form-check-input marca" id="gabineteCorsair" data-marca="corsair">
+                          <label class="form-check-label" for="gabineteCorsair">Corsair</label>
+                        </div>
+    
+                        <div class="mb-3 form-check">
+                          <input type="checkbox" class="form-check-input marca" id="gabineteCoolerMaster"
+                            data-marca="coolerMaster">
+                          <label class="form-check-label" for="gabineteCoolerMaster">Cooler Master</label>
+                        </div>
+    
+                        <div class="mb-3 form-check">
+                          <input type="checkbox" class="form-check-input marca" id="gabineteGigabyte" data-marca="gigabyte">
+                          <label class="form-check-label" for="gabineteGigabyte">Gigabyte</label>
+                        </div>
+    
+                        <div class="mb-3 form-check">
+                          <input type="checkbox" class="form-check-input marca" id="gabineteKolink" data-marca="kolink">
+                          <label class="form-check-label" for="gabineteKolink">Kolink</label>
+                        </div>
+    
+                        <div class="mb-3 form-check">
+                          <input type="checkbox" class="form-check-input marca" id="gabineteLianLi" data-marca="lianLi">
+                          <label class="form-check-label" for="gabineteLianLi">Lian Li</label>
+                        </div>
+    
+                        <div class="mb-3 form-check">
+                          <input type="checkbox" class="form-check-input marca" id="gabineteMsi" data-marca="msi">
+                          <label class="form-check-label" for="gabineteMsi">MSI</label>
+                        </div>
+    
+                        <div class="mb-3 form-check">
+                          <input type="checkbox" class="form-check-input marca" id="gabineteGenerico" data-marca="generico">
+                          <label class="form-check-label" for="gabineteGenerico">Generico</label>
+                        </div>
+                      </div>
                     </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed border" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                        Formato
+                      </button>
+                    </h2>
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse "
+                      data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                        <div class="mb-3 form-check">
+                          <input type="checkbox" class="form-check-input formato" id="formatoAtx" data-formato="atx">
+                          <label class="form-check-label" for="formatoAtx">ATX</label>
+                        </div>
+    
+                        <div class="mb-3 form-check">
+                          <input type="checkbox" class="form-check-input formato" id="formatoMicroAtx"
+                            data-formato="microAtx">
+                          <label class="form-check-label" for="formatoMicroAtx">Micro ATX</label>
+                        </div>
+                      </div>
                     </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                        Precio
+                      </button>
+                    </h2>
+                    <div id="flush-collapseThree" class="accordion-collapse collapse "
+                      data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body ">
+                        <div class="mb-3 form-check ">
+                          <input type="checkbox" class="form-check-input" id="rango1Precio">
+                          <label class="form-check-label" for="rango1Precio">$50.000 - $100.000</label>
+    
+                          <input type="checkbox" class="form-check-input" id="rango2Precio">
+                          <label class="form-check-label" for="rango2Precio">$100.001 - $200.000</label>
+    
+                          <input type="checkbox" class="form-check-input" id="rango3Precio">
+                          <label class="form-check-label" for="rango3Precio">$200.001 - $300.000</label>
+    
+                          <input type="checkbox" class="form-check-input" id="rango4Precio">
+                          <label class="form-check-label" for="rango4Precio">$300.001 - $500.000</label>
+    
+                          <input type="checkbox" class="form-check-input" id="rango5Precio">
+                          <label class="form-check-label" for="rango5Precio">$500.001 - $100.000.000</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
+              </div>
+    
             {% endblock %}
         </div>
         {% block card %}
