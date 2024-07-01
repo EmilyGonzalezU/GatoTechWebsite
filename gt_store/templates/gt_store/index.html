@@ -11,13 +11,13 @@
     <div class="item">
         <div class="image-container1 d-flex justify-content-center">
             <!--img banner2-->
-            <img src="{% static 'gt_store/img/Banner/banner3.png' %} " class="d-block imgBanner" alt="...">
+            <img src="{% static 'gt_store/img/Banner/a (1).png' %} " class="d-block imgBanner" alt="...">
         </div>
     </div>
     <div class="item">
         <div class="image-container1 d-flex justify-content-center">
             <!--a-->
-            <img src="{% static 'gt_store/img/Banner/banner3.png' %}" class="d-block imgBanner" alt="...">
+            <img src="{% static 'gt_store/img/Banner/banner2.png' %}" class="d-block imgBanner" alt="...">
         </div>
     </div>
 </div>
@@ -32,30 +32,39 @@
                 {% for pc in pcs_destacados %}
                 <div class="item">
                     <div class="cards-wrapper position-relative">
-                        <div class="card border-0">
-                            <a href="#">
-                                <div class="image-container">
-                                    <img src="{{ pc.imagen.url }}" class="card-img-top main-image" alt="">
-                                </div>
-                            </a>
-                            <div class="card-body" style="height: 300px;">
-                                <h6 class="fw-bold">{{ pc.marca }}</h6>
-                                <div class="position-relative" style="height: 86.1px;">
-                                    <p class="productDesc">{{ pc.descripcion }}</p>
-                                </div>
-                                <div>
-                                    <div class="priceContainer d-flex position-absolute">
-                                        <span class="dscto">{{ pc.descuento }}</span> <span class="old-price">{{pc.precio_anterior }}</span>
+                        <a href="{% url 'detalle_producto' pc.id_producto %}" class="stretched-link text-decoration-none">
+                            <div class="card border-0">
+                                <a href="#">
+                                    <div class="image-container">
+                                        <img src="{{ pc.imagen.url }}" class="card-img-top main-image" alt="">
                                     </div>
-                                    <div class="position-relative pt-4">
-                                        <p class="price">${{ pc.precio_transferencia }}</p>
-                                        <p class="transf fw">Transferencia</p>
-                                        <p class="price">${{ pc.precio_normal }}</p>
-                                        <p class="otro fw">Otro medio de pago</p>
+                                </a>
+                                <div class="card-body" style="height: 300px;">
+                                    <h6 class="fw-bold">{{ pc.marca }}</h6>
+                                    <div class="position-relative" style="height: 86.1px;">
+                                        <p class="productDesc">{{ pc.descripcion }}</p>
+                                    </div>
+                                    <div>
+                                        {% if pc.descuento is not 0 or pc.precio_anterior is not 0 %}
+                                        <div class="priceContainer d-flex position-absolute dsctoTarget">
+                                            {% if pc.descuento is not 0 %}
+                                                <span class="dscto">{{ pc.descuento }}% DCTO.</span>
+                                            {% endif %}
+                                            {% if pc.precio_anterior is not 0 %}
+                                                <span class="old-price oldPrice">${{ pc.precio_anterior }}</span>
+                                            {% endif %}
+                                        </div>
+                                        {% endif %}
+                                        <div class="position-relative pt-4">
+                                            <p class="price">${{ pc.precio_transferencia }}</p>
+                                            <p class="transf fw">Transferencia</p>
+                                            <p class="price">${{ pc.precio_normal }}</p>
+                                            <p class="otro fw">Otro medio de pago</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
                 {% endfor %}
@@ -81,37 +90,40 @@
                 {% for poten in potencia  %}
                 <div class="item">
                     <div class="cards-wrapper position-relative">
-                        <div class="card border-0">
-                            <a href="#">
-                                <div class="image-container">
-                                    <img src="{{ poten.imagen.url }}" class="card-img-top main-image" alt="">
-                                </div>
-                            </a>
-                            <div class="card-body" style="height: 300px;">
-                                <h6 class="fw-bold">{{ poten.marca }}</h6>
-                                <div class="position-relative" style="height: 86.1px;">
-                                    <p class="productDesc">{{ poten.descripcion }}</p>
-                                </div>
-                                <div>
-                                    {% if poten.descuento is not None or poten.precio_anterior is not None %}
-                                    <div class="priceContainer d-flex position-absolute dsctoTarget">
-                                        {% if poten.descuento is not None %}
-                                            <span class="dscto">{{ poten.descuento }} DCTO.</span>
-                                        {% endif %}
-                                        {% if poten.precio_anterior is not None %}
-                                            <span class="old-price oldPrice">{{ poten.precio_anterior }}</span>
-                                        {% endif %}
+                        <a href="{% url 'detalle_producto' poten.id_producto %}" class="stretched-link text-decoration-none">
+
+                            <div class="card border-0">
+                                <a href="#">
+                                    <div class="image-container">
+                                        <img src="{{ poten.imagen.url }}" class="card-img-top main-image" alt="">
                                     </div>
-                                    {% endif %}
-                                    <div class="position-relative pt-4">
-                                        <p class="price">${{ poten.precio_transferencia }}</p>
-                                        <p class="transf fw">Transferencia</p>
-                                        <p class="price">${{ poten.precio_normal }}</p>
-                                        <p class="otro fw">Otro medio de pago</p>
+                                </a>
+                                <div class="card-body" style="height: 300px;">
+                                    <h6 class="fw-bold">{{ poten.marca }}</h6>
+                                    <div class="position-relative" style="height: 86.1px;">
+                                        <p class="productDesc">{{ poten.descripcion }}</p>
+                                    </div>
+                                    <div>
+                                        {% if poten.descuento is not 0 or poten.precio_anterior is not 0 %}
+                                        <div class="priceContainer d-flex position-absolute dsctoTarget">
+                                            {% if poten.descuento is not 0 %}
+                                                <span class="dscto">{{ poten.descuento }}% DCTO.</span>
+                                            {% endif %}
+                                            {% if poten.precio_anterior is not 0 %}
+                                                <span class="old-price oldPrice">${{ poten.precio_anterior }}</span>
+                                            {% endif %}
+                                        </div>
+                                        {% endif %}
+                                        <div class="position-relative pt-4">
+                                            <p class="price">${{ poten.precio_transferencia }}</p>
+                                            <p class="transf fw">Transferencia</p>
+                                            <p class="price">${{ poten.precio_normal }}</p>
+                                            <p class="otro fw">Otro medio de pago</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
                 {% endfor %}
@@ -138,37 +150,39 @@
                 {% for note in notebooks  %}
                 <div class="item">
                     <div class="cards-wrapper position-relative">
-                        <div class="card border-0">
-                            <a href="#">
-                                <div class="image-container">
-                                    <img src="{{ note.imagen.url }}" class="card-img-top main-image" alt="">
-                                </div>
-                            </a>
-                            <div class="card-body" style="height: 300px;">
-                                <h6 class="fw-bold">{{ note.marca }}</h6>
-                                <div class="position-relative" style="height: 86.1px;">
-                                    <p class="productDesc">{{ note.descripcion }}</p>
-                                </div>
-                                <div>
-                                    {% if note.descuento is not None or note.precio_anterior is not None %}
-                                    <div class="priceContainer d-flex position-absolute dsctoTarget">
-                                        {% if note.descuento is not None %}
-                                            <span class="dscto">{{ note.descuento }} DCTO.</span>
-                                        {% endif %}
-                                        {% if note.precio_anterior is not None %}
-                                            <span class="old-price oldPrice">{{ note.precio_anterior }}</span>
-                                        {% endif %}
+                        <a href="{% url 'detalle_producto' note.id_producto %}" class="stretched-link text-decoration-none">
+                            <div class="card border-0">
+                                <a href="#">
+                                    <div class="image-container">
+                                        <img src="{{ note.imagen.url }}" class="card-img-top main-image" alt="">
                                     </div>
-                                    {% endif %}
-                                    <div class="position-relative pt-4">
-                                        <p class="price">${{ note.precio_transferencia }}</p>
-                                        <p class="transf fw">Transferencia</p>
-                                        <p class="price">${{ note.precio_normal }}</p>
-                                        <p class="otro fw">Otro medio de pago</p>
+                                </a>
+                                <div class="card-body" style="height: 300px;">
+                                    <h6 class="fw-bold">{{ note.marca }}</h6>
+                                    <div class="position-relative" style="height: 86.1px;">
+                                        <p class="productDesc">{{ note.descripcion }}</p>
+                                    </div>
+                                    <div>
+                                        {% if note.descuento is not 0 or note.precio_anterior is not 0 %}
+                                        <div class="priceContainer d-flex position-absolute dsctoTarget">
+                                            {% if note.descuento is not 0 %}
+                                                <span class="dscto">{{ note.descuento }} DCTO.</span>
+                                            {% endif %}
+                                            {% if note.precio_anterior is not 0 %}
+                                                <span class="old-price oldPrice">{{ note.precio_anterior }}</span>
+                                            {% endif %}
+                                        </div>
+                                        {% endif %}
+                                        <div class="position-relative pt-4">
+                                            <p class="price">${{ note.precio_transferencia }}</p>
+                                            <p class="transf fw">Transferencia</p>
+                                            <p class="price">${{ note.precio_normal }}</p>
+                                            <p class="otro fw">Otro medio de pago</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
                 {% endfor %}
@@ -194,37 +208,39 @@
                 {% for r in p_razer %}
                 <div class="item">
                     <div class="cards-wrapper position-relative">
-                        <div class="card border-0">
-                            <a href="#">
-                                <div class="image-container">
-                                    <img src="{{ r.imagen.url }}" class="card-img-top main-image" alt="">
-                                </div>
-                            </a>
-                            <div class="card-body" style="height: 300px;">
-                                <h6 class="fw-bold">{{ r.marca }}</h6>
-                                <div class="position-relative" style="height: 86.1px;">
-                                    <p class="productDesc">{{ r.descripcion }}</p>
-                                </div>
-                                <div>
-                                    {% if r.descuento is not None or p.precio_anterior is not None %}
-                                    <div class="priceContainer d-flex position-absolute dsctoTarget">
-                                        {% if r.descuento is not None %}
-                                            <span class="dscto">{{ p.descuento }} DCTO.</span>
-                                        {% endif %}
-                                        {% if r.precio_anterior is not None %}
-                                            <span class="old-price oldPrice">{{ p.precio_anterior }}</span>
-                                        {% endif %}
+                        <a href="{% url 'detalle_producto' r.id_producto %}" class="stretched-link text-decoration-none">
+                            <div class="card border-0">
+                                <a href="#">
+                                    <div class="image-container">
+                                        <img src="{{ r.imagen.url }}" class="card-img-top main-image" alt="">
                                     </div>
-                                    {% endif %}
-                                    <div class="position-relative pt-4">
-                                        <p class="price">${{ r.precio_transferencia }}</p>
-                                        <p class="transf fw">Transferencia</p>
-                                        <p class="price">${{ r.precio_normal }}</p>
-                                        <p class="otro fw">Otro medio de pago</p>
+                                </a>
+                                <div class="card-body" style="height: 300px;">
+                                    <h6 class="fw-bold">{{ r.marca }}</h6>
+                                    <div class="position-relative" style="height: 86.1px;">
+                                        <p class="productDesc">{{ r.descripcion }}</p>
+                                    </div>
+                                    <div>
+                                        {% if r.descuento is not 0 or p.precio_anterior is not 0 %}
+                                        <div class="priceContainer d-flex position-absolute dsctoTarget">
+                                            {% if r.descuento is not 0 %}
+                                                <span class="dscto">{{ r.descuento }}% DCTO.</span>
+                                            {% endif %}
+                                            {% if r.precio_anterior is not 0 %}
+                                                <span class="old-price oldPrice">${{ r.precio_anterior }}</span>
+                                            {% endif %}
+                                        </div>
+                                        {% endif %}
+                                        <div class="position-relative pt-4">
+                                            <p class="price">${{ r.precio_transferencia }}</p>
+                                            <p class="transf fw">Transferencia</p>
+                                            <p class="price">${{ r.precio_normal }}</p>
+                                            <p class="otro fw">Otro medio de pago</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
                 {% endfor %}

@@ -22,13 +22,13 @@ class Product(models.Model):
     marca = models.CharField(max_length=60, blank=False, null=False)
     nombre_producto = models.CharField(max_length=60, blank=False, null=False, default='nombre_producto')
     descripcion = models.CharField(max_length=100, blank=False, null=True)
-    descuento = models.CharField(max_length=60, blank=True, null=True, default=' ')
-    precio_anterior = models.CharField(max_length=60, blank=True, null=True, default=' ')
-    precio_transferencia = models.CharField(max_length=60, blank=False, null=True)
-    precio_normal = models.CharField(max_length=60, blank=False, null=True)
+    descuento = models.IntegerField(blank=True, null=True, default=' ')
+    precio_anterior = models.IntegerField(blank=True, null=True, default=' ')
+    precio_transferencia = models.IntegerField(blank=False, null=True)
+    precio_normal = models.IntegerField(blank=False, null=True)
     imagen = models.ImageField(upload_to='gt_store/', null=True, blank=False)
     categoria = models.CharField(max_length=20, choices=CATEGORIAS, default='pc')
-
+    stock = models.IntegerField(blank=False, null=False, default=1)
 
     def __str__(self):
         return str(self.marca)

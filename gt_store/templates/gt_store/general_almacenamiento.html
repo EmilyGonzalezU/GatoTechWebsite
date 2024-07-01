@@ -25,7 +25,7 @@
         <div class="col-md-12 col-lg-9 col-sm-12 col-xs-12 d-flex flex-wrap">
             {% for p in productos %}
             <div class="position-relative col-lg-3 col-md-4 col-sm-6 mb-4">
-                <a href="{% url 'detalle_producto' p.id_producto %}" class="stretched-link text-decoration-none">
+                <a href="{% url 'detalle_producto' p.id_producto %}" class="stretched-link text-decoration-0">
                     <div class="card border rounded-0">
                         {% if p.imagen %}
                             <img src="{{ p.imagen.url }}" class="card-img-top main-image mx-auto d-block" style="height: 200px; width: 200px;">
@@ -36,12 +36,12 @@
                             <div class="position-relative" style="height: 86.1px;">
                                 <p class="productDesc">{{ p.descripcion }}</p>
                             </div>
-                            {% if p.descuento is not None or p.precio_anterior is not None %}
+                            {% if p.descuento is not 0 or p.precio_anterior is not 0 %}
                                 <div class="priceContainer d-flex position-absolute dsctoTarget">
-                                    {% if p.descuento is not None %}
+                                    {% if p.descuento is not 0 %}
                                         <span class="dscto">{{ p.descuento }} DCTO.</span>
                                     {% endif %}
-                                    {% if p.precio_anterior is not None %}
+                                    {% if p.precio_anterior is not 0 %}
                                         <span class="old-price oldPrice">{{ p.precio_anterior }}</span>
                                     {% endif %}
                                 </div>

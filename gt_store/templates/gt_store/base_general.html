@@ -66,12 +66,153 @@
                     <div class="container-fluid d-flex justify-content-center align-items-center">
                         <button type="button" class="btn " id="openModalBtn"><i
                                 class="bi bi-person fs-1 me-3 iconNav ms-2"></i></button>
-                        <a href=""><i class="bi bi-cart3  fs-2 iconNav me-2"></i></a>
+                        <button type="button" class="btn"  data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" id="openCartOffCanvas"><i class="bi bi-cart3  fs-2 iconNav me-2"></i></button>
                     </div>
                 </div>
             </nav>
         </div>
     </div>
+    
+    <!-- Offcanvas -->
+       <div class="offcanvas offcanvas-end offcanvasCart" tabindex="-2" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title fw-bold fs-5" id="offcanvasRightLabel">Resumen</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="product-list">
+                {% if request.session.carrito.items %}
+                    {% for key, value in request.session.carrito.items %}
+                        <div class="product-item container-fluid">
+                            <div class="row">
+                                <div class="col-4">
+                                    <div class="container d-flex align-items-center justify-content-center" style="width: 100%; height: 100%;">
+                                        <img src="{{value.imagen}}" alt="{{ value.nombre }}">
+                                    </div>
+                                </div>
+                                <div class="col-8 product-details">
+                                    <p class="product-name">{{ value.nombre }}</p>
+                                    <div class="d-flex justify-content-between">
+                                        <p class="fw-bold">Total pago con transferencia:</p>
+                                        <p class="product-price">${{ value.acumulado_transferencia }}</p>
+                                    </div>
+                                    <div class="d-flex justify-content-between">
+                                        <p>Total otros medios de pago:</p>
+                                        <p class="product-price">${{ value.acumulado_normal }}</p>
+                                    </div>
+                                    <div class="cantidadProductos">
+                                        <a href="{% url 'Sub' value.producto_id %}" class="badge btn btn-dark badge-dark">-</a>
+                                        <span class="mx-2">{{ value.cantidad }}</span>
+                                        <a href="{% url 'Add' value.producto_id %}" class="badge btn btn-dark badge-dark {% if value.cantidad >= value.stock %}disabled{% endif %}">+</a>
+                                    </div>
+                                    {% if value.cantidad >= value.stock %}
+                                        <p class="stock-warning">No puedes agregar más de este producto. Stock disponible: {{ value.stock }}</p>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                {% else %}
+                    <p>No hay productos en el carrito.</p>
+                {% endif %}
+            </div>
+        
+            <!-- Totales fijos -->
+            <div class="resumenFijo">
+                <div class="d-flex justify-content-between">
+                    <p class="fw-bold">Pago con transferencia:</p>
+                    <p class="product-price">${{total_carrito_transferencia }}</p>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <p>Otro medio de pago:</p>
+                    <p class="product-price">${{total_carrito_normal }}</p>
+                </div>
+                <div class="row text-center mt-3">
+                    <div class="col-6"><a href="{% url 'CLS' %}" class="btn btn-danger btn-custom">Vaciar carrito</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <style>
+        
+        .offcanvas-body {
+            display: flex;
+            flex-direction: column;
+            padding-bottom: 100px; 
+        }
+
+        .product-list {
+            flex-grow: 1;
+            overflow-y: auto;
+            max-height: calc(100vh - 200px); 
+            padding: 10px;
+            margin-bottom: 20px; 
+        }
+
+        .product-item {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            padding: 15px;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .product-item img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        .product-details {
+            font-size: 14px;
+        }
+
+        .cantidadProductos {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .cantidadProductos .badge {
+            cursor: pointer;
+        }
+
+        .resumenFijo {
+            position: sticky;
+            bottom: 0;
+            background-color: white;
+            padding: 15px;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.1); 
+            z-index: 10;
+        }
+
+        .resumenFijo p {
+            margin: 0;
+        }
+
+        .btn-custom {
+            font-size: 16px;
+        }
+
+        .btn-danger {
+            background-color: #dc3545;
+            border-color: #dc3545;
+        }
+
+
+        .nombre{
+            font-weight: bold;
+            color: #333;
+        }
+
+
+        .stock-warning {
+            color: #dc3545;
+            font-size: 12px;
+        }
+    </style>
+    
 
     <!--Modal-->
     <div class="modal fade " id="loginModal" tabindex="-2" role="dialog" aria-labelledby="loginModalLabel"
@@ -130,8 +271,8 @@
             </button>
             <a href="{% url 'home' %}" class="navbar-brand"><img src="{% static 'gt_store/img/Logos/GatoTechLogo.png' %}" class="imgLogomd" alt=""></a>
             <div class="d-lg-none">
-                <a href="iniciosesion.html"><i class="bi bi-person fs-1 me-2  ms-1"></i></a>
-                <a href=""><i class="bi bi-cart3 fs-2  me-3"></i></a>
+                <button type="button" class="btn" ><i class="bi bi-person fs-1 me-2  ms-1"></i></button>
+                <button type="button" class="btn"  data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" id="openCartOffCanvas"><i class="bi bi-cart3  fs-2 iconNav me-2"></i></button>
             </div>
             <div class="container-fluid justify-content-center d-flex mb-2 mt-2  searchDiv">
                 <form class="d-flex w-100">
@@ -152,19 +293,18 @@
                 <div class="offcanvas-body d-flex flex-column">
                     <ul class="navbar-nav bg-black" style="gap: 10px;">
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-white" href="#" role="button"
+                            <a class="nav-link dropdown-toggle text-white" href="{% url 'general_pc' %}" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">
                                 PC
                             </a>
                             <ul class="dropdown-menu bg-black text-white">
-                                <li><a class="dropdown-item text-white" href="{% url 'general_pc' %}">PC Gamer</a></li>
-                                <li><a class="dropdown-item text-white" href="#">PC Escritorio</a></li>
+                                <li><a class="dropdown-item text-white" href="{% url 'pc_gamer' %}">PC Gamer</a></li>
+                                <li><a class="dropdown-item text-white" href="{% url 'pc_escritorio' %}">PC Escritorio</a></li>
                             </ul>
                         </li>
 
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle  text-white" href="#" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">Notebook</a>
+                            <a class="nav-link dropdown-toggle  text-white" href="{% url 'general_notebooks'%}" role="button" data-bs-toggle="dropdown" aria-expanded="false">Notebook</a>
                             <ul class="dropdown-menu bg-black text-white">
                                 <li><a class="dropdown-item text-white" href="#">Notebook Gamer</a></li>
                                 <li><a class="dropdown-item text-white" href="#">Notebook</a></li>
@@ -175,21 +315,13 @@
                             <a class="nav-link dropdown-toggle  text-white" href="#" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">Componentes</a>
                             <ul class="dropdown-menu bg-black text-white">
-                                <li><a class="dropdown-item text-white" href="#">Procesador</a></li>
-                                <li><a class="dropdown-item text-white" href="#">Placa Madre</a></li>
-                                <div class="dropdown">
-                                    <li class="sub-menu-ram"><a href="#" class="dropdown-item dropdown-toggle"
-                                            data-toggle="dropdown">RAM</a>
-                                        <ul class="dropdown-menu">
-                                            <li><a href="#" class="dropdown-item">PC</a></li>
-                                            <li><a href="#" class="dropdown-item">Notebook</a></li>
-                                        </ul>
-                                    </li>
-                                </div>
-                                <li><a class="dropdown-item text-white" href="#">Almacenamiento</a></li>
-                                <li><a class="dropdown-item text-white" href="#">Fuente de Poder</a></li>
-                                <li><a class="dropdown-item text-white" href="#">Tarjeta de Video</a></li>
-                                <li><a class="dropdown-item text-white" href="#">Gabinetes</a></li>
+                                <li><a class="dropdown-item text-white" href="{% url 'general_processors' %}">Procesador</a></li>
+                                <li><a class="dropdown-item text-white" href="{% url 'general_placa' %}">Placa Madre</a></li>
+                                <li><a class="dropdown-item text-white" href="{% url 'general_ram' %}">Ram</a></li>
+                                <li><a class="dropdown-item text-white" href="{% url 'general_almacenamiento' %}">Almacenamiento</a></li>
+                                <li><a class="dropdown-item text-white" href="{% url 'general_fP' %}">Fuente de Poder</a></li>
+                                <li><a class="dropdown-item text-white" href="{% url 'general_gpu' %}">Tarjeta de Video</a></li>
+                                <li><a class="dropdown-item text-white" href="{% url 'general_gabinete' %}">Gabinetes</a></li>
                             </ul>
                         </li>
 
@@ -197,10 +329,10 @@
                             <a class="nav-link dropdown-toggle  text-white" href="#" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">Periféricos</a>
                             <ul class="dropdown-menu bg-black text-white">
-                                <li><a class="dropdown-item text-white" href="#">Audifonos</a></li>
-                                <li><a class="dropdown-item text-white" href="#">Monitores</a></li>
-                                <li><a class="dropdown-item text-white" href="#">Teclados</a></li>
-                                <li><a class="dropdown-item text-white" href="#">Mouse</a></li>
+                                <li><a class="dropdown-item text-white" href="{% url 'general_headset' %}">Audifonos</a></li>
+                                <li><a class="dropdown-item text-white" href="{% url 'general_monitor' %}">Monitores</a></li>
+                                <li><a class="dropdown-item text-white" href="{% url 'general_keyboard' %}">Teclados</a></li>
+                                <li><a class="dropdown-item text-white" href="{% url 'general_mouse' %}">Mouse</a></li>
                             </ul>
                         </li>
 
@@ -228,8 +360,8 @@
                                                 <div class="col-lg-2 col-sm-6 py-4 px-xl-5 px-4">
                                                     <h5>Pc</h5>
                                                     <div class="list-group">
-                                                        <a class="list-group-item" href="#">Pc Gamer</a>
-                                                        <a class="list-group-item" href="#">Pc Oficina</a>
+                                                        <a class="list-group-item" href="{% url 'pc_gamer' %}">Pc Gamer</a>
+                                                        <a class="list-group-item" href="{% url 'pc_escritorio' %}">Pc Oficina</a>
                                                         <a class="list-group-item text-info" href="{% url 'general_pc' %}">Ver
                                                             Todos</a>
                                                     </div>
@@ -237,8 +369,8 @@
                                                 <div class="col-lg-2 col-sm-6 py-4 px-xl-5 px-4">
                                                     <h5>Notebook</h5>
                                                     <div class="list-group">
-                                                        <a class="list-group-item" href="#">Notebook Gamer</a>
-                                                        <a class="list-group-item" href="#">Notebook Oficina</a>
+                                                        <a class="list-group-item" href="{% url 'general_note_gamer'}">Notebook Gamer</a>
+                                                        <a class="list-group-item" href="{% url 'general_note_escritorio'}">Notebook Oficina</a>
                                                         <a class="list-group-item text-info" href="{% url 'general_notebooks' %}">Ver
                                                             Todos</a>
                                                     </div>
@@ -277,8 +409,8 @@
                                                 <div class="col-lg-2 col-xl-2  col-sm-6 py-4 px-xl-5 px-4">
                                                     <h5>Procesador</h5>
                                                     <div class="list-group">
-                                                        <a class="list-group-item" href="#">AMD</a>
-                                                        <a class="list-group-item" href="#">Intel</a>
+                                                        <a class="list-group-item" href="{% url 'general_proce_amd' %}">AMD</a>
+                                                        <a class="list-group-item" href="{% url 'general_proce_intel' %}">Intel</a>
                                                         <a class="list-group-item text-info" href="{% url 'general_processors' %}">Ver
                                                             Todos</a>
                                                     </div>
@@ -286,8 +418,8 @@
                                                 <div class="col-lg-2 col-xl-2 col-sm-6 py-4 px-xl-5 px-4">
                                                     <h5>Placa Madre</h5>
                                                     <div class="list-group">
-                                                        <a class="list-group-item" href="#">Placa madre AMD</a>
-                                                        <a class="list-group-item" href="#">Placa madre Intel</a>
+                                                        <a class="list-group-item" href="{% url 'general_placa_amd' %}">Placa madre AMD</a>
+                                                        <a class="list-group-item" href="{% url 'general_placa_intel' %}">Placa madre Intel</a>
                                                         <a class="list-group-item text-info" href="{% url 'general_placa' %}">Ver
                                                             Todos</a>
                                                     </div>
@@ -304,8 +436,9 @@
                                                 <div class="col-lg-2  col-xl-2  col-sm-6 py-4 px-xl-5 px-4">
                                                     <h5>Almacenamiento</h5>
                                                     <div class="list-group">
-                                                        <a class="list-group-item" href="#">Almacenamiento HDD</a>
-                                                        <a class="list-group-item" href="#">Almacenamiento SDD </a>
+                                                        <a class="list-group-item" href="{% url 'general_hdd' %}">Almacenamiento HDD</a>
+                                                        <a class="list-group-item" href="{% url 'general_ssd' %}">Almacenamiento SDD </a>
+                                                        <a class="list-group-item" href="{% url 'general_nvme' %}">Almacenamiento Nvme </a>
                                                         <a class="list-group-item text-info"
                                                             href="{% url 'general_almacenamiento' %}">Ver Todos</a>
                                                     </div>
@@ -317,7 +450,7 @@
                                                 <div class="col-lg-2 col-xl-2 col-sm-6 py-4 px-xl-5 px-4">
                                                     <h5>Fuente de Poder</h5>
                                                     <div class="list-group">
-                                                        <a class="list-group-item" href="#">Fuentes de Poder</a>
+                                                        <a class="list-group-item" href="{% url 'general_fP' %}">Fuentes de Poder</a>
                                                         <a class="list-group-item text-info"
                                                             href="{% url 'general_fP' %}">Ver Todos</a>
                                                     </div>
@@ -325,8 +458,7 @@
                                                 <div class="col-lg-2  col-xl-2 col-sm-6 py-4 px-xl-5 px-4">
                                                     <h5>Gabinete</h5>
                                                     <div class="list-group">
-                                                        <a class="list-group-item" href="#">Gabinetes Gamer</a>
-                                                        <a class="list-group-item" href="#">Gabinetes Oficina</a>
+                                                        <a class="list-group-item" href="{% url 'general_gabinete' %}">Gabinetes</a>
                                                         <a class="list-group-item text-info" href="{% url 'general_gabinete' %}">Ver
                                                             Todos</a>
                                                     </div>
@@ -334,9 +466,9 @@
                                                 <div class="col-lg-2 col-xl-2  col-sm-6 py-4 px-xl-5 px-4">
                                                     <h5>Tarjeta de Video</h5>
                                                     <div class="list-group">
-                                                        <a class="list-group-item" href="#">Tarjeta de Video NVIDIA</a>
-                                                        <a class="list-group-item" href="#">Tarjeta de Video AMD</a>
-                                                        <a class="list-group-item" href="#">Tarjeta de Video Intel</a>
+                                                        <a class="list-group-item" href="{% url 'general_gpu_nvidia' %}">Tarjeta de Video NVIDIA</a>
+                                                        <a class="list-group-item" href="{% url 'general_gpu_amd' %}">Tarjeta de Video AMD</a>
+                                                        <a class="list-group-item" href="{% url 'general_gpu_intel' %}">Tarjeta de Video Intel</a>
                                                         <a class="list-group-item text-info"
                                                             href="{% url 'general_gpu' %}">Ver Todos</a>
                                                     </div>
@@ -365,8 +497,7 @@
                                                     <h5>Audifonos</h5>
                                                     <div class="list-group">
                                                         <a class="list-group-item" href="#">True wireless (TWS)</a>
-                                                        <a class="list-group-item" href="#">Headsets</a>
-                                                        <a class="list-group-item" href="#">Deportivos</a>
+                                                        <a class="list-group-item" href="{% url 'general_headset_headset' %}">Headsets</a>
                                                         <a class="list-group-item text-info" href="{% url 'general_headset' %}">Ver
                                                             Todos</a>
                                                     </div>
@@ -374,9 +505,8 @@
                                                 <div class="col-lg-2 col-sm-6 py-4 px-xl-5 px-4">
                                                     <h5>Teclados</h5>
                                                     <div class="list-group">
-                                                        <a class="list-group-item" href="#">Mecánicos</a>
-                                                        <a class="list-group-item" href="#">Membrana</a>
-                                                        <a class="list-group-item" href="#">Inalambricos</a>
+                                                        <a class="list-group-item" href="{% url 'general_mecanico' %}">Mecánicos</a>
+                                                        <a class="list-group-item" href="{% url 'general_membrana' %}">Membrana</a>
                                                         <a class="list-group-item text-info" href="{% url 'general_keyboard' %}">Ver
                                                             Todos</a>
                                                     </div>
@@ -384,9 +514,8 @@
                                                 <div class="col-lg-2 col-sm-6 py-4 px-xl-5 px-4">
                                                     <h5>Mouse</h5>
                                                     <div class="list-group">
-                                                        <a class="list-group-item" href="#">Ópticos</a>
-                                                        <a class="list-group-item" href="#">Láser</a>
-                                                        <a class="list-group-item" href="#">Inalámbricos</a>
+                                                        <a class="list-group-item" href="{% url 'general_mouse_optico'%}">Ópticos</a>
+                                                        <a class="list-group-item" href="{% url 'general_mouse_laser'%}">Láser</a>
                                                         <a class="list-group-item text-info" href="{% url 'general_mouse' %}">Ver
                                                             Todos</a>
                                                     </div>
@@ -394,7 +523,6 @@
                                                 <div class="col-lg-2 col-sm-6 py-4 px-xl-5 px-4">
                                                     <h5>Monitores</h5>
                                                     <div class="list-group">
-                                                        <a class="list-group-item" href="#">De 144Hz o más</a>
                                                         <a class="list-group-item" href="#">Con FreeSync</a>
                                                         <a class="list-group-item" href="#">Con G-Sync</a>
                                                         <a class="list-group-item text-info" href="{% url 'general_monitor' %}">Ver
@@ -504,6 +632,5 @@
     <script src="{% static 'gt_store/js/script.js' %}"></script>
     <script src="{% static 'gt_store/js/apiReseñas.js' %}"></script>
     <script src="{% static 'gt_store/js/valIncioSesion.js' %}"></script>
-    <script src="{% static 'gt_store/js/valRegistro.js' %}"></script>
 </body>
 </html>

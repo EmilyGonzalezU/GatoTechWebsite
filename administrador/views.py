@@ -51,6 +51,7 @@ FORM_MAP2 = {
     'monitor': (Monitor_form),
 }
 
+#Pone en plural los nombres de las categorias!! para que? es para proporcionar una representación más adecuada para listas o grupos de elementos en interfaces
 CATEGORY_CHOICES = [(key, form.Meta.model._meta.verbose_name_plural.title()) for key, form in FORM_MAP2.items()]
 
 def product_add(request):

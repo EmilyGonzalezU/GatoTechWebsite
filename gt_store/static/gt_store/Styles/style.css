@@ -81,6 +81,10 @@
     .footerLogo{
         width: 10rem;
     }
+
+    .offcanvasCart{
+        width: 100%;
+    }
 }
 
 /*Small*/
@@ -172,6 +176,9 @@
      /*Footer Logo*/
      .footerLogo{
         width: 10rem;
+    }
+    .offcanvasCart{
+        width: 60%;
     }
 }
 
@@ -274,6 +281,9 @@
     /*Footer Logo*/
     .footerLogo{
         width: 10rem;
+    }
+    .offcanvasCart{
+        width: 70%;
     }
 }
 
@@ -411,7 +421,7 @@
     .footerLogo{
         width: 20rem;
     }
-    
+
 }
 
 /*Superior bar*/
@@ -530,3 +540,4 @@ h1{
 .campo-valido {
     border-color: #0ac2a3 !important;
 }
+

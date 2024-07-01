@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'gt_store',
     'administrador',
+    'usuarios',
+    'carrito',
 ]
 
 MIDDLEWARE = [
@@ -63,6 +65,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'carrito.context_processors.total_carrito_transferencia',
+                'carrito.context_processors.total_carrito_normal',
             ],
         },
     },

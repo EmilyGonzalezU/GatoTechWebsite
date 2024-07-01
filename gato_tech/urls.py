@@ -24,6 +24,9 @@ urlpatterns = [
     path('GatoTech/', include('gt_store.urls')),
     path('administrador/', include('administrador.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
+    path('usuario/', include('usuarios.urls')),
+    path('carrito/', include('carrito.urls')),
+
 ]
 
 if settings.DEBUG:

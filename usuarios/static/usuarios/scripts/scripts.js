@@ -1,6 +1,5 @@
 const btnEnviar = document.getElementById('btnEnviar');
 
-//registro
 let nombreValido = false;
 let apellidoValido = false;
 let emailValido = false;
@@ -11,13 +10,13 @@ let passValido = false;
 const nombreUsuario = document.getElementById('nombre');
 const apellidoUsuario = document.getElementById('apellido');
 const telUsuario = document.getElementById('telefono');
-const rutUsuario = document.getElementById('RUT');
+const rutUsuario = document.getElementById('rut');
 const passUsuario = document.getElementById('pass');
 const emailUsuario = document.getElementById('email');
 
 const validacion = () => {
     // Validar nombre
-    nombreUsuario.addEventListener('focus', function(){
+    nombreUsuario.addEventListener('blur', function() {
         const nombreValue = nombreUsuario.value.trim();
         if (nombreValue === "" || !/^[a-zA-Z\s]+$/.test(nombreValue)) {
             nombreUsuario.classList.add('campo-invalido');
@@ -33,7 +32,7 @@ const validacion = () => {
     });
 
     // Validar apellido
-    apellidoUsuario.addEventListener('focus', function(){
+    apellidoUsuario.addEventListener('blur', function() {
         const apellidoValue = apellidoUsuario.value.trim();
         if (apellidoValue === "" || !/^[a-zA-Z\s]+$/.test(apellidoValue)) {
             apellidoUsuario.classList.add('campo-invalido');
@@ -49,26 +48,26 @@ const validacion = () => {
     });
 
     // Validar email
-    emailUsuario.addEventListener('focus', function() {
+    emailUsuario.addEventListener('blur', function() {
         const emailValue = emailUsuario.value.trim();
         if (emailValue === "") {
-            emailUsuario.classList.add('campo-invalido'); 
-            emailUsuario.classList.remove('campo-valido'); 
-            document.getElementById('msgErrorMail').textContent = "Ingrese su e-mail."; 
+            emailUsuario.classList.add('campo-invalido');
+            emailUsuario.classList.remove('campo-valido');
+            document.getElementById('msgErrorMail').textContent = "Ingrese su e-mail.";
             emailValido = false;
         } else if (!emailValue.includes("@") || !emailValue.includes(".")) {
-            document.getElementById('msgErrorMail').textContent="Ingrese un e-mail válido.";
+            document.getElementById('msgErrorMail').textContent = "Ingrese un e-mail válido.";
             emailValido = false;
         } else {
-            document.getElementById('msgErrorMail').textContent="";
+            document.getElementById('msgErrorMail').textContent = "";
             emailValido = true;
             emailUsuario.classList.remove('campo-invalido');
             emailUsuario.classList.add('campo-valido');
         }
     });
-    
+
     // Validar teléfono
-    telUsuario.addEventListener('focus', function(){
+    telUsuario.addEventListener('blur', function() {
         const telValue = telUsuario.value.trim();
         if (telValue === "" || !/^\d{8}$/.test(telValue)) {
             telUsuario.classList.add('campo-invalido');
@@ -83,32 +82,32 @@ const validacion = () => {
         }
     });
 
-    // Validar RUT 
-    rutUsuario.addEventListener('focus', function() {
+    // Validar RUT
+    rutUsuario.addEventListener('blur', function() {
         const rutValue = rutUsuario.value.trim();
         if (rutValue === "") {
             rutUsuario.classList.add('campo-invalido');
-            rutUsuario.classList.remove('campo-valido'); 
-            document.getElementById('msgErrorRUT').textContent = "Ingrese su RUT.";             
+            rutUsuario.classList.remove('campo-valido');
+            document.getElementById('msgErrorRUT').textContent = "Ingrese su RUT.";
             rutValido = false;
         } else if (!Fn.validaRut(rutValue)) {
-            document.getElementById('msgErrorRUT').textContent = "Ingrese un RUT válido.(Sin puntos y con dígito verificador).";             
+            document.getElementById('msgErrorRUT').textContent = "Ingrese un RUT válido (sin puntos y con dígito verificador).";
             rutValido = false;
         } else {
-            document.getElementById('msgErrorRUT').textContent = "";            
+            document.getElementById('msgErrorRUT').textContent = "";
             rutUsuario.classList.remove('campo-invalido');
             rutUsuario.classList.add('campo-valido');
             rutValido = true;
         }
     });
-    
+
     // Validar contraseña
-    passUsuario.addEventListener('focus', function(){
+    passUsuario.addEventListener('blur', function() {
         const passValue = passUsuario.value;
         if (passValue === "" || passValue.length < 8) {
             passUsuario.classList.add('campo-invalido');
             passUsuario.classList.remove('campo-valido');
-            document.getElementById('msgErrorPass').textContent = "Ingrese una contraseña (Mínimo 8 carácteres).";            
+            document.getElementById('msgErrorPass').textContent = "Ingrese una contraseña (Mínimo 8 caracteres).";
             passValido = false;
         } else {
             document.getElementById('msgErrorPass').textContent = "";
@@ -121,11 +120,11 @@ const validacion = () => {
     // Calcular esValido después de todas las validaciones
     const esValido = nombreValido && apellidoValido && emailValido && telValido && rutValido && passValido;
     return esValido;
-}
+};
 
-btnEnviar.addEventListener('click', (event) => {
+btnEnviar.addEventListener('click', function(event) {
     const esValido = validacion();
-    
+
     if (!esValido) {
         event.preventDefault();
         nombreUsuario.focus();
@@ -137,9 +136,9 @@ btnEnviar.addEventListener('click', (event) => {
     }
 });
 
-// Validacion RUT 
+// Validacion RUT
 var Fn = {
-    validaRut: function (rutCompleto) {
+    validaRut: function(rutCompleto) {
         rutCompleto = rutCompleto.replace("‐", "-");
         if (!/^[0-9]+[-|‐]{1}[0-9kK]{1}$/.test(rutCompleto))
             return false;
@@ -150,11 +149,11 @@ var Fn = {
 
         return (Fn.dv(rut) == digv);
     },
-    dv: function (T) {
-        var M = 0, S = 1;
+    dv: function(T) {
+        var M = 0,
+            S = 1;
         for (; T; T = Math.floor(T / 10))
             S = (S + T % 10 * (9 - M++ % 6)) % 11;
         return S ? S - 1 : 'k';
     }
-}
-
+};

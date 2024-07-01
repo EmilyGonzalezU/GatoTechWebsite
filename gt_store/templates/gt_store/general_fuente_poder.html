@@ -35,10 +35,16 @@
                             <div class="position-relative" style="height: 86.1px;">
                                 <p class="productDesc">{{ p.descripcion }}</p>
                             </div>
-                            <div class="priceContainer d-flex position-absolute dsctoTarget">
-                                <span class="dscto">{{ p.descuento }} DCTO.</span>
-                                <span class="old-price oldPrice">{{ p.precio_anterior }}</span>
-                            </div>
+                            {% if p.descuento is not 0 or p.precio_anterior is not 0 %}
+                                <div class="priceContainer d-flex position-absolute dsctoTarget">
+                                    {% if p.descuento is not 0 %}
+                                        <span class="dscto">{{ p.descuento }} DCTO.</span>
+                                    {% endif %}
+                                    {% if p.precio_anterior is not 0 %}
+                                        <span class="old-price oldPrice">{{ p.precio_anterior }}</span>
+                                    {% endif %}
+                                </div>
+                            {% endif %}
                             <div class="position-relative pt-4">
                                 <p class="price">{{ p.precio_transferencia }}</p>
                                 <p class="metod">Transferencia</p>
