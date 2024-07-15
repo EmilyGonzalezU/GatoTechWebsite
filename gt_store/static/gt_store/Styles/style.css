@@ -37,6 +37,10 @@
     .card{
         margin: 0 .5em;
         width: calc(100%);
+<<<<<<< HEAD
+=======
+        margin-top: 10vh;
+>>>>>>> cambios
     }
 
     .dscto{
@@ -97,11 +101,20 @@
 
     .navMenu{
         display: none;
+<<<<<<< HEAD
     }
 
     .imgBanner {
         max-width: 100%; /* Establece el ancho máximo de la imagen como un porcentaje del contenedor */
         height: auto; /* Mantiene la proporción de aspecto de la imagen */
+=======
+
+    }
+
+    .imgBanner {
+        max-width: 100%; 
+        height: auto; 
+>>>>>>> cambios
     }
     
     .image-container11{
@@ -133,6 +146,10 @@
     .card{
         margin: 0 .5em;
         width: calc(100%);
+<<<<<<< HEAD
+=======
+        margin-top: 5vh;
+>>>>>>> cambios
     }
 
     /*Prices*/
@@ -180,6 +197,11 @@
     .offcanvasCart{
         width: 60%;
     }
+<<<<<<< HEAD
+=======
+
+    
+>>>>>>> cambios
 }
 
 /*Mid*/
@@ -204,8 +226,13 @@
 
     /*Banner*/
     .imgBanner {
+<<<<<<< HEAD
         max-width: 100%; /* Establece el ancho máximo de la imagen como un porcentaje del contenedor */
         height: auto; /* Mantiene la proporción de aspecto de la imagen */
+=======
+        max-width: 100%; 
+        height: auto;
+>>>>>>> cambios
     }
  
     .image-container11{
@@ -214,11 +241,19 @@
     }
    
     .banner-image {
+<<<<<<< HEAD
         width: 100%; /* Para asegurar que la imagen ocupe todo el ancho del container */
         height: auto; /* Altura automática para mantener la proporción de la imagen */
         max-width: 100%; /* Máximo ancho de la imagen */
         max-height: 200px; /* Máxima altura de la imagen (ajustar según tu necesidad) */
         padding-left: 9vw; /* Espaciado interior del container */
+=======
+        width: 100%; 
+        height: auto; 
+        max-width: 100%; 
+        max-height: 200px; 
+        padding-left: 9vw;
+>>>>>>> cambios
         padding-right: 9vw;
         padding-top: 20px;
         justify-content: center;
@@ -234,6 +269,10 @@
     .card{
         margin: 0 .5em;
         width: calc(100%);
+<<<<<<< HEAD
+=======
+        margin-top: 5vh;
+>>>>>>> cambios
     }
     
     /*Prices*/
@@ -394,7 +433,11 @@
     .card:hover .image-container .hover-image {
         opacity: 1;
         transform: scale(1.1);
+<<<<<<< HEAD
         transition: opacity 0.3s ease, transform 0.3s ease; /* Agrega la transición de transformación */
+=======
+        transition: opacity 0.3s ease, transform 0.3s ease;
+>>>>>>> cambios
     }
 
     .card .image-container .hover-image {
@@ -475,8 +518,13 @@ h1{
     height: auto;
     margin: auto;
     overflow: hidden;
+<<<<<<< HEAD
     display: flex; /* Utilizar flexbox para alinear los elementos internos */
     justify-content: center; /* Centrar horizontalmente los elementos internos */
+=======
+    display: flex;
+    justify-content: center; 
+>>>>>>> cambios
     
 }
 
@@ -541,3 +589,7 @@ h1{
     border-color: #0ac2a3 !important;
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cambios

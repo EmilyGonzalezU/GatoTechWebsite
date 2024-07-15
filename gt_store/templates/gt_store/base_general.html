@@ -60,6 +60,7 @@
                         </form>
                     </div>
                 </div>
+<<<<<<< HEAD
 
                 <div class="col-md-3 col-xl-3">
                     <div class="container-fluid d-flex justify-content-center align-items-center">
@@ -68,6 +69,58 @@
                         <button type="button" class="btn"  data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" id="openCartOffCanvas"><i class="bi bi-cart3  fs-2 iconNav me-2"></i></button>
                     </div>
                 </div>
+=======
+                <div class="col-md-3 col-xl-3">
+                    <div class="container-fluid d-flex justify-content-center align-items-center">
+                        {% if request.session.user_nombre %}
+                            <a href="{% url 'login_usuario' %}"><button type="button" class="btn">
+                                <i class="bi bi-person fs-1 me-3 iconNav ms-2"></i>
+                            </button></a>
+                            <div class="user-info">
+                                <span class="user-greeting">Hola {{ request.session.user_nombre }}</span> <!-- Accedemos al nombre del usuario autenticado -->
+                                <a href="{% url 'login_usuario' %}" class="user-account">Mi cuenta</a>
+                            </div>
+                        {% else %}
+                            <a href="{% url 'inicio' %}"><button type="button" class="btn">
+                                <i class="bi bi-person fs-1 me-3 iconNav ms-2"></i>
+                            </button></a>
+                            <div class="user-info">
+                                <span class="user-greeting">Hola </span>
+                                <a href="{% url 'inicio' %}" class="user-account">Iniciar sesión</a>
+                            </div>
+                        {% endif %}
+                
+                        <button type="button" class="btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" id="openCartOffCanvas">
+                            <i class="bi bi-cart3 fs-2 iconNav me-2"></i>
+                        </button>
+                    </div>
+                </div>                
+                <style>
+                    .user-info {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        margin-right: 10px; /* Ajusta según sea necesario */
+                    }
+
+                    .user-greeting {
+                        font-size: 1rem;
+                        font-weight: bold;
+                        color: white; /* Ajusta según sea necesario */
+                    }
+
+                    .user-account {
+                        font-size: 0.9rem;
+                        color: white; /* Ajusta según sea necesario */
+                        text-decoration: none;
+                    }
+
+                    .user-account:hover {
+                        text-decoration: underline;
+                    }
+
+                </style>
+>>>>>>> cambios
             </nav>
         </div>
     </div>
@@ -128,6 +181,10 @@
                 </div>
                 <div class="row text-center mt-3">
                     <div class="col-6"><a href="{% url 'CLS' %}" class="btn btn-danger btn-custom">Vaciar carrito</a></div>
+<<<<<<< HEAD
+=======
+                    <div class="col-6"><a href="{% url 'carrito' %}" class="btn btn-danger btn-custom">Ver carrito</a></div>
+>>>>>>> cambios
                 </div>
             </div>
         </div>
@@ -211,6 +268,7 @@
             font-size: 12px;
         }
     </style>
+<<<<<<< HEAD
     
 
     <!--Modal-->
@@ -261,6 +319,8 @@
         </div>
     </div>
 
+=======
+>>>>>>> cambios
     <!--NavBar=md -->
     <nav class="navbar navBarmd bg-black">
         <div class="container-fluid">
@@ -270,7 +330,15 @@
             </button>
             <a href="{% url 'home' %}" class="navbar-brand"><img src="{% static 'gt_store/img/Logos/GatoTechLogo.png' %}" class="imgLogomd" alt=""></a>
             <div class="d-lg-none">
+<<<<<<< HEAD
                 <button type="button" class="btn" ><i class="bi bi-person fs-1 me-2  ms-1"></i></button>
+=======
+                {% if request.session.user_nombre %}
+                    <a href="{% url 'login_usuario' %}"><button type="button" class="btn"><i class="bi bi-person fs-1 me-2  ms-1"></i></button></a>
+                {% else %}
+                    <a href="{% url 'inicio' %}"><button type="button" class="btn"><i class="bi bi-person fs-1 me-2  ms-1"></i></button></a>
+                {% endif %}
+>>>>>>> cambios
                 <button type="button" class="btn"  data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" id="openCartOffCanvas"><i class="bi bi-cart3  fs-2 iconNav me-2"></i></button>
             </div>
             <div class="container-fluid justify-content-center d-flex mb-2 mt-2  searchDiv">
@@ -629,8 +697,14 @@
     </script>
     <script src="{% static 'gt_store/js/apiMaps.js' %}"></script>
     <script src="{% static 'gt_store/js/script.js' %}"></script>
+<<<<<<< HEAD
     <script src="{% static 'gt_store/js/apiReseñas.js' %}"></script>
     <script src="{% static 'gt_store/js/valIncioSesion.js' %}"></script>
     <script src="{% static 'gt_store/js/filtro.js' %}"></script>
+=======
+    <script src="{% static 'gt_store/js/filtro.js' %}"></script>
+    <script src="{% static 'gt_store/js/valInicioSesion.js' %}"></script>
+
+>>>>>>> cambios
 </body>
 </html>

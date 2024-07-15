@@ -48,8 +48,13 @@
 @media (min-width: 576px) and ( max-width: 768px ){
   
     .card {
+<<<<<<< HEAD
         width: calc(100% - 20px); /* Ocupa el resto del ancho disponible */
         margin-bottom: 5px; /* Reducir el espacio entre tarjetas */
+=======
+        width: calc(100% - 20px);
+        margin-bottom: 5px;
+>>>>>>> cambios
     }
 
     .desc {
@@ -89,12 +94,21 @@
 
 @media (min-width: 768px) {
     .filter {
+<<<<<<< HEAD
         width: 20%; /* Ancho fijo para los filtros en dispositivos medianos */
     }
 
     .card {
         width: calc(100% - 20px); /* Ocupa el resto del ancho disponible */
         margin-bottom: 5px; /* Reducir el espacio entre tarjetas */
+=======
+        width: 20%; 
+    }
+
+    .card {
+        width: calc(100% - 20px);
+        margin-bottom: 5px; 
+>>>>>>> cambios
     }
 
     .price {
@@ -131,12 +145,21 @@
 
 @media (min-width: 992px) {
     .filter {
+<<<<<<< HEAD
         width: 15%; /* Ancho fijo para los filtros en dispositivos grandes */
     }
 
     .card {
         width: calc(100% - 20px); /* Ocupa el resto del ancho disponible */
         margin-bottom: 5px; /* Reducir el espacio entre tarjetas */
+=======
+        width: 15%; 
+    }
+
+    .card {
+        width: calc(100% - 20px); 
+        margin-bottom: 5px; 
+>>>>>>> cambios
     }
 
     .price {
