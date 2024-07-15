@@ -60,16 +60,6 @@
                         </form>
                     </div>
                 </div>
-<<<<<<< HEAD
-
-                <div class="col-md-3 col-xl-3">
-                    <div class="container-fluid d-flex justify-content-center align-items-center">
-                        <button type="button" class="btn " id="openModalBtn"><i
-                                class="bi bi-person fs-1 me-3 iconNav ms-2"></i></button>
-                        <button type="button" class="btn"  data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" id="openCartOffCanvas"><i class="bi bi-cart3  fs-2 iconNav me-2"></i></button>
-                    </div>
-                </div>
-=======
                 <div class="col-md-3 col-xl-3">
                     <div class="container-fluid d-flex justify-content-center align-items-center">
                         {% if request.session.user_nombre %}
@@ -120,7 +110,6 @@
                     }
 
                 </style>
->>>>>>> cambios
             </nav>
         </div>
     </div>
@@ -181,10 +170,7 @@
                 </div>
                 <div class="row text-center mt-3">
                     <div class="col-6"><a href="{% url 'CLS' %}" class="btn btn-danger btn-custom">Vaciar carrito</a></div>
-<<<<<<< HEAD
-=======
                     <div class="col-6"><a href="{% url 'carrito' %}" class="btn btn-danger btn-custom">Ver carrito</a></div>
->>>>>>> cambios
                 </div>
             </div>
         </div>
@@ -268,59 +254,6 @@
             font-size: 12px;
         }
     </style>
-<<<<<<< HEAD
-    
-
-    <!--Modal-->
-    <div class="modal fade " id="loginModal" tabindex="-2" role="dialog" aria-labelledby="loginModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document"
-            style="width: 262px; height: 350px; margin-right: 150px; margin-top: 110px;">
-            <div class="modal-content">
-                <div class="modal-body" style="width: 262px; height: 400px; align-items: end; ">
-                    <!-- Formulario de inicio de sesión -->
-                    <form method="get" id="sing-up-form " novalidate>
-                        <div class="form-group mb-3 " style="height: 100px;">
-                            <label for="email" class="fs-5 mt-1 pb-1 fw-semibold ">Ingrese email</label>
-                            <div class="input-group mt-1 pb-2">
-                                <div class="input-group-text bg-info">
-                                    <i class="bi bi-envelope text-white"></i>
-                                </div>
-                                <input class="form-control bg-light" id="emailInicio" type="email" name="email"
-                                    required />
-                            </div>
-                            <div class="text-danger fw-bold" id="msgErrorMailInicio" style="font-size: 13px;"></div>
-                        </div>
-                        <div class="form-group " style="height: 100px;">
-                            <label for="password" class="fs-5 pb-1 fw-semibold">Contraseña</label>
-                            <div class="input-group mt-1">
-                                <div class="input-group-text bg-info">
-                                    <i class="bi bi-key-fill text-white"></i>
-                                </div>
-                                <input class="form-control bg-light" id="passInicio" type="password" name="password"
-                                    required />
-                            </div>
-                            <div class=" text-danger fw-bold " id="msgErrorPassInicio" style="font-size: 13px;"></div>
-                        </div>
-                        <button class="btn btn-info text-white w-100 mt-2 fw-semibold shadow-sm" type="submit"
-                            id="btn">Iniciar sesión</button>
-                        <div class="pt-1 mb-1 text-center">
-                            <a href="#" class="text-decoration-none text-info fw-semibold"
-                                style="font-size: 0.9rem">¿Olvidaste la contraseña?</a>
-                        </div>
-                        <hr>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="text-start">¿No tienes cuenta?</div>
-                            <a href="{% url 'registro' %}" class="text-decoration-none text-info fw-semibold">Registrarse</a>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-
-=======
->>>>>>> cambios
     <!--NavBar=md -->
     <nav class="navbar navBarmd bg-black">
         <div class="container-fluid">
@@ -330,15 +263,11 @@
             </button>
             <a href="{% url 'home' %}" class="navbar-brand"><img src="{% static 'gt_store/img/Logos/GatoTechLogo.png' %}" class="imgLogomd" alt=""></a>
             <div class="d-lg-none">
-<<<<<<< HEAD
-                <button type="button" class="btn" ><i class="bi bi-person fs-1 me-2  ms-1"></i></button>
-=======
                 {% if request.session.user_nombre %}
                     <a href="{% url 'login_usuario' %}"><button type="button" class="btn"><i class="bi bi-person fs-1 me-2  ms-1"></i></button></a>
                 {% else %}
                     <a href="{% url 'inicio' %}"><button type="button" class="btn"><i class="bi bi-person fs-1 me-2  ms-1"></i></button></a>
                 {% endif %}
->>>>>>> cambios
                 <button type="button" class="btn"  data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" id="openCartOffCanvas"><i class="bi bi-cart3  fs-2 iconNav me-2"></i></button>
             </div>
             <div class="container-fluid justify-content-center d-flex mb-2 mt-2  searchDiv">
@@ -697,14 +626,8 @@
     </script>
     <script src="{% static 'gt_store/js/apiMaps.js' %}"></script>
     <script src="{% static 'gt_store/js/script.js' %}"></script>
-<<<<<<< HEAD
-    <script src="{% static 'gt_store/js/apiReseñas.js' %}"></script>
-    <script src="{% static 'gt_store/js/valIncioSesion.js' %}"></script>
-    <script src="{% static 'gt_store/js/filtro.js' %}"></script>
-=======
     <script src="{% static 'gt_store/js/filtro.js' %}"></script>
     <script src="{% static 'gt_store/js/valInicioSesion.js' %}"></script>
 
->>>>>>> cambios
 </body>
 </html>

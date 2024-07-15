@@ -210,8 +210,5 @@ def products (request):
     return render(request, 'gt_store/sugerencia.html', context)
 
 
-<<<<<<< HEAD
-=======
 def registro (request):
     return render(request, 'usuarios/registro.html')
->>>>>>> cambios

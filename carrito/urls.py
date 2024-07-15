@@ -8,11 +8,8 @@ urlpatterns = [
     path('eliminar/<int:id_producto>/', views.eliminar_producto, name="Del"),
     path('restar/<int:id_producto>/', views.restar_producto, name="Sub"),
     path('limpiar/', views.limpiar_carrito, name="CLS"),
-<<<<<<< HEAD
-=======
     path('carrito/', views.carrito, name="carrito"),
     
->>>>>>> cambios
 
 ] 
 

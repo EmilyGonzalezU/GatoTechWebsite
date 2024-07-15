@@ -6,12 +6,6 @@ class PerfilUsuario(models.Model):
     telefono = models.CharField(max_length=15)
     email = models.EmailField(max_length=90, unique=True)
     rut = models.CharField(max_length=12, unique=True)
-<<<<<<< HEAD
-    password = models.CharField(max_length=128)
-
-    def __str__(self):
-        return self.email
-=======
     contrasena = models.CharField(max_length=128)
 
     def __str__(self):
@@ -32,4 +26,3 @@ class Direccion(models.Model):
 
     def __str__(self):
         return f'{self.calle} {self.numero}, {self.comuna}, {self.region}'
->>>>>>> cambios

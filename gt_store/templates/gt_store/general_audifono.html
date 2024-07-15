@@ -98,11 +98,7 @@
                 <a href="{% url 'detalle_producto' p.id_producto %}" class="stretched-link text-decoration-none">
                     <div class="card border rounded-0">
                         {% if p.imagen %}
-<<<<<<< HEAD
-                            <img src="{{ p.imagen.url }}" class="card-img-top main-image mx-auto d-block" style="height: 200px; width: 200px;">
-=======
                             <img src="{{ p.imagen.url }}" class="card-img-top main-image mx-auto d-block"  >
->>>>>>> cambios
                         {% endif %}
                         
                         <div class="card-body" style="height: 295px;">
@@ -113,11 +109,7 @@
                             {% if p.descuento is not 0 or p.precio_anterior is not 0 %}
                                 <div class="priceContainer d-flex position-absolute dsctoTarget">
                                     {% if p.descuento is not 0 %}
-<<<<<<< HEAD
-                                        <span class="dscto">{{ p.descuento }} DCTO.</span>
-=======
                                         <span class="dscto">{{ p.descuento }}% DCTO.</span>
->>>>>>> cambios
                                     {% endif %}
                                     {% if p.precio_anterior is not 0 %}
                                         <span class="old-price oldPrice">{{ p.precio_anterior }}</span>
@@ -125,15 +117,9 @@
                                 </div>
                             {% endif %}
                             <div class="position-relative pt-4">
-<<<<<<< HEAD
-                                <p class="price">{{ p.precio_transferencia }}</p>
-                                <p class="metod">Transferencia</p>
-                                <p class="price">{{ p.precio_normal }}</p>
-=======
                                 <p class="price">${{ p.precio_transferencia }}</p>
                                 <p class="metod">Transferencia</p>
                                 <p class="price">${{ p.precio_normal }}</p>
->>>>>>> cambios
                                 <p class="metod">Otros medio de pago</p>
                             </div>
                         </div>
