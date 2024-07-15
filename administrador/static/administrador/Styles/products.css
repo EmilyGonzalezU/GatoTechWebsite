@@ -1,0 +1,181 @@
+@media (max-width: 576px) {
+    .filter {
+        display: none; 
+    }
+
+    .card {
+        width: 80vw; 
+        margin-top: 5vh;
+        margin-bottom: 5px;
+        margin-left: 5vw;
+        margin-right: 6vw;
+    }
+
+    .desc {
+        font-size: auto;
+    }  
+
+    .price {
+        color: #E22F89;
+        margin: 0;
+        font-weight: bold;
+    }
+
+    .metod {
+        font-size: 10px;
+    }
+
+    .dscto {
+        border: 1px solid;
+        border-radius: 5px;
+        padding: 3px;
+        background-color: #00e6fa;
+        color: white;
+        font-size: 10px;
+        font-weight: bold;
+    }
+
+    .old-price {
+        padding-left: 5px;
+        text-decoration: line-through;
+        font-size: 15px;
+    }
+
+    .productDesc{
+        font-size: 11px;
+    }
+}
+@media (min-width: 576px) and ( max-width: 768px ){
+  
+    .card {
+        width: calc(100% - 20px); /* Ocupa el resto del ancho disponible */
+        margin-bottom: 5px; /* Reducir el espacio entre tarjetas */
+    }
+
+    .desc {
+        font-size: 12px;
+    }
+
+    .price {
+        color: #E22F89;
+        margin: 0;
+        font-weight: bold;
+    }
+
+    .metod {
+        font-size: 10px;
+    }
+
+    .dscto {
+        border: 1px solid;
+        border-radius: 5px;
+        padding: 3px;
+        background-color: #00e6fa;
+        color: white;
+        font-size: 10px;
+        font-weight: bold;
+    }
+
+    .old-price {
+        padding-left: 5px;
+        text-decoration: line-through;
+        font-size: 15px;
+    }
+
+    .productDesc{
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 768px) {
+    .filter {
+        width: 20%; /* Ancho fijo para los filtros en dispositivos medianos */
+    }
+
+    .card {
+        width: calc(100% - 20px); /* Ocupa el resto del ancho disponible */
+        margin-bottom: 5px; /* Reducir el espacio entre tarjetas */
+    }
+
+    .price {
+        color: #E22F89;
+        margin: 0;
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    .metod {
+        font-size: 14px;
+    }
+
+    .dscto {
+        border: 1px solid;
+        border-radius: 5px;
+        padding: 3px;
+        background-color: #00e6fa;
+        color: white;
+        font-size: 7px;
+        font-weight: bold;
+    }
+
+    .old-price {
+        padding-left: 5px;
+        text-decoration: line-through;
+        font-size: 8px;
+    }
+
+    .productDesc{
+        font-size: 13px;
+    }
+}
+
+@media (min-width: 992px) {
+    .filter {
+        width: 15%; /* Ancho fijo para los filtros en dispositivos grandes */
+    }
+
+    .card {
+        width: calc(100% - 20px); /* Ocupa el resto del ancho disponible */
+        margin-bottom: 5px; /* Reducir el espacio entre tarjetas */
+    }
+
+    .price {
+        color: #E22F89;
+        margin: 0;
+        font-weight: bold;
+        font-size: 21px;
+    }
+
+    .metod {
+        font-size: 16px;
+    }
+
+    .dscto {
+        border: 1px solid;
+        border-radius: 5px;
+        padding: 3px;
+        background-color: #00e6fa;
+        color: white;
+        font-size: 10px;
+        font-weight: bold;
+    }
+
+    .old-price {
+        padding-left: 5px;
+        text-decoration: line-through;
+        font-size: 15px;
+    }
+}
+
+.breadcrumb-item a {
+    text-decoration: none;
+    color: #E22F89;
+    font-weight: bold;
+}
+
+.input-group input:focus,
+.form-control:focus {
+    border-color: #ced4da;
+    box-shadow: none;
+}
+

@@ -1,0 +1,90 @@
+<!-- templates/app_usuarios/registro.html -->
+{% extends 'gt_store/base_general.html' %}
+{% load static %}
+{% block contenido %}
+<div class="container-fluid pt-5">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-md-4">
+            <div class="p-5 rounded-5 text-secondary shadow">
+                <div class="text-start fs-3 fw-bold mb-4">Registro de usuarios</div>
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="nombre" class="fs-5 pb-1 fw-semibold">Nombre</label>
+                        <div class="input-group mt-1">
+                            <div class="input-group-text bg-info">
+                                <i class="bi bi-person text-white"></i>
+                            </div>
+                            {{ form.nombre }}
+                        </div>
+                        <div class="text-danger fw-bold" id="msgErrorNom" style="font-size: 13px;"></div>
+                    </div>
+                
+                    <div class="form-group">
+                        <label for="apellido" class="fs-5 pb-1 fw-semibold">Apellido</label>
+                        <div class="input-group mt-1">
+                            <div class="input-group-text bg-info">
+                                <i class="bi bi-person text-white"></i>
+                            </div>
+                            {{ form.apellido }}
+                        </div>
+                        <div class="text-danger fw-bold" id="msgErrorAp" style="font-size: 13px;"></div>
+                    </div>
+                
+                    <div class="form-group">
+                        <label for="email" class="fs-5 pb-1 fw-semibold">Email</label>
+                        <div class="input-group mt-1">
+                            <div class="input-group-text bg-info">
+                                <i class="bi bi-envelope text-white"></i>
+                            </div>
+                            {{ form.email }}
+                        </div>
+                        <div class="text-danger fw-bold" id="msgErrorMail" style="font-size: 13px;"></div>
+                    </div>
+                
+                    <div class="form-group">
+                        <label for="telefono" class="fs-5 pb-1 fw-semibold">Teléfono</label>
+                        <div class="input-group mt-1">
+                            <div class="input-group-text bg-info">
+                                <i class="bi bi-telephone text-white"></i>
+                            </div>
+                            {{ form.telefono }}
+                        </div>
+                        <div class="text-danger fw-bold" id="msgErrorTel" style="font-size: 13px;"></div>
+                    </div>
+                
+                    <div class="form-group">
+                        <label for="rut" class="fs-5 pb-1 fw-semibold">RUT</label>
+                        <div class="input-group mt-1">
+                            <div class="input-group-text bg-info">
+                                <i class="bi bi-person-vcard text-white"></i>
+                            </div>
+                            {{ form.rut }}
+                        </div>
+                        <div class="text-danger fw-bold" id="msgErrorRUT" style="font-size: 13px;"></div>
+                    </div>
+                
+                    <div class="form-group">
+                        <label for="pass" class="fs-5 pb-1 fw-semibold">Contraseña</label>
+                        <div class="input-group mt-1">
+                            <div class="input-group-text bg-info">
+                                <i class="bi bi-key-fill text-white"></i>
+                            </div>
+                            {{ form.contrasena }}
+                        </div>
+                        <div class="text-danger fw-bold" id="msgErrorPass" style="font-size: 13px;"></div>
+                    </div>
+                    
+                
+                    <button class="btn btn-info text-white w-100 mt-5 fw-semibold shadow-sm" type="submit" id="btnEnviar">Registrarse</button>                
+                </form>
+                
+                <div class="text-center mt-4">
+                    ¿Ya tienes cuenta? <a href="{% url 'inicio' %}" class="text-info fw-bold text-decoration-none">Iniciar sesión</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="{% static 'usuarios/scripts/scripts.js'%}"></script>
+{% endblock %}

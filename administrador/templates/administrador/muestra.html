@@ -1,0 +1,50 @@
+{% extends 'administrador/base_admin.html'%}
+{% block tittle %}Listado de productos{% endblock%}
+{% block admin %}
+        <div class="container">
+            <div class="row">
+                <h1>Listado de Productos</h1>
+            </div>
+            <br>
+            <div class="row mb-3">
+                <table class="table table-bordered" id="alumnos">
+                    <thead class="table-dark">
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Marca</th>
+                            <th scope="col">Descripcion</th>
+                            <th scope="col">Descuento</th>
+                            <th scope="col">Precio anterior</th>
+                            <th scope="col">Precio transferencia</th>
+                            <th scope="col">Precio normal</th>
+                            <th scope="col">Categoria</th>
+                            <th scope="col">Imagen</th>
+                            <th scope="col">Modificar</th>
+                            <th scope="col">Eliminar</th>
+                        </tr>
+                    </thead>
+                    {% for p in productos %}
+                    <tr>
+                        <td>{{p.id_producto}}</td>
+                        <td>{{p.nombre_producto}}</td>
+                        <td>{{p.marca}}</td>
+                        <td>{{p.descripcion}}</td>
+                        <td>{{p.descuento}}</td>
+                        <td>{{p.precio_anterior}}</td>
+                        <td>{{p.precio_transferencia}}</td>
+
+                        <td>{{p.precio_normal}}</td>
+                        <td>{{p.categoria}}</td>
+                        {% if p.imagen %}
+                        <td><img src="{{p.imagen.url}}" alt="no disponible" style="height: 50px;"></td>
+                        {% endif %}
+                        <td><a href="{% url 'p_Edit' id_producto=p.id_producto %}"><button type="button" class="btn btn-outline-warning">Actualizar</button></a></td>
+                        <td><a href="{% url 'producto_del' id_producto=p.id_producto %}"><button type="button" class="btn btn-outline-danger">Eliminar</button></a></td>
+                    </tr>
+                    {% endfor %}
+                </table>
+            </div>
+            <br>
+        </div>
+        {% endblock %}

@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GatoTech</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="Styles/style.css">
+    <link rel="stylesheet" href="Styles/menu.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!--MontserratFont-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <!--Icon-->
+    <link rel="icon" href="img/Logos/2.png" type="image/x-icon">
+</head>
+
+<body>
+    <!--Superior Barr-->
+    <div class="container-fluid text-center">
+        <div class="row align-items-start supBarr">
+            <div class="col-12">
+                <nav>
+                    <h6 class="">¡Envio gratis en la primera compra!</h6>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <!--NavBarLg-->
+    <div class="container-fluid text-center  navBarLg">
+        <div class="row align-items-start">
+            <nav class="navbar pe-2 ">
+                <div class="col-md-3 mb-3 col-xl-3">
+                    <div class="container-fluid d-flex justify-content-center">
+                        <a class="navbar-brand" href="#">
+                            <img src="img/Logos/GatoTechLogo.png" alt="Logo" class="ms-5 imgLogoLg" id="imgLogo">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-xs-3col-md-6 col-xl-6">
+                    <div class="container-fluid d-flex justify-content-center">
+                        <form class="d-flex w-100 p-0">
+                            <input class="form-control me-2 m-2" type="search" placeholder="Encuentra lo que necesitas"
+                                aria-label="Search">
+                            <button class="btn btnSearch border-1" type="submit">
+                                <i class="bi bi-search fs-2 iconNav"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-xl-3">
+                    <div class="container-fluid d-flex justify-content-center align-items-center">
+                        <button type="button" class="btn " id="openModalBtn"><i
+                                class="bi bi-person fs-1 me-3 iconNav ms-2"></i></button>
+                        <a href=""><i class="bi bi-cart3  fs-2 iconNav me-2"></i></a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <!--Modal-->
+    <div class="modal fade " id="loginModal" tabindex="-2" role="dialog" aria-labelledby="loginModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document"
+            style="width: 262px; height: 350px; margin-right: 150px; margin-top: 110px;">
+            <div class="modal-content">
+                <div class="modal-body" style="width: 262px; height: 370px; align-items: end; ">
+                    <!-- Formulario de inicio de sesión -->
+                    <form method="get" id="sing-up-form " novalidate>
+                        <div class="form-group mb-3 " style="height: 100px;">
+                            <label for="email" class="fs-5 mt-1 pb-1 fw-semibold ">Ingrese email</label>
+                            <div class="input-group mt-1 pb-2">
+                                <div class="input-group-text bg-info">
+                                    <i class="bi bi-envelope text-white"></i>
+                                </div>
+                                <input class="form-control bg-light" id="emailInicio" type="email" name="email"
+                                    required />
+                            </div>
+                            <div class="text-danger fw-bold" id="msgErrorMailInicio" style="font-size: 13px;"></div>
+                        </div>
+                        <div class="form-group " style="height: 100px;">
+                            <label for="password" class="fs-5 pb-1 fw-semibold">Contraseña</label>
+                            <div class="input-group mt-1">
+                                <div class="input-group-text bg-info">
+                                    <i class="bi bi-key-fill text-white"></i>
+                                </div>
+                                <input class="form-control bg-light" id="passInicio" type="password" name="password"
+                                    required />
+                            </div>
+                            <div class=" text-danger fw-bold " id="msgErrorPassInicio" style="font-size: 13px;"></div>
+                        </div>
+                        <button class="btn btn-info text-white w-100 mt-2 fw-semibold shadow-sm" type="submit"
+                            id="btn">Iniciar sesión</button>
+                        <div class="pt-1 mb-1 text-center">
+                            <a href="#" class="text-decoration-none text-info fw-semibold"
+                                style="font-size: 0.9rem">¿Olvidaste la contraseña?</a>
+                        </div>
+                        <hr>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="text-start">¿No tienes cuenta?</div>
+                            <a href="registro.html" class="text-decoration-none text-info fw-semibold">Registrarse</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--NavBar=md -->
+    <nav class="navbar navBarmd bg-black">
+        <div class="container-fluid">
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#menulateral">
+                <span class="navbar-toggler-icon "><i class="bi bi-list text-light fs-1"></i></span>
+            </button>
+            <a href="#" class="navbar-brand"><img src="img/Logos/GatoTechLogo.png" class="imgLogomd" alt=""></a>
+            <div class="d-lg-none">
+                <a href="iniciosesion.html"><i class="bi bi-person fs-1 me-2  ms-1"></i></a>
+                <a href=""><i class="bi bi-cart3 fs-2  me-3"></i></a>
+            </div>
+            <div class="container-fluid justify-content-center d-flex mb-2 mt-2  searchDiv">
+                <form class="d-flex w-100">
+                    <input class="form-control mt-3 ms-2 " type="search" placeholder="Encuentra lo que necesitas"
+                        aria-label="Search">
+                    <button class="btn pt-4 ms-2" type="submit"><i class="bi bi-search fs-5"></i></button>
+                </form>
+            </div>
+            <section class="offcanvas offcanvas-start bg-black p-3" id="menulateral" tabindex="-1 ">
+                <div class="offcanvas-header  align-items-start mt-3" data-bs-theme="none">
+                    <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto me-5 text-decoration-none">
+                        <img src="img/Logos/GatoTechLogo.png" class="imgLogomd" alt="gatoTechLogo">
+                    </a>
+                    <button class="btn pt-1 ms-5" type="button" aria-label="close" data-bs-dismiss="offcanvas"><i
+                            class="bi bi-x-lg  fs-5 text-white ms-1"></i></button>
+                </div>
+                <hr class="text-white w-60 h-10">
+                <div class="offcanvas-body d-flex flex-column">
+                    <ul class="navbar-nav bg-black" style="gap: 10px;">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                PC
+                            </a>
+                            <ul class="dropdown-menu bg-black text-white">
+                                <li><a class="dropdown-item text-white" href="pc-gamer.html">PC Gamer</a></li>
+                                <li><a class="dropdown-item text-white" href="#">PC Escritorio</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle  text-white" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">Notebook</a>
+                            <ul class="dropdown-menu bg-black text-white">
+                                <li><a class="dropdown-item text-white" href="#">Notebook Gamer</a></li>
+                                <li><a class="dropdown-item text-white" href="#">Notebook</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle  text-white" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">Componentes</a>
+                            <ul class="dropdown-menu bg-black text-white">
+                                <li><a class="dropdown-item text-white" href="#">Procesador</a></li>
+                                <li><a class="dropdown-item text-white" href="#">Placa Madre</a></li>
+                                <div class="dropdown">
+                                    <li class="sub-menu-ram"><a href="#" class="dropdown-item dropdown-toggle"
+                                            data-toggle="dropdown">RAM</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#" class="dropdown-item">PC</a></li>
+                                            <li><a href="#" class="dropdown-item">Notebook</a></li>
+                                        </ul>
+                                    </li>
+                                </div>
+                                <li><a class="dropdown-item text-white" href="#">Almacenamiento</a></li>
+                                <li><a class="dropdown-item text-white" href="#">Fuente de Poder</a></li>
+                                <li><a class="dropdown-item text-white" href="#">Tarjeta de Video</a></li>
+                                <li><a class="dropdown-item text-white" href="#">Gabinetes</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle  text-white" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">Periféricos</a>
+                            <ul class="dropdown-menu bg-black text-white">
+                                <li><a class="dropdown-item text-white" href="#">Audifonos</a></li>
+                                <li><a class="dropdown-item text-white" href="#">Monitores</a></li>
+                                <li><a class="dropdown-item text-white" href="#">Teclados</a></li>
+                                <li><a class="dropdown-item text-white" href="#">Mouse</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
+                <hr class="text-white w-60 h-10">
+            </section>
+        </div>
+    </nav>
+    <!--NavMenu-->
+    <div id="nav-especifico">
+        <header class="navMenu">
+            <nav class="navbar navbar-expand-lg border-bottom">
+                <div class="container">
+                    <div class="collapse navbar-collapse" id="navbar-content">
+                        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                            <li class="nav-item dropdown dropdown-mega position-static">
+                                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
+                                    data-bs-auto-close="outside">Computación</a>
+                                <div class="dropdown-menu shadow">
+                                    <div class="mega-content px-md-4">
+                                        <div class="container-fluid">
+                                            <div class="row">
+                                                <div class="col-2"></div>
+                                                <div class="col-lg-2 col-sm-6 py-4 px-xl-5 px-4">
+                                                    <h5>Pc</h5>
+                                                    <div class="list-group">
+                                                        <a class="list-group-item" href="#">Pc Gamer</a>
+                                                        <a class="list-group-item" href="#">Pc Oficina</a>
+                                                        <a class="list-group-item text-info" href="pc-gamer.html">Ver
+                                                            Todos</a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-2 col-sm-6 py-4 px-xl-5 px-4">
+                                                    <h5>Notebook</h5>
+                                                    <div class="list-group">
+                                                        <a class="list-group-item" href="#">Notebook Gamer</a>
+                                                        <a class="list-group-item" href="#">Notebook Oficina</a>
+                                                        <a class="list-group-item text-info" href="notebook.html">Ver
+                                                            Todos</a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-2 col-sm-6 py-4 px-xl-5 px-4">
+                                                    <h5>Periféricos</h5>
+                                                    <div class="list-group">
+                                                        <a class="list-group-item" href="teclados.html">Teclados</a>
+                                                        <a class="list-group-item" href="audifonos.html">Audifonos</a>
+                                                        <a class="list-group-item" href="mouse.html">Mouse</a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-2 col-sm-6 py-4 px-xl-5 px-4">
+                                                    <h5>Monitores</h5>
+                                                    <div class="list-group">
+                                                        <a class="list-group-item" href="#">Monitor Gamer</a>
+                                                        <a class="list-group-item" href="#">Monitor Oficina</a>
+                                                        <a class="list-group-item text-info" href="monitores.html">Ver
+                                                            Todos</a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-2"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="nav-item dropdown dropdown-mega position-static">
+                                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
+                                    data-bs-auto-close="outside">Componentes</a>
+                                <div class="dropdown-menu shadow">
+                                    <div class="mega-content px-md-4">
+                                        <div class="container-fluid">
+                                            <div class="row">
+                                                <div class="col-2"></div>
+                                                <div class="col-lg-2 col-xl-2  col-sm-6 py-4 px-xl-5 px-4">
+                                                    <h5>Procesador</h5>
+                                                    <div class="list-group">
+                                                        <a class="list-group-item" href="#">AMD</a>
+                                                        <a class="list-group-item" href="#">Intel</a>
+                                                        <a class="list-group-item text-info" href="procesador.html">Ver
+                                                            Todos</a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-2 col-xl-2 col-sm-6 py-4 px-xl-5 px-4">
+                                                    <h5>Placa Madre</h5>
+                                                    <div class="list-group">
+                                                        <a class="list-group-item" href="#">Placa madre AMD</a>
+                                                        <a class="list-group-item" href="#">Placa madre Intel</a>
+                                                        <a class="list-group-item text-info" href="placa-madre.html">Ver
+                                                            Todos</a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-2  col-xl-2 col-sm-6 py-4 px-xl-5 px-4">
+                                                    <h5>Memoria RAM</h5>
+                                                    <div class="list-group">
+                                                        <a class="list-group-item" href="#">Memoria RAM PC</a>
+                                                        <a class="list-group-item" href="#">Memoria RAM Notebook</a>
+                                                        <a class="list-group-item text-info" href="ram.html">Ver
+                                                            Todos</a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-2  col-xl-2  col-sm-6 py-4 px-xl-5 px-4">
+                                                    <h5>Almacenamiento</h5>
+                                                    <div class="list-group">
+                                                        <a class="list-group-item" href="#">Almacenamiento HDD</a>
+                                                        <a class="list-group-item" href="#">Almacenamiento SDD </a>
+                                                        <a class="list-group-item text-info"
+                                                            href="almacenamiento.html">Ver Todos</a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-2"></div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-2"></div>
+                                                <div class="col-lg-2 col-xl-2 col-sm-6 py-4 px-xl-5 px-4">
+                                                    <h5>Fuente de Poder</h5>
+                                                    <div class="list-group">
+                                                        <a class="list-group-item" href="#">Fuentes de Poder</a>
+                                                        <a class="list-group-item text-info"
+                                                            href="fuente-poder.html">Ver Todos</a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-2  col-xl-2 col-sm-6 py-4 px-xl-5 px-4">
+                                                    <h5>Gabinete</h5>
+                                                    <div class="list-group">
+                                                        <a class="list-group-item" href="#">Gabinetes Gamer</a>
+                                                        <a class="list-group-item" href="#">Gabinetes Oficina</a>
+                                                        <a class="list-group-item text-info" href="gabinetes.html">Ver
+                                                            Todos</a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3 col-xl-3  col-sm-6 py-4 px-xl-5 px-4">
+                                                    <h5>Tarjeta de Video</h5>
+                                                    <div class="list-group">
+                                                        <a class="list-group-item" href="#">Tarjeta de Video NVIDIA</a>
+                                                        <a class="list-group-item" href="#">Tarjeta de Video AMD</a>
+                                                        <a class="list-group-item" href="#">Tarjeta de Video Intel</a>
+                                                        <a class="list-group-item text-info"
+                                                            href="tarjeta-video.html">Ver Todos</a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-2"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown dropdown-mega position-static">
+                                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
+                                    data-bs-auto-close="outside">Periféricos</a>
+                                <div class="dropdown-menu shadow">
+                                    <div class="mega-content px-md-4">
+                                        <div class="container-fluid">
+                                            <div class="row">
+                                                <div class="col-2"></div>
+                                                <div class="col-lg-2 col-sm-6 py-4 px-xl-5 px-4">
+                                                    <h5>Audifonos</h5>
+                                                    <div class="list-group">
+                                                        <a class="list-group-item" href="#">True wireless (TWS)</a>
+                                                        <a class="list-group-item" href="#">Headsets</a>
+                                                        <a class="list-group-item" href="#">Deportivos</a>
+                                                        <a class="list-group-item text-info" href="audifonos.html">Ver
+                                                            Todos</a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-2 col-sm-6 py-4 px-xl-5 px-4">
+                                                    <h5>Teclados</h5>
+                                                    <div class="list-group">
+                                                        <a class="list-group-item" href="#">Mecánicos</a>
+                                                        <a class="list-group-item" href="#">Membrana</a>
+                                                        <a class="list-group-item" href="#">Inalambricos</a>
+                                                        <a class="list-group-item text-info" href="teclados.html">Ver
+                                                            Todos</a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-2 col-sm-6 py-4 px-xl-5 px-4">
+                                                    <h5>Mouse</h5>
+                                                    <div class="list-group">
+                                                        <a class="list-group-item" href="#">Ópticos</a>
+                                                        <a class="list-group-item" href="#">Láser</a>
+                                                        <a class="list-group-item" href="#">Inalámbricos</a>
+                                                        <a class="list-group-item text-info" href="mouse.html">Ver
+                                                            Todos</a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-2 col-sm-6 py-4 px-xl-5 px-4">
+                                                    <h5>Monitores</h5>
+                                                    <div class="list-group">
+                                                        <a class="list-group-item" href="#">De 144Hz o más</a>
+                                                        <a class="list-group-item" href="#">Con FreeSync</a>
+                                                        <a class="list-group-item" href="#">Con G-Sync</a>
+                                                        <a class="list-group-item text-info" href="monitores.html">Ver
+                                                            Todos</a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-2"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+    </div>
+    <div class="container" id="cardprsent">
+        <div class="section" id="procesadores">
+            <h2>Procesadores</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Procesadores Top</h5>
+                            <p class="card-text">Explora los mejores procesadores del mercado.</p>
+                            <a href="#tproce" class="btn btn-primary" data-bs-smooth-scroll="false">Ver más</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Procesadores Medium</h5>
+                            <p class="card-text">Descubre procesadores con un buen equilibrio entre rendimiento y
+                                precio.</p>
+                            <a href="#mproce" class="btn btn-primary">Ver más</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Procesadores Low</h5>
+                            <p class="card-text">Encuentra procesadores económicos para presupuestos ajustados.</p>
+                            <a href="#lproce" class="btn btn-primary">Ver más</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section" id="tarjetas-video">
+            <h2>Tarjetas de Video</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Tarjetas de Video Top</h5>
+                            <p class="card-text">Explora las mejores tarjetas gráficas para gaming y diseño.</p>
+                            <a href="#vtop" class="btn btn-primary">Ver más</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Tarjetas de Video Medium</h5>
+                            <p class="card-text">Descubre tarjetas gráficas con buen rendimiento a un precio razonable.
+                            </p>
+                            <a href="#vmid" class="btn btn-primary">Ver más</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Tarjetas de Video Low</h5>
+                            <p class="card-text">Encuentra tarjetas gráficas básicas para uso multimedia y gaming
+                                ligero.</p>
+                            <a href="#vlow" class="btn btn-primary">Ver más</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h1 class="text-center pt-5 pb-5">¡GatoTech te ayuda a escoger el procesador y gráfica de tu PC!</h1>
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-lg-12">
+                <h2 class="pb-3 fs-1" style="color: #00e6fa;">Procesadores</h2>
+                <p>Los procesadores, también conocidos como unidades centrales de procesamiento (CPU), son uno de los
+                    componentes más importantes de cualquier sistema informático. Son responsables de ejecutar
+                    instrucciones y procesar datos, lo que los convierte en el cerebro de la computadora.</p>
+                <p class="">Aquí presentamos una selección de procesadores divididos en categorías: top, mid y low, con
+                    detalles clave como modelo, velocidad de reloj, número de núcleos/hilos, caché, TDP, etc. También
+                    proporcionamos recomendaciones sobre qué procesador elegir según el presupuesto y el uso previsto
+                    del PC.</p>
+                <h2 class="pt-5 pb-3 fs-4" id="tproce" style="color: #00e6fa;">Procesadores Top</h2>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Modelo</th>
+                            <th>Velocidad de Reloj</th>
+                            <th>Número de Núcleos</th>
+                            <th>Número de Hilos</th>
+                            <th>TDP</th>
+                            <th>Uso Previsto</th>
+                            <th>Consejos</th>
+                        </tr>
+                    </thead>
+                    <tbody id="topProcesadores">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row mb-5">
+            <div class="col-lg-12">
+                <h2 class="pb-3 fs-4" id="mproce" style="color: #00e6fa;">Procesadores Medium</h2>
+                <table class="table table-striped mb-5">
+                    <thead>
+                        <tr>
+                            <th>Modelo</th>
+                            <th>Velocidad de Reloj</th>
+                            <th>Número de Núcleos</th>
+                            <th>Número de Hilos</th>
+                            <th>TDP</th>
+                            <th>Uso Previsto</th>
+                            <th>Consejos</th>
+                        </tr>
+                    </thead>
+                    <tbody id="midProcesadores">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row mb-5">
+            <div class="col-lg-12">
+                <h2 class="pb-3 fs-4" id="lproce" style="color: #00e6fa;">Procesadores Low</h2>
+                <table class="table table-striped mb-5">
+                    <thead>
+                        <tr>
+                            <th>Modelo</th>
+                            <th>Velocidad de Reloj</th>
+                            <th>Número de Núcleos</th>
+                            <th>Número de Hilos</th>
+                            <th>TDP</th>
+                            <th>Uso Previsto</th>
+                            <th>Consejos</th>
+                        </tr>
+                    </thead>
+                    <tbody id="lowProcesadores">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="pb-3 fs-1" style="color: #00e6fa;">Tarjetas de Video</h2>
+                <p>Las tarjetas gráficas, también conocidas como unidades de procesamiento gráfico (GPU), son
+                    componentes esenciales para la reproducción de imágenes y vídeos en un sistema informático. Son
+                    responsables de renderizar gráficos en la pantalla y acelerar operaciones relacionadas con gráficos
+                    en aplicaciones y juegos.</p>
+                <p>Aquí presentamos una selección de tarjetas gráficas divididas en categorías: top, mid y low, con
+                    detalles clave como modelo, memoria, velocidad de reloj, ancho de banda, consumo energético, etc.
+                    También proporcionamos recomendaciones sobre qué tarjeta gráfica elegir según el presupuesto y el
+                    uso previsto del PC.</p>
+                <h2 class="pt-5 pb-3 fs-4" id="vtop" style="color: #00e6fa;">Tarjetas de Video Top</h2>
+                <table class="table table-striped mb-5">
+                    <thead>
+                        <tr>
+                            <th>Modelo</th>
+                            <th>Memoria</th>
+                            <th>Velocidad de Reloj</th>
+                            <th>Ancho de Banda</th>
+                            <th>Consumo Energético</th>
+                            <th>Uso Previsto</th>
+                            <th>Consejos</th>
+                        </tr>
+                    </thead>
+                    <tbody id="topVideo">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row mb-5">
+            <div class="col-lg-12">
+                <h2 class="pb-3 fs-4" id="vmid" style="color: #00e6fa;">Tarjetas de Video Medium</h2>
+                <table class="table table-striped mb-5">
+                    <thead>
+                        <tr>
+                            <th>Modelo</th>
+                            <th>Memoria</th>
+                            <th>Velocidad de Reloj</th>
+                            <th>Ancho de Banda</th>
+                            <th>Consumo Energético</th>
+                            <th>Uso Previsto</th>
+                            <th>Consejos</th>
+                        </tr>
+                    </thead>
+                    <tbody id="midVideo">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row" style="padding-bottom: 20vh;">
+            <div class="col-lg-12">
+                <h2 class="pb-3 fs-4" id="vlow" style="color: #00e6fa;">Tarjetas de Video Low</h2>
+                <table class="table table-striped mb-5">
+                    <thead>
+                        <tr>
+                            <th>Modelo</th>
+                            <th>Memoria</th>
+                            <th>Velocidad de Reloj</th>
+                            <th>Ancho de Banda</th>
+                            <th>Consumo Energético</th>
+                            <th>Uso Previsto</th>
+                            <th>Consejos</th>
+                        </tr>
+                    </thead>
+                    <tbody id="lowVideo">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+     <!--Footer-->
+     <div class="container-fluid">
+        <div class="row p-5 pb-0 bg-black text-white justify-content-between">
+            <div class="d-none d-sm-none d-md-none d-xs-none d-lg-block col-lg-3">
+                <a href=""><img src="img/Logos/GatoTechLogo.png" class="footerLogo" alt=""></a>
+            </div>
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-3 ">
+                <p class="h5 ">Navegacion</p>
+                <div class="border-bottom footerLine mx-auto"></div>
+                <div class="mb-2">
+                    <a class="text-white  text-decoration-none" href="# ">PC</a>
+                </div>
+                <div class="mb-2">
+                    <a class="text-white text-decoration-none" href="#">Notebook</a>
+                </div>
+                <div class="mb-2">
+                    <a class="text-white text-decoration-none" href="#">Componentes</a>
+                </div>
+                <div class="mb-2">
+                    <a class="text-white text-decoration-none" href="#">Perifericos</a>
+                </div>
+            </div>
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-3">
+                <p class="h5 ">Redes sociales</p>
+                <div class="border-bottom footerLine mx-auto"></div>
+                <div class="mb-2">
+                    <a class="text-white  text-decoration-none" href="# ">Instagram</a>
+                </div>
+                <div class="mb-2">
+                    <a class="text-white text-decoration-none" href="#">TikTok</a>
+                </div>
+                <div class="mb-2">
+                    <a class="text-white text-decoration-none" href="#">Facebook</a>
+                </div>
+            </div>
+            <div class="col-xs-4  col-sm-4 col-md-4 col-lg-3">
+                <p class="h5 ">Sobre nosotros</p>
+                <div class="border-bottom footerLine  mx-auto"></div>
+                <div class="mb-2">
+                    <a class="text-white text-decoration-none" href="#">Terminos y condiciones</a>
+                </div>
+                <div class="mb-2">
+                    <a class="text-white text-decoration-none" href="#">Politicas de privacidad</a>
+                </div>
+                <div class="mb-2">
+                    <a class="text-white  text-decoration-none fw-bold" href="# ">Encuentranos aquí</a>
+                    <div class="container-fluid">
+                        <div class="row justify-content-start">
+                            <div class="col-1"></div>
+                            <div class="col-6 mt-3 mb-3" id="map" style="height: 28vh; width: 28vw; margin-left:0vw ;">
+                            </div>
+                            <div class="col-1"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% for p in productos %}
+        {{p.descripcion}}, {{p.marca}}, {{p.capacidad}}, {{p.procesador}}
+    {% endfor %}
+ 
+    <script src="js/apiComponentes.js"></script>
+    <script src="js/apiMaps.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDyMudUDq9GoN9KwzuoAndo0C8Svo4UHGE&libraries=places&callback=initMap" defer></script>
+</body>
+
+</html>
