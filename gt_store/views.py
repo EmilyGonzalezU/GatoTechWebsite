@@ -3,7 +3,6 @@ from django.shortcuts import render, get_object_or_404
 from . import models
 from itertools import chain
 import random
-
 # Create your views here.
 def index(request):
      # PC Destacados
@@ -212,3 +211,4 @@ def products (request):
 
 def registro (request):
     return render(request, 'usuarios/registro.html')
+

@@ -125,20 +125,6 @@ def lista_direcciones(request):
     direcciones = Direccion.objects.filter(perfil_usuario=user)
     return render(request, 'usuarios/direcciones.html', {'direcciones': direcciones})
 
-
-# views.py en la app 'app_usuarios'
-
-from django.shortcuts import render, redirect
-from .forms import RegistroUsuarioForm  
-
-def registro_usuario(request):
-    if request.method == 'POST':
-        form = RegistroUsuarioForm(request.POST)
-        if form.is_valid():
-            form.save()
-            return redirect('pagina_de_exito')
-    else:
-        form = RegistroUsuarioForm()
-
-    return render(request, 'usuarios/registro.html', {'form': form})
-#??
+#Tipo usuario
+def tipo_usuario(request):
+    return render(request, 'usuarios/tipo_usuario.html')

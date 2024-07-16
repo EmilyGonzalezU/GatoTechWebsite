@@ -1,0 +1,57 @@
+{% extends 'gt_store/base_general.html' %}
+{% load static %}
+{% block contenido %}
+<div class="container pt-5">
+    <div class="row justify-content-center align-items-center">
+        <!-- Formulario de Inicio de Sesión -->
+        <div class="col-md-5">
+            <div class="p-5 rounded-5 text-secondary shadow mb-4">
+                <div class="text-start fs-3 fw-bold mb-4">Inicio de Sesión</div>
+                <form method="post" id="sing-up-form" novalidate>
+                    {% csrf_token %}
+                    <div class="form-group mb-3" style="height: 100px;">
+                        <label for="email" class="fs-5 mt-1 pb-1 fw-semibold">Ingrese email</label>
+                        <div class="input-group mt-1 pb-2">
+                            <div class="input-group-text bg-info">
+                                <i class="bi bi-envelope text-white"></i>
+                            </div>
+                            <input class="form-control bg-light {% if email_error %}is-invalid{% endif %}" id="email" type="email" name="email" required />
+                        </div>
+                        <div class="text-danger fw-bold" id="msgErrorMailInicio" style="font-size: 13px;">
+                            {% if email_error %}{{ email_error }}{% endif %}
+                        </div>
+                    </div>
+                    <div class="form-group" style="height: 100px;">
+                        <label for="password" class="fs-5 pb-1 fw-semibold">Contraseña</label>
+                        <div class="input-group mt-1">
+                            <div class="input-group-text bg-info">
+                                <i class="bi bi-key-fill text-white"></i>
+                            </div>
+                            <input class="form-control bg-light {% if password_error %}is-invalid{% endif %}" id="password" type="password" name="password" required />
+                        </div>
+                        <div class="text-danger fw-bold" id="msgErrorPassInicio" style="font-size: 13px;">
+                            {% if password_error %}{{ password_error }}{% endif %}
+                        </div>
+                    </div>
+                    <button class="btn btn-info text-white w-100 mt-2 fw-semibold shadow-sm" type="submit" id="btn">Iniciar sesión</button>
+                    <div class="pt-1 mb-1 text-center">
+                        <a href="#" class="text-decoration-none text-info fw-semibold" style="font-size: 0.9rem">¿Olvidaste la contraseña?</a>
+                    </div>
+                </form>
+                <div class="text-center mt-4">
+                    ¿No tienes cuenta? <a href="{% url 'registro' %}" class="text-info fw-bold text-decoration-none">Registrarse</a>
+                </div>
+            </div>
+        </div>
+        <!-- Continuar como Invitado -->
+        <div class="col-md-5">
+            <div class="p-5 rounded-5 text-secondary shadow text-center mb-4">
+                <div class="text-start fs-3 fw-bold mb-4">Continuar como Invitado</div>
+                <p class="mb-4">Puedes continuar con tu compra sin necesidad de crear una cuenta. Tus datos serán solicitados al finalizar la compra.</p>
+                <a href="{% url 'tipo_usuario' %}" class="btn btn-info text-white w-100 mt-2 fw-semibold shadow-sm">Continuar como Invitado</a>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="{% static 'usuarios/scripts/scriptInicio.js' %}"></script>
+{% endblock %}

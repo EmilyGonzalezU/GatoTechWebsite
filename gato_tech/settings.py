@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'administrador',
     'usuarios',
     'carrito',
+    'django.contrib.humanize'
 ]
 
 MIDDLEWARE = [

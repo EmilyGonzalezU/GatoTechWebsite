@@ -1,63 +1,71 @@
 {% extends 'gt_store/base_filtros.html' %}
+{% load humanize %}
 {% block contenido %}
-    <div class="container-fluid mb-5 mt-5">
-        <div class="row">
-            <div class="col-lg-1 col-md-0"></div>
-            <div class="col-lg-7 col-md-8 col-12">
-                <div class="product-list">
-                    {% if request.session.carrito.items %}
-                        {% for key, value in request.session.carrito.items %}
-                            <div class="product-item container-fluid mb-3">
-                                <div class="row">
-                                    <div class="col-md-4 col-12 mb-2 mb-md-0">
-                                        <div class="container d-flex align-items-center justify-content-center" style="width: 100%; height: 100%;">
-                                            <img src="{{value.imagen}}" alt="{{ value.nombre }}" class="img-fluid">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-8 col-12">
-                                        <p class="product-name">{{ value.nombre }}</p>
-                                        <div class="d-flex justify-content-between">
-                                            <p class="fw-bold">Total pago con transferencia:</p>
-                                            <p class="product-price">${{ value.acumulado_transferencia }}</p>
-                                        </div>
-                                        <div class="d-flex justify-content-between">
-                                            <p>Total otros medios de pago:</p>
-                                            <p class="product-price">${{ value.acumulado_normal }}</p>
-                                        </div>
-                                        <div class="cantidadProductos d-flex align-items-center">
-                                            <a href="{% url 'Sub' value.producto_id %}" class="badge btn btn-dark badge-dark">-</a>
-                                            <span class="mx-2">{{ value.cantidad }}</span>
-                                            <a href="{% url 'Add' value.producto_id %}" class="badge btn btn-dark badge-dark {% if value.cantidad >= value.stock %}disabled{% endif %}">+</a>
-                                        </div>
-                                        {% if value.cantidad >= value.stock %}
-                                            <p class="stock-warning mt-2">No puedes agregar más de este producto. Stock disponible: {{ value.stock }}</p>
-                                        {% endif %}
+<div class="container-fluid mb-5 mt-5">
+    <div class="row">
+        <div class="col-lg-1 col-md-0"></div>
+        <div class="col-lg-7 col-md-8 col-12">
+            <div class="product-list">
+                {% if request.session.carrito.items %}
+                    {% for key, value in request.session.carrito.items %}
+                        <div class="product-item container-fluid mb-3">
+                            <div class="row">
+                                <div class="col-md-4 col-12 mb-2 mb-md-0">
+                                    <div class="container d-flex align-items-center justify-content-center" style="width: 100%; height: 100%;">
+                                        <img src="{{ value.imagen }}" alt="{{ value.nombre }}" class="img-fluid">
                                     </div>
                                 </div>
+                                <div class="col-md-8 col-12">
+                                    <p class="product-name">{{ value.nombre }}</p>
+                                    <div class="d-flex justify-content-between">
+                                        <p class="fw-bold">Total pago con transferencia:</p>
+                                        <p class="product-price" data-acumulado-transferencia="{{ value.acumulado_transferencia }}"></p>
+                                    </div>
+                                    <div class="d-flex justify-content-between">
+                                        <p>Total otros medios de pago:</p>
+                                        <p class="product-price" data-acumulado-normal="{{ value.acumulado_normal }}"></p>
+                                    </div>
+                                    <div class="cantidadProductos d-flex align-items-center">
+                                        <a href="{% url 'Sub' value.producto_id %}" class="badge btn btn-dark badge-dark">-</a>
+                                        <span class="mx-2">{{ value.cantidad }}</span>
+                                        <a href="{% url 'Add' value.producto_id %}" class="badge btn btn-dark badge-dark {% if value.cantidad >= value.stock %}disabled{% endif %}">+</a>
+                                    </div>
+                                    {% if value.cantidad >= value.stock %}
+                                        <p class="stock-warning mt-2">No puedes agregar más de este producto. Stock disponible: {{ value.stock }}</p>
+                                    {% endif %}
+                                </div>
                             </div>
-                        {% endfor %}
+                        </div>
+                    {% endfor %}
+                {% else %}
+                    <p>No hay productos en el carrito.</p>
+                {% endif %}
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-12">
+            <div class="resumenFijo sticky-top mt-4 mt-md-0">
+                <div class="d-flex justify-content-between">
+                    <p class="fw-bold">Pago con transferencia:</p>
+                    <p class="product-price fw-bold fs-5 text-success" data-total-normal="{{total_carrito_transferencia}}"></p>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <p>Otro medio de pago:</p>
+                    <p class="product-price fs-5" data-total-normal="{{total_carrito_normal}}"></p>
+                </div>
+                <div class="row text-center mt-3">
+                    {% if request.session.user_nombre %}
+                        <div class="col-12 mb-2">
+                            <a href="{% url 'CLS' %}" class="btn btn-info text-white w-100 mt-2 fw-semibold shadow-sm">Continuar con la compra</a>
+                        </div>
                     {% else %}
-                        <p>No hay productos en el carrito.</p>
+                        <div class="col-12 mb-2">
+                            <a href="{% url 'tipo_usuario' %}" class="btn btn-info text-white w-100 mt-2 fw-semibold shadow-sm">Continuar con la compra</a>
+                        </div>
                     {% endif %}
                 </div>
             </div>
-            <div class="col-lg-3 col-md-4 col-12">
-                <div class="resumenFijo sticky-top mt-4 mt-md-0">
-                    <div class="d-flex justify-content-between">
-                        <p class="fw-bold">Pago con transferencia:</p>
-                        <p class="product-price">${{total_carrito_transferencia }}</p>
-                    </div>
-                    <div class="d-flex justify-content-between">
-                        <p>Otro medio de pago:</p>
-                        <p class="product-price">${{total_carrito_normal }}</p>
-                    </div>
-                    <div class="row text-center mt-3">
-                        <div class="col-6"><a href="{% url 'CLS' %}" class="btn btn-danger btn-custom">Vaciar carrito</a></div>
-                        <div class="col-6"><a href="{% url 'CLS' %}" class="btn btn-danger btn-custom">Continuar con la compra</a></div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-1 col-md-0"></div>
         </div>
+        <div class="col-lg-1 col-md-0"></div>
     </div>
+</div>
 {% endblock %}

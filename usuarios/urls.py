@@ -12,7 +12,7 @@ urlpatterns = [
     path('modificacion/<str:rut>/', views.editar_datos_personales, name='editar_datos_personales'),
     path('direcciones/agregar/', views.agregar_direccion, name='agregar_direccion'),
     path('direcciones/', views.lista_direcciones, name='lista_direcciones'),
-
+    path('tipo_usuario/', views.tipo_usuario, name='tipo_usuario'),
 
 
 ] 

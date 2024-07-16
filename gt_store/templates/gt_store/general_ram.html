@@ -1,102 +1,105 @@
 {% extends 'gt_store/base_filtros.html' %}
+
 {% block breadcrumb %}
     <li class="breadcrumb-item"><a href="{% url 'home' %}">Inicio</a></li>
     <li class="breadcrumb-item"><a href="#">Componentes</a></li>
     <li class="breadcrumb-item"><a href="#">Ram</a></li>
 {% endblock %}
-            {%block filtros%}
-            <div class="container-expand-md border">
-                <div class="accordion accordion-flush" id="accordionFlushExample">
-                  <div class="accordion-item">
-                    <h2 class="accordion-header">
-                      <button class="accordion-button collapsed border" type="button" data-bs-toggle="collapse"
+
+{% block filtros %}
+<div class="container-expand-md border">
+    <div class="accordion accordion-flush" id="accordionFlushExample">
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed border" type="button" data-bs-toggle="collapse"
                         data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                        Marca
-                      </button>
-                    </h2>
-                    <div id="flush-collapseTwo" class="accordion-collapse collapse " data-bs-parent="#accordionFlushExample">
-                      <div class="accordion-body">
-                        <div class="mb-3 form-check">
-                          <input type="checkbox" class="form-check-input" id="amdCategoria">
-                          <label class="form-check-label" for="amdCategoria"></label>
-                        </div>
-      
-                        <div class="mb-3 form-check">
-                          <input type="checkbox" class="form-check-input" id="intelCategoria">
-                          <label class="form-check-label" for="intelCategoria"></label>
-                        </div>
-                      </div>
+                    Marca
+                </button>
+            </h2>
+            <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="amdCategoria">
+                        <label class="form-check-label" for="amdCategoria">AMD</label>
                     </div>
-                  </div>
-                  <div class="accordion-item">
-                    <h2 class="accordion-header">
-                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                        Precio
-                      </button>
-                    </h2>
-                    <div id="flush-collapseThree" class="accordion-collapse collapse "
-                      data-bs-parent="#accordionFlushExample">
-                      <div class="accordion-body ">
-                        <div class="mb-3 form-check ">
-                          <input type="checkbox" class="form-check-input" id="rango1Precio">
-                          <label class="form-check-label" for="rango1Precio">$50.000 - $100.000</label>
-      
-                          <input type="checkbox" class="form-check-input" id="rango2Precio">
-                          <label class="form-check-label" for="rango2Precio">$100.001 - $200.000</label>
-      
-                          <input type="checkbox" class="form-check-input" id="rango3Precio">
-                          <label class="form-check-label" for="rango3Precio">$200.001 - $300.000</label>
-      
-                          <input type="checkbox" class="form-check-input" id="rango4Precio">
-                          <label class="form-check-label" for="rango4Precio">$300.001 - $500.000</label>
-      
-                          <input type="checkbox" class="form-check-input" id="rango5Precio">
-                          <label class="form-check-label" for="rango5Precio">$500.001 - $100.000.000</label>
-                        </div>
-                      </div>
+
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="intelCategoria">
+                        <label class="form-check-label" for="intelCategoria">Intel</label>
                     </div>
-                  </div>
                 </div>
-              </div>
-      
-            {% endblock %}
-        </div>
-        {% block card %}
-        <div class="col-md-12 col-lg-9 col-sm-12 col-xs-12 d-flex flex-wrap">
-            {% for p in productos %}
-            <div class="position-relative col-lg-3 col-md-4 col-sm-6 mb-4">
-                <a href="{% url 'detalle_producto' p.id_producto %}" class="stretched-link text-decoration-none">
-                    <div class="card border rounded-0">
-                        {% if p.imagen %}
-                            <img src="{{ p.imagen.url }}" class="card-img-top main-image mx-auto d-block"  >
-                        {% endif %}
-                        
-                        <div class="card-body" style="height: 295px;">
-                            <h6 class="fw-bold">{{ p.marca }}</h6>
-                            <div class="position-relative" style="height: 86.1px;">
-                                <p class="productDesc">{{ p.descripcion }}</p>
-                            </div>
-                            {% if p.descuento is not 0 or p.precio_anterior is not 0 %}
-                                <div class="priceContainer d-flex position-absolute dsctoTarget">
-                                    {% if p.descuento is not 0 %}
-                                        <span class="dscto">{{ p.descuento }} DCTO.</span>
-                                    {% endif %}
-                                    {% if p.precio_anterior is not 0 %}
-                                        <span class="old-price oldPrice">{{ p.precio_anterior }}</span>
-                                    {% endif %}
-                                </div>
-                            {% endif %}
-                            <div class="position-relative pt-4">
-                                <p class="price">{{ p.precio_transferencia }}</p>
-                                <p class="metod">Transferencia</p>
-                                <p class="price">{{ p.precio_normal }}</p>
-                                <p class="metod">Otros medio de pago</p>
-                            </div>
-                        </div>
-                    </div>
-                </a>
             </div>
-            {% endfor %}
         </div>
-        {% endblock %}
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                    Precio
+                </button>
+            </h2>
+            <div id="flush-collapseThree" class="accordion-collapse collapse"
+                 data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="rango1Precio">
+                        <label class="form-check-label" for="rango1Precio">$50.000 - $100.000</label>
+
+                        <input type="checkbox" class="form-check-input" id="rango2Precio">
+                        <label class="form-check-label" for="rango2Precio">$100.001 - $200.000</label>
+
+                        <input type="checkbox" class="form-check-input" id="rango3Precio">
+                        <label class="form-check-label" for="rango3Precio">$200.001 - $300.000</label>
+
+                        <input type="checkbox" class="form-check-input" id="rango4Precio">
+                        <label class="form-check-label" for="rango4Precio">$300.001 - $500.000</label>
+
+                        <input type="checkbox" class="form-check-input" id="rango5Precio">
+                        <label class="form-check-label" for="rango5Precio">$500.001 - $100.000.000</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block card %}
+<div class="col-md-12 col-lg-9 col-sm-12 col-xs-12 d-flex flex-wrap">
+    {% for p in productos %}
+    <div class="position-relative col-lg-3 col-md-4 col-sm-6 mb-4">
+        <a href="{% url 'detalle_producto' p.id_producto %}" class="stretched-link text-decoration-none">
+            <div class="card border rounded-0">
+                {% if p.imagen %}
+                <img src="{{ p.imagen.url }}" class="card-img-top main-image mx-auto d-block">
+                {% endif %}
+
+                <div class="card-body" style="height: 295px;">
+                    <h6 class="fw-bold">{{ p.marca }}</h6>
+                    <div class="position-relative" style="height: 86.1px;">
+                        <p class="productDesc">{{ p.descripcion }}</p>
+                    </div>
+
+                    {% if p.descuento or p.precio_anterior %}
+                    <div class="priceContainer d-flex position-absolute dsctoTarget">
+                        {% if p.descuento %}
+                        <span class="dscto">{{ p.descuento }} DCTO.</span>
+                        {% endif %}
+                        {% if p.precio_anterior %}
+                        <span class="old-price oldPrice" data-precio-anterior="{{ p.precio_anterior }}"></span>
+                        {% endif %}
+                    </div>
+                    {% endif %}
+
+                    <div class="position-relative pt-4">
+                        <p class="price" data-precio-transferencia="{{ p.precio_transferencia }}"></p>
+                        <p class="metod">Transferencia</p>
+                        <p class="price" data-precio-normal="{{ p.precio_normal }}"></p>
+                        <p class="metod">Otros medios de pago</p>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

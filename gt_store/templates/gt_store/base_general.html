@@ -67,7 +67,7 @@
                                 <i class="bi bi-person fs-1 me-3 iconNav ms-2"></i>
                             </button></a>
                             <div class="user-info">
-                                <span class="user-greeting">Hola {{ request.session.user_nombre }}</span> <!-- Accedemos al nombre del usuario autenticado -->
+                                <span class="user-greeting">Hola {{ request.session.user_nombre }}</span>
                                 <a href="{% url 'login_usuario' %}" class="user-account">Mi cuenta</a>
                             </div>
                         {% else %}
@@ -90,18 +90,18 @@
                         display: flex;
                         flex-direction: column;
                         align-items: flex-start;
-                        margin-right: 10px; /* Ajusta según sea necesario */
+                        margin-right: 10px;
                     }
 
                     .user-greeting {
                         font-size: 1rem;
                         font-weight: bold;
-                        color: white; /* Ajusta según sea necesario */
+                        color: white;
                     }
 
                     .user-account {
                         font-size: 0.9rem;
-                        color: white; /* Ajusta según sea necesario */
+                        color: white; 
                         text-decoration: none;
                     }
 
@@ -115,7 +115,7 @@
     </div>
     
     <!-- Offcanvas -->
-       <div class="offcanvas offcanvas-end offcanvasCart" tabindex="-2" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+    <div class="offcanvas offcanvas-end offcanvasCart" tabindex="-2" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
         <div class="offcanvas-header">
             <h5 class="offcanvas-title fw-bold fs-5" id="offcanvasRightLabel">Resumen</h5>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -135,11 +135,11 @@
                                     <p class="product-name">{{ value.nombre }}</p>
                                     <div class="d-flex justify-content-between">
                                         <p class="fw-bold">Total pago con transferencia:</p>
-                                        <p class="product-price">${{ value.acumulado_transferencia }}</p>
+                                        <p class="product-price" data-acumulado-transferencia="{{ value.acumulado_transferencia }}"></p>
                                     </div>
                                     <div class="d-flex justify-content-between">
                                         <p>Total otros medios de pago:</p>
-                                        <p class="product-price">${{ value.acumulado_normal }}</p>
+                                        <p class="product-price" data-acumulado-normal="{{ value.acumulado_normal }}"></p>
                                     </div>
                                     <div class="cantidadProductos">
                                         <a href="{% url 'Sub' value.producto_id %}" class="badge btn btn-dark badge-dark">-</a>
@@ -157,37 +157,47 @@
                     <p>No hay productos en el carrito.</p>
                 {% endif %}
             </div>
-        
+
             <!-- Totales fijos -->
             <div class="resumenFijo">
                 <div class="d-flex justify-content-between">
                     <p class="fw-bold">Pago con transferencia:</p>
-                    <p class="product-price">${{total_carrito_transferencia }}</p>
+                    <p class="product-price fw-bold fs-5 text-success" data-total-transferencia="{{total_carrito_transferencia }}"></p>
                 </div>
                 <div class="d-flex justify-content-between">
                     <p>Otro medio de pago:</p>
-                    <p class="product-price">${{total_carrito_normal }}</p>
+                    <p class="product-price fs-5" data-total-normal="{{total_carrito_normal}}"></p>
                 </div>
                 <div class="row text-center mt-3">
-                    <div class="col-6"><a href="{% url 'CLS' %}" class="btn btn-danger btn-custom">Vaciar carrito</a></div>
-                    <div class="col-6"><a href="{% url 'carrito' %}" class="btn btn-danger btn-custom">Ver carrito</a></div>
+                    <div class="col-6"><a href="{% url 'CLS' %}" class="btn btn-danger text-white w-100 mt-2 fw-semibold shadow-sm">Vaciar carrito</a></div>
+                    <div class="col-6"><a href="{% url 'carrito' %}" class="btn btn-info text-white w-100 mt-2 fw-semibold shadow-sm">Ver carrito</a></div>
                 </div>
             </div>
         </div>
     </div>
-    
+
     <style>
-        
+        .offcanvas-end {
+            width: 70%; /* Ajusta el ancho del offcanvas */
+            max-width: 100%;
+            transform: translateX(100%); /* Mueve el offcanvas fuera de la vista cuando está cerrado */
+            transition: transform 0.3s ease-in-out; /* Animación suave para la transición */
+        }
+
+        .offcanvas.show {
+            transform: translateX(0); /* Mueve el offcanvas a su posición original cuando está abierto */
+        }
+
         .offcanvas-body {
             display: flex;
             flex-direction: column;
-            padding-bottom: 100px; 
+            padding-bottom: 100px; /* Ajusta el padding según sea necesario */
         }
 
         .product-list {
             flex-grow: 1;
             overflow-y: auto;
-            max-height: calc(100vh - 200px); 
+            max-height: calc(100vh - 200px); /* Ajusta la altura máxima según sea necesario */
             padding: 10px;
             margin-bottom: 20px; 
         }
@@ -233,27 +243,17 @@
             margin: 0;
         }
 
-        .btn-custom {
-            font-size: 16px;
-        }
-
         .btn-danger {
             background-color: #dc3545;
             border-color: #dc3545;
         }
-
-
-        .nombre{
-            font-weight: bold;
-            color: #333;
-        }
-
 
         .stock-warning {
             color: #dc3545;
             font-size: 12px;
         }
     </style>
+    
     <!--NavBar=md -->
     <nav class="navbar navBarmd bg-black">
         <div class="container-fluid">
@@ -622,6 +622,39 @@
                 autoplay: true,
                 autoplaySpeed: 2000,
             });
+        });
+    </script>
+    <script>
+        function formatNumber(number) {
+            return '$' + number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+        }
+    
+        document.querySelectorAll('[data-precio-anterior]').forEach(el => {
+            el.innerText = formatNumber(el.getAttribute('data-precio-anterior'));
+        });
+    
+        document.querySelectorAll('[data-precio-transferencia]').forEach(el => {
+            el.innerText = formatNumber(el.getAttribute('data-precio-transferencia'));
+        });
+    
+        document.querySelectorAll('[data-precio-normal]').forEach(el => {
+            el.innerText = formatNumber(el.getAttribute('data-precio-normal'));
+        });
+
+        document.querySelectorAll('[data-acumulado-transferencia]').forEach(el => {
+            el.innerText = formatNumber(el.getAttribute('data-acumulado-transferencia'));
+        });
+
+        document.querySelectorAll('[data-acumulado-normal]').forEach(el => {
+            el.innerText = formatNumber(el.getAttribute('data-acumulado-normal'));
+        });
+
+        document.querySelectorAll('[data-total-transferencia]').forEach(el => {
+            el.innerText = formatNumber(el.getAttribute('data-total-transferencia'));
+        });
+
+        document.querySelectorAll('[data-total-normal]').forEach(el => {
+            el.innerText = formatNumber(el.getAttribute('data-total-normal'));
         });
     </script>
     <script src="{% static 'gt_store/js/apiMaps.js' %}"></script>
