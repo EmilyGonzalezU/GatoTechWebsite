@@ -3,6 +3,10 @@ from django.shortcuts import render, get_object_or_404
 from . import models
 from itertools import chain
 import random
+
+from .models import Mouse, Teclado, Monitor, Audifono
+from .filters import MouseFilter, TecladoFilter, MonitorFilter, AudifonoFilter
+
 # Create your views here.
 def index(request):
      # PC Destacados
@@ -212,3 +216,39 @@ def products (request):
 def registro (request):
     return render(request, 'usuarios/registro.html')
 
+#test filtro
+def filtrar_mouse(request):
+    queryset = Mouse.objects.all()
+    mouse_filter = MouseFilter(request.GET, queryset=queryset)
+    context = {
+        'filter': mouse_filter,
+        'productos': mouse_filter.qs
+    }
+    return render(request, 'gt_store/general_mouse.html', context)
+
+def filtrar_teclado(request):
+    queryset = Teclado.objects.all()
+    teclado_filter = TecladoFilter(request.GET, queryset=queryset)
+    context = {
+        'filter': teclado_filter,
+        'productos': teclado_filter.qs
+    }
+    return render(request, 'gt_store/general_teclado.html', context)
+
+def filtrar_monitor(request):
+    queryset = Monitor.objects.all()
+    monitor_filter = MonitorFilter(request.GET, queryset=queryset)
+    context = {
+        'filter': monitor_filter,
+        'productos': monitor_filter.qs
+    }
+    return render(request, 'gt_store/general_monitor.html', context)
+
+def filtrar_audifonos(request):
+    queryset = Audifono.objects.all()
+    audifono_filter = AudifonoFilter(request.GET, queryset=queryset)
+    context = {
+        'filter': audifono_filter,
+        'productos': audifono_filter.qs
+    }
+    return render(request, 'gt_store/general_audifono.html', context)

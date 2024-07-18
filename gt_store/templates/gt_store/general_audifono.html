@@ -1,16 +1,17 @@
 {% extends 'gt_store/base_filtros.html' %}
 
-{% block tittle %}Audifonos{% endblock %}
+{% load static %}
 
 {% block breadcrumb %}
     <li class="breadcrumb-item"><a href="{% url 'home' %}">Inicio</a></li>
-    <li class="breadcrumb-item"><a href="#">Perifericos</a></li>
-    <li class="breadcrumb-item"><a href="{% url 'general_headset' %}">Audifonos</a></li>
+    <li class="breadcrumb-item"><a href="#">Audífonos</a></li>
 {% endblock %}
 
 {% block filtros %}
-    <div class="container-expand-md border">
+<div class="container-expand-md border">
+    <form method="GET" action="{% url 'filtrar_audifonos' %}" id="filtrosForm">
         <div class="accordion accordion-flush" id="accordionFlushExample">
+
             <div class="accordion-item">
                 <h2 class="accordion-header">
                     <button class="accordion-button collapsed border" type="button" data-bs-toggle="collapse"
@@ -20,21 +21,17 @@
                 </h2>
                 <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                     <div class="accordion-body">
-                        <div class="mb-3 form-check">
-                            <input type="checkbox" class="form-check-input marca" id="audifonos_redragon" data-marca="redragon">
-                            <label class="form-check-label" for="audifonos_redragon">Redragon</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="marca__in" value="RAZER" id="marcaRazer">
+                            <label class="form-check-label" for="marcaRazer">Razer</label>
                         </div>
-                        <div class="mb-3 form-check">
-                            <input type="checkbox" class="form-check-input marca" id="audifonos_logitech" data-marca="logitech">
-                            <label class="form-check-label" for="audifonos_logitech">Logitech</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="marca__in" value="LOGITECH" id="marcaLogitech">
+                            <label class="form-check-label" for="marcaLogitech">Logitech</label>
                         </div>
-                        <div class="mb-3 form-check">
-                            <input type="checkbox" class="form-check-input marca" id="audifonos_razer" data-marca="razer">
-                            <label class="form-check-label" for="audifonos_razer">Razer</label>
-                        </div>
-                        <div class="mb-3 form-check">
-                            <input type="checkbox" class="form-check-input marca" id="audifonos_hyperx" data-marca="hyperx">
-                            <label class="form-check-label" for="audifonos_hyperx">HyperX</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="marca__in" value="HYPERX" id="marcaHyperx">
+                            <label class="form-check-label" for="marcaHyperx">HyperX</label>
                         </div>
                     </div>
                 </div>
@@ -44,18 +41,43 @@
                 <h2 class="accordion-header">
                     <button class="accordion-button collapsed border" type="button" data-bs-toggle="collapse"
                         data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                        Tipo
+                        Conexión
                     </button>
                 </h2>
                 <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                     <div class="accordion-body">
-                        <div class="mb-3 form-check">
-                            <input type="checkbox" class="form-check-input tipo" id="audifonos_cable" data-tipo="cable">
-                            <label class="form-check-label" for="audifonos_cable">Cable</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="audifono_tipo_conexion" value="Cable" id="conexionCable">
+                            <label class="form-check-label" for="conexionCable">Cable</label>
                         </div>
-                        <div class="mb-3 form-check">
-                            <input type="checkbox" class="form-check-input tipo" id="audifonos_wirless" data-tipo="wireless">
-                            <label class="form-check-label" for="audifonos_wirless">Wireless</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="audifono_tipo_conexion" value="Inalambrico" id="conexionInalambrico">
+                            <label class="form-check-label" for="conexionInalambrico">Inalámbrico</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed border" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                        Tipo de Auricular
+                    </button>
+                </h2>
+                <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="audifono_tipo_auricular" value="Headset" id="tipoHeadset">
+                            <label class="form-check-label" for="tipoHeadset">Headset</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="audifono_tipo_auricular" value="In-ear" id="tipoInEar">
+                            <label class="form-check-label" for="tipoInEar">In-ear</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="audifono_tipo_auricular" value="Over-ear" id="tipoOverEar">
+                            <label class="form-check-label" for="tipoOverEar">Over-ear</label>
                         </div>
                     </div>
                 </div>
@@ -64,76 +86,79 @@
             <div class="accordion-item">
                 <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                        data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
                         Precio
                     </button>
                 </h2>
-                <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                     <div class="accordion-body">
-                        <div class="mb-3 form-check">
-                            <input type="checkbox" class="form-check-input" id="rango1Precio">
-                            <label class="form-check-label" for="rango1Precio">$50.000 - $100.000</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="precio_normal__lte" value="100000" id="rango0Precio">
+                            <label class="form-check-label" for="rango0Precio">$0 - $100.000</label>
                         </div>
-                        <div class="mb-3 form-check">
-                            <input type="checkbox" class="form-check-input" id="rango2Precio">
-                            <label class="form-check-label" for="rango2Precio">$100.001 - $200.000</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="precio_normal__gte" value="100001" id="rango1Precio">
+                            <label class="form-check-label" for="rango1Precio">$100.001 - $200.000</label>
                         </div>
-                        <div class="mb-3 form-check">
-                            <input type="checkbox" class="form-check-input" id="rango3Precio">
-                            <label class="form-check-label" for="rango3Precio">$200.001 - $300.000</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="precio_normal__gte" value="200001" id="rango2Precio">
+                            <label class="form-check-label" for="rango2Precio">$200.001 - $300.000</label>
                         </div>
-                        <div class="mb-3 form-check">
-                            <input type="checkbox" class="form-check-input" id="rango4Precio">
-                            <label class="form-check-label" for="rango4Precio">$300.001 - $500.000</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="precio_normal__gte" value="300001" id="rango3Precio">
+                            <label class="form-check-label" for="rango3Precio">$300.001 - $500.000</label>
                         </div>
-                        <div class="mb-3 form-check">
-                            <input type="checkbox" class="form-check-input" id="rango5Precio">
-                            <label class="form-check-label" for="rango5Precio">$500.001 - $100.000.000</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="precio_normal__gte" value="500001" id="rango4Precio">
+                            <label class="form-check-label" for="rango4Precio">$500.001 - $100.000.000</label>
                         </div>
                     </div>
                 </div>
             </div>
+
         </div>
-    </div>
+    </form>
+</div>
 {% endblock %}
 
 {% block card %}
-    <div class="col-md-12 col-lg-9 col-sm-12 col-xs-12 d-flex flex-wrap">
-        {% for p in productos %}
-        <div class="position-relative col-lg-3 col-md-4 col-sm-6 mb-4">
-            <a href="{% url 'detalle_producto' p.id_producto %}" class="stretched-link text-decoration-none">
-                <div class="card border rounded-0">
-                    {% if p.imagen %}
-                        <img src="{{ p.imagen.url }}" class="card-img-top main-image mx-auto d-block">
-                    {% endif %}
-
-                    <div class="card-body" style="height: 295px;">
-                        <h6 class="fw-bold">{{ p.marca }}</h6>
-                        <div class="position-relative" style="height: 86.1px;">
-                            <p class="productDesc">{{ p.descripcion }}</p>
-                        </div>
-
-                        {% if p.descuento or p.precio_anterior %}
+<div class="col-md-12 col-lg-9 col-sm-12 col-xs-12 d-flex flex-wrap">
+    {% for p in productos %}
+    <div class="position-relative col-lg-3 col-md-4 col-sm-6 mb-4">
+        <a href="{% url 'detalle_producto' p.id_producto %}" class="stretched-link text-decoration-none">
+            <div class="card border rounded-0">
+                {% if p.imagen %}
+                    <img src="{{ p.imagen.url }}" class="card-img-top main-image mx-auto d-block" style="height: 200px; width: 200px;">
+                {% endif %}
+                <div class="card-body" style="height: 295px;">
+                    <h6 class="fw-bold">{{ p.marca }}</h6>
+                    <div class="position-relative" style="height: 86.1px;">
+                        <p class="productDesc">{{ p.descripcion }}</p>
+                    </div>
+                    {% if p.descuento is not 0 or p.precio_anterior is not 0 %}
                         <div class="priceContainer d-flex position-absolute dsctoTarget">
-                            {% if p.descuento %}
+                            {% if p.descuento is not 0 %}
                                 <span class="dscto">{{ p.descuento }} DCTO.</span>
                             {% endif %}
-                            {% if p.precio_anterior %}
-                                <span class="old-price oldPrice" data-precio-anterior="{{ p.precio_anterior }}"></span>
+                            {% if p.precio_anterior is not 0 %}
+                                <span class="old-price oldPrice">{{ p.precio_anterior }}</span>
                             {% endif %}
                         </div>
-                        {% endif %}
-
-                        <div class="position-relative pt-4">
-                            <p class="price" data-precio-transferencia="{{ p.precio_transferencia }}"></p>
-                            <p class="metod">Transferencia</p>
-                            <p class="price" data-precio-normal="{{ p.precio_normal }}"></p>
-                            <p class="metod">Otros medio de pago</p>
-                        </div>
+                    {% endif %}
+                    <div class="position-relative pt-4">
+                        <p class="price">{{ p.precio_transferencia }}</p>
+                        <p class="metod">Transferencia</p>
+                        <p class="price">{{ p.precio_normal }}</p>
+                        <p class="metod">Otros medios de pago</p>
                     </div>
                 </div>
-            </a>
-        </div>
-        {% endfor %}
+            </div>
+        </a>
     </div>
+    {% endfor %}
+</div>
+{% endblock %}
+
+{% block extra_scripts %}
+<script src="{% static 'js/filtro.js' %}"></script>
 {% endblock %}
