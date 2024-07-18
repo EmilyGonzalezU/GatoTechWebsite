@@ -1,6 +1,8 @@
 from django.shortcuts import get_object_or_404, render, redirect
 from django.http import JsonResponse, HttpResponseRedirect
 from gt_store.models import Product
+from usuarios.forms import DatosPersonalesForm2
+from usuarios.models import PerfilUsuario
 
 class Carrito:
     def __init__(self, request):
@@ -85,3 +87,38 @@ def limpiar_carrito(request):
 
 def carrito(request):
     return render(request, 'carrito/carrito.html')
+
+
+from django.shortcuts import render, redirect
+from django.contrib.auth.decorators import login_required
+
+
+
+
+
+def datos_usuario_compra(request):
+    if 'user_id' in request.session:
+        try:
+            user = PerfilUsuario.objects.get(id=request.session['user_id'])
+            form = DatosPersonalesForm2(instance=user)
+        except PerfilUsuario.DoesNotExist:
+            form = DatosPersonalesForm2()
+    else:
+        form = DatosPersonalesForm2()
+
+    if request.method == 'POST':
+        if 'user_id' in request.session:
+            form = DatosPersonalesForm2(request.POST, instance=user)
+        else:
+            form = DatosPersonalesForm2(request.POST)
+        
+        if form.is_valid():
+            return redirect('direccion')
+
+    context = {
+        'form': form,
+    }
+    return render(request, 'carrito/continuacion_compra.html', context)
+
+def direccion(request):
+    return render(request, 'carrito/agregar_direccion.html')

@@ -66,7 +66,7 @@
             <!-- Botones de Acción -->
             <div class="d-grid gap-2 mb-4">
                 <a href="{% url 'Add' producto.id_producto %}" class="btn btn-info text-white w-100 mt-2 fw-semibold shadow-sm">Agregar al carrito</a>
-                <button class="btn btn-white text-info w-100 mt-2 fw-semibold shadow-sm border-info">Comprar ahora</button>
+                <a href="{% url 'datos_usuario' %}"><button class="btn btn-white text-info w-100 mt-2 fw-semibold shadow-sm border-info">Comprar ahora</button></a>
             </div>
 
             <!-- Información de Stock -->

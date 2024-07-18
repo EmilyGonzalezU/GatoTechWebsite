@@ -1,17 +1,55 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Agregar Dirección</title>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-</head>
-<body>
-    <h2>Agregar Dirección</h2>
-    <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Guardar</button>
-    </form>
-
-
-</body>
-</html>
+<!-- direcciones_add.html -->
+{% extends 'gt_store/base_general.html' %}
+{% block contenido %}
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-lg-6 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="fw-bold fs-5 mb-4">Dirección</h2>
+                    <form method="POST">
+                        {% csrf_token %}
+                        <div class="mb-3">
+                            <label for="{{ form.calle.id_for_label }}" class="form-label">Calle</label>
+                            {{ form.calle }}
+                        </div>
+                        <div class="mb-3">
+                            <label for="{{ form.numero.id_for_label }}" class="form-label">Número</label>
+                            {{ form.numero }}
+                        </div>
+                        <div class="mb-3">
+                            <label for="{{ form.depto_casa.id_for_label }}" class="form-label">Depto/Casa</label>
+                            {{ form.depto_casa }}
+                        </div>
+                        <div class="mb-3">
+                            <label for="{{ form.nombre_receptor.id_for_label }}" class="form-label">Nombre Receptor</label>
+                            {{ form.nombre_receptor }}
+                        </div>
+                        <div class="mb-3">
+                            <label for="{{ form.apellido_receptor.id_for_label }}" class="form-label">Apellido Receptor</label>
+                            {{ form.apellido_receptor }}
+                        </div>
+                        <div class="mb-3">
+                            <label for="{{ form.rut_receptor.id_for_label }}" class="form-label">RUT Receptor</label>
+                            {{ form.rut_receptor }}
+                        </div>
+                        <div class="mb-3">
+                            <label for="{{ form.telefono_receptor.id_for_label }}" class="form-label">Teléfono Receptor</label>
+                            {{ form.telefono_receptor }}
+                        </div>
+                        <div class="mb-3">
+                            <label for="{{ form.region.id_for_label }}" class="form-label">Región</label>
+                            {{ form.region }}
+                        </div>
+                        <div class="mb-3">
+                            <label for="{{ form.comuna.id_for_label }}" class="form-label">Comuna</label>
+                            {{ form.comuna }}
+                        </div>
+                        <button type="submit" class="btn btn-info text-white w-100 mt-2 fw-semibold shadow-sm">Continuar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

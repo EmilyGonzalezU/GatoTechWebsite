@@ -51,14 +51,14 @@
                                                 <span class="dscto">{{ pc.descuento }}% DCTO.</span>
                                             {% endif %}
                                             {% if pc.precio_anterior is not 0 %}
-                                                <span class="old-price oldPrice">${{ pc.precio_anterior }}</span>
+                                                <span class="old-price oldPrice" data-precio-anterior="{{pc.precio_anterior}}"></span>
                                             {% endif %}
                                         </div>
                                         {% endif %}
                                         <div class="position-relative pt-4">
-                                            <p class="price">${{ pc.precio_transferencia }}</p>
+                                            <p class="price" data-precio-transferencia="{{pc.precio_transferencia}}"></p>
                                             <p class="transf fw">Transferencia</p>
-                                            <p class="price">${{ pc.precio_normal }}</p>
+                                            <p class="price" data-precio-normal="{{pc.precio_normal}}"></p>
                                             <p class="otro fw">Otro medio de pago</p>
                                         </div>
                                     </div>
@@ -110,14 +110,14 @@
                                                 <span class="dscto">{{ poten.descuento }}% DCTO.</span>
                                             {% endif %}
                                             {% if poten.precio_anterior is not 0 %}
-                                                <span class="old-price oldPrice">${{ poten.precio_anterior }}</span>
+                                                <span class="old-price oldPrice" data-precio-anterior="{{ poten.precio_anterior }}"></span>
                                             {% endif %}
                                         </div>
                                         {% endif %}
                                         <div class="position-relative pt-4">
-                                            <p class="price">${{ poten.precio_transferencia }}</p>
+                                            <p class="price" data-precio-transferencia="{{poten.precio_transferencia}}"></p>
                                             <p class="transf fw">Transferencia</p>
-                                            <p class="price">${{ poten.precio_normal }}</p>
+                                            <p class="price" data-precio-normal="{{poten.precio_normal}}"></p>
                                             <p class="otro fw">Otro medio de pago</p>
                                         </div>
                                     </div>
@@ -169,14 +169,14 @@
                                                 <span class="dscto">{{ note.descuento }} DCTO.</span>
                                             {% endif %}
                                             {% if note.precio_anterior is not 0 %}
-                                                <span class="old-price oldPrice">{{ note.precio_anterior }}</span>
+                                                <span class="old-price oldPrice" data-precio-anterior="{{ note.precio_anterior }}"></span>
                                             {% endif %}
                                         </div>
                                         {% endif %}
                                         <div class="position-relative pt-4">
-                                            <p class="price">${{ note.precio_transferencia }}</p>
+                                            <p class="price" data-precio-transferencia="{{ note.precio_transferencia }}"></p>
                                             <p class="transf fw">Transferencia</p>
-                                            <p class="price">${{ note.precio_normal }}</p>
+                                            <p class="price" data-precio-normal="{{note.precio_normal}}"></p>
                                             <p class="otro fw">Otro medio de pago</p>
                                         </div>
                                     </div>
@@ -227,14 +227,14 @@
                                                 <span class="dscto">{{ r.descuento }}% DCTO.</span>
                                             {% endif %}
                                             {% if r.precio_anterior is not 0 %}
-                                                <span class="old-price oldPrice">${{ r.precio_anterior }}</span>
+                                                <span class="old-price oldPrice" data-precio-anterior="{{r.precio_anterior}}"></span>
                                             {% endif %}
                                         </div>
                                         {% endif %}
                                         <div class="position-relative pt-4">
-                                            <p class="price">${{ r.precio_transferencia }}</p>
+                                            <p class="price" data-precio-transferencia="{{r.precio_transferencia}}"></p>
                                             <p class="transf fw">Transferencia</p>
-                                            <p class="price">${{ r.precio_normal }}</p>
+                                            <p class="price" data-precio-normal="{{r.precio_normal}}"></p>
                                             <p class="otro fw">Otro medio de pago</p>
                                         </div>
                                     </div>
