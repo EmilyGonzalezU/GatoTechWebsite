@@ -4,8 +4,8 @@ from . import models
 from itertools import chain
 import random
 
-from .models import Mouse, Teclado, Monitor, Audifono
-from .filters import MouseFilter, TecladoFilter, MonitorFilter, AudifonoFilter
+from .models import Pc, Notebook, Procesador, Placa_madre, Tarjeta_video, almacenamiento, Fuente_poder, Ram, Gabinete
+from .filters import ProcesadorFilter, PlacaMadreFilter, TarjetaVideoFilter, AlmacenamientoFilter, FuentePoderFilter, RamFilter, GabineteFilter
 
 # Create your views here.
 def index(request):
@@ -252,3 +252,84 @@ def filtrar_audifonos(request):
         'productos': audifono_filter.qs
     }
     return render(request, 'gt_store/general_audifono.html', context)
+
+def filtrar_pcs(request):
+    queryset = Pc.objects.all()
+    pc_filter = PcFilter(request.GET, queryset=queryset)
+    context = {
+        'filter': pc_filter,
+        'productos': pc_filter.qs
+    }
+    return render(request, 'gt_store/general_pc.html', context)
+
+def filtrar_notebooks(request):
+    queryset = Notebook.objects.all()
+    notebook_filter = NotebookFilter(request.GET, queryset=queryset)
+    context = {
+        'filter': notebook_filter,
+        'productos': notebook_filter.qs
+    }
+    return render(request, 'gt_store/general_notebook.html', context)
+
+def filtrar_procesadores(request):
+    queryset = Procesador.objects.all()
+    filter = ProcesadorFilter(request.GET, queryset=queryset)
+    context = {
+        'filter': filter,
+        'productos': filter.qs
+    }
+    return render(request, 'gt_store/general_procesador.html', context)
+
+def filtrar_placas_madre(request):
+    queryset = Placa_madre.objects.all()
+    filter = PlacaMadreFilter(request.GET, queryset=queryset)
+    context = {
+        'filter': filter,
+        'productos': filter.qs
+    }
+    return render(request, 'gt_store/general_placa.html', context)
+
+def filtrar_tarjetas_video(request):
+    queryset = Tarjeta_video.objects.all()
+    filter = TarjetaVideoFilter(request.GET, queryset=queryset)
+    context = {
+        'filter': filter,
+        'productos': filter.qs
+    }
+    return render(request, 'gt_store/general_gpu.html', context)
+
+def filtrar_almacenamiento(request):
+    queryset = almacenamiento.objects.all()
+    filter = AlmacenamientoFilter(request.GET, queryset=queryset)
+    context = {
+        'filter': filter,
+        'productos': filter.qs
+    }
+    return render(request, 'gt_store/general_almacenamiento.html', context)
+
+def filtrar_fuente_poder(request):
+    queryset = Fuente_poder.objects.all()
+    filter = FuentePoderFilter(request.GET, queryset=queryset)
+    context = {
+        'filter': filter,
+        'productos': filter.qs
+    }
+    return render(request, 'gt_store/general_fuente_poder.html', context)
+
+def filtrar_ram(request):
+    queryset = Ram.objects.all()
+    filter = RamFilter(request.GET, queryset=queryset)
+    context = {
+        'filter': filter,
+        'productos': filter.qs
+    }
+    return render(request, 'gt_store/general_ram.html', context)
+
+def filtrar_gabinete(request):
+    queryset = Gabinete.objects.all()
+    filter = GabineteFilter(request.GET, queryset=queryset)
+    context = {
+        'filter': filter,
+        'productos': filter.qs
+    }
+    return render(request, 'gt_store/general_gabinete.html', context)
