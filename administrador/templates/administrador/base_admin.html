@@ -66,13 +66,25 @@
                 <a class="nav-link active text-white" aria-current="page" href="{% url 'listado de productos' %}">Listado de productos</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-white" href="{% url 'product_add'%}">Agregar productos</a>
+                <a class="nav-link text-white" href="{% url 'product_add' %}">Agregar productos</a>
               </li>
-              <li class="nav-item">
-                {% if user.is_authenticated %}
-                <a  class="nav-link text-white">Bienvenido, {{ user.username }}!</a>
-                {% endif %}
-              </li>
+              {% if user.is_superuser %}
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="{% url 'admin_pedidos' %}">Pedidos realizados</a>
+                </li>
+              {% endif %}
+              {% if user.is_authenticated %}
+                <li class="nav-item">
+                  <a class="nav-link text-white">Bienvenido, {{ user.username }}!</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="{% url 'logout' %}">Cerrar sesión</a>
+                </li>
+              {% else %}
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="{% url 'login' %}">Iniciar sesión</a>
+                </li>
+              {% endif %}
             </ul>
           </div>
         </div>

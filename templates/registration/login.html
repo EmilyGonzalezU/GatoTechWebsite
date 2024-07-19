@@ -1,40 +1,63 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - GatoTech</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .login-container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border: none;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
-      
-      body {
-          font-family: 'Montserrat', sans-serif;
-          background-color: #f8f9fa;
-          margin: 0;
-          display: flex;
-          flex-direction: column;
-          min-height: 100vh;
-      }
-      .form-container {
-          max-width: 700px;
-          width: 100%;
-          background-color: #fff;
-          padding: 30px;
-          border-radius: 10px;
-          box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-      }
-    </style>
     <div class="login-container">
-        <h2>GatoTech</h2>
-        <div class="form-container">
-            <form method="post">
-                {% csrf_token %}
-                {{ form.as_p }}
-                <button type="submit">Iniciar sesión</button>
-            </form>
-        </div>
-    </div>
-</body>
-</html>
+        <h2 class="text-center mb-4">GatoTechAdmin</h2>
+        <form method="post">
+            {% csrf_token %}
+            <div class="mb-3">
+                <label for="username" class="form-label">Usuario</label>
+                <div class="input-group">
+                    <input type="text" class="form-control {% if username_error %}is-invalid{% endif %}" id="username" name="username" placeholder="Ingrese su usuario" required>
+                </div>
+                {% if username_error %}
+                <div class="invalid-feedback">
+                    {{ username_error }}
+                </div>
+                {% endif %}
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Contraseña</label>
+                <div class="input-group">
+                    <input type="password" class="form-control {% if password_error %}is-invalid{% endif %}" id="password" name="password" placeholder="Ingrese su contraseña" required>
+                </div>
+                {% if password_error %}
+                <div class="invalid-feedback">
+                    {{ password_error }}
+                </div>
+                {% endif %}
+            </div>
+            <button type="submit" class="btn btn-info text-white w-100 mt-2 fw-semibold shadow-sm border-info">Iniciar sesión</but

@@ -110,3 +110,31 @@ def producto_del(request, id_producto):
     product = Product.objects.get(pk=id_producto)  
     product.delete()
     return redirect(to='listado de productos')
+#Para ver pedidos realizados
+
+from django.shortcuts import render
+from django.contrib.auth.decorators import user_passes_test
+from carrito.models import Pedido, ProductoPedido
+
+def is_admin(user):
+    return user.is_superuser
+
+@user_passes_test(is_admin)
+def admin_pedidos_view(request):
+    pedidos = Pedido.objects.all().order_by('-fecha')
+    print(f"Pedidos: {pedidos}")  # Debug: Imprimir pedidos
+
+    pedidos_detalle = []
+    for pedido in pedidos:
+        productos = ProductoPedido.objects.filter(pedido=pedido)
+        print(f"Pedido ID {pedido.id}, Productos: {productos}")  # Debug: Imprimir productos por pedido
+        pedidos_detalle.append({
+            'pedido': pedido,
+            'productos': productos
+        })
+
+    context = {
+        'pedidos_detalle': pedidos_detalle,
+    }
+    print(f"Contexto: {context}")  # Debug: Imprimir contexto
+    return render(request, 'administrador/admin_compras.html', context)

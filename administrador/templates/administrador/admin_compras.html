@@ -1,0 +1,53 @@
+{% extends 'administrador/base_admin.html' %}
+
+{% block admin %}
+    <div class="container mt-4">
+        <h1 class="mb-4">Lista de Pedidos</h1>
+        {% if pedidos_detalle %}
+            <div class="table-responsive">
+                <table class="table table-bordered table-striped">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>ID Pedido</th>
+                            <th>Nombre Usuario</th>
+                            <th>Apellido Usuario</th>
+                            <th>Email Usuario</th>
+                            <th>Rut Usuario</th>
+                            <th>Estado</th>
+                            <th>Total Transferencia</th>
+                            <th>Total Normal</th>
+                            <th>Fecha</th>
+                            <th>Productos</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for detalle in pedidos_detalle %}
+                            <tr>
+                                <td>{{ detalle.pedido.id }}</td>
+                                <td>{{ detalle.pedido.nombre_usuario }}</td>
+                                <td>{{ detalle.pedido.apellido_usuario }}</td>
+                                <td>{{ detalle.pedido.email_usuario }}</td>
+                                <td>{{ detalle.pedido.rut_usuario }}</td>
+                                <td>{{ detalle.pedido.estado }}</td>
+                                <td>${{ detalle.pedido.total_transferencia }}</td>
+                                <td>${{ detalle.pedido.total_normal }}</td>
+                                <td>{{ detalle.pedido.fecha }}</td>
+                                <td>
+                                    <ul class="list-unstyled">
+                                        {% for producto in detalle.productos %}
+                                            <li>{{ producto.producto.nombre_producto }} x {{ producto.cantidad }} - ${{ producto.precio }}</li>
+                                        {% empty %}
+                                            <li>No hay productos asociados.</li>
+                                        {% endfor %}
+                                    </ul>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        {% else %}
+            <p>No se han encontrado pedidos.</p>
+        {% endif %}
+    </div>
+{% endblock %}

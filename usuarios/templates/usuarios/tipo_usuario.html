@@ -35,10 +35,10 @@
                     </div>
                     {% if request.session.user_nombre  %}
                         <div class="col-12 mb-2">
-                            <a href="{% url 'datos_usuario' %}" class="btn btn-info text-white w-100 mt-2 fw-semibold shadow-sm">Continuar con la compra</a>
+                            <a href="{% url 'datos_usuario_compra' %}" class="btn btn-info text-white w-100 mt-2 fw-semibold shadow-sm">Continuar con la compra</a>
                         </div>
                     {% endif %}
-                    <a href="{% url 'datos_usuario'%}"><button class="btn btn-info text-white w-100 mt-2 fw-semibold shadow-sm" type="submit" id="btn">Iniciar sesión</button></a>
+                    <a href="{% url 'datos_usuario_compra'%}"><button class="btn btn-info text-white w-100 mt-2 fw-semibold shadow-sm" type="submit" id="btn">Iniciar sesión</button></a>
                     <div class="pt-1 mb-1 text-center">
                         <a href="#" class="text-decoration-none text-info fw-semibold" style="font-size: 0.9rem">¿Olvidaste la contraseña?</a>
                     </div>
@@ -55,7 +55,7 @@
                 <div class="flex-grow-1 d-flex align-items-center">
                     <p class="mb-4">Puedes continuar con tu compra sin necesidad de crear una cuenta. Tus datos serán solicitados en el proceso de compra.</p>
                 </div>
-                <a href="{% url 'datos_usuario'%}" class="btn btn-info text-white w-100 mt-2 fw-semibold shadow-sm">Continuar como Invitado</a>
+                <a href="{% url 'datos_usuario_compra'%}" class="btn btn-info text-white w-100 mt-2 fw-semibold shadow-sm">Continuar como Invitado</a>
             </div>
         </div>
         

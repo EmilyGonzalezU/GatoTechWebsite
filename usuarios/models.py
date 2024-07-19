@@ -12,17 +12,3 @@ class PerfilUsuario(models.Model):
         return self.email
     
     
-class Direccion(models.Model):
-    perfil_usuario = models.ForeignKey(PerfilUsuario, on_delete=models.CASCADE)
-    calle = models.CharField(max_length=100)
-    numero = models.CharField(max_length=10)
-    depto_casa = models.CharField(max_length=10, blank=True, null=True)
-    nombre_receptor = models.CharField(max_length=60)
-    apellido_receptor = models.CharField(max_length=60)
-    rut_receptor = models.CharField(max_length=12)
-    telefono_receptor = models.CharField(max_length=15)
-    region = models.CharField(max_length=15, null=False)
-    comuna = models.CharField(max_length=15, null=False)
-
-    def __str__(self):
-        return f'{self.calle} {self.numero}, {self.comuna}, {self.region}'

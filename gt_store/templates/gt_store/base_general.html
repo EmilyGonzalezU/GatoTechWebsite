@@ -67,15 +67,15 @@
                                 <i class="bi bi-person fs-1 me-3 iconNav ms-2"></i>
                             </button></a>
                             <div class="user-info">
-                                <span class="user-greeting">Hola {{ request.session.user_nombre }}</span>
-                                <a href="{% url 'login_usuario' %}" class="user-account">Mi cuenta</a>
+                                <span class="user-greeting">Hola, {{ request.session.user_nombre }}</span>
+                                <a href="{% url 'cerrar_sesion' %}" class="user-account">Cerrar Sesión</a>
                             </div>
                         {% else %}
                             <a href="{% url 'inicio' %}"><button type="button" class="btn">
                                 <i class="bi bi-person fs-1 me-3 iconNav ms-2"></i>
                             </button></a>
                             <div class="user-info">
-                                <span class="user-greeting">Hola </span>
+                                <span class="user-greeting">Hola, </span>
                                 <a href="{% url 'inicio' %}" class="user-account">Iniciar sesión</a>
                             </div>
                         {% endif %}

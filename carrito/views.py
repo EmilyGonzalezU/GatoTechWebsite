@@ -1,8 +1,11 @@
 from django.shortcuts import get_object_or_404, render, redirect
-from django.http import JsonResponse, HttpResponseRedirect
+from django.http import HttpResponseRedirect
 from gt_store.models import Product
-from usuarios.forms import DatosPersonalesForm2
-from usuarios.models import PerfilUsuario
+from django.shortcuts import render, redirect, get_object_or_404
+from django.contrib import messages
+from .models import  ProductoPedido
+from .forms import PedidoForm
+from usuarios.models import  PerfilUsuario
 
 class Carrito:
     def __init__(self, request):
@@ -88,37 +91,68 @@ def limpiar_carrito(request):
 def carrito(request):
     return render(request, 'carrito/carrito.html')
 
-
-from django.shortcuts import render, redirect
-from django.contrib.auth.decorators import login_required
-
-
-
-
+#Compra
 
 def datos_usuario_compra(request):
-    if 'user_id' in request.session:
-        try:
-            user = PerfilUsuario.objects.get(id=request.session['user_id'])
-            form = DatosPersonalesForm2(instance=user)
-        except PerfilUsuario.DoesNotExist:
-            form = DatosPersonalesForm2()
-    else:
-        form = DatosPersonalesForm2()
+    carrito = request.session.get('carrito', {})
+    total_transferencia = sum(item['acumulado_transferencia'] for item in carrito.values())
+    total_normal = sum(item['acumulado_normal'] for item in carrito.values())
 
     if request.method == 'POST':
-        if 'user_id' in request.session:
-            form = DatosPersonalesForm2(request.POST, instance=user)
-        else:
-            form = DatosPersonalesForm2(request.POST)
-        
+        form = PedidoForm(request.POST)
         if form.is_valid():
-            return redirect('direccion')
+            pedido = form.save(commit=False)
+            
+            if request.user.is_authenticated:
+                pedido.usuario = request.user
+                # Opcionalmente, puedes rellenar los campos del usuario con la información del perfil
+                perfil_usuario = PerfilUsuario.objects.filter(email=request.user.email).first()
+                if perfil_usuario:
+                    pedido.nombre_usuario = perfil_usuario.nombre
+                    pedido.apellido_usuario = perfil_usuario.apellido
+                    pedido.telefono_usuario = perfil_usuario.telefono
+                    pedido.email_usuario = perfil_usuario.email
+                    pedido.rut_usuario = perfil_usuario.rut
+            pedido.total_transferencia = total_transferencia
+            pedido.total_normal = total_normal
+            pedido.save()
+
+            for item in carrito.values():
+                try:
+                    producto = Product.objects.get(id_producto=item['producto_id'])
+                    ProductoPedido.objects.create(
+                        pedido=pedido,
+                        producto=producto,
+                        cantidad=item['cantidad'],
+                        precio=item['acumulado_normal']
+                    )
+                except Product.DoesNotExist:
+                    messages.error(request, f"Producto con id {item['producto_id']} no encontrado.")
+                    return redirect('carrito_datos')  
+
+            for item in carrito.values():
+                try:
+                    producto = Product.objects.get(id_producto=item['producto_id'])
+                    producto.stock -= item['cantidad']
+                    producto.save()
+                except Product.DoesNotExist:
+                    messages.error(request, f"Producto con id {item['producto_id']} no encontrado al actualizar stock.")
+                    return redirect('carrito_datos')  
+
+            request.session.pop('carrito', None)
+
+            messages.success(request, "Compra realizada con éxito.")
+            return redirect('realizado')
+    else:
+        form = PedidoForm()
 
     context = {
         'form': form,
+        'carrito': carrito,
     }
+
     return render(request, 'carrito/continuacion_compra.html', context)
 
-def direccion(request):
-    return render(request, 'carrito/agregar_direccion.html')
+#Pedido realizado
+def pago_exitoso (request):
+    return render(request, 'carrito/resultado.html')

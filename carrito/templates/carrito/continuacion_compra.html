@@ -1,31 +1,72 @@
 {% extends 'gt_store/base_general.html' %}
-{% load static %}
 {% block contenido %}
 <div class="container mt-4">
     <div class="row">
         <div class="col-lg-6 mb-4">
             <div class="card">
                 <div class="card-body">
-                    <form method="POST" action="{% url 'datos_usuario' %}">
+                    <form method="POST">
                         {% csrf_token %}
-                        <h2 class="fw-bold fs-5 mb-4">Tus Datos</h2>
+                        <h2 class="fw-bold fs-5 mb-4">Datos del Usuario</h2>
                         <div class="mb-3">
-                            <label for="{{ form.nombre.id_for_label }}" class="form-label">Nombre</label>
-                            {{ form.nombre }}
+                            <label for="{{  form.nombre_usuario.id_for_label }}" class="form-label">Nombre</label>
+                            {{  form.nombre_usuario }}
                         </div>
                         <div class="mb-3">
-                            <label for="{{ form.apellido.id_for_label }}" class="form-label">Apellido</label>
-                            {{ form.apellido }}
+                            <label for="{{  form.apellido_usuario.id_for_label }}" class="form-label">Apellido</label>
+                            {{  form.apellido_usuario }}
                         </div>
                         <div class="mb-3">
-                            <label for="{{ form.email.id_for_label }}" class="form-label">Email</label>
-                            {{ form.email }}
+                            <label for="{{  form.telefono_usuario.id_for_label }}" class="form-label">Teléfono</label>
+                            {{  form.telefono_usuario }}
                         </div>
                         <div class="mb-3">
-                            <label for="{{ form.telefono.id_for_label }}" class="form-label">Teléfono</label>
-                            {{ form.telefono }}
+                            <label for="{{  form.email_usuario.id_for_label }}" class="form-label">Email</label>
+                            {{  form.email_usuario }}
                         </div>
-                        <a href="{% url 'direccion'}"><button type="submit" class="btn btn-info text-white w-100 mt-2 fw-semibold shadow-sm">Continuar</button></a>
+                        <div class="mb-3">
+                            <label for="{{  form.rut_usuario.id_for_label }}" class="form-label">RUT</label>
+                            {{  form.rut_usuario }}
+                        </div>
+
+                        <h2 class="fw-bold fs-5 mb-4">Dirección</h2>
+                        <div class="mb-3">
+                            <label for="{{  form.calle.id_for_label }}" class="form-label">Calle</label>
+                            {{  form.calle }}
+                        </div>
+                        <div class="mb-3">
+                            <label for="{{  form.numero.id_for_label }}" class="form-label">Número</label>
+                            {{  form.numero }}
+                        </div>
+                        <div class="mb-3">
+                            <label for="{{  form.depto_casa.id_for_label }}" class="form-label">Depto/Casa</label>
+                            {{  form.depto_casa }}
+                        </div>
+                        <div class="mb-3">
+                            <label for="{{  form.nombre_receptor.id_for_label }}" class="form-label">Nombre Receptor</label>
+                            {{  form.nombre_receptor }}
+                        </div>
+                        <div class="mb-3">
+                            <label for="{{  form.apellido_receptor.id_for_label }}" class="form-label">Apellido Receptor</label>
+                            {{  form.apellido_receptor }}
+                        </div>
+                        <div class="mb-3">
+                            <label for="{{  form.rut_receptor.id_for_label }}" class="form-label">RUT Receptor</label>
+                            {{  form.rut_receptor }}
+                        </div>
+                        <div class="mb-3">
+                            <label for="{{  form.telefono_receptor.id_for_label }}" class="form-label">Teléfono Receptor</label>
+                            {{  form.telefono_receptor }}
+                        </div>
+                        <div class="mb-3">
+                            <label for="{{  form.region.id_for_label }}" class="form-label">Región</label>
+                            {{  form.region }}
+                        </div>
+                        <div class="mb-3">
+                            <label for="{{  form.comuna.id_for_label }}" class="form-label">Comuna</label>
+                            {{  form.comuna }}
+                        </div>
+                        <button type="submit" class="btn btn-info text-white w-100 mt-2 fw-semibold shadow-sm border-info">Realizar pago</button>
                     </form>
                 </div>
             </div>
@@ -62,7 +103,6 @@
                             {% endfor %}
                         {% endif %}
                     </div>
-                    <!-- Totales fijos -->
                     <div class="resumenFijo">
                         <div class="d-flex justify-content-between">
                             <p class="fw-bold">Pago con transferencia:</p>

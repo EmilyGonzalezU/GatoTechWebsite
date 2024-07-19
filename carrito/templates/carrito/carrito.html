@@ -58,7 +58,7 @@
                     {% if request.session.user_nombre  %}
                         {% if  request.session.carrito.items %}
                             <div class="col-12 mb-2">
-                                <a href="{% url 'datos_usuario' %}" class="btn btn-info text-white w-100 mt-2 fw-semibold shadow-sm">Continuar con la compra</a>
+                                <a href="{% url 'datos_usuario_compra' %}" class="btn btn-info text-white w-100 mt-2 fw-semibold shadow-sm">Continuar con la compra</a>
                             </div>
                         {% endif %}
                     {% else %}
