@@ -185,3 +185,5 @@ class Monitor(Product):
 
     def __str__(self):
         return str(self.marca)
+    
+    
